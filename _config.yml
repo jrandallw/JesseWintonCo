@@ -21,13 +21,3 @@ url: http://yourdomain.com
 twitter_username: jekyllrb
 github_username: jekyll
 markdown: kramdown
-
-defaults: 
-- scope: 
-    type: "roles" 
-    values:
-      Character: 
-      Director: 
-      Theatre: 
-      Opening Date: 
-      Closing Date: 
