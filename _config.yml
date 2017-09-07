@@ -23,7 +23,7 @@ markdown: kramdown
 
 defaults:
 - scope:
-	type: roles
+	type: "roles"
   values:
   	Role Information:
   	  Character: 
