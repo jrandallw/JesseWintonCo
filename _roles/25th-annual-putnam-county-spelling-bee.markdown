@@ -7,5 +7,6 @@ Role Information:
   Theatre: KD Studios
   Opening Date: 2017-11-03 10:00:00 Z
   Closing Date: 2017-11-05 20:00:00 Z
+layout: role
 ---
 
