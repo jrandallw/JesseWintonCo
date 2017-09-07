@@ -8,13 +8,6 @@ collections:
   roles:
     title: Roles
     output: false
-    Role Information:
-      Character: 
-      Director: 
-      Theatre: 
-      Year: 
-      Opening Date: 
-      Closing Date: 
   uploads:
     title: Uploads
     output: true
