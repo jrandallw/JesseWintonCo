@@ -26,7 +26,6 @@ defaults:
 - scope: 
     type: "roles" 
     values:
-      Role Information: 
       Character: 
       Director: 
       Theatre: 
