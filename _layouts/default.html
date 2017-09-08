@@ -5,14 +5,22 @@
 
   <body>
 
-    {% include header.html %}
+    {% include nav.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
-
+    <section class="hero position-relative">
+      {% for asset in entry.hero %}
+      <figure class="column align-center" style="background: url('{{ asset.getUrl('portrait') }}');">
+        <figcaption><a href="{{ siteUrl }}"><h4 class="name text-center">Jesse<br>Winton</h4></a></figcaption>
+      </figure>
+      {% endfor %}
+    </section>
+    
+    <section class="home-content column align-center position-relative">
+      <div class="container">
+      	<p class="description text-center">{{ entry.homeDescription|striptags('<strong><em><br>')|raw|nl2br  }}</p>
+      </div> 
+    </section>
+    
     {% include footer.html %}
 
   </body>

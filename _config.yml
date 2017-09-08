@@ -21,6 +21,7 @@ defaults:
     director: 
     opening date: 
     closing date: 
+    layout: role
 - scope:
     path: ''
     type: pages
