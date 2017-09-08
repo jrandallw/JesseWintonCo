@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body>
-    <main class="wrapper {% if craft.request.firstSegment == '' %}row{% else %}column{% endif %} align-center position-relative" role="main">
+    <main class="wrapper {% if template == 'index' %}row{% else %}column{% endif %} align-center position-relative" role="main">
 	    {% include nav.html %}
 
       {{ content }}
