@@ -21,9 +21,13 @@ header {
         }	
     }
     
-    &.light a {
+    &.dark a {
     	color: #fff;
     }	
+    
+    &.dark .nav-branding {
+    	color: #fff;
+    }
     
 }
 
