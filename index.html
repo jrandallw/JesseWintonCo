@@ -2,22 +2,16 @@
 layout: default
 ---
 
-<div class="home">
+<section class="hero position-relative">
+  {% for asset in entry.hero %}
+  <figure class="column align-center" style="background: url('{{ asset.getUrl('portrait') }}');">
+    <figcaption><a href="{{ siteUrl }}"><h4 class="name text-center">Jesse<br>Winton</h4></a></figcaption>
+  </figure>
+  {% endfor %}
+</section>
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.roles %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+<section class="home-content column align-center position-relative">
+  <div class="container">
+  	<p class="description text-center">{{ entry.homeDescription|striptags('<strong><em><br>')|raw|nl2br  }}</p>
+  </div> 
+</section>
