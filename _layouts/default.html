@@ -4,13 +4,11 @@
   {% include head.html %}
 
   <body>
-    <main class="wrapper {% if template == 'index' %}row{% else %}column{% endif %} align-center position-relative" role="main">
-	    {% include nav.html %}
+        {% include nav.html %}
 
       {{ content }}
     
       {% include footer.html %}
-    </main>  
-  </body>
+    </body>
 
 </html>
