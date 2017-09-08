@@ -2,8 +2,10 @@
 layout: split
 ---
 
+{% assign hero_image = "background: url(" | append: page.hero_image | append: ");" %}
+
 <section class="hero position-relative">
-    <figure class="column align-center" style="">
+    <figure class="column align-center" style="{{ hero_image }}">
     <figcaption><a href=""><h4 class="name text-center">Jesse<br>Winton</h4></a></figcaption>
   </figure>
 </section>
