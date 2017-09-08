@@ -138,19 +138,3 @@ em {
 .text-justify {
 	text-align: justify;
 }
-
-/* header */
-header {
-	line-height: 1.5;
-}
-
-.nav {
-	top: 1.4em;
-    z-index: 10;
-    width: $full-width;
-}
-
-.nav-split {
-    width: $half-width !important;
-    right: 0;
-}
