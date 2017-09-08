@@ -22,7 +22,7 @@ defaults:
       director: 
       opening date: 
       closing date: 
-      year:
+      year: 
 - scope:
     path: ''
     type: pages
