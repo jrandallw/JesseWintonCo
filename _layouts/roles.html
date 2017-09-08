@@ -11,7 +11,7 @@ layout: default
     <h6 class="call text-center">here they are</h6>
   </section>
   
-  {% for role in site.roles %}
+  {% for role in site.roles | sort: 'position' %}
     <div class="role grid-one-half column align-center text-center gap-left-right">
       <h4 class="title">{{ role.title }}</h4>
       <p class="credits"></p>
