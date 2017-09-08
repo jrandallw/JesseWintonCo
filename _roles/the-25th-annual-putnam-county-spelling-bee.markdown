@@ -1,6 +1,7 @@
 ---
 title: The 25th Annual Putnam County Spelling Bee
 date: 2017-09-07 23:23:00 Z
+position: 0
 role_info:
   character: Vice Principal Doug Panch
   theatre: KD Studios
