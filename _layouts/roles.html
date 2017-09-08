@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+{% for role in site.roles %}
+  <div class="role grid-one-half column align-center text-center gap-left-right">
+    <h4 class="title">{{ role.title }}</h4>
+    <p class="credits"></p>
+    <p class="credits">At {{ role.theatre }} – {{ role.year }}</p>
+  </div>
+{% endfor %}
