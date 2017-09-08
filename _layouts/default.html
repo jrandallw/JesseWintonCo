@@ -4,13 +4,13 @@
   {% include head.html %}
 
   <body>
+    <main class="wrapper {% if craft.request.firstSegment == '' %}row{% else %}column{% endif %} align-center position-relative" role="main">
+	    {% include nav.html %}
 
-    {% include nav.html %}
-
-    {{ content }}
+      {{ content }}
     
-    {% include footer.html %}
-
+      {% include footer.html %}
+    </main>  
   </body>
 
 </html>
