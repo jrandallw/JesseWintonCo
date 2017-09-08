@@ -1,6 +1,7 @@
 ---
 title: The Crucible
 date: 2017-09-08 06:44:00 Z
+position: 5
 role_info:
   character: Marshall Herrick
   theatre: William Jessup University
