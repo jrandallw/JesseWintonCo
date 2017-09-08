@@ -1,28 +1,13 @@
-<!DOCTYPE html>
-<html>
+---
+layout: split
+---
 
-  {% include head.html %}
+<figure class="column align-center" style="background: url('{{ asset.getUrl('portrait') }}');">
+  <figcaption><a href="{{ siteUrl }}"><h4 class="name text-center">Jesse<br>Winton</h4></a></figcaption>
+</figure>
 
-  <body>
-    <main class="wrapper column align-center position-relative" role="main">
-      {% include split-nav.html %}
-      
-        <figure class="column align-center" style="background: url('{{ asset.getUrl('portrait') }}');">
-          <figcaption><a href="{{ siteUrl }}"><h4 class="name text-center">Jesse<br>Winton</h4></a></figcaption>
-        </figure>
-      </section>
-      
-      <section class="home-content column align-center position-relative">
-        <div class="container">
-        	<p class="description text-center">{{ page['page heading'] }}</p>
-        </div> 
-      </section>
-      
-      {% include split-footer.html %}
-    </main>
-    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    
-  </body>
-
-</html>
+<section class="home-content column align-center position-relative">
+  <div class="container">
+	<p class="description text-center">{{ page['page heading'] }}</p>
+  </div> 
+</section>
