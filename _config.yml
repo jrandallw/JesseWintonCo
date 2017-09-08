@@ -20,9 +20,9 @@ defaults:
       character: 
       theatre: 
       director: 
-      year:
+      year: 
       opening date: 
-      closing date:  
+      closing date: 
 - scope:
     path: ''
     type: pages
