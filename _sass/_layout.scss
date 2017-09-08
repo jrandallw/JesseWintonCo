@@ -1,26 +1,47 @@
-.nav a {
-	font-size: 10px;
-    letter-spacing: 1px;
-	color: #000;
-	text-transform: uppercase;
-    margin: 0 20px;
-    border-bottom: 1px solid rgba(0,0,0,0);
+/* header */
+header {
+	line-height: 1.5;
 }
 
-.nav a:hover {
-    border-color: #000;
+.nav {
+	top: 1.4em;
+    z-index: 10;
+    width: $full-width;
+    
+     a {
+    	font-size: 10px;
+        letter-spacing: 1px;
+    	color: #000;
+    	text-transform: uppercase;
+        margin: 0 20px;
+        border-bottom: 1px solid rgba(0,0,0,0);
+        
+        &:hover {
+        	border-color: #000;
+        }	
+    }
+    
+    &.light a {
+    	color: #fff;
+    }	
+    
+}
+
+.nav-split {
+    width: $half-width !important;
+    right: 0;
 }
 
 .nav-branding {
     display: block;
     border: none !important;
-}
 
-.nav-branding h4 {
-    display: none;
-    font-size: 16px;
-    margin-top: 15px;
-    line-height: 1.5;
+	h4 {
+		color: $white;
+    	font-size: 16px;
+    	margin-top: 15px;
+    	line-height: 1.5;
+	}
 }
 
 .roles .nav a,
@@ -42,11 +63,6 @@ a.active {
     border-color: rgba(0,0,0,0);
 }
 
-.roles .nav-branding h4,
-.journal .nav-branding h4 {
-    display: block;
-    color: #fff;
-}
 
 .photos .nav-branding h4 {
     display: block;
