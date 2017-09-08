@@ -1,6 +1,7 @@
 ---
 title: Oklahoma!
 date: 2017-09-08 06:46:00 Z
+position: 6
 role_info:
   character: Fred
   theatre: William Jessup University
