@@ -1,4 +1,4 @@
-<nav class="nav {% if page.layout == 'default' %}nav-split{% endif %} gap-left-right text-center position-absolute">
+<nav class="nav gap-left-right text-center position-absolute">
   {% assign pages = site.pages | where:"is_nav_page",true | sort: 'position' %}
     {% for page in pages %}
     <a href={{ page.url | escape }}>{{ page.title }}</a>
