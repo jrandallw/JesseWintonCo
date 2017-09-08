@@ -1,7 +1,7 @@
 ---
 title: I, Know it All
 date: 2017-09-08 06:27:00 Z
-position: 0
+position: 1
 role_info:
   character: Original One-Man Show
   theatre: Blacktop Comedy
