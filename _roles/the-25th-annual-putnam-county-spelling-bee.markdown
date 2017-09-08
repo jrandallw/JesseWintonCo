@@ -9,6 +9,5 @@ role_info:
   year: 2017
   opening date: 2017-11-03 10:00:00 Z
   closing date: 2017-11-05 20:00:00 Z
-layout: roles
 ---
 
