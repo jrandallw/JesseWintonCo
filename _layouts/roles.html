@@ -3,7 +3,8 @@ layout: default
 ---
 
 <section class="roles-content row position-relative wrap no-space">
-  <section class="intro column">
+  {% assign theme = is_dark %}
+  <section class="intro column {% if theme == true %}dark{% endif %}">
     <div class="container column align-center">
       {{ content }}
     </div>
