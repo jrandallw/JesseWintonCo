@@ -16,12 +16,13 @@ defaults:
     path: ''
     type: roles
   values:
-    character: 
-    theatre: 
-    director: 
-    opening date: 
-    closing date: 
-    layout: role
+    role info:
+      character: 
+      theatre: 
+      director: 
+      opening date: 
+      closing date: 
+      year:
 - scope:
     path: ''
     type: pages
