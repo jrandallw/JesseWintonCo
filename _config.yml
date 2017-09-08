@@ -16,7 +16,7 @@ defaults:
     path: ''
     type: roles
   values:
-    role info:
+    role_info:
       character: 
       theatre: 
       director: 
