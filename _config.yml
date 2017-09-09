@@ -5,6 +5,9 @@ collections:
   journals:
     title: Journals
     output: true
+  photos:
+    title: Photos
+    output: true
   posts:
     title: Posts
     output: true
