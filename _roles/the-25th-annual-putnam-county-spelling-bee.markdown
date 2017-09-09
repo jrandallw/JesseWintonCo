@@ -7,7 +7,7 @@ role_info:
   theatre: KD Studios
   director: Kelly Dunn
   year: 2017
-  opening date: 2017-11-03 10:00:00 Z
-  closing date: 2017-11-05 20:00:00 Z
+  opening_date: 2017-11-03 10:00:00 Z
+  closing_date: 2017-11-05 20:00:00 Z
 ---
 
