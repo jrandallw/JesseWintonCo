@@ -34,7 +34,7 @@ defaults:
       director: 
       year: 
       opening date: 
-      closing date:
+      closing date: 
 - scope:
     path: ''
     type: photos
@@ -43,7 +43,7 @@ defaults:
       photo: 
       year: 
       photographer: 
-      photographer_website:
+      photographer_website: 
 email: info@jessewinton.com
 description: Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
