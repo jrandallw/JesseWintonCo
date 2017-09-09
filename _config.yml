@@ -17,6 +17,12 @@ collections:
 defaults:
 - scope:
     path: ''
+    type: pages
+  values:
+    is_nav_page: 
+    is_dark: 
+- scope:
+    path: ''
     type: roles
   values:
     role_info:
@@ -25,13 +31,16 @@ defaults:
       director: 
       year: 
       opening date: 
-      closing date: 
+      closing date:
 - scope:
     path: ''
-    type: pages
+    type: photos
   values:
-    is_nav_page: 
-    is_dark: 
+    photo_info:
+      photo: 
+      year: 
+      photographer: 
+      photographer_website:
 email: info@jessewinton.com
 description: Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for Google search
