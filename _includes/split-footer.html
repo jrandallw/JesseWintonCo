@@ -1,8 +1,8 @@
 <footer class="footer-split position-absolute row align-center no-space gap-left-right">
   <nav class="social grid-one-half">
-    {% for item in site.data.social.items %}
-    <a href={{ item.url | escape }} target={{ item.target }}>{{ item.title }}</a>
-    {% endfor %}
+  	{% for item in site.data.social.items %}
+  	<a href={{ item.url | escape }} target={{ item.target }}>{{ item.title }}</a>
+  	{% endfor %}
   </nav> 	
-  <h6 class="copyright grid-one-half text-right">©2017 {{ site.title }}</h6>
+  <h6 class="copyright grid-one-half text-right">{{ site.title | escape }}</h6>
 </footer>
