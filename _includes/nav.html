@@ -3,5 +3,5 @@
   {% for page in pages %}
   <a href={{ page.url | escape }}>{{ page.title }}</a>
   {% endfor %}
-  <a href="{{ site.url }}" class="nav-branding"><h4 class="name text-center">Jesse<br>Winton</h4></a>
+  <a href="{{ site.url }}" class="nav-branding"><h4 class="name text-center">{{ site.title }}</h4></a>
 </nav>
