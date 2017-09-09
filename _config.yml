@@ -23,6 +23,11 @@ defaults:
     is_dark: 
 - scope:
     path: ''
+    type: posts
+  values:
+    permalink: "/journal/:title/"    
+- scope:
+    path: ''
     type: roles
   values:
     role_info:
