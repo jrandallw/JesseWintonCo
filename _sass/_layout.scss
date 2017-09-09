@@ -56,6 +56,8 @@ header {
 	h4 {
     	font-size: 16px;
     	margin-top: 15px;
+    	width: 100px;
+    	margin: 0 auto;
     	line-height: 1.5;
 	}
 }
@@ -93,6 +95,7 @@ header {
 .hero .name {
 	color: #fff;
 	width: 150px;
+	text-transform: uppercase;
 	line-height: 1.4;
 }
 
