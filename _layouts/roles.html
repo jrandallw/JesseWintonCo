@@ -17,7 +17,7 @@ layout: default
   {% for role in sorted %}
     <div class="role grid-one-half column align-center text-center gap-left-right">
       <h4 class="title">{{ role.title }}</h4>
-      <p class="credits">{% if role.role_info.opening_date|date('YmdHi') > now|date('YmdHi') %}I'll be playing:{% elseif role.role_info.opening_date|date('YmdHi') <= now|date('YmdHi') and role.role_info.closing_date|date('YmdHi') > now|date('YmdHi') %}I'm playing:{% else %}I played:{% endif %} {{ role.role_info.character }} – Directed by: {{ role.role_info.director }}</p>
+      <p class="credits">{{ role.role_info.character }} – Directed by: {{ role.role_info.director }}</p>
       <p class="credits">At {{ role.role_info.theatre }} – {{ role.role_info.year }}</p>
     </div>
   {% endfor %}
