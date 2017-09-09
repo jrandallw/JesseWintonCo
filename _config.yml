@@ -2,9 +2,6 @@
 title: Jesse Winton
 timezone: UTC
 collections:
-  journal:
-    title: Journals
-    output: true
   photos:
     title: Photos
     output: false
