@@ -12,11 +12,14 @@ $light-color: #fff;
 $dark-color: #222;
 
 // Width of the content area
-$full-width: 100%;
-$half-width: 50%;
+$full: 100%;
+$half: 50%;
+$full-viewport-width: 100vw;
+$half-viewport-width: 50vw;
+$full-viewport-height: 100vh;
+$half-viewport-height: 50vh;
 
-
-@import
-        "base",
-        "layout"
+@import 
+	"base",
+	"layout"
 ;
