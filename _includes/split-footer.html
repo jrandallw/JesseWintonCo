@@ -1,7 +1,7 @@
 <footer class="footer-split position-absolute row align-center no-space gap-left-right">
   <nav class="social grid-one-half">
   	{% for item in site.data.social.items %}
-  	<a href={{ item.url | escape }} target={{ item.target }}>{{ item.title }}</a>
+  	<a href={{ item.url | escape }} target={{ item.target }}>{{ item.title | escape }}</a>
   	{% endfor %}
   </nav> 	
   <h6 class="copyright grid-one-half text-right">&copy;{{ 'now' | date: "%Y" }} Jesse Winton</h6>
