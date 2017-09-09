@@ -7,7 +7,7 @@ role_info:
   theatre: Blacktop Comedy
   director: Jesse Winton
   year: 2017
-  opening date: 2017-04-29 19:00:00 Z
-  closing date: 2017-04-29 21:00:00 Z
+  opening_date: 2017-04-29 19:00:00 Z
+  closing_date: 2017-04-29 21:00:00 Z
 ---
 
