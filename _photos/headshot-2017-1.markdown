@@ -1,5 +1,5 @@
 ---
-title: 2017 Headshot 1
+title: Headshot 2017 - 1
 date: 2017-09-09 01:15:00 Z
 position: 1
 photo_info:
