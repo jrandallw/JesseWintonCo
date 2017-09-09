@@ -1,10 +1,6 @@
 ---
 ---
 
-@charset "utf-8";
-
-
-
 // Variables
 $base-font-family: 'Roboto Mono', sans-serif;
 $heading-font-family: 'Young Serif';
@@ -20,7 +16,6 @@ $full-width: 100%;
 $half-width: 50%;
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout"
