@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section class="roles-content row position-relative wrap no-space">
+  
+  <section class="intro column">
+    <div class="container column align-center">
+      {{ content }}
+    </div>
+    
+    <h6 class="call text-center">here they are</h6>
+  </section>
+  
+  {% assign sorted = (site.photos | sort: 'position') %}
+  
+  {% for photo in sorted %}
+  {% assign headshot = "background: url(" | append: photo.photo | append: ");" %}
+  <figure class="photo grid-one-third grid-item gap-bottom">
+    <img src="{{ headshot }}" alt="{{ photo.photographer }} – {{ photo.year }}">
+    <figcaption class="credits text-center small-gap-top">Shot in {{ photo.year }} by {% if photo.photographer_website %}<a href="{{ photo.photographer_website }}" target="_blank">{{ photo.photographer }}</a>{% else %}{{ photo.photographer }}{% endif %}</figcaption>
+  </figure>  
+  {% endfor %}
+</section>
