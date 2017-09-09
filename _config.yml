@@ -8,9 +8,6 @@ collections:
   photos:
     title: Photos
     output: false
-  posts:
-    title: Posts
-    output: true
   roles:
     title: Roles
     output: false
