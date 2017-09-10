@@ -7,4 +7,4 @@ hero_image: "/uploads/hero.jpg"
 layout: home
 ---
 
-Actor, writer and director studying in Sacramento.
+Actor, writer, and director studying in Sacramento.
