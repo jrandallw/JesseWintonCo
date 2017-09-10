@@ -173,60 +173,6 @@ header {
     }
 }
 
-/* roles */
-.role {
-    height: 50vh;
-}
-
-.role .title {
-    max-width: 65%;
-    margin: 0 auto 20px auto;
-}
-
-.role:nth-child(3n+1) {
-    background: #fff;
-}
-
-.role:nth-child(3n+2) {
-    background: #f2f2f2;
-}
-
-.role:nth-child(3n+3) {
-    background: #eee;
-}
-
-.role .credits {
-    font-size: 11px;
-}
-
-@media screen and (max-width: 438px) {
-    .role {
-        height: 75vh !important;
-    }
-    
-    .role .title {
-    	max-width: 75% !important;
-    }
-}
-
-@media screen and (min-width: 414px) and (max-width: 736px) and (orientation: landscape) {
-    .role {
-        height: $full-viewport-height;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .role {
-        height: $full-viewport-height !important;
-    }
-}
-
-/* photos */
-.photo a {
-    color: $text-color;
-    border-bottom: 1px solid $dark-color;
-}
-
 /* footer */
 .footer {
     bottom: 0;
