@@ -17,8 +17,7 @@ layout: default
   {% for role in sorted %}
     <div class="role grid-one-half column align-center text-center gap-left-right">
       <h4 class="title">{{ role.title }}</h4>
-      {% capture current_day %}{{ "now" | date: "%B %d, %y" }}{% endcapture %}
-      <p class="credits">{{ role.role_info.character }} – Directed by: {{ role.role_info.director }}</p>
+      <p class="credits">I played: {{ role.role_info.character }} – Directed by: {{ role.role_info.director }}</p>
       <p class="credits">At {{ role.role_info.theatre }} – {{ role.role_info.year }}</p>
     </div>
   {% endfor %}
