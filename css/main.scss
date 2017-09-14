@@ -11,7 +11,7 @@ $text-color: #222;
 $light-color: #fff;
 $dark-color: #222;
 
-// Width of the content area
+// Width of the content areas
 $full: 100%;
 $half: 50%;
 $full-viewport-width: 100vw;
@@ -19,9 +19,9 @@ $half-viewport-width: 50vw;
 $full-viewport-height: 100vh;
 $half-viewport-height: 50vh;
 
+// Breakpoints
+
 @import 
 	"base",
-	"layout",
-	"photos",
-	"roles"
+	"layout"
 ;
