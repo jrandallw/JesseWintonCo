@@ -14,8 +14,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-plugins:
-  - jekyll-seo-tag    
 defaults:
 - scope:
     path: ''
@@ -48,6 +46,8 @@ defaults:
       year: 
       photographer: 
       photographer_website: 
+plugins:
+- jekyll-seo-tag
 email: info@jessewinton.com
 description: Official website of Jesse Winton. Actor, writer, and director studying
   in Sacramento.
