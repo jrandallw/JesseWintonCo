@@ -7,7 +7,7 @@ header {
 	top: 1.4em;
     z-index: 10;
     width: $full;
-    
+
      a {
     	font-size: 10px;
         letter-spacing: 1px;
@@ -15,29 +15,29 @@ header {
     	text-transform: uppercase;
         margin: 0 20px;
         border-bottom: 1px solid rgba(0,0,0,0);
-        
+
         &:hover {
         	border-color: #000;
-        }	
+        }
     }
-    
+
     &.dark a {
     	color: #fff;
-    }	
-    
+    }
+
     &.dark .nav-branding h4 {
     	color: #fff;
     }
-    
+
     &.dark a.active {
     	border-color: #fff;
-    }	
+    }
 }
 
 .nav-split {
     width: $half !important;
     right: 0;
-    
+
     .nav-branding {
     	display: none;
     }
@@ -65,11 +65,11 @@ header {
     .nav-split {
         width: $full !important;
     }
-    
+
     .nav a {
         margin: 0 6px !important;
     }
-    
+
     .nav-branding h4 {
         display: block;
     }
@@ -78,7 +78,7 @@ header {
 /* hero */
 .hero {
 	height: $full-viewport-height !important;
-	width: $half !important;
+	width: 35% !important;
     overflow: hidden;
 }
 
@@ -91,15 +91,14 @@ header {
     -o-background-size: cover !important;
 }
 
-.hero .name {
-	color: #fff;
-	width: 150px;
-	text-transform: uppercase;
-	line-height: 1.4;
-}
-
-.hero .name:hover {
-	color: #000;
+.color-layer {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background: #b29f77;
+    bottom: 0;
+    z-index: 0;
+    opacity: .5
 }
 
 @media screen and (max-width: 768px) {
@@ -111,7 +110,7 @@ header {
 /* homepage content */
 .home-content {
 	background: #f9f9f9;
-	width: $half;
+	width: 65%;
 	min-height: $full-viewport-height;
 }
 
@@ -125,7 +124,7 @@ header {
     .wrapper {
         flex-direction: column;
     }
-    
+
 	.home-content,
 	.hero {
 		width: 100% !important;
@@ -158,7 +157,7 @@ header {
     .intro {
         height: $full-viewport-height;
     }
-    
+
     .intro .container {
         width: 70%;
     }
@@ -222,7 +221,7 @@ header {
     .role {
         height: 75vh !important;
     }
-    
+
     .role .title {
     	max-width: 75% !important;
     }
@@ -268,7 +267,7 @@ header {
     margin-left: 0;
 }
 
-.social a {    
+.social a {
     margin: 0 6px;
 }
 
@@ -286,18 +285,18 @@ header {
 	    flex-direction: column;
 	    text-align: center !important;
 	}
-	
+
 	.footer .copyright,
 	.footer-split .copyright {
 	    text-align: center !important;
 	}
-	
+
     .footer-split {
         bottom: 0;
         height: 75px;
         width: $full !important;
     }
-    
+
     .footer .grid-one-half,
     .footer-split .grid-one-half {
         flex: none !important;
@@ -489,7 +488,7 @@ header {
 	flex: 0 0 25%;
 }
 
-@media screen and (max-width: 438px) {	
+@media screen and (max-width: 438px) {
   	.grid-one-half,
   	.grid-one-third,
   	.grid-one-quarter,
@@ -498,7 +497,7 @@ header {
 		width: 100%;
         flex: 0 0 100% !important;
   	}
-    
+
     .grid-item {
         margin: 0 !important;
     }

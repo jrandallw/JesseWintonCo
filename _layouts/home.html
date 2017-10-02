@@ -2,16 +2,16 @@
 layout: split
 ---
 
-{% assign hero_image = "background: url(" | append: page.hero_image | append: ");" %}
-
-<section class="hero position-relative">
-    <figure class="column align-center" style="{{ hero_image }}">
-    <figcaption><a href="{{ site.url }}"><h4 class="name text-center">{{ site.title }}</h4></a></figcaption>
-  </figure>
-</section>
-
 <section class="home-content column align-center position-relative">
   <div class="container">
 	<p class="description text-center">{{ content | remove: '<p>' | remove: '</p>' }}</p>
-  </div> 
+  </div>
 </section>
+
+{% assign hero_image = "background: url(" | append: page.hero_image | append: ");" %}
+
+<section class="hero position-relative">
+    <figure class="column align-center" style="{{ hero_image }}"></figure>
+</section>
+
+<div class="color-layer"></div>
