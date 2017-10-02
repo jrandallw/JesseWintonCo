@@ -114,8 +114,10 @@ header {
 
 .description {
 	font-family: 'Young Serif' !important;
-	font-size: 30px !Important;
-	color: #000;
+	font-size: 50px !important;
+  width: 75%;
+  z-index: 1;
+  position: relative
 }
 
 @media screen and (max-width: 768px) {
