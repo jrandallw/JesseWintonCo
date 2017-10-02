@@ -7,4 +7,4 @@ hero_image: "/uploads/hero.jpg"
 layout: home
 ---
 
-Actor, writer, and director studying in Sacramento.
+I’m Jesse, and I’m a writer/designer in Northern California. 
