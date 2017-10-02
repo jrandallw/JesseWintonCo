@@ -8,9 +8,6 @@ collections:
   posts:
     title: Posts
     output: true
-  roles:
-    title: Roles
-    output: false
   uploads:
     title: Uploads
     output: true
