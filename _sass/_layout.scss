@@ -77,13 +77,13 @@ header {
 
 /* hero */
 .hero {
-	height: $full-viewport-height !important;
-	width: 35% !important;
-    overflow: hidden;
+		height: $full-viewport-height !important;
+		width: 35% !important;
+  	overflow: hidden;
 }
 
 .hero figure {
-	height: $full-viewport-height !important;
+		height: $full-viewport-height !important;
     background-position: center !important;
     background-size: cover !important;
     -webkit-background-size: cover !important;
@@ -91,20 +91,18 @@ header {
     -o-background-size: cover !important;
 }
 
-.color-layer {
-    height: 50%;
-    width: 100%;
-    position: absolute;
-    background: #b29f77;
-    bottom: 0;
-    z-index: 0;
-    opacity: .5
-}
-
 @media screen and (max-width: 768px) {
 	.hero {
 		display: none;
 	}
+}
+.color-layer {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    opacity: .5
 }
 
 /* homepage content */
