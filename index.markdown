@@ -5,7 +5,7 @@ position: 0
 is_nav_page: true
 hero_image: "/uploads/hero.jpg"
 layer_color: "#b29f77"
-layout: home
+layout: default
 ---
 
 I’m Jesse, and I’m a writer/designer in Northern California. 
