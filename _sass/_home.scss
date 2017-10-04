@@ -1,0 +1,60 @@
+// hero
+.hero {
+		height: $full-viewport-height !important;
+		width: 35% !important;
+  	overflow: hidden;
+}
+
+.hero figure {
+		height: $full-viewport-height !important;
+    background-position: center !important;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+
+.hero figure::after {
+    content: '';
+    background: #fff;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+	.hero {
+		display: none;
+	}
+}
+.color-layer {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    opacity: .5
+}
+
+// homepage content
+.home-content {
+	background: #eee;
+	width: 65%;
+	min-height: $full-viewport-height;
+}
+
+.description {
+	font-family: 'Young Serif' !important;
+	font-size: 50px !important;
+  width: 75%;
+  z-index: 1;
+  position: relative
+}
+
+@media screen and (max-width: 768px) {
+	.home-content,
+	.hero {
+		width: 100% !important;
+	}
+}

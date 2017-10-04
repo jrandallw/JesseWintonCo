@@ -21,7 +21,10 @@ $half-viewport-height: 50vh;
 
 // Breakpoints
 
-@import 
+@import
 	"base",
-	"layout"
+	"layout",
+	"home",
+	"grids",
+	"fonts"
 ;
