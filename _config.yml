@@ -40,11 +40,11 @@ defaults:
       year: 
       photographer: 
       photographer_website: 
-email: info@jessewinton.com
+email: info@jessewinton.co
 description: Official website of Jesse Winton. Actor, writer, and director studying
   in Sacramento.
 baseurl: 
-url: http://jessewinton.com
+url: http://jessewinton.co
 twitter_username: jrandallw
 markdown: kramdown
 plugins:
