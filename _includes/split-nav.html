@@ -1,7 +1,0 @@
-<nav class="nav nav-split gap-left-right text-center position-absolute {% if page.is_dark == true %}dark{% endif %}">
-  {% assign pages = site.pages | where:"is_nav_page",true | sort: 'position' %}
-    {% for page in pages %}
-    <a href={{ page.url | escape }}>{{ page.title }}</a>
-    {% endfor %}
-    <a href="{{ site.url }}" class="nav-branding"><h4 class="name text-center">{{ site.title }}</h4></a>
-</nav>

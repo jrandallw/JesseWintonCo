@@ -1,34 +1,28 @@
 // header
 header {
-	line-height: 1.5;
+	top: 0;
+	width: 100%;
+
+	.branding {
+		position: relative;
+		z-index: 1000
+	}
 }
 
 .nav {
-	top: 1.4em;
+		top: 1.4em;
     z-index: 10;
-    width: $full;
 
      a {
-    	font-size: 10px;
+    		font-size: 10px;
         letter-spacing: 1px;
-    	color: #000;
-    	text-transform: uppercase;
+    		color: #000;
+    		text-transform: uppercase;
         margin: 0 20px;
         border-bottom: 1px solid rgba(0,0,0,0);
-
         &:hover {
         	border-color: #000;
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav a {
-        margin: 0 6px !important;
-    }
-
-    .nav-branding h4 {
-        display: block;
     }
 }
 
@@ -38,15 +32,14 @@ header {
     width:  100%;
     left: 0;
     height: 75px;
-    background: #f9f9f9;
 }
 
 .social a,
 .copyright {
-	font-family: 'Roboto Mono';
-	font-size: 10px;
+		font-family: 'Roboto Mono';
+		font-size: 10px;
     letter-spacing: 1px;
-	color: #000;
+		color: #000;
     border-bottom: 1px solid rgba(0,0,0,0);
 }
 
@@ -63,7 +56,7 @@ header {
 }
 
 .copyright {
-	text-align: right;
+		text-align: right;
 }
 
 @media screen and (max-width: 768px) {

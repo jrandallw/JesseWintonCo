@@ -8,4 +8,4 @@ layer_color: "#b29f77"
 layout: home
 ---
 
-I’m Jesse, and I’m a writer/designer in Northern California. 
+I’m Jesse, and I’m a writer/designer in Northern California.
