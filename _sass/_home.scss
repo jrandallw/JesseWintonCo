@@ -3,15 +3,13 @@
 		height: $full-viewport-height !important;
 		width: 35% !important;
   	overflow: hidden;
+		display: none;
 }
 
 .hero figure {
 		height: $full-viewport-height !important;
     background-position: center !important;
-    background-size: cover !important;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    -o-background-size: cover !important;
+    @include prefix(background-size, cover !important, webkit moz ms);
 }
 
 .hero figure::after {
@@ -23,12 +21,13 @@
     opacity: .5;
 }
 
-@media screen and (max-width: 768px) {
+@media #{$break-large} {
 	.hero {
 		display: none;
 	}
 }
 .color-layer {
+	display: none;
     height: 50%;
     width: 100%;
     position: absolute;
@@ -40,19 +39,19 @@
 // homepage content
 .home-content {
 	background: #eee;
-	width: 65%;
+	width: $full-viewport-width;
 	min-height: $full-viewport-height;
 }
 
 .description {
 	font-family: 'Young Serif' !important;
-	font-size: 50px !important;
-  width: 75%;
+	font-size: $base-font-size + 54px !important;
+  width: $full;
   z-index: 1;
   position: relative
 }
 
-@media screen and (max-width: 768px) {
+@media #{$break-large} {
 	.home-content,
 	.hero {
 		width: 100% !important;

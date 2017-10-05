@@ -1,72 +1,72 @@
 // grids
 .row {
-	margin: 0 auto;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+		margin: 0 auto;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
 }
 
 .column {
-	margin: 0 auto;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	flex-direction: column;
+		margin: 0 auto;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		flex-direction: column;
 }
 
 .wrap {
-	flex-wrap: wrap;
+		flex-wrap: wrap;
 }
 
 .grid-item {
-	margin: 0 10px 0 10px;
+		margin: 0 10px 0 10px;
 }
 
 .grid-full {
-	flex: 0 0 calc(100% - 20px);
+		flex: 0 0 calc(100% - 20px);
 }
 
 .grid-one-half {
-	flex: 0 0 calc($half - 20px);
+		flex: 0 0 calc($half - 20px);
 }
 
 .grid-one-third {
-	flex: 0 0 calc(33.3333% - 20px);
+		flex: 0 0 calc(33.3333% - 20px);
 }
 
 .grid-two-thirds {
-	flex: 0 0 calc(66.66% - 20px);
+		flex: 0 0 calc(66.66% - 20px);
 }
 
 .grid-one-quarter {
-	flex: 0 0 calc(25% - 20px);
+		flex: 0 0 calc(25% - 20px);
 }
 
 .no-space .grid-full {
-	flex: 0 0 100%;
+		flex: 0 0 100%;
 }
 
 .no-space .grid-one-half {
-	flex: 0 0 $half;
+		flex: 0 0 $half;
 }
 
 .no-space .grid-one-third {
-	flex: 0 0 33.3333%;
+		flex: 0 0 33.3333%;
 }
 
 .no-space .grid-two-thirds {
-	flex: 0 0 66.6666%;
+		flex: 0 0 66.6666%;
 }
 
 .no-space .grid-one-quarter {
-	flex: 0 0 25%;
+		flex: 0 0 25%;
 }
 
-@media screen and (max-width: 438px) {
+@media #{break-medium} {
   	.grid-one-half,
   	.grid-one-third,
   	.grid-one-quarter,

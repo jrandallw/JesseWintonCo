@@ -19,7 +19,18 @@ $half-viewport-width: 50vw;
 $full-viewport-height: 100vh;
 $half-viewport-height: 50vh;
 
+// Browser prefix mixin
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
 // Breakpoints
+$break-large: "screen and (max-width: 768px)";
+$break-medium: "screen and (max-width: 438px)";
 
 @import
 	"base",
