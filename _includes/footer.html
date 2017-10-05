@@ -1,4 +1,6 @@
-<footer class="footer row align-center no-space gap-left-right position-absolute">
+<section class="footer-spacer"></section>
+
+<footer class="footer row align-center no-space gap-left-right position-fixed">
   <nav class="social grid-one-half">
   	{% for item in site.data.social.items %}
   	<a href={{ item.url | escape }} target={{ item.target }}>{{ item.title | escape }}</a>
