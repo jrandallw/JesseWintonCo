@@ -9,6 +9,7 @@ $base-font-weight: 400;
 $base-line-height: 2;
 $text-color: #222;
 $light-color: #fff;
+$border-color: #ddd;
 $dark-color: #222;
 
 // Width of the content areas
@@ -35,7 +36,8 @@ $break-medium: "screen and (max-width: 438px)";
 @import
 	"base",
 	"layout",
-	"home",
-	"grids",
+	"pages",
+  "structure",
+  "grids",
 	"fonts"
 ;

@@ -1,0 +1,21 @@
+// home
+.home-content {
+	background: #eee;
+	width: $full-viewport-width;
+	min-height: $full-viewport-height;
+}
+
+.description {
+	font-family: 'Young Serif' !important;
+	font-size: $base-font-size + 54px !important;
+  width: $full - 30%;
+  z-index: 1;
+  position: relative
+}
+
+@media #{$break-large} {
+	.home-content,
+	.hero {
+		width: 100% !important;
+	}
+}
