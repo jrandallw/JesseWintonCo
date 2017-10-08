@@ -2,12 +2,17 @@
 layout: default
 ---
 
-<section class="about-content column align-center position-relative">
+<section class="about-content column align-center grid-two-thirds position-relative">
   <div class="container">
-	<p class="text-left">{{ content }}</p>
+    {{ content }}
+    
+    <figure class="bio-image position-relative">
+      <img src="{{ page.bio_image }}">
+    </figure>
+
   </div>
 </section>
 
 <section class="about-hero hero position-relative">
-  <div class="column align-center"><h1>About Jesse Winton</h1></div>
+  <div class="column align-center"></div>
 </section>
