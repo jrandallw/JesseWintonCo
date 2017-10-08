@@ -2,15 +2,16 @@
 ---
 
 // Variables
-$base-font-family: 'Roboto Mono', sans-serif;
-$heading-font-family: 'Young Serif';
+$base-font-stack: 'Roboto Mono', 'Courier New', Courier, monospace;
+$heading-font-stack: 'Young Serif';
 $base-font-size: 12px;
 $base-font-weight: 400;
 $base-line-height: 2;
 $text-color: #222;
 $light-color: #fff;
 $border-color: #ddd;
-$dark-color: #222;
+$dark-color: #111;
+$gutter: 20px;
 
 // Width of the content areas
 $full: 100%;
