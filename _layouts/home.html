@@ -8,9 +8,12 @@ layout: default
   </div>
 </section>
 
-{% assign hero_image = "background: url(" | append: page.hero_image | append: ");" %}
 <section class="hero position-relative">
-    <figure class="column align-center" style="{{ hero_image }}"></figure>
+    <figure class="column align-center">
+      {% for asset in assets %}
+      <img src="{{ asset.url }}">
+      {% endfor %}
+    </figure>
 </section>
 
 <div class="color-layer" style="background-color: {{ page.layer_color }}"></div>
