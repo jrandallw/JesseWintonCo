@@ -26,6 +26,7 @@ defaults:
   values:
     permalink: "/about"
     layout: about
+    page_heading: ''
     bio_image: ''
 - scope:
     path: contact
