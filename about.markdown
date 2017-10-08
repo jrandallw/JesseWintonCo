@@ -4,6 +4,7 @@ date: 2017-10-08 02:27:00 Z
 permalink: "/about"
 position: 1
 is_nav_page: true
+bio_image: "/uploads/hero.jpg"
 layout: about
 ---
 
