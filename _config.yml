@@ -26,7 +26,6 @@ defaults:
   values:
     permalink: "/contact"
     layout: "contact"
-    contact_form:
 email: hi@jessewinton.co
 description: Official website of Jesse Winton. Actor, writer, and director studying
   in Sacramento.
