@@ -31,6 +31,16 @@
 	min-height: $full-viewport-height;
 }
 
-.about-hero h1 {
-	color: $light-color;
+.about-content .bio-image {
+	width: 300px;
+	margin: 120px auto 0 auto;
+}
+
+.about-content .bio-name {
+	font-size: 25px;
+	right: -50px;
+}
+
+.about-hero {
+	background: $light-color !important;
 }
