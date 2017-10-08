@@ -20,7 +20,8 @@ header {
     z-index: 10;
 
      a {
-    		font-size: $base-font-size + 2px;
+			font-size: $base-font-size - 2px;
+			text-transform: uppercase;
         letter-spacing: 1px;
     		color: #000;
         margin: 0 20px;

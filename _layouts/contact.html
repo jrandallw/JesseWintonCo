@@ -1,23 +1,13 @@
 ---
 layout: default
 ---
-
-<section class="contact-content column align-center position-relative">
-  <div class="container">
-	<form accept-charset="UTF-8" action="https://formkeep.com/f/2210291265c2" method="POST">
-        <input type="hidden" name="utf8" value="✓">
-      
-        <label for="email-address">Email Address</label>
-        <input type="email" id="email-address" name="email">
-      
-        <button type="submit">Submit</button>
-      </form>
-  </div>
-</section>
-
 {% assign hero_image = "background: url(" | append: page.hero_image | append: ");" %}
 <section class="hero position-relative">
     <figure class="column align-center" style="{{ hero_image }}"></figure>
 </section>
 
-<div class="color-layer" style="background-color: {{ page.layer_color }}"></div>
+<section class="home-content column align-center position-relative">
+  <div class="container">
+    {% include form.html %}
+  </div>
+</section>
