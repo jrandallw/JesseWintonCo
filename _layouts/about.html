@@ -2,8 +2,14 @@
 layout: default
 ---
 
-<section class="about-content column align-center grid-two-thirds position-relative">
+<section class="hero hero position-relative">
+  <div class="column align-center"><h4>{{ page.title }}</h4></div>
+</section>
+
+<section class="page-content about column align-center grid-one-half position-relative">
   <div class="container">
+    <h6>{{ page.page_heading }}</h6>
+
     {{ content }}
     
     <figure class="bio-image position-relative">
@@ -11,8 +17,4 @@ layout: default
     </figure>
 
   </div>
-</section>
-
-<section class="about-hero hero position-relative">
-  <div class="column align-center"></div>
 </section>

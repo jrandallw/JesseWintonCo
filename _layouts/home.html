@@ -2,15 +2,6 @@
 layout: default
 ---
 
-<section class="home-content column align-center position-relative">
-  <div class="container">
-	<p class="description text-left">{{ content | remove: '<p>' | remove: '</p>' }}</p>
-  </div>
+<section class="page-content home column align-center position-relative">
+	<h1 class="description text-left">{{ content | remove: '<p>' | remove: '</p>' }}</h1>
 </section>
-
-{% assign hero_image = "background: url(" | append: page.hero_image | append: ");" %}
-<section class="hero position-relative">
-    <figure class="column align-center" style="{{ hero_image }}"></figure>
-</section>
-
-<div class="color-layer" style="background-color: {{ page.layer_color }}"></div>

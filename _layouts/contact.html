@@ -2,13 +2,12 @@
 layout: default
 ---
 
-{% assign hero_image = "background: url(" | append: page.hero_image | append: ");" %}
 <section class="hero position-relative">
-    <figure class="column align-center" style="{{ hero_image }}"></figure>
+    <div class="column align-center"><h4>{{ page.title }}</h4></div>
 </section>
 
-<section class="home-content column align-center position-relative">
-  <div class="container">
+<section class="page-content column align-center grid-one-half position-relative">
+  <div class="container column align-center">
     {% include form.html %}
   </div>
 </section>

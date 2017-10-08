@@ -16,14 +16,14 @@ header {
 }
 
 .nav {
-		top: 1.4em;
+	top: 1.4em;
     z-index: 10;
 
-     a {
-			font-size: $base-font-size - 2px;
-			text-transform: uppercase;
+    a {
+		font-size: $base-font-size - 2px;
+		text-transform: uppercase;
         letter-spacing: 1px;
-    		color: #000;
+    	color: #000;
         margin: 0 20px;
     }
 }
@@ -34,16 +34,16 @@ header {
     width:  100%;
     left: 0;
     height: 300px;
-		z-index: -1;
-		background: $dark-color;
+	z-index: -1;
+	background: $dark-color;
 }
 
 .social a,
 .copyright {
-		font-family: 'Roboto Mono';
-		font-size: 10px;
+	font-family: 'Roboto Mono';
+	font-size: 10px;
     letter-spacing: 1px;
-		color: #000;
+	color: #000;
     border-bottom: 1px solid rgba(0,0,0,0);
 }
 

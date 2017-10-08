@@ -1,46 +1,142 @@
-// home
-.home-content {
-	background: #eee;
+.page-content {
+	background: $light-color;
 	width: $full-viewport-width;
 	min-height: $full-viewport-height;
-}
 
-.hero {
-	width: $half-viewport-width;
-}
+	//home	
+	&.home {
+		width: $full-viewport-width;
 
-.description {
-	font-family: 'Young Serif' !important;
-	font-size: $base-font-size + 54px !important;
-  width: $full - 30%;
-  z-index: 1;
-  position: relative
-}
+		.description {
+			font-family: 'Young Serif' !important;
+			font-size: $base-font-size + 54px !important;
+			  width: $full - 30%;
+			  z-index: 1;
+			  position: relative;
+		}
+	}
 
-@media #{$break-large} {
-	.home-content,
-	.hero {
-		width: 100% !important;
+	&.about {
+		.bio-image {
+			width: 300px;
+			margin: 100px auto 0 auto;
+		}
 	}
 }
 
-// about 
-.about-content {
-	background: $light-color;
-	width: $half-viewport-width;
-	min-height: $full-viewport-height;
+// contact
+.inquire-form {
+	width: $full;
 }
 
-.about-content .bio-image {
-	width: 300px;
-	margin: 120px auto 0 auto;
+.form-section {
+	margin-bottom: 20px;
 }
 
-.about-content .bio-name {
-	font-size: 25px;
-	right: -50px;
+.form-section:last-child {
+	margin: 0;
 }
 
-.about-hero {
-	background: $light-color !important;
+input,
+select,
+textarea {
+  border: 1px solid #DDDEE0;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0.6rem;
+  width: $full;
+  font-size: $base-font-size - 3px;
+  font-family: $base-font-stack;
+  letter-spacing: 1px;
+  background: transparent;
+  -webkit-appearance: none;
 }
+@media only screen and (min-width: 40.063em) {
+  input,
+  select,
+  textarea {
+    font-size: 10px;
+  }
+}
+input:active, input:focus,
+select:active,
+select:focus,
+textarea:active,
+textarea:focus {
+  border-color: black;
+  outline: none;
+  -webkit-appearance: none;
+}
+input::-webkit-input-placeholder,
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #A7AAA9;
+}
+input:-moz-placeholder,
+select:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #A7AAA9;
+}
+input::-moz-placeholder,
+select::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #A7AAA9;
+}
+input:-ms-input-placeholder,
+select:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #A7AAA9;
+}
+
+textarea {
+  resize: vertical;
+  line-height: 2;
+}
+
+select {
+  position: relative;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  color: #A7AAA9;
+}
+select.filled {
+  color: black;
+}
+
+.validetta-bubble {
+  display: block;
+  padding-top: 0.6rem;
+  padding-left: 0;
+  font-family: $base-font-stack;
+  font-size: 9px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.btn {
+	display: block;
+	padding: 0.9rem 1.2rem 0.8rem;
+	border: 2px solid white;
+	font-family: $base-font-stack;
+	font-size: $base-font-size - 1px;
+	line-height: $base-line-height - .4;
+	max-width: 200px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-decoration: none;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
+	color: white !important;
+	background: black;
+  }
+  .btn:hover {
+	border-color: black;
+  }
+  @media only screen and (min-width: 40.063em) {
+	.btn {
+	  font-size: 10px;
+	}
+  }
