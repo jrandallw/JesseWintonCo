@@ -5,7 +5,7 @@ permalink: "/about"
 position: 1
 is_nav_page: true
 bio_image: "/uploads/hero.jpg"
-page_heading: "I’m a writer, a designer. I make things."
+page_heading: I’m a writer, a designer. I make things.
 layout: about
 ---
 
