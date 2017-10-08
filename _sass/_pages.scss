@@ -5,6 +5,10 @@
 	min-height: $full-viewport-height;
 }
 
+.hero {
+	width: $half-viewport-width;
+}
+
 .description {
 	font-family: 'Young Serif' !important;
 	font-size: $base-font-size + 54px !important;
@@ -18,4 +22,11 @@
 	.hero {
 		width: 100% !important;
 	}
+}
+
+// about 
+.about-content {
+	background: #fff;
+	width: $half-viewport-width;
+	min-height: $full-viewport-height;
 }
