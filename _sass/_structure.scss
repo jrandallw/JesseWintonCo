@@ -1,8 +1,8 @@
 // layout
 .wrapper {
 	width: $full;
-	margin: 0 auto;
-	padding-bottom: 300px;
+	padding-bottom: $footer-height;
+	z-index: 1;
 }
 
 @media #{$break-large} {
@@ -18,7 +18,9 @@
 
 .hero {
 	width: $half-viewport-width;
-	
+	height: $full-viewport-height;
+	background: $dark-color;
+
 	h4 {
 		color: $light-color;
 	}

@@ -1,7 +1,11 @@
 .page-content {
 	background: $light-color;
 	width: $full-viewport-width;
-	min-height: $full-viewport-height;
+  min-height: $full-viewport-height;
+  
+  .page-heading {
+    margin-bottom: $gutter * 2;
+  }
 
 	//home	
 	&.home {
