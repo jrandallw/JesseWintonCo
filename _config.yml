@@ -20,27 +20,14 @@ defaults:
     type: posts
   values:
     permalink: "/journal/:title/"
-- scope:
-    path: ''
-    type: roles
+- scope: 
+    path: 'contact'
+    type: pages
   values:
-    role_info:
-      character: 
-      theatre: 
-      director: 
-      year: 
-      opening date: 
-      closing date: 
-- scope:
-    path: ''
-    type: photos
-  values:
-    photo_info:
-      photo: 
-      year: 
-      photographer: 
-      photographer_website: 
-email: info@jessewinton.co
+    permalink: "/contact"
+    layout: "contact"
+    contact_form:
+email: hi@jessewinton.co
 description: Official website of Jesse Winton. Actor, writer, and director studying
   in Sacramento.
 baseurl: 
