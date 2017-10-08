@@ -13,8 +13,8 @@ defaults:
     path: ''
     type: pages
   values:
-    is_nav_page: 
-    is_dark: 
+    is_nav_page:
+    is_dark:
 - scope:
     path: ''
     type: posts
@@ -25,27 +25,29 @@ defaults:
     type: roles
   values:
     role_info:
-      character: 
-      theatre: 
-      director: 
-      year: 
-      opening date: 
-      closing date: 
+      character:
+      theatre:
+      director:
+      year:
+      opening date:
+      closing date:
 - scope:
     path: ''
     type: photos
   values:
     photo_info:
-      photo: 
-      year: 
-      photographer: 
-      photographer_website: 
+      photo:
+      year:
+      photographer:
+      photographer_website:
 email: info@jessewinton.co
 description: Official website of Jesse Winton. Actor, writer, and director studying
   in Sacramento.
-baseurl: 
+baseurl:
 url: http://jessewinton.co
 twitter_username: jrandallw
 markdown: kramdown
 plugins:
 - jekyll-seo-tag
+sass:
+  style: compressed
