@@ -21,7 +21,7 @@ defaults:
   values:
     permalink: "/journal/:title/"
 - scope:
-    path: about
+    path: about.markdown
     type: pages
   values:
     permalink: "/about"
