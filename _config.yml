@@ -29,11 +29,12 @@ defaults:
     page_heading: ''
     bio_image: ''
 - scope:
-    path: contact
+    path: contact.markdown
     type: pages
   values:
     permalink: "/contact"
     layout: contact
+    page_heading: ''
 email: hi@jessewinton.co
 description: Official website of Jesse Winton. Actor, writer, and director studying
   in Sacramento.
