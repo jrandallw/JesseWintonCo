@@ -26,7 +26,11 @@
 
 // about 
 .about-content {
-	background: #fff;
+	background: $light-color;
 	width: $half-viewport-width;
 	min-height: $full-viewport-height;
+}
+
+.about-hero h1 {
+	color: $light-color;
 }

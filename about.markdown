@@ -7,6 +7,6 @@ is_nav_page: true
 layout: about
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend dui vitae ipsum rhoncus, et tincidunt tortor viverra. Nulla sed ornare neque. Praesent quis ipsum eu leo porttitor venenatis. Phasellus malesuada ultrices suscipit. Fusce ut posuere elit. Maecenas non porta velit. Maecenas condimentum quam sed mi facilisis, non maximus turpis sollicitudin. 
+I'm a writer, a designer. I make things. I'm a self-taught visual communicator with a specific focus on copywriting and communicative design. I love working closely with founders, small teams, and non-profits to help create the written or visual content that they need to build and grow. Sure, I work by myself, but that allows a pure collaboration between you and me, providing an atmosphere for producing great work.  
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend dui vitae ipsum rhoncus, et tincidunt tortor viverra.
+I provide strategy, branding, design, writing, art direction, film, and photography services. 
