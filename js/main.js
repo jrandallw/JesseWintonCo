@@ -3,7 +3,7 @@ Filename: main.js
 */
 
 // animation
-$(document).ready(function(){var t=new TimelineMax;t.from(".hero",.5,{opacity:0},0).from(".description",.5,{opacity:0},0)});
+$(document).ready(function(){var t=new TimelineMax;t.from(".description",.5,{opacity:0},0)});
 
 // contact form ajax
 $(function() {
