@@ -1,16 +1,18 @@
 // header
 header {
 	top: 30px;
-	width: $full - 20%;
+	width: $half;
+	right: 0;
 
 	.branding {
 		position: relative;
 		z-index: 1000;
 
 		.name {
-    	width: 130px;
-    	text-align: center;
-    	line-height: 1.3;
+    		width: 130px;
+    		text-align: center;
+			line-height: 1.3;
+			margin: 0 auto;
 		}
 	}
 }
