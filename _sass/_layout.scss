@@ -17,6 +17,12 @@ header {
 	}
 }
 
+@media #{$break-medium} {
+    .header {
+        width: $full;
+    }
+}
+
 .nav {
 	top: 1.4em;
     z-index: 10;

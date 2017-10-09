@@ -7,13 +7,19 @@
 
 @media #{$break-large} {
     .wrapper {
-        flex-direction: column;
+		flex-direction: column;
     }
 }
 
 .container {
 	width: $full - 60%;
 	margin: 0 auto;
+}
+
+@media #{$break-medium} {
+    .container {
+        width: $full - 20%;
+    }
 }
 
 .hero {
@@ -24,6 +30,12 @@
 	h4 {
 		color: $light-color;
 	}
+}
+
+@media #{$break-medium} {
+    .hero {
+        width: $full-viewport-width;
+    }
 }
 
 // border classes
