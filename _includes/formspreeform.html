@@ -1,5 +1,19 @@
-<form action="https://formspree.io/hi@jessewinton.co" method="POST">
-    <input type="text" name="name">
-    <input type="email" name="_replyto">
-    <input type="submit" value="Send">
- </form>
+<form action="https://formspree.io/{{ site.email }}" method="POST" class="inquire-form">
+  <h6 class="page-heading">{{ page.page_heading }}</h6>
+  <input type="text" name="_gotcha" style="display:none" />
+  <div class="form-section">
+    <input type="text" id="company-contact" placeholder="Your Name" name="name">
+  </div>
+  <div class="form-section">
+    <input type="text" id="company-email" placeholder="Your Email Address" name="email">
+  </div>
+  <div class="form-section">
+    <input type="text" id="company-name" placeholder="Who You Work With" name="company-name">
+  </div>
+  <div class="form-section">
+    <textarea id="project-overview" placeholder="What is the purpose of your project? What goals are you looking to achieve through your project? What kind of services do you need?" rows="5" name="project-overview"></textarea>
+  </div>
+  <div class="form-section form-actions">
+    <p><input type="submit" value="Let's Talk" class="btn"></p>
+  </div>
+</form>
