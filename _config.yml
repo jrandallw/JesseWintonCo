@@ -15,6 +15,7 @@ defaults:
   values:
     is_nav_page: 
     is_dark: 
+    is_split:
 - scope:
     path: ''
     type: posts
