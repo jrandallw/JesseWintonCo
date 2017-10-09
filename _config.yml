@@ -1,6 +1,7 @@
 ---
 title: Jesse Winton
 timezone: UTC
+anayltics_id: 
 collections:
   posts:
     title: Posts
@@ -15,7 +16,7 @@ defaults:
   values:
     is_nav_page: 
     is_dark: 
-    is_split: 
+    is_split:
 - scope:
     path: ''
     type: posts
