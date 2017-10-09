@@ -1,7 +1,6 @@
 ---
 title: Jesse Winton
 timezone: UTC
-anayltics_id: 'UA-107682340-1'
 collections:
   posts:
     title: Posts
@@ -44,6 +43,8 @@ description: Official website of Jesse Winton. Actor, writer, and director study
 baseurl: 
 url: http://jessewinton.co
 twitter_username: jrandallw
+google_analytics:
+  tracking_id: UA-107682340-1
 markdown: kramdown
 plugins:
 - jekyll-seo-tag
