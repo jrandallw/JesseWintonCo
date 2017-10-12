@@ -28,7 +28,7 @@ defaults:
     path: ''
     type: work
   values:
-    permalink: "work/:title/"
+    permalink: work/:title/
     layout: projects
     general:
       client: 
