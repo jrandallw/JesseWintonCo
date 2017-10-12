@@ -1,9 +1,9 @@
-<footer class="footer row align-center position-fixed">
+<footer class="footer {% if page.is_split == true %}split{% endif %} row align-center position-absolute">
   <nav class="social grid-one-half">
   	{% for item in site.data.social.items %}
   	<a href={{ item.url | escape }} target={{ item.target }}>{{ item.title | escape }}</a>
   	{% endfor %}
   </nav>
 
-  <h6 class="copyright grid-one-half text-right">&copy;2011-{{ 'now' | date: "%Y" }} Jesse Winton</h6>
+  <h6 class="copyright grid-one-half text-right">&copy; 2011-{{ 'now' | date: "%Y" }} Jesse Winton</h6>
 </footer>

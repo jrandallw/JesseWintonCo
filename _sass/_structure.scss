@@ -1,7 +1,6 @@
 // layout
 .wrapper {
 	width: $full;
-	padding-bottom: $footer-height;
 	z-index: 1;
 }
 
@@ -12,7 +11,7 @@
 }
 
 .container {
-	width: $full - 60%;
+	width: $full - 25%;
 	margin: 0 auto;
 }
 
@@ -23,12 +22,17 @@
 }
 
 .hero {
-	width: $one-third;
+	width: $half-viewport-width;
 	height: $full-viewport-height;
 	background: $dark-color;
 
 	h4 {
 		color: $light-color;
+		text-transform: uppercase;
+	}
+	
+	.name {
+		width: 130px;
 	}
 }
 

@@ -1,6 +1,6 @@
 .page-content {
 	background: $light-color;
-	width: $two-thirds;
+	width: $half;
   min-height: $full-viewport-height;
   
   .page-heading {
@@ -9,17 +9,16 @@
 
 	//home	
 	&.home {
-		width: $full-viewport-width;
-
 		.description {
 			font-family: $heading-font-stack !important;
-			font-size: $base-font-size + 54px;
+			font-size: $base-font-size + 20px;
 			width: $full - 30%;
-			z-index: 1;
+      z-index: 1;
       position: relative;
+      margin: 0 auto;
       line-height: $base-line-height - .6;
 		}
-	}
+  }
 
 @media #{$break-medium} {
   .description {
@@ -28,6 +27,11 @@
 }
 
 	&.about {
+
+    .container {
+      width: $half;
+    }
+
 		.bio-image {
 			width: 300px;
 			margin: 100px auto 0 auto;

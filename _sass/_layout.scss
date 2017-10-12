@@ -5,7 +5,7 @@ header {
 	width: $full;
 
 	&.split {
-		width: $two-thirds;
+		width: $half;
 	}
 
 	.branding {
@@ -44,12 +44,16 @@ header {
 .footer {
     bottom: 0;
     width:  100%;
-    left: 0;
+    right: 0;
     height: $footer-height;
-	z-index: -1;
-	padding: 0 $gutter;
+	z-index: 1;
+	padding: 0 $gutter * 3;
 	box-sizing: $border-box;
 	background: $light-color;
+
+	&.split {
+		width: $half;
+	}
 }
 
 .social a,
