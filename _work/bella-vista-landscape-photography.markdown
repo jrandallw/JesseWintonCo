@@ -1,7 +1,6 @@
 ---
 title: Bella Vista Landscape Photography
 date: 2017-10-12 18:48:00 Z
-permalink: "/work/bella-vista-landscape-photography"
 general:
   client: Bella Vista Landscape
   project_year: 2017
