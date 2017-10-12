@@ -30,7 +30,9 @@ defaults:
   values:
     permalink: work/:title/
     general:
-      project_year: 
+      client:
+      project_year:
+      project_url: 
       credits:
         branding: 
         design: 
