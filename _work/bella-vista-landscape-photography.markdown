@@ -8,5 +8,6 @@ general:
     photography: Jesse Winton
 services:
   is_photography: true
+layout: projects
 ---
 
