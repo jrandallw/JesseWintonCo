@@ -1,6 +1,6 @@
 .page-content {
 	background: $light-color;
-	width: $full-viewport-width;
+	width: $two-thirds;
   min-height: $full-viewport-height;
   
   .page-heading {
@@ -12,13 +12,20 @@
 		width: $full-viewport-width;
 
 		.description {
-			font-family: 'Young Serif' !important;
-			font-size: $base-font-size + 54px !important;
-			  width: $full - 30%;
-			  z-index: 1;
-			  position: relative;
+			font-family: $heading-font-stack !important;
+			font-size: $base-font-size + 54px;
+			width: $full - 30%;
+			z-index: 1;
+      position: relative;
+      line-height: $base-line-height - .6;
 		}
 	}
+
+@media #{$break-medium} {
+  .description {
+    font-size: $base-font-size + 13px !important;
+  }
+}
 
 	&.about {
 		.bio-image {
