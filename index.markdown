@@ -5,7 +5,6 @@ position: 0
 is_nav_page: false
 is_split: true
 hero_image: "/uploads/hero.jpg"
-layer_color: "#b29f77"
 layout: home
 ---
 
