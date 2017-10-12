@@ -27,16 +27,16 @@ defaults:
 - scope:
     path: ''
     type: work
-  values: 
-    permalink: "work/:title/"
+  values:
+    permalink: work/:title/
     services:
-      is_strategy:
-      is_branding:
-      is_design:
-      is_writing:
-      is_art_direction:
-      is_film:
-      is_photography:
+      is_strategy: 
+      is_branding: 
+      is_design: 
+      is_writing: 
+      is_art_direction: 
+      is_film: 
+      is_photography: 
 - scope:
     path: about.markdown
     type: pages
