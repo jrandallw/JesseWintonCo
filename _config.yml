@@ -25,6 +25,12 @@ defaults:
   values:
     permalink: "/journal/:title/"
 - scope:
+    path: ''
+    type: work
+  values: 
+    permalink: "work/:title/"
+    is_open:    
+- scope:
     path: about.markdown
     type: pages
   values:
