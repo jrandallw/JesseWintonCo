@@ -28,14 +28,14 @@ defaults:
     path: ''
     type: work
   values:
-    permalink: "work/:title/"
+    permalink: work/:title/
     general:
-      project_year:
+      project_year: 
       credits:
-        branding:
-        design:
-        film:
-        photography:
+        branding: 
+        design: 
+        film: 
+        photography: 
     services:
       is_strategy: 
       is_branding: 
