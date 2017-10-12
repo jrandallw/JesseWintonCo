@@ -30,6 +30,12 @@ defaults:
     page_heading: ''
     bio_image: ''
 - scope:
+    path: work.markdown
+    type: pages
+  values:
+    permalink: "/work"
+    layout: work   
+- scope:
     path: contact.markdown
     type: pages
   values:
