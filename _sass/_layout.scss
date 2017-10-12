@@ -1,8 +1,12 @@
 // header
 header {
 	top: 30px;
-	width: $half;
 	right: 0;
+	width: $full;
+
+	&.split {
+		width: $two-thirds;
+	}
 
 	.branding {
 		position: relative;
