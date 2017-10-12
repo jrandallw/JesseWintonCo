@@ -34,7 +34,7 @@ defaults:
     type: pages
   values:
     permalink: "/work"
-    layout: work   
+    layout: work
 - scope:
     path: contact.markdown
     type: pages
