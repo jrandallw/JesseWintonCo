@@ -2,7 +2,7 @@
 title: About
 date: 2017-10-08 02:27:00 Z
 permalink: "/about"
-position: 1
+position: 2
 is_nav_page: true
 is_split: true
 page_heading: I’m a writer, a designer. I make things.
