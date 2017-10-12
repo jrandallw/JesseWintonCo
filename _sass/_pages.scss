@@ -20,14 +20,13 @@
 		}
   }
 
-@media #{$break-medium} {
-  .description {
-    font-size: $base-font-size + 13px !important;
+  @media #{$break-medium} {
+    .description {
+      font-size: $base-font-size + 13px !important;
+    }
   }
-}
 
 	&.about {
-
     .container {
       width: $half;
     }
@@ -36,7 +35,11 @@
 			width: 300px;
 			margin: 100px auto 0 auto;
 		}
-	}
+  }
+  
+  &.work {
+    width: $full;
+  }
 }
 
 // contact
