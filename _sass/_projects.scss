@@ -1,0 +1,42 @@
+.project-overview {
+    width: $full;
+    position: absolute;
+    top: 0;
+    background: $secondary-light-color;
+    height: 650px;
+    z-index: -1;
+
+    .container {
+        max-width: $half;
+    }
+
+    .intro,
+    .credits {
+        flex: 0 0 calc(50% - #{$gutter * 2});
+    }
+
+    .credits {
+        margin-left: auto;
+    }
+
+    .heading {
+        font-size: $base-font-size;
+        font-family: $base-font-stack;
+        font-weight: $font-weight-medium;
+        text-transform: uppercase;
+        margin-bottom: $gutter;
+    }
+
+    .project-link {
+        display: block;
+        margin-top: $gutter;
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+.project-content {
+    background: $light-color;
+    width: $full;
+    min-height: $footer-height;
+}

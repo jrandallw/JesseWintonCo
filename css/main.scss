@@ -7,8 +7,10 @@ $heading-font-stack: 'Young Serif';
 $base-font-size: 12px;
 $base-font-weight: 400;
 $base-line-height: 2;
+$font-weight-medium: 500;
 $text-color: #222;
 $light-color: #fff;
+$secondary-light-color: #eee;
 $border-color: #ddd;
 $dark-color: #111;
 $footer-height: 100px;
@@ -44,7 +46,8 @@ $break-medium: "screen and (max-width: 438px)";
 @import
 	"base",
 	"layout",
-	"pages",
+  "pages",
+  "projects",
   "structure",
   "grids",
 	"fonts"

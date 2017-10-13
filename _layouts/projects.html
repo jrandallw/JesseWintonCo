@@ -2,14 +2,33 @@
 layout: default
 ---
 
-<section class="project-overview">
-  <div class="container">
-    <article class="intro grid-one-half">
-      {{ content | remove: '<p>' | remove: '</p>' }}
-    </article>
+<section class="project-overview row align-center">
+  <div class="container row">
+    <div class="intro grid-one-half">
+      <h6 class="heading">{{ page.general.client }}</h6>
 
-    <article class="credits grid-one-half">
-        
-      </article>
+      {{ page.content | remove: '<p>' | remove: '</p>' }}
+
+      <a href="{{ page.general.project_url }}" target="_blank" class="project-link">{{ page.general.project_url_label }}</a>
+    </div>
+
+    <div class="credits grid-one-half">
+      <h6 class="heading">Services</h6>   
+      
+      <ul class="services">
+        {% if page.services.is_strategy == true %}<li>Strategy</li>{% endif %}
+        {% if page.services.is_branding == true %}<li>Branding</li>{% endif %}
+        {% if page.services.is_design == true %}<li>Design</li>{% endif %}
+        {% if page.services.is_writing == true %}<li>Writing</li>{% endif %}
+        {% if page.services.is_art_direction == true %}<li>Art Direction</li>{% endif %}
+        {% if page.services.is_film == true %}<li>Film</li>{% endif %}
+        {% if page.services.is_photography == true %}<li>Photography</li>{% endif %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="project-content">
+  <div class="container">
   </div>
 </section>

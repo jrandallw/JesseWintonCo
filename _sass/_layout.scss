@@ -3,6 +3,11 @@ header {
 	top: 30px;
 	right: 0;
 	width: $full;
+	position: absolute;
+	
+	.template-work-post & {
+		position: fixed;
+	}
 
 	&.split {
 		width: $half;
@@ -39,7 +44,7 @@ header {
 		font-size: $base-font-size - 2px;
 		text-transform: uppercase;
         letter-spacing: 1px;
-    	color: #000;
+    	color: $text-color;
         margin: 0 20px;
     }
 }

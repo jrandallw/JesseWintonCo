@@ -33,7 +33,8 @@ defaults:
     layout: projects
     general:
       client: 
-      project_year: 
+      project_year:
+      project_url_label: 
       project_url: 
       credits:
         branding: 
@@ -48,6 +49,11 @@ defaults:
       is_art_direction: 
       is_film: 
       is_photography: 
+    photos:
+      full_width_image:
+      center_image:
+      split_left_image:
+      split_right_image:
 - scope:
     path: about.markdown
     type: pages
