@@ -39,4 +39,8 @@
     background: $light-color;
     width: $full;
     min-height: $footer-height;
+
+    .container {
+        max-width: $half;
+    }
 }

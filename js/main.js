@@ -6,26 +6,11 @@ Filename: main.js
 $(document).ready(function(){var t=new TimelineMax;t.from(".description",.5,{opacity:0},0)});
 
 // formkeep ajax
-$(function() {
-  $('.inquire-form').submit(function(event) {
-    event.preventDefault();
-    var formEl = $(this);
-    var submitButton = $('input[type=submit]', formEl);
-  
-    $.ajax({
-      type: 'POST',
-      url: formEl.prop('action'),
-      accept: {
-        javascript: 'application/javascript'
-      },
-      data: formEl.serialize(),
-      beforeSend: function() {
-        submitButton.prop('disabled', 'disabled');
-      }
-    }).done(function(data) {
-      submitButton.prop('disabled', false);
-    });
-  });
+$.ajax({
+  url: "https://formspree.io/hi@jessewinton.co", 
+  method: "POST",
+  data: $('.inquire-form').serialize(),
+  dataType: "json"
 });
 
 

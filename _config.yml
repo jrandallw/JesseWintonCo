@@ -3,7 +3,7 @@ title: Jesse Winton
 timezone: UTC
 collections:
   posts:
-    title: Posts
+    title: Journal
     output: true
   work:
     title: Projects
@@ -21,7 +21,7 @@ defaults:
     is_dark: 
     is_split: 
 - scope:
-    path: ''
+    path: 'journal'
     type: posts
   values:
     permalink: "/journal/:title/"
