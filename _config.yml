@@ -2,10 +2,6 @@
 title: Jesse Winton
 timezone: UTC
 collections:
-  journal:
-    title: Posts
-    output: true
-    permalink: journal/:path
   posts:
     title: Posts
     output: true
