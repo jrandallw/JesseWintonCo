@@ -5,6 +5,7 @@ collections:
   posts:
     title: Journal
     output: true
+    permalink: "/journal/:path/"
   work:
     title: Projects
     output: true
@@ -21,10 +22,8 @@ defaults:
     is_dark: 
     is_split: 
 - scope:
-    path: journal
+    path: ''  
     type: posts
-  values:
-    permalink: "/journal/:title/"
 - scope:
     path: ''
     type: work
