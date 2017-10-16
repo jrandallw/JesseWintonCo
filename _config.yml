@@ -5,6 +5,7 @@ collections:
   journal:
     title: Posts
     output: true
+    permalink: journal/:title/
   posts:
     title: Posts
     output: true
