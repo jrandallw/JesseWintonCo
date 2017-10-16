@@ -21,7 +21,7 @@ defaults:
     is_dark: 
     is_split: 
 - scope:
-    path: 'journal'
+    path: journal
     type: posts
   values:
     permalink: "/journal/:title/"
