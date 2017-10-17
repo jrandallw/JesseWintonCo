@@ -24,7 +24,7 @@ defaults:
     path: ''
     type: posts
   values:
-    permalink: "/journal/:path/"
+    permalink: "/journal/:title/"
     layout: entries
 - scope:
     path: ''
