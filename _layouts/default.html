@@ -4,7 +4,7 @@
   {% include head.html %}
 
   <body class="template-{{ page.collection }}-post">
-    <main class="wrapper row align-center position-relative" role="main">
+    <main class="wrapper {% if page.is_split == true %}row{% else %}column{% endif %} align-center position-relative" role="main">
       {% include header.html %}
       {{ content }}
       {% include footer.html %}
