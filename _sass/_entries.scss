@@ -1,0 +1,31 @@
+.entries-overview {
+    width: $full;
+    position: relative;
+    top: 0;
+    background: $dark-color;
+    height: $half-viewport-height;
+    z-index: -1;
+
+    .title {
+        color: $light-color;
+        font-family: $heading-font-stack;
+    }
+
+    .date-time {
+        color: $light-color;
+        font-family: $base-font-stack;
+        font-size: $base-font-size;
+    }
+}
+
+.entry-content {
+    background: $light-color;
+    max-width: $full - 20%;
+    width: $full;
+    min-height: $footer-height;
+
+    .container {
+        padding: $gutter * 3 0;
+        max-width: $half - 10%;
+    }
+}

@@ -63,6 +63,11 @@ header {
 	&.split {
 		width: $half;
 	}
+
+	.template-posts-post & {
+		max-width: $full - 20%;
+		position: relative;
+	}
 }
 
 .social a,
