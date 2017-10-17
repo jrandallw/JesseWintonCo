@@ -25,6 +25,7 @@ defaults:
     type: posts
   values:
     permalink: "/journal/:path/"
+    layout: entries
 - scope:
     path: ''
     type: work
