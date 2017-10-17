@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="template-{{ page.collection }}-post">
+  <body {% if layout.class %}class="template-{{ layout.class }}-post"{% endif %}>
     <main class="wrapper {% if page.is_split == true %}row{% else %}column{% endif %} align-center position-relative" role="main">
       {% include header.html %}
       {{ content }}

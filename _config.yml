@@ -89,3 +89,4 @@ plugins:
 - jekyll-seo-tag
 sass:
   style: compressed
+permalinks: pretty
