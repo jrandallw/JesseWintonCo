@@ -10,6 +10,8 @@ general:
     photography: Jesse Winton
 services:
   is_photography: true
+photos:
+  full_width_image: "/uploads/hero.jpg"
 layout: projects
 ---
 
