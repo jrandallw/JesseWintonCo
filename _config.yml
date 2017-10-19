@@ -90,4 +90,4 @@ plugins:
 sass:
   style: compressed
 permalinks: pretty
-seo_profile_image: 
+seo_profile_image: "/uploads/profile.jpg"
