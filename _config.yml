@@ -91,4 +91,8 @@ sass:
   style: compressed
 permalinks: pretty
 seo_profile_image:
-
+social:
+  facebook:
+  twitter: 
+  instagram:
+  dribbble:
