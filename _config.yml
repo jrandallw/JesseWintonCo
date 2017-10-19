@@ -90,9 +90,9 @@ plugins:
 sass:
   style: compressed
 permalinks: pretty
-seo_profile_image:
+seo_profile_image: 
 social:
-  facebook:
+  facebook: 
   twitter: 
-  instagram:
-  dribbble:
+  instagram: 
+  dribbble: 
