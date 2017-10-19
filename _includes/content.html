@@ -1,7 +1,7 @@
 {% for block in page.project_content %}
 <div class="{{ block.type }} content-block">
 {% case block.type %}
-{% when 'full-width-image' %}
+{% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
   <img src="{{ block.image }}">
 {% when 'text' %}
   {{ block.body | markdownify }}
