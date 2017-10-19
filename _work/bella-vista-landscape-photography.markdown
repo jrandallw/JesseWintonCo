@@ -30,4 +30,4 @@ project_content:
 layout: projects
 ---
 
-Partnering with Bella Vista Landscape, I produced a series of shots of their new landscape remodel at the La Salle Apartments in Davis, CA. Building a new courtyard, planting new plants, and building out a river bed that stretched throughout the entire complex, I helped the capture the essence of their new, modern design. 
+Partnering with Bella Vista Landscape, I produced a series of shots of their landscape remodel at La Salle Apartments, Davis, CA. When they completed the process of building a new courtyard, planting new plants, and building out a river bed that stretched throughout the entire complex, I helped the capture the essence of their new, modern design. 
