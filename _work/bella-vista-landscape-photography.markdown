@@ -10,11 +10,11 @@ services:
   is_photography: true
 project_content:
 - type: center-image
-  image: "/uploads/5D1_8907.jpg"
+  image: "/uploads/lasalle-1.jpg"
 - type: split-image-left
-  image: "/uploads/5D1_8699.jpg"
+  image: "/uploads/lasalle-2.jpg"
 - type: split-image-right
-  image: "/uploads/5D1_8610.jpg"
+  image: "/uploads/lasalle-3.jpg"
 layout: projects
 ---
 
