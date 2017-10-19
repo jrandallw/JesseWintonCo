@@ -85,8 +85,12 @@ twitter_username: jrandallw
 google_analytics:
   tracking_id: UA-107682340-1
 markdown: kramdown
+<<<<<<< HEAD
 plugins:
 - jekyll-sitemap
+=======
+plugins: 
+>>>>>>> 517501a956328ed20c235646e6e2ebc842db4aec
 sass:
   style: compressed
 permalinks: pretty
