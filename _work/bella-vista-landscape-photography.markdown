@@ -11,6 +11,8 @@ services:
 project_content:
 - type: center-image
   image: "/uploads/5D1_8907.jpg"
+- type: split-image-left
+  image: "/uploads/5D1_8699.jpg"
 layout: projects
 ---
 
