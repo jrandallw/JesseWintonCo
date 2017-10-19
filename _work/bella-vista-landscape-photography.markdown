@@ -11,7 +11,6 @@ general:
 services:
   is_photography: true
 project_content:
-  full_width_image: "/uploads/hero.jpg"
 layout: projects
 ---
 

@@ -51,10 +51,8 @@ defaults:
       is_film: 
       is_photography: 
     project_content:
-      full_width_image: 
-      center_image: 
-      split_left_image: 
-      split_right_image: 
+      - type: full_width_image
+        image: 
 - scope:
     path: about.markdown
     type: pages
