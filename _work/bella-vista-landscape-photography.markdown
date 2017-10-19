@@ -11,8 +11,12 @@ general:
 services:
   is_photography: true
 project_content:
-- type: center-image
-  image: "/uploads/5D1_8610.jpg"
+- type: full-width-image
+  image: "/uploads/hero.jpg"
+- type: text
+  body: This is another test content block.
+- type: text
+  body: text two.  
 layout: projects
 ---
 
