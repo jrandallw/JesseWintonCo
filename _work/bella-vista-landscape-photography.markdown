@@ -13,8 +13,6 @@ services:
 project_content:
 - type: center-image
   image: "/uploads/5D1_8907.jpg"
-- type: text
-  body: This is another test content block.
 layout: projects
 ---
 
