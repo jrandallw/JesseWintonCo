@@ -50,9 +50,9 @@ defaults:
       is_art_direction: 
       is_film: 
       is_photography: 
-    project_content: 
+    project_content:
     - type: full-width-image
-      image:
+      image: 
     - type: text
       body: 
 - scope:
