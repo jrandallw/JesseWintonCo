@@ -51,11 +51,6 @@ defaults:
       is_film: 
       is_photography: 
     project_content:
-<<<<<<< HEAD
-=======
-    - type: full_width_image
-      image: 
->>>>>>> 0bfd2f6cf11d0baf2d3b2b4d905d6007dcc64fd0
 - scope:
     path: about.markdown
     type: pages
