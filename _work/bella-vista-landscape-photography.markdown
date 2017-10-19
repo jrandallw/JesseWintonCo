@@ -18,4 +18,4 @@ project_content:
 layout: projects
 ---
 
-I partnered with Bella Vista Landscape Services to produce shots of their recent remodel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec quam dui. Nullam lacinia nisl at porttitor cursus. Nulla sed velit venenatis, aliquet libero at, vulputate purus. Nunc tempor lorem a turpis interdum, sit amet feugiat tellus imperdiet.
+Par
