@@ -12,6 +12,7 @@ services:
   is_photography: true
 photos:
   full_width_image: "/uploads/hero.jpg"
+  text_content: this is block two!
 layout: projects
 ---
 
