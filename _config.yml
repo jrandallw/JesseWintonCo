@@ -90,3 +90,5 @@ plugins:
 sass:
   style: compressed
 permalinks: pretty
+seo_profile_image:
+
