@@ -16,7 +16,7 @@ project_content:
 - type: text
   body: This is another test content block.
 - type: text
-  body: text two.  
+  body: text two.
 layout: projects
 ---
 
