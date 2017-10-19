@@ -13,6 +13,8 @@ project_content:
   image: "/uploads/5D1_8907.jpg"
 - type: split-image-left
   image: "/uploads/5D1_8699.jpg"
+- type: split-image-right
+  image: "/uploads/5D1_8610.jpg"
 layout: projects
 ---
 
