@@ -15,6 +15,8 @@ project_content:
   image: "/uploads/lasalle-2.jpg"
 - type: split-image-right
   image: "/uploads/lasalle-3.jpg"
+- type: center-image
+  image: "/uploads/lasalle-4.jpg"
 layout: projects
 ---
 
