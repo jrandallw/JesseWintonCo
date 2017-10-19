@@ -1,0 +1,29 @@
+{% for photo in page.project_content.full_width_image %}
+<div class="fullwidth-image content-block">
+  <img src="{{ photo }}">
+</div>
+{% endfor %}
+
+{% for photo in page.project_content.center_image %}
+<div class="center-image content-block">
+<img src="{{ photo }}">
+</div>
+{% endfor %}
+
+{% for photo in page.project_content.split_left_image %}
+<div class="split-image-left content-block">
+<img src="{{ photo }}">
+</div>
+{% endfor %}
+
+{% for photo in page.project_content.split_right_image %}
+<div class="split-image-right content-block">
+<img src="{{ photo }}">
+</div>
+{% endfor %}
+
+{% for content in page.project_content.text_content %}
+<div class="text-block content-block">
+  {{ content }}
+</div>
+{% endfor %}

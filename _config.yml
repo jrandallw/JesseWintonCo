@@ -50,7 +50,7 @@ defaults:
       is_art_direction: 
       is_film: 
       is_photography: 
-    photos:
+    project_content:
       full_width_image: 
       center_image: 
       split_left_image: 

@@ -10,9 +10,8 @@ general:
     photography: Jesse Winton
 services:
   is_photography: true
-photos:
+project_content:
   full_width_image: "/uploads/hero.jpg"
-  text_content: this is block two!
 layout: projects
 ---
 

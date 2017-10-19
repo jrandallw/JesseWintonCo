@@ -3,7 +3,7 @@
     position: absolute;
     top: 0;
     background: $secondary-light-color;
-    height: 650px;
+    height: $project-overview;
     z-index: -1;
 
     .container {
@@ -38,9 +38,47 @@
 .project-content {
     background: $light-color;
     width: $full;
+    padding: $gutter * 2 0;
+    margin-top: $project-overview;
+    margin-bottom: $footer-height;
     min-height: $footer-height;
 
     .container {
         max-width: $half;
+    }
+
+    .content-block {
+        margin: $gutter auto;
+    }
+
+    .fullwidth-image img {
+        width: 100%;
+    }
+
+    .center-image img {
+        margin: 0 auto;
+    }
+
+    .split-image-left,
+    .split-image-right {
+        width: 100%;
+        background: $dark-color;
+    }
+
+    .split-image-left::after,
+    .split-image-right::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .split-image-left img {
+        float: left;
+        width: $half;
+    }
+
+    .split-image-right img {
+        float: right;
+        width: $half;
     }
 }
