@@ -15,8 +15,6 @@ project_content:
   image: "/uploads/hero.jpg"
 - type: text
   body: This is another test content block.
-- type: text
-  body: text two.
 layout: projects
 ---
 
