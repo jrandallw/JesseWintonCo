@@ -13,6 +13,8 @@ services:
 project_content:
 - type: full-width-image
   image: "/uploads/hero.jpg"
+- type: center-image
+  image: "/uploads/5D1_8610.jpg"
 layout: projects
 ---
 
