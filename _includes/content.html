@@ -1,5 +1,10 @@
-{% for item in page.project_content %}
-<div class="{{ item.type }} content-block">
-  <img src="{{ item.image }}">
+{% for block in page.project_content %}
+<div class="{{ block.type }} content-block">
+{% case block.type %}
+{% when 'full-width-image' %}
+  <img src="{{ block.image }}">
+{% when 'text' %}
+  {{ block.body | markdownify }}
+{% endcase %}
 </div>
 {% endfor %}
