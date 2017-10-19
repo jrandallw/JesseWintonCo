@@ -19,6 +19,14 @@ project_content:
   image: "/uploads/lasalle-4.jpg"
 - type: center-image
   image: "/uploads/lasalle-5.jpg"
+- type: split-image-left
+  image: "/uploads/lasalle-6.jpg"
+- type: center-image
+  image: "/uploads/lasalle-7.jpg"
+- type: split-image-right
+  image: "/uploads/lasalle-8.jpg"
+- type: split-image-left
+  image: "/uploads/lasalle-9.jpg"
 layout: projects
 ---
 
