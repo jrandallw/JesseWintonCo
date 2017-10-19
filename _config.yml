@@ -51,6 +51,10 @@ defaults:
       is_film: 
       is_photography: 
     project_content: 
+    - type: full-width-image
+      image:
+    - type: text
+      body: 
 - scope:
     path: about.markdown
     type: pages
