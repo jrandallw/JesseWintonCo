@@ -10,7 +10,7 @@ general:
     photography: Jesse Winton
 services:
   is_photography: true
-project_content:
+project_content: 
 layout: projects
 ---
 
