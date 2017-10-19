@@ -1,10 +1,13 @@
 items:
 - title: Facebook
-  url: https://facebook.com/jrandallw
+  url: https://facebook.com/jessewinton
   target: "_blank"
 - title: Twitter
   url: https://twitter.com/jrandallw
   target: "_blank"
 - title: Instagram
   url: https://www.instagram.com/jrandallwinton  
+  target: "_blank"
+- title: Dribbble
+  url: https://www.dribbble.com/jrandallw 
   target: "_blank"
