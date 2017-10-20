@@ -3,7 +3,7 @@
     position: absolute;
     top: 0;
     background: $secondary-light-color;
-    height: $project-overview;
+    min-height: $project-overview;
     z-index: -1;
 
     .container {
@@ -32,6 +32,26 @@
         margin-top: $gutter;
         color: $text-color;
         text-decoration: underline;
+    }
+
+    @media #{$break-medium} {
+        & {
+            height: $full-viewport-height;
+        }
+
+        & .container {
+            max-width: $full - 10%;
+            width: $full - 10%;
+            flex-direction: column;
+
+            .credits {
+                margin: $gutter 0 0 0;
+            }
+
+            .content-block {
+                margin: $gutter * 3 auto;
+            }
+        }
     }
 }
 
@@ -80,5 +100,16 @@
     .split-image-right img {
         float: right;
         width: $half;
+    }
+
+    @media #{$break-medium} {
+        & .container {
+            max-width: $full;
+            width: $full;
+
+            .content-block {
+                margin: $gutter * 3 auto;
+            }
+        }
     }
 }

@@ -86,7 +86,7 @@ google_analytics:
   tracking_id: UA-107682340-1
 markdown: kramdown
 plugins:
-- jekyll-sitemap
+
 sass:
   style: compressed
 permalinks: pretty
