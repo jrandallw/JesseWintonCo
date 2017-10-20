@@ -11,6 +11,7 @@ project_content:
 - type: split-image-right
   image: "/uploads/europe-1.jpg"
 - type: center-image
+  body: 
   image: "/uploads/europe-2.jpg"
 - type: split-image-left
   image: "/uploads/europe-3.jpg"
@@ -26,3 +27,4 @@ project_content:
   image: "/uploads/europe-8.jpg"
 ---
 
+There is nothing that can more authentically capture the nature of European culture than a simple walk through it’s streets. Over two trips, I tried to capture the essence of simplicity I witnessed through the lens.
