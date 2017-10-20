@@ -37,11 +37,11 @@ defaults:
       project_year: 
       project_url_label: 
       project_url: 
-      cover_image:
+      cover_image: 
       credits:
-      - credit:
+      - credit: 
     services:
-      - type: 
+    - type: 
     project_content:
     - type: full-width-image
       image: 
