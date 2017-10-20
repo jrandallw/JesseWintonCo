@@ -1,5 +1,5 @@
 ---
-title: God of Carnage Poster Design
+title: God of Carnage
 date: 2017-10-20 06:36:00 Z
 categories:
 - work
@@ -21,4 +21,4 @@ project_content:
 - type: text
 ---
 
-Personal project designing a poster for the 2009 Broadway play _God of Carnage._ A personal favorite, "armed?" is an opening line to the show, and, to me, represents the madness that's about to unfold. With this design, I took an extremely minimalist approach and inspiration from Saul Bass.
+Personal poster design for the 2009 Broadway play _God of Carnage._ A personal favorite, "armed?" is an opening line to the show, and, to me, represents the madness that's about to unfold. With this design, I took an extremely minimalist approach and inspiration from Saul Bass.
