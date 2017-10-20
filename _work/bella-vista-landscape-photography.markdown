@@ -11,12 +11,14 @@ general:
   project_year: 2017
   credits:
     photography: Jesse Winton
+  is_nav_page: true
 services:
   is_photography: true
 project_content:
 - type: center-image
   image: "/uploads/lasalle-1.jpg"
 - type: split-image-left
+  body: 
   image: "/uploads/lasalle-2.jpg"
 - type: split-image-right
   image: "/uploads/lasalle-3.jpg"
