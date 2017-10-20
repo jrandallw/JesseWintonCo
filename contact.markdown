@@ -5,7 +5,7 @@ permalink: "/contact"
 position: 3
 is_nav_page: true
 is_split: true
-page_heading: Give me a buzz
+page_heading:
 layout: contact
 ---
 
