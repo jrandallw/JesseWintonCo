@@ -11,7 +11,6 @@ general:
   project_year: 2017
   credits:
     photography: Jesse Winton
-  is_nav_page: true
 services:
   is_photography: true
 project_content:
