@@ -37,7 +37,11 @@
 }
 
 @media #{$break-medium} {
-    .hero {
+	.hero {
+		display: none !important;
+	}
+
+	.page-content {
         width: $full-viewport-width;
     }
 }

@@ -28,12 +28,13 @@ header {
 			margin: 0 auto;
 		}
 	}
-}
 
-@media #{$break-medium} {
-    .header {
-        width: $full;
-    }
+	@media #{$break-medium} {
+		&, &.split {
+			width: $full;
+			padding: 0 !important;
+		}
+	}
 }
 
 .nav {
@@ -46,8 +47,18 @@ header {
 		text-decoration: none;
         letter-spacing: 1px;
     	color: $text-color;
-        margin: 0 20px;
-    }
+		margin: 0 20px;
+		
+		&.active {
+			border-bottom: 1px solid $dark-color;
+		}
+	}
+	
+	@media #{$break-medium} {
+		& a {
+			text-align: center;
+		}
+	}
 }
 
 // footer
@@ -75,9 +86,10 @@ header {
 	}
 
 	@media #{$break-medium} {
-		& {
+		&, &.split {
         	display: block !important;
-        	padding: 0 20px;
+			padding: 0 20px;
+			width: $full;
         	text-align: center;
         	height: 75px;
         	position: relative !important;

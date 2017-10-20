@@ -22,6 +22,7 @@
 
   @media #{$break-medium} {
     .description {
+      width: $full - 10%;
       font-size: $base-font-size + 13px !important;
     }
   }
