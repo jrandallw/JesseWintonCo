@@ -4,6 +4,7 @@ date: 2017-10-20 07:51:00 Z
 general:
   client: Personal Project
   project_year: 2015-2016
+  project_url: http://Tetsuro.com
   cover_image: "/uploads/europe-1.jpg"
 services:
 - type: Photography
