@@ -15,7 +15,7 @@ general:
 services:
 - type: Design
 - type: Art Direction
-credits: 
+credits:
 - type: Play Written by Yasmina Reza
 project_content:
 - type: full-width-image

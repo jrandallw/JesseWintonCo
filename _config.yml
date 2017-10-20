@@ -36,11 +36,11 @@ defaults:
       client: 
       project_year: 
       project_url: 
-      cover_image:  
+      cover_image: 
     services:
     - type: 
     credits:
-    - type:
+    - type: 
     project_content:
     - type: full-width-image
       image: 
