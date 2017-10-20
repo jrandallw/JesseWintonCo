@@ -47,12 +47,9 @@
   
   &.work {
     width: $full;
+    min-height: calc(#{$full-viewport-height} - #{$gutter * 10});
+    padding-top: $gutter * 10;
   }
-}
-
-// work
-.page-content.work {
-  padding-top: $gutter * 10;
 }
 
 .project {
