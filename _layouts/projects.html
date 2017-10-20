@@ -13,14 +13,28 @@ class: page
       <a href="{{ page.general.project_url }}" target="_blank" class="project-link">{{ page.general.project_url | remove: "http://" }}</a>
     </div>
 
-    <div class="credits grid-one-half">
-      <h6 class="heading">Services</h6>   
-      
-      <ul class="services">
-        {% for service in page.services %}
-        <li>{{ service.type }}</li>
-        {% endfor %}
-      </ul>
+    <div class="credits grid-one-half row">
+      {% if page.services %}
+      <div class="grid-one-half">
+        <h6 class="heading">Services</h6>   
+        <ul class="services">
+          {% for service in page.services %}
+          <li>{{ service.type }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.credits %}
+      <div class="grid-one-half">
+        <h6 class="heading">Services</h6>
+        <ul class="services">
+          {% for credit in page.credits %}
+          <li>{{ credit.type }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
