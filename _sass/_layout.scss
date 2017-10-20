@@ -34,6 +34,12 @@ header {
 			width: $full;
 			padding: 0 !important;
 		}
+
+		&.split {
+			.name {
+				display: block !important;
+			}
+		}
 	}
 }
 
@@ -87,18 +93,23 @@ header {
 
 	@media #{$break-medium} {
 		&, &.split {
-        	display: block !important;
+        	flex-direction: column;
 			padding: 0 20px;
 			width: $full;
         	text-align: center;
         	height: 75px;
         	position: relative !important;
     	}
-    
-		a, 
-		.copyright {
-        	margin: 0 3px !important;
-			text-align: center;
+
+		& .social,
+		& .copyright {
+			margin: 2px auto !important;
+			   height: auto !important;
+			flex: none !important;
+		}
+
+		& a {
+			margin: 0 3px !important;
 		}
 	}
 }

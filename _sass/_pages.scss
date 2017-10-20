@@ -30,6 +30,13 @@
 	&.about {
     .container {
       width: $half;
+
+      @media #{$break-medium} {
+        & {
+          margin-top: $gutter * 8;
+          width: $full - 10%;
+        }
+      }
     }
 
 		.bio-image {
