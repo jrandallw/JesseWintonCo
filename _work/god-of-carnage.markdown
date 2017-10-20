@@ -4,9 +4,10 @@ date: 2017-10-20 06:36:00 Z
 general:
   client: Personal Project
   project_year: 2017
+  cover_image: "/uploads/god-of-carnage.jpg"
 services:
-  is_design: true
-  is_art_direction: true
+- type: Design
+- type: Art Direction
 project_content:
 - type: full-width-image
   image: "/uploads/god-of-carnage.jpg"

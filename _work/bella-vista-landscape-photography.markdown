@@ -9,10 +9,9 @@ tags:
 general:
   client: Bella Vista Landscape
   project_year: 2017
-  credits:
-    photography: Jesse Winton
+  cover_image: "/uploads/lasalle-2.jpg"
 services:
-  is_photography: true
+- type: Photography
 project_content:
 - type: center-image
   image: "/uploads/lasalle-1.jpg"

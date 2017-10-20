@@ -42,6 +42,42 @@
   }
 }
 
+// work
+.page-content.work {
+  padding-top: $gutter * 10;
+}
+
+.project {
+  margin: auto;
+  flex: 0 0 calc(33.333% - 100px);
+
+  figcaption {
+    margin-top: $gutter;
+
+    .title,
+    .details {
+      font-size: $base-font-size;
+      font-family: $base-font-stack;
+      text-transform: uppercase;
+    }
+  } 
+
+  a {
+    text-decoration: none;
+  }
+  
+  &:hover {
+   text-decoration: underline; 
+  }
+
+  @media #{$break-medium} {
+    & {
+      flex: 0 0 $full;
+      margin-bottom: $gutter * 3;
+    }
+  }
+}
+
 // contact
 .inquire-form {
 	width: $full;

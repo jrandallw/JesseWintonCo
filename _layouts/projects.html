@@ -17,13 +17,9 @@ class: page
       <h6 class="heading">Services</h6>   
       
       <ul class="services">
-        {% if page.services.is_strategy == true %}<li>Strategy</li>{% endif %}
-        {% if page.services.is_branding == true %}<li>Branding</li>{% endif %}
-        {% if page.services.is_design == true %}<li>Design</li>{% endif %}
-        {% if page.services.is_writing == true %}<li>Writing</li>{% endif %}
-        {% if page.services.is_art_direction == true %}<li>Art Direction</li>{% endif %}
-        {% if page.services.is_film == true %}<li>Film</li>{% endif %}
-        {% if page.services.is_photography == true %}<li>Photography</li>{% endif %}
+        {% for service in page.services %}
+        <li>{{ service.type }}</li>
+        {% endfor %}
       </ul>
     </div>
   </div>

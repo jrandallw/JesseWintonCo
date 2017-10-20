@@ -5,6 +5,21 @@ class: page
 
 <section class="page-content work position-relative">
   <div class="container row position-relative wrap">
+    {% assign projects = site.work | sort: "position" %}
+    
+    {% for project in projects %}
+      <div class="project">
+        <a href="{{ project.url }}">
+          <figure class="project-details">
+            <img src="{{ project.general.cover_image }}">
+            <figcaption class="text-center">
+              <h6 class="title">{{ project.title }}</h6>
+              <h6 class="details">{% for service in project.services %}{{ service.type }}{% endfor %}</h6>
+            </figcaption>
+          </figure> 
+        </a> 
+      </div>
+    {% endfor %}
   </div>
 </section>
         

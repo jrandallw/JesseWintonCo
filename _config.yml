@@ -37,19 +37,11 @@ defaults:
       project_year: 
       project_url_label: 
       project_url: 
+      cover_image:
       credits:
-        branding: 
-        design: 
-        film: 
-        photography: 
+      - credit:
     services:
-      is_strategy: 
-      is_branding: 
-      is_design: 
-      is_writing: 
-      is_art_direction: 
-      is_film: 
-      is_photography: 
+      - type: 
     project_content:
     - type: full-width-image
       image: 
