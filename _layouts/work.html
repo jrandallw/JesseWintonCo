@@ -14,7 +14,7 @@ class: page
             <img src="{{ project.general.cover_image }}">
             <figcaption class="text-center">
               <h6 class="title">{{ project.title }}</h6>
-              <h6 class="details">{% for service in project.services %}{{ service.type }}{% endfor %}</h6>
+              <h6 class="details">{% for service in project.services %}{{ service.type }}{% if forloop.last == false %},{% endif %}{% endfor %}</h6>
             </figcaption>
           </figure> 
         </a> 
@@ -22,4 +22,3 @@ class: page
     {% endfor %}
   </div>
 </section>
-        
