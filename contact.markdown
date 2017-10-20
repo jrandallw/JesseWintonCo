@@ -5,7 +5,7 @@ permalink: "/contact"
 position: 3
 is_nav_page: true
 is_split: true
-page_heading:
+page_heading: 
 layout: contact
 ---
 
