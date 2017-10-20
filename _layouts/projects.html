@@ -10,7 +10,7 @@ class: page
 
       {{ page.content | remove: '<p>' | remove: '</p>' }}
 
-      <a href="{{ page.general.project_url }}" target="_blank" class="project-link">{{ page.general.project_url_label }}</a>
+      <a href="{{ page.general.project_url }}" target="_blank" class="project-link">{{ page.general.project_url | remove: "http://" }}</a>
     </div>
 
     <div class="credits grid-one-half">
