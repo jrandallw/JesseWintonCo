@@ -14,15 +14,7 @@ project_content:
 - type: video
   video_id: 135926120
 - type: center-image
-  image: "/uploads/otb-1.png"
-- type: center-image
-  image: "/uploads/otb-2.png"
-- type: center-image
-  image: "/uploads/otb-3.png"
-- type: center-image
-  image: "/uploads/otb-4.png"
-- type: center-image
-  image: "/uploads/otb-5.png"
+  image: "/uploads/otb-1.jpg"
 ---
 
 _Out of the Blue_ is a short portrait of the mind of the artist. A personal project featuring painter Jennifer Rowe, _Out of the Blue_ is a short exploration of artistry, creativity, and the process that makes good art good.
