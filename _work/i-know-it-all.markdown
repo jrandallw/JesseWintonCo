@@ -20,6 +20,8 @@ credits:
 project_content:
 - type: split-image-left
   image: "/uploads/i-know-it-all-image.jpg"
+- type: split-image-right
+  image: "/uploads/i-know-it-all-script.jpg"
 ---
 
 _I, Know it All_. Based around my own life, this solo show is an exploration of the complexities of life, love, relationships, and the ways that we fool ourselves into thinking that we're on top of it. Now in rewrites, this work debuted in April 2017.
