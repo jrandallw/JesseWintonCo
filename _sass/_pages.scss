@@ -47,13 +47,13 @@
   
   &.work {
     width: $full;
-    min-height: calc(#{$full-viewport-height} - #{$gutter * 10});
+    min-height: $full-viewport-height;
     padding-top: $gutter * 10;
   }
 }
 
 .project {
-  margin: auto;
+  margin: $gutter auto;
   flex: 0 0 calc(33.333% - 100px);
 
   figcaption {

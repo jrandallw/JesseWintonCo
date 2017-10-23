@@ -1,7 +1,6 @@
 ---
 title: Out of the Blue
 date: 2017-10-23 07:33:00 Z
-published: false
 general:
   client: Personal Project
   project_year: 2015
@@ -12,8 +11,8 @@ credits:
 - type: Written & Directed by Jesse Winton
 project_content:
 - type: video
-  code: <iframe src="https://player.vimeo.com/video/135926120" width="640" height="270"
-    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-- type: text
+  code: 135926120
 ---
+
+_Out of the Blue_ is a short portrait of the mind of the artist. A personal project featuring painter Jennifer Rowe, _Out of the Blue_ is a short exploration of artistry, creativity, and the process that makes good art good.
 
