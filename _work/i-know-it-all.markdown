@@ -21,6 +21,7 @@ project_content:
 - type: split-image-left
   image: "/uploads/i-know-it-all-image.jpg"
 - type: split-image-right
+  body: 
   image: "/uploads/i-know-it-all-script.jpg"
 - type: split-image-left
   image: "/uploads/i-know-it-all-poster.jpg"
