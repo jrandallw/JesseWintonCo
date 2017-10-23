@@ -11,11 +11,11 @@
     }
 
     .intro,
-    .credits {
+    .info {
         flex: 0 0 calc(50% - #{$gutter * 2});
     }
 
-    .credits {
+    .info {
         margin-left: auto;
     }
 
@@ -42,10 +42,17 @@
         & .container {
             max-width: $full - 10%;
             width: $full - 10%;
+            margin-top: $gutter * 9;
             flex-direction: column;
+            padding-bottom: $gutter * 3;
+
+            .info {
+                margin: $gutter 0 0 0;
+                flex-direction: column;
+            }
 
             .credits {
-                margin: $gutter 0 0 0;
+                margin-top: $gutter * 2;
             }
 
             .content-block {

@@ -13,11 +13,11 @@ class: page
       <a href="{{ page.general.project_url }}" target="_blank" class="project-link">{{ page.general.project_url | remove: "http://" }}</a>
     </div>
 
-    <div class="credits grid-one-half row">
+    <div class="info grid-one-half row">
       {% if page.services %}
-      <div class="grid-one-half">
+      <div class="services grid-one-half">
         <h6 class="heading">Services</h6>   
-        <ul class="services">
+        <ul>
           {% for service in page.services %}
           <li>{{ service.type }}</li>
           {% endfor %}
@@ -26,9 +26,9 @@ class: page
       {% endif %}
 
       {% if page.credits %}
-      <div class="grid-one-half">
-        <h6 class="heading">Services</h6>
-        <ul class="services">
+      <div class="credits grid-one-half">
+        <h6 class="heading">Credits</h6>
+        <ul>
           {% for credit in page.credits %}
           <li>{{ credit.type }}</li>
           {% endfor %}
