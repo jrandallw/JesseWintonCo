@@ -4,17 +4,16 @@ date: 2017-10-23 08:11:00 Z
 categories:
 - design
 - personal
-- art direction
+- writing
 tags:
 - design
-- art direction
+- writing
 general:
   client: Personal Project
   project_year: 2016-2017
   cover_image: "/uploads/i-know-it-all-script.jpg"
 services:
 - type: Writing
-- type: Art Direction
 credits:
 - type: Photography by Sarah Winton
 project_content:
