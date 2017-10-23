@@ -11,7 +11,7 @@ tags:
 general:
   client: Personal Project
   project_year: 2016-2017
-  cover_image: "/uploads/i-know-it-all-image.jpg"
+  cover_image: "/uploads/i-know-it-all-script.jpg"
 services:
 - type: Writing
 - type: Art Direction
