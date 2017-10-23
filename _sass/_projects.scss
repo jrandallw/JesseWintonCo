@@ -20,8 +20,8 @@
     }
 
     .heading {
-        font-size: $base-font-size;
-        font-family: $base-font-stack;
+        font-size: $base-font-size - 2px;
+        font-family: $heading-font-stack;
         font-weight: $font-weight-bold;
         text-transform: uppercase;
         margin-bottom: $gutter;
