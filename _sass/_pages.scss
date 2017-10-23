@@ -48,7 +48,7 @@
   &.work {
     width: $full;
     min-height: $full-viewport-height;
-    padding-top: $gutter * 10;
+    padding: $gutter * 10 0;
   }
 }
 
