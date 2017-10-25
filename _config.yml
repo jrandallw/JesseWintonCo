@@ -51,6 +51,12 @@ defaults:
     - type: text
       body: 
 - scope:
+    path: ''
+    type: proposal
+  values:
+    permalink: "/proposal/:title/"
+    layout: proposal     
+- scope:
     path: about.markdown
     type: pages
   values:
