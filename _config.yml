@@ -58,11 +58,11 @@ defaults:
     layout: proposal
     is_split: true
     services:
-    - type:
+    - type: 
     sections:
-    - title:
-      body:
-      price:  
+    - title: 
+      body: 
+      price: 
 - scope:
     path: about.markdown
     type: pages
