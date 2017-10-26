@@ -3,8 +3,14 @@ layout: default
 class: page
 ---
 
-<section class="page-content proposal position-relative">
-  <div class="container row position-relative wrap">
-    
+<section class="hero column align-center position-relative">
+  <hgroup class="meta text-center">
+    <h4 class="title">{{ page.title }}</h4>
+    <h6 class="services">{% for service in page.services %}{{ service.type }}{% if forloop.last == false %},{% endif %}{% endfor %}</h6>
+</hgroup>
+</section>
+
+<section class="page-content column align-center position-relative">
+  <div class="container">
   </div>
 </section>

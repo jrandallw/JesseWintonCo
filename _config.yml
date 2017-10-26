@@ -56,6 +56,13 @@ defaults:
   values:
     permalink: "/proposal/:title/"
     layout: proposal
+    is_split: true
+    services:
+    - type:
+    sections:
+    - title:
+      body:
+      price:  
 - scope:
     path: about.markdown
     type: pages
