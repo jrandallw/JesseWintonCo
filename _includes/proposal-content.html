@@ -1,0 +1,6 @@
+{% for block in page.sections %}
+<div class="{{ block.title | downcase }}">
+  <h4 class="section-title">{{ block.title }}</h4>
+  {{ block.body | markdownify }}
+</div>
+{% endfor %}

@@ -6,6 +6,7 @@ Filename: main.js
 $(document).ready(function(){var t=new TimelineMax;
   t.from(".description",.5,{opacity:0},0);
   t.staggerFrom(".content-block, .project",.5,{opacity:0},0.1);
+  t.staggerFrom(".section-title, .summary p",.5,{opacity:0},0.1);
 });
 
 // formkeep ajax
