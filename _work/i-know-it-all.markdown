@@ -15,6 +15,7 @@ general:
 services:
 - type: Writing
 credits:
+- type: Written By
 - type: Photography by Sarah Winton
 project_content:
 - type: split-image-left
