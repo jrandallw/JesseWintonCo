@@ -60,10 +60,10 @@ defaults:
     services:
     - type: 
     sections:
-    - type:
+    - type: 
     - title: 
       body: 
-      price:   
+      price: 
 - scope:
     path: about.markdown
     type: pages
