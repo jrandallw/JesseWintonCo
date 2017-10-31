@@ -1,13 +1,126 @@
-.template-proposal-post {
-    .proposal-block {
-        margin-bottom: $gutter * 3;
+.proposal-overview {
+    width: $full;
+    position: absolute;
+    top: 0;
+    background: $secondary-light-color;
+    min-height: $project-overview;
+    z-index: -1;
+
+    .container {
+        max-width: $half;
+    }
+
+    .intro,
+    .info {
+        flex: 0 0 calc(50% - #{$gutter * 2});
+    }
+
+    .info {
+        margin-left: auto;
+    }
+
+    .heading {
+        font-size: $base-font-size - 2px;
+        font-family: $heading-font-stack;
+        text-transform: uppercase;
+        margin-bottom: $gutter;
+    }
+
+    @media #{$break-medium} {
+        & {
+            height: $full-viewport-height;
+        }
+
+        & .container {
+            max-width: $full - 10%;
+            width: $full - 10%;
+            margin-top: $gutter * 9;
+            flex-direction: column;
+            padding-bottom: $gutter * 3;
+
+            .info {
+                margin: $gutter 0 0 0;
+                flex-direction: column;
+            }
+
+            .credits {
+                margin-top: $gutter * 2;
+            }
+
+            .content-block {
+                margin: $gutter * 3 auto;
+            }
+        }
     }
 }
 
-.meta {
-    .services {
-        font-size: $base-font-size + 2px;
-        font-family: $base-font-stack;
-        color: $light-color;
+.proposal-content {
+    background: $light-color;
+    width: $full;
+    padding: $gutter * 2 0;
+    margin-top: $project-overview;
+    margin-bottom: $footer-height;
+    min-height: $footer-height;
+
+    .container {
+        max-width: $half;
+    }
+
+    .content-block {
+        margin: $gutter * 8 auto;
+    }
+
+    .full-width-image img {
+        width: 100%;
+    }
+
+    .center-image img {
+        margin: 0 auto;
+    }
+
+    .split-image-left,
+    .split-image-right {
+        width: 100%;
+        background: $dark-color;
+    }
+
+    .split-image-left::after,
+    .split-image-right::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .split-image-left img {
+        float: left;
+        width: $half;
+    }
+
+    .split-image-right img {
+        float: right;
+        width: $half;
+    }
+
+    .text {
+        max-width: $half;
+        margin: 0 auto;
+
+        .heading {
+            font-size: $base-font-size - 1px;
+            font-family: $heading-font-stack;
+            text-transform: uppercase;
+            margin-bottom: $gutter;
+        }
+    }
+
+    @media #{$break-medium} {
+        & .container {
+            max-width: $full;
+            width: $full;
+
+            .content-block {
+                margin: $gutter * 3 auto;
+            }
+        }
     }
 }

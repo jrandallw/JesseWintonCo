@@ -1,6 +1,13 @@
 {% for block in page.sections %}
-<div class="proposal-block">
-  <h4 class="section-title">{{ block.title }}</h4>
+<div class="{{ block.type }} content-block">
+{% case block.type %}
+{% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
+  <img src="{{ block.image }}">
+{% when 'text' %}
+  {% if block.title %}<h6 class="heading">{{ block.title }}</h6>{% endif %}
   {{ block.body | markdownify }}
+
+  {% if block.price %}<h6 class="heading">Price • $<span class="price">{{ block.price }}</span></h6>{% endif %}
+{% endcase %}
 </div>
 {% endfor %}

@@ -3,20 +3,19 @@ layout: default
 class: proposal
 ---
 
-<section class="project-overview row align-center">
+<section class="proposal-overview row align-center">
   <div class="container row">
     <div class="intro grid-one-half">
       <h6 class="heading">{{ page.title }} • {% for service in page.services %}{{ service.type }}{% if forloop.last == false %},{% endif %}{% endfor %}</h6>
-
       {{ page.content | remove: '<p>' | remove: '</p>' }}
-
-      <a href="{{ page.general.project_url }}" target="_blank" class="project-link">{{ page.general.project_url | remove: "http://" }}</a>
     </div>
   </div>
 </section>
 
-<section class="project-content">
+<section class="proposal-content">
   <div class="container">
-    {% include work-content.html %}
+    {% include proposal-content.html %}
+
+    <h4 class="total"></h4>
   </div>
 </section>

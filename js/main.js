@@ -9,14 +9,13 @@ $(document).ready(function(){var t=new TimelineMax;
   t.staggerFrom(".proposal-block p",.5,{opacity:0},0.1);
 });
 
-// formkeep ajax
-$.ajax({
-  url: "https://formspree.io/hi@jessewinton.co", 
-  method: "POST",
-  data: $('.inquire-form').serialize(),
-  dataType: "json"
+// proposals
+var sum = 0.0;
+$('.price').each(function(){ 
+  sum += parseFloat($(this).text());
 });
 
+$('.total').html('$' + sum);
 
 
 // greensock
