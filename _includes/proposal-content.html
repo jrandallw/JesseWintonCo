@@ -1,5 +1,5 @@
 {% for block in page.sections %}
-<div class="{{ block.title | downcase }}">
+<div class="proposal-block">
   <h4 class="section-title">{{ block.title }}</h4>
   {{ block.body | markdownify }}
 </div>

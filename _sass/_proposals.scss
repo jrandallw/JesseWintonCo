@@ -1,3 +1,9 @@
+.template-proposal-post {
+    .proposal-block {
+        margin-bottom: $gutter * 3;
+    }
+}
+
 .meta {
     .services {
         font-size: $base-font-size + 2px;
