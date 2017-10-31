@@ -1,8 +1,10 @@
 <nav class="nav text-right {% if page.is_dark == true %}dark{% endif %}">
+  {% if page.collection != 'proposal' %}
   {% assign pages = site.pages | where:"is_nav_page",true | sort: 'position' %}
   {% for node in pages %}
   <a href="{{ node.url | escape }}" {% if page.url == node.url %}class="active"{% endif %}>{{ node.title }}</a>
   {% endfor %}
+  {% endif %}
   <div class="branding">
     <a href="{{ site.url }}"><h6 class="name">{{ site.title }}</h6></a>
   </div>

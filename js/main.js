@@ -10,12 +10,7 @@ $(document).ready(function(){var t=new TimelineMax;
 });
 
 // proposals
-var sum = 0.0;
-$('.price').each(function(){ 
-  sum += parseFloat($(this).text());
-});
 
-$('.total').html('$' + sum);
 
 
 // greensock

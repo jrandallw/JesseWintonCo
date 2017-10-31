@@ -4,8 +4,8 @@ class: proposal
 ---
 
 <section class="proposal-overview row align-center">
-  <div class="container row">
-    <div class="intro grid-one-half">
+  <div class="container">
+    <div class="intro text-center">
       <h6 class="heading">{{ page.title }} • {% for service in page.services %}{{ service.type }}{% if forloop.last == false %},{% endif %}{% endfor %}</h6>
       {{ page.content | remove: '<p>' | remove: '</p>' }}
     </div>
@@ -13,9 +13,11 @@ class: proposal
 </section>
 
 <section class="proposal-content">
-  <div class="container">
     {% include proposal-content.html %}
 
-    <h4 class="total"></h4>
-  </div>
+    {% assign total = 0 %}
+    {% for price in page.sections %}
+      {% assign total = total | plus: price.price %}
+    {% endfor %}
+    <h4 class="total">{{ total | prepend: "$" }}</h4>
 </section>
