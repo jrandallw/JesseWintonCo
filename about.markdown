@@ -10,6 +10,6 @@ bio_image: "/uploads/bio-image.jpg"
 layout: about
 ---
 
-I'm a self-taught visual communicator with a specific focus on copywriting and communicative design. I love working closely with founders, small teams, and non-profits to help create the written or visual content that they need to build and grow. Sure, I work by myself, but that allows a pure collaboration between you and me, providing an atmosphere for producing great work.  
+I'm a self-taught communicator with a focus in strategy, communicative design, and writing. I love working with start-ups and established companies across all sectors to help create the things that they need to build and grow. Pure, candid collaboration is my goal, which in turn creates an incubator for strong work, both in-house and through strategic creative partnerships. 
 
-I provide strategy, branding, design, writing, art direction, film, and photography services. 
+I provide strategy, production, design, film, and photographic services. 
