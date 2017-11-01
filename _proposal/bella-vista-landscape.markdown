@@ -1,5 +1,6 @@
 ---
 title: Bella Vista Landscape
+<<<<<<< HEAD
 date: 2017-10-25 23:04:00 Z
 is_split: false
 services:
@@ -24,6 +25,8 @@ sections:
   title: Pricing
   body: Pre Production Included Includes 1 Location scout day Meetings with Jesse, Client, and Team Sample pictures for production.
   price: 500/month     
+=======
+>>>>>>> a30b4d44b418d2cdfa6dcd7c9abc802e3bbc9099
 ---
 
 This proposal is for the strategization, upkeep, and management of Bella Vista Landscape Services social media. 
