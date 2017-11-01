@@ -5,7 +5,7 @@ permalink: "/about"
 position: 2
 is_nav_page: true
 is_split: true
-page_heading: I’m a writer, a designer. I make things.
+page_heading: I’m a one-man agency.
 bio_image: "/uploads/bio-image.jpg"
 layout: about
 ---
