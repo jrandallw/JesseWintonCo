@@ -10,7 +10,15 @@ $(document).ready(function(){var t=new TimelineMax;
 });
 
 // proposals
-
+var header = $(".proposal-nav");
+$(window).scroll(function() {    
+  var scroll = $(window).scrollTop();
+     if (scroll >= window.innerHeight) {
+        header.addClass("fixed");
+      } else {
+        header.removeClass("fixed");
+      }
+});
 
 
 // greensock

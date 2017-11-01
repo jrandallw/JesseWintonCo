@@ -41,6 +41,19 @@ class: page
 
 <section class="project-content">
   <div class="container">
-    {% include work-content.html %}
+    {% for block in page.project_content %}
+    <div class="{{ block.type }} content-block">
+    {% case block.type %}
+    {% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
+      <img src="{{ block.image }}">
+    {% when 'text' %}
+      {{ block.body | markdownify }}
+    {% when 'video' %}
+      <div class="video">
+        <iframe src="https://player.vimeo.com/video/{{ block.video_id }}?title=0&byline=0&portrait=0&rel=0" width="640" height="270" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    {% endcase %}
+    </div>
+    {% endfor %}
   </div>
 </section>

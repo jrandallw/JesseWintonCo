@@ -3,7 +3,7 @@ layout: default
 class: proposal
 ---
 
-<section class="proposal-overview row align-center">
+<section class="proposal-overview column align-center">
   <div class="container">
     <div class="intro text-center">
       <h6 class="heading">{{ page.title }} • {% for service in page.services %}{{ service.type }}{% if forloop.last == false %},{% endif %}{% endfor %}</h6>
@@ -12,12 +12,30 @@ class: proposal
   </div>
 </section>
 
-<section class="proposal-content">
-    {% include proposal-content.html %}
+<nav class="proposal-nav row align-center">
+  {% for block in page.sections %}
+    {% if block.title %}<a href="#{{ block.title | downcase }}">{{ block.title }}</a>{% endif %}
+  {% endfor %}
+</nav>
 
-    {% assign total = 0 %}
-    {% for price in page.sections %}
-      {% assign total = total | plus: price.price %}
-    {% endfor %}
-    <h4 class="total">{{ total | prepend: "$" }}</h4>
+<section class="proposal-content">
+  {% for block in page.sections %}
+  <div id="{{ block.title | downcase }}" class="{{ block.type }} content-block">
+  {% case block.type %}
+  {% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
+    <img src="{{ block.image }}"> 
+  {% when 'text' %}
+    <div class="container">
+      {{ block.body | markdownify | downcase }}
+      {% if block.price %}<h6 class="heading">Price • $<span class="price">{{ block.price }}</span></h6>{% endif %}
+    </div>
+  {% endcase %}
+  </div>
+  {% endfor %}
+
+  {% assign total = 0 %}
+  {% for price in page.sections %}
+    {% assign total = total | plus: price.price %}
+  {% endfor %}
+  <h6 class="total heading">{{ total | prepend: "$" }}</h6>
 </section>

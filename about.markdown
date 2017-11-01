@@ -6,7 +6,7 @@ position: 2
 is_nav_page: true
 is_split: true
 page_heading: I’m a writer, a designer. I make things.
-bio_image: "/uploads/29E53040-BAAA-4425-AE78-8CD9A73FF6B4.jpeg"
+bio_image: "/uploads/bio-image.jpg"
 layout: about
 ---
 
