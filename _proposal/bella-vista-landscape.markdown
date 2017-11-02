@@ -35,4 +35,4 @@ sections:
   price: 500/month
 ---
 
-This proposal is for the strategization, upkeep, and management of Bella Vista Landscape Services social media. 
+This proposal is for strategization, upkeep, and management of Bella Vista Landscape Services social media. 
