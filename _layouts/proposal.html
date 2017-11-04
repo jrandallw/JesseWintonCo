@@ -3,6 +3,12 @@ layout: default
 class: proposal
 ---
 
+<nav class="proposal-nav row align-center">
+  {% for block in page.sections %}
+    {% if block.title %}<a href="#{{ block.title | downcase | split: ' ' | first }}">{{ block.title }}</a>{% endif %}
+  {% endfor %}
+</nav>
+
 <section class="proposal-overview column align-center">
   <div class="container">
     <div class="intro text-center">
@@ -12,15 +18,9 @@ class: proposal
   </div>
 </section>
 
-<nav class="proposal-nav row align-center">
-  {% for block in page.sections %}
-    {% if block.title %}<a href="#{{ block.title | downcase }}">{{ block.title }}</a>{% endif %}
-  {% endfor %}
-</nav>
-
 <section class="proposal-content">
   {% for block in page.sections %}
-  <div id="{{ block.title | downcase }}" class="{{ block.type }} content-block">
+  <div id="{{ block.title | downcase | split: ' ' | first }}" class="{{ block.type }} content-block">
   {% case block.type %}
   {% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
     <img src="{{ block.image }}"> 
@@ -37,5 +37,9 @@ class: proposal
   {% for price in page.sections %}
     {% assign total = total | plus: price.price %}
   {% endfor %}
-  <h6 class="total heading">{{ total | prepend: "$" }}</h6>
+  <div class="billing container">
+    <div class"text">
+      <p class="total heading">{{ total | prepend: "$" }} • {{ page.billing_type | downcase }}</p>
+    </div>  
+  </div>  
 </section>

@@ -60,19 +60,14 @@
     text-align: center;
     height: 60px;
     z-index: 100;
+    position: fixed;
+    top: 0;
 
     a {
         color: $dark-color;
         margin: 0 $gutter;
         text-decoration: none;
         text-transform: uppercase;
-    }
-
-    &.fixed {
-        position: fixed !important;
-        margin-top: 0 !important;
-        top: 0 !important
-        
     }
 }
 

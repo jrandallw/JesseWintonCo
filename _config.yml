@@ -57,11 +57,12 @@ defaults:
     permalink: "/proposal/:title/"
     layout: proposal
     is_split: true
+    billing_type: 
     services:
     - type: 
     sections:
     - type: 
-    - title: 
+      title: 
       body: 
       price: 
 - scope:

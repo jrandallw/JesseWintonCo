@@ -2,6 +2,7 @@
 title: Bella Vista Landscape
 date: 2017-10-25 23:04:00 Z
 is_split: false
+billing_type: Monthly
 services:
 - type: Marketing & Strategy Proposal
 sections:
@@ -20,19 +21,14 @@ sections:
 - type: split-image-right
   image: "/uploads/lasalle-2.jpg"
 - type: text
-  title: Goals
-  body: Daily tasks will include
-  price: 500/month
-- type: text
-  title: Responsibilites
-  body: Pre Production Included Includes 1 Location scout day Meetings with Jesse,
-    Client, and Team Sample pictures for production.
-  price: 500/month
+  title: Tasks
+  body: We've demonstrated an ability to create aesthetically pleasing, meaningful content through
+    our work photographing LaSalle & Montessa in Rocklin, CA.
 - type: text
   title: Pricing
   body: Pre Production Included Includes 1 Location scout day Meetings with Jesse,
     Client, and Team Sample pictures for production.
-  price: 500/month
+  price: 500 monthly
 ---
 
 This proposal is for strategization, upkeep, and management of Bella Vista Landscape Services social media. 
