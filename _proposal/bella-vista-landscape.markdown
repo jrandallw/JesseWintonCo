@@ -23,8 +23,8 @@ sections:
   image: "/uploads/lasalle-2.jpg"
 - type: text
   title: Tasks
-  body: We've demonstrated an ability to create aesthetically pleasing, meaningful content through
-    our work photographing LaSalle & Montessa in Rocklin, CA.
+  body: We've demonstrated an ability to create aesthetically pleasing, meaningful
+    content through our work photographing LaSalle & Montessa in Rocklin, CA.
 - type: text
   title: Pricing
   body: Pre Production Included Includes 1 Location scout day Meetings with Jesse,
