@@ -17,7 +17,7 @@ services:
 credits:
 - type: Written By
 - type: Photography by Sarah Winton
-project_content:
+sections:
 - type: split-image-left
   image: "/uploads/i-know-it-all-image.jpg"
 - type: split-image-right

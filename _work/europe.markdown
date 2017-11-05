@@ -13,7 +13,7 @@ general:
   cover_image: "/uploads/europe-1.jpg"
 services:
 - type: Photography
-project_content:
+sections:
 - type: split-image-right
   image: "/uploads/europe-1.jpg"
 - type: center-image

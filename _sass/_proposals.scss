@@ -139,6 +139,16 @@
             text-transform: uppercase;
             margin-bottom: $gutter;
         }
+
+        .price {
+            font-family: $base-font-stack;
+            font-size: $base-font-size - 1px;
+            font-weight: bold;
+        }
+    }
+
+    .total span {
+        float: right;
     }
 
     @media #{$break-medium} {

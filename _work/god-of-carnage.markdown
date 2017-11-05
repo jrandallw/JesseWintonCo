@@ -17,7 +17,7 @@ services:
 - type: Art Direction
 credits:
 - type: Play Written by Yasmina Reza
-project_content:
+sections:
 - type: full-width-image
   image: "/uploads/god-of-carnage.jpg"
 - type: text

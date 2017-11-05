@@ -1,0 +1,13 @@
+{% for block in page.sections%}
+<div id="{{ block.title | downcase | split: ' ' | first }}" class="{{ block.type }} content-block">
+{% case block.type %}
+{% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
+  <img src="{{ block.image }}"> 
+{% when 'text' %}
+  <div class="container">
+    {{ block.body | markdownify | downcase }}
+    {% if block.price %}<h6 class="price heading">$<span class="price">{{ block.price }}</span></h6>{% endif %}
+  </div>
+{% endcase %}
+</div>
+{% endfor %}

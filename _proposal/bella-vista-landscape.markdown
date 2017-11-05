@@ -9,6 +9,7 @@ sections:
 - type: full-width-image
   image: "/uploads/lasalle-7.jpg"
 - title: Executive Summary
+  type: text
   body: 'In the modern business landscape, there is perhaps nothing more vital to
     the continued success and growth of a company than social media. Across all sectors
     of business, companies with a strong social media presence are able to continuously
@@ -17,8 +18,7 @@ sections:
     through social media. As of 2017, Facebook has over 2 billion active monthly users,
     Twitter has over 300 million active monthly users, and Instagram has 600 million
     monthly active users, and more importantly within the construction sector, LinkedIn
-    has 450 million active monthly users. '
-  type: text
+    has 450 million active monthly users.'
 - type: split-image-right
   image: "/uploads/lasalle-2.jpg"
 - type: text

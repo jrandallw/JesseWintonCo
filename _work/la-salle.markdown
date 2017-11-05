@@ -12,7 +12,7 @@ general:
   cover_image: "/uploads/lasalle-2.jpg"
 services:
 - type: Photography
-project_content:
+sections:
 - type: split-image-left
   image: "/uploads/lasalle-2.jpg"
 - type: split-image-right

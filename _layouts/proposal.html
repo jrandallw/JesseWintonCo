@@ -19,27 +19,17 @@ class: proposal
 </section>
 
 <section class="proposal-content">
-  {% for block in page.sections %}
-  <div id="{{ block.title | downcase | split: ' ' | first }}" class="{{ block.type }} content-block">
-  {% case block.type %}
-  {% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
-    <img src="{{ block.image }}"> 
-  {% when 'text' %}
-    <div class="container">
-      {{ block.body | markdownify | downcase }}
-      {% if block.price %}<h6 class="heading">Price • $<span class="price">{{ block.price }}</span></h6>{% endif %}
-    </div>
-  {% endcase %}
-  </div>
-  {% endfor %}
+  {% include content.html %}
 
   {% assign total = 0 %}
   {% for price in page.sections %}
     {% assign total = total | plus: price.price %}
   {% endfor %}
-  <div class="billing container">
-    <div class"text">
-      <p class="total heading">{{ total | prepend: "$" }} • {{ page.billing_type | downcase }}</p>
+  <div class="billing">
+    <div class="text">
+      <div class="container">
+        <p class="total heading">Total Price <span>{{ total | prepend: "$" }} {{ page.billing_type | downcase }}</span></p>
+      </div>  
     </div>  
   </div>  
 </section>

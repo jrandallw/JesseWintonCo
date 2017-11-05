@@ -45,9 +45,7 @@ defaults:
     - type: 
     credits:
     - type: 
-    project_content:
-    - type: full-width-image
-      image: 
+    sections:
     - type: text
       body: 
 - scope:
