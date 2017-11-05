@@ -20,10 +20,36 @@ sections:
 - type: split-image-right
   image: "/uploads/lasalle-2.jpg"
 - type: text
-  title: Pricing
-  body: Pre Production Included Includes 1 Location scout day Meetings with Jesse,
-    Client, and Team Sample pictures for production.
+  title: Daily
+  body: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
+    lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
+    ipsum. Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
+    non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
+    tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
+    ut felis.
   price: 500 monthly
+- type: split-image-right
+  image: "/uploads/lasalle-8.jpg"
+- type: text
+  title: Weekly
+  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
+    lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
+    ipsum.\n\n* Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi.
+    \n* Vestibulum non faucibus ligula. \n\nSuspendisse eu felis vel leo vulputate
+    ornare. Fusce vehicula, tortor quis accumsan elementum, eros lacus tempus sapien,
+    non lacinia diam purus ut felis."
+  price: 500 monthly
+- type: text
+  title: Monthly
+- type: image
+  image: "/uploads/lasalle-9.jpg"
+- type: text
+  title: Monthly
+  body: Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
+    non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
+    tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
+    ut felis.
+  price: 1000 monthly
 ---
 
 This proposal is for strategization, upkeep, and management of Bella Vista Landscape Services social media. 
