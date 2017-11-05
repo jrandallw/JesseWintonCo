@@ -56,8 +56,11 @@ defaults:
     layout: proposal
     is_split: true
     billing_type: 
+    purpose:
     services:
     - type: 
+    team:
+    - role:
     sections:
     - type: 
       title: 

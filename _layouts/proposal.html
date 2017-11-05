@@ -3,33 +3,55 @@ layout: default
 class: proposal
 ---
 
-<nav class="proposal-nav row align-center">
-  {% for block in page.sections %}
-    {% if block.title %}<a href="#{{ block.title | downcase | split: ' ' | first }}">{{ block.title }}</a>{% endif %}
-  {% endfor %}
-</nav>
-
 <section class="proposal-overview column align-center">
-  <div class="container">
-    <div class="intro text-center">
-      <h6 class="heading">{{ page.title }} • {% for service in page.services %}{{ service.type }}{% if forloop.last == false %},{% endif %}{% endfor %}</h6>
+  <div class="container row">
+    <div class="intro grid-one-half">
+      <h6 class="heading">{{ page.title }} • {{ page.purpose }}</h6>
       {{ page.content | remove: '<p>' | remove: '</p>' }}
+    </div>
+
+    <div class="info grid-one-half row">
+      {% if page.team %}
+      <div class="team grid-one-half">
+        <h6 class="heading">Creative Team</h6>   
+        <ul>
+          {% for member in page.team %}
+          <li>{{ member.role }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if page.services %}
+      <div class="services grid-one-half">
+        <h6 class="heading">Services</h6>   
+        <ul>
+          {% for service in page.services %}
+          <li>{{ service.type }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </div>
   </div>
 </section>
 
 <section class="proposal-content">
+  <div class="container">
   {% include content.html %}
 
   {% assign total = 0 %}
   {% for price in page.sections %}
     {% assign total = total | plus: price.price %}
   {% endfor %}
-  <div class="billing">
+  <div class="call-to-action content-block">
     <div class="text">
-      <div class="container">
-        <p class="total heading">Total Price <span>{{ total | prepend: "$" }} {{ page.billing_type | downcase }}</span></p>
-      </div>  
+      <div class="container row align-center">
+        <p class="total price heading">Total Price <span>{{ total | prepend: "$" }} {{ page.billing_type | downcase }}</span></p>
+
+        <h6 class="heading button"><a href="mailto:{{ site.email }}?subject=Inquiry about {{ page.title }} • {{ page.purpose }}">ask a question</a></h6>
+      </div> 
     </div>  
   </div>  
+</div>
 </section>

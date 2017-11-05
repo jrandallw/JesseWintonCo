@@ -1,8 +1,9 @@
 .proposal-overview {
     width: $full;
+    position: absolute;
     top: 0;
     background: $secondary-light-color;
-    min-height: $full-viewport-height;
+    min-height: $project-overview;
     z-index: -1;
 
     .container {
@@ -15,12 +16,12 @@
     }
 
     .info {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     .heading {
-        font-size: $base-font-size + 5px;
-        text-align: center;
+        font-size: $base-font-size - 2px;
         font-family: $heading-font-stack;
         text-transform: uppercase;
         margin-bottom: $gutter;
@@ -54,36 +55,19 @@
     }
 }
 
-.proposal-nav {
-    background: $secondary-light-color;
-    width: $full;
-    text-align: center;
-    height: 60px;
-    z-index: 100;
-    position: fixed;
-    top: 0;
-
-    a {
-        color: $dark-color;
-        margin: 0 $gutter;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-}
-
 .proposal-content {
     background: $light-color;
     width: $full;
+    margin-top: $project-overview;
     margin-bottom: $footer-height;
     min-height: $footer-height;
 
     .container {
-        max-width: $half;
+        max-width: $half + 20%;
     }
 
     .content-block {
-        margin: $gutter * 8 auto;
-        max-width: $full - 20%;
+        margin: $gutter * 8 auto !important;
     }
 
     .image-block {
@@ -128,26 +112,32 @@
     }
 
     .text {
-        max-width: $half - 5%;
         margin: $gutter auto;
         font-size: $base-font-size - 1px;
         text-align: justify;
 
         .heading {
             font-size: $base-font-size - 1px;
-            font-family: $heading-font-stack;
+            font-family: $base-font-stack;
+            font-weight: bold;
             text-transform: uppercase;
             margin-bottom: $gutter;
         }
 
-        .price {
-            font-family: $base-font-stack;
-            font-size: $base-font-size - 1px;
-            font-weight: bold;
+        ul {
+            margin-left: $gutter * 2;
+            margin-bottom: $gutter;
+            
+            li::before {
+                content: '•';
+                vertical-align: middle;
+                margin-right: $gutter / 4;
+                font-size: 14px;
+            }
         }
     }
 
-    .total span {
+    .price span {
         float: right;
     }
 
@@ -160,5 +150,34 @@
                 margin: $gutter * 3 auto;
             }
         }
+    }
+}
+
+.call-to-action {
+    .button {
+        width: 200px !important;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #111;
+        height: 40px;
+        line-height: 40px;
+    }
+}
+
+.total {
+    width: $full;
+    border: 1px solid #111;
+ 	height: $gutter * 2;
+    line-height: $gutter * 2;
+    padding: 0 0 0 $gutter;
+    
+    span {
+        height: $gutter * 2;
+        line-height: $gutter * 2;
+        padding: 0 $gutter;
+        color: $light-color;
+        background: $dark-color;
+        vertical-align: middle;
+        border-left: 1px solid $dark-color;
     }
 }

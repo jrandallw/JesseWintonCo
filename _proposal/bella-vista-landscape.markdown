@@ -3,8 +3,15 @@ title: Bella Vista Landscape
 date: 2017-10-25 23:04:00 Z
 is_split: false
 billing_type: Monthly
+purpose: Marketing & Strategy Proposal
 services:
-- type: Marketing & Strategy Proposal
+- type: Social Media Management
+- type: Landscape Photography
+- type: Visual Designs
+- type: Film
+team:
+- role: Produced by Jesse Winton
+- role: Directed by Kyle Barr
 sections:
 - type: full-width-image
   title: 
@@ -27,8 +34,8 @@ sections:
     non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
     tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
     ut felis.
-  price: 500 monthly
-- type: split-image-right
+  price: 500
+- type: split-image-left
   image: "/uploads/lasalle-8.jpg"
 - type: text
   title: Weekly
@@ -38,10 +45,10 @@ sections:
     \n* Vestibulum non faucibus ligula. \n\nSuspendisse eu felis vel leo vulputate
     ornare. Fusce vehicula, tortor quis accumsan elementum, eros lacus tempus sapien,
     non lacinia diam purus ut felis."
-  price: 500 monthly
+  price: 500
 - type: text
   title: Monthly
-- type: image
+- type: split-image-right
   image: "/uploads/lasalle-9.jpg"
 - type: text
   title: Monthly
@@ -49,7 +56,7 @@ sections:
     non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
     tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
     ut felis.
-  price: 1000 monthly
+  price: 1000
 ---
 
 This proposal is for strategization, upkeep, and management of Bella Vista Landscape Services social media. 

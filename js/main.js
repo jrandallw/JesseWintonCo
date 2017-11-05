@@ -5,8 +5,8 @@ Filename: main.js
 // animation
 $(document).ready(function(){var t=new TimelineMax;
   t.from(".description",.5,{opacity:0},0);
+  t.staggerFrom(".proposal-overview .info ul li",.5,{opacity:0},0.1);
   t.staggerFrom(".content-block, .project",.5,{opacity:0},0.1);
-  t.staggerFrom(".proposal-block p",.5,{opacity:0},0.1);
 });
 
 // proposals
