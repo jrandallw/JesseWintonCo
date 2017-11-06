@@ -63,11 +63,12 @@
     min-height: $footer-height;
 
     .container {
-        max-width: $half + 20%;
+        width: $full;
+        max-width: $max-width;
     }
 
     .content-block {
-        margin: $gutter * 8 auto !important;
+        margin: $gutter * 6 auto !important;
     }
 
     .image-block {
@@ -113,11 +114,11 @@
 
     .text {
         margin: $gutter auto;
-        font-size: $base-font-size - 1px;
-        text-align: justify;
+        max-width: $half;
+        font-size: $base-font-size;
 
         .heading {
-            font-size: $base-font-size - 1px;
+            font-size: $base-font-size;
             font-family: $base-font-stack;
             font-weight: bold;
             text-transform: uppercase;
@@ -135,6 +136,13 @@
                 font-size: 14px;
             }
         }
+    }
+
+    .byline {
+        margin: $gutter auto 0 auto;
+        max-width: $half;
+        font-family: $heading-font-stack;
+        font-size: $base-font-size;
     }
 
     .price span {
@@ -155,7 +163,7 @@
 
 .call-to-action {
     .button {
-        width: 200px !important;
+        min-width: 200px !important;
         display: inline-block;
         text-align: center;
         border: 1px solid #111;
@@ -174,7 +182,7 @@
     span {
         height: $gutter * 2;
         line-height: $gutter * 2;
-        padding: 0 $gutter;
+        padding: 0 $gutter * 2;
         color: $light-color;
         background: $dark-color;
         vertical-align: middle;
