@@ -10,13 +10,10 @@ services:
 - type: Visual Designs
 - type: Film
 team:
-- role: Produced by Jesse Winton
-- role: Directed by Kyle Barr
+- role: Creative Direction • In-house
+- role: Film Production • KWB Creative
 sections:
 - type: full-width-image
-  title: 
-  body: 
-  price: 
   image: "/uploads/lasalle-7.jpg"
 - title: Executive Summary
   type: text
