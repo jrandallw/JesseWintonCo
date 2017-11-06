@@ -10,7 +10,7 @@ collections:
     output: true
     permalink: "/:collection/:path"
   proposal:
-    title: Proposal
+    title: Proposals
     output: true
     permalink: "/:collection/:path"
   uploads:
