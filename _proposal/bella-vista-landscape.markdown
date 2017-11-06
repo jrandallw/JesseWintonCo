@@ -27,10 +27,8 @@ sections:
 - type: split-image-right
   image: "/uploads/lasalle-2.jpg"
 - type: text
-  title: Daily
+  title: Daily Responsibilities
   body: |-
-    ###### Daily Tasks
-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
     lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
     ipsum. Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
@@ -41,7 +39,7 @@ sections:
 - type: split-image-left
   image: "/uploads/lasalle-8.jpg"
 - type: text
-  title: Weekly
+  title: Weekly Responsibilities
   body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
     lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
     ipsum.\n\n* Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi.
@@ -49,12 +47,10 @@ sections:
     ornare. Fusce vehicula, tortor quis accumsan elementum, eros lacus tempus sapien,
     non lacinia diam purus ut felis."
   price: 500
-- type: text
-  title: Monthly
 - type: split-image-right
   image: "/uploads/lasalle-9.jpg"
 - type: text
-  title: Monthly
+  title: Monthly Responsibilities
   body: Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
     non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
     tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
