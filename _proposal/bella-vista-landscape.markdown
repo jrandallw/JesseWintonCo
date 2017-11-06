@@ -29,7 +29,7 @@ sections:
 - type: text
   title: Daily
   body: |-
-    ### This is a heading.
+    ###### Daily Tasks
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
     lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
