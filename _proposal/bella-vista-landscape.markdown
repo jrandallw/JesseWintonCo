@@ -25,12 +25,12 @@ sections:
 
     We've demonstrated an ability to create aesthetically pleasing, meaningful content through our work photographing LaSalle & Montessa in Rocklin, CA.
 - type: split-image-right
-  image: "/uploads/lasalle-2.jpg" 
+  image: "/uploads/lasalle-2.jpg"
 - type: text
   title: Daily
   body: |-
     ###This is a heading###
-    
+
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
     lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
     ipsum. Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
