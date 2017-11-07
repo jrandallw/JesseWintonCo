@@ -15,6 +15,7 @@ sections:
   body: |-
     The purpose of this campaign is to tell your story by exploring how Eyecenter Optometric
     has kept family values at the forefront of their business for 57 years through a series of 6 short films. Broken into chapters, each chapter will demonstrate those values through specific stories relating to the history of the company throughout the years.
+  price: 
 - type: text
   title: Pricing
   body: |-
@@ -27,3 +28,4 @@ sections:
   price: 3500
 ---
 
+This campaign will introduce the community to the story of Eycenter Optometric, through the eyes of Dr. Fred Fuerst, Dr. Palmer Lee, and others who have been a part of the Eyecenter Family.
