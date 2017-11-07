@@ -81,8 +81,8 @@ sections:
 
     * Photographing 1-2 relevant properties maintained or built my Bella Vista. Preparing and releasing photos via social media channels.
 
-    * Creating 1 strategic short film piece between 1-2 minutes long with our creative partner, KWB Creative. Releasing and promoting via relevant social media channels.
-  price: '1000 (additional costs for short film evaluated on a per project basis) '
+    * Creating 1 strategic short film piece between 1-2 minutes long with our creative partner, KWB Creative. Releasing and promoting via relevant social media channels. Additional costs for short films will be evaluated on a per project basis.
+  price: 1000
 ---
 
 This proposal is for strategization, upkeep, and management of Bella Vista Landscape Services social media. 
