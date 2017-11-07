@@ -41,7 +41,7 @@ sections:
 - type: text
   title: Daily Responsibilities
   body: "Daily responsibilities will include:\n\n* Curating and preparing weekly content.
-    \n\n* 1-2 social media posts as content is prepared.\n\n* Interacting and engaging
+    \n* 1-2 social media posts as content is prepared.\n* Interacting and engaging
     with users via social media channels. "
   price: 500
 - type: split-image-left
@@ -52,13 +52,9 @@ sections:
     Weekly responsibilities will include:
 
     * 10-12 engaging Twitter posts.
-
     * 1-3 Instagram uploads.
-
     * 5-8 Facebook actions.
-
     * Researching and sharing at least 3 articles within the sector to demonstrate credibility.
-
     * Connecting with relevant property management firms throughout Northern California via LinkedIn and other channels to build trust and attempt to forge strategic partnerships.
   price: 500
 - type: split-image-right
@@ -69,7 +65,6 @@ sections:
     Bi-Weekly Responsibilities will include:
 
     * Researching and preparing one original piece of written content.
-
     * Designing and sharing one piece of art directed, visual content on major social media channels.
   price: 1000
 - type: full-width-image
@@ -80,7 +75,6 @@ sections:
     Monthly responsibilities include:
 
     * Photographing 1-2 relevant properties maintained or built my Bella Vista. Preparing and releasing photos via social media channels.
-
     * Creating 1 strategic short film piece between 1-2 minutes long with our creative partner, KWB Creative. Releasing and promoting via relevant social media channels. Additional costs for short films will be evaluated on a per project basis.
   price: 1000
 ---
