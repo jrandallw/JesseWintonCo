@@ -71,11 +71,13 @@ sections:
   image: "/uploads/lasalle-4.jpg"
 - type: text
   title: Monthly Responsibilities
-  body: |-
-    Monthly responsibilities include:
-
-    * Photographing 1-2 relevant properties maintained or built my Bella Vista. Preparing and releasing photos via social media channels.
-    * Creating 1 strategic short film piece between 1-2 minutes long with our creative partner, KWB Creative. Releasing and promoting via relevant social media channels. Additional costs for short films will be evaluated on a per project basis.
+  body: "Monthly responsibilities include:\n\n* Photographing 1-2 relevant properties
+    maintained or built by Bella Vista. Preparing and releasing photos via social
+    media channels. Travel costs will be incurred for any project outside of a 150
+    mile radius. \n* Creating 1 strategic short film piece between 1-2 minutes long
+    with our creative partner, KWB Creative. Releasing and promoting via relevant
+    social media channels. Additional costs for short films will be evaluated on a
+    per project basis."
   price: 1000
 ---
 
