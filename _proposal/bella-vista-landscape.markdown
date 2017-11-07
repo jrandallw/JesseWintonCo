@@ -59,6 +59,15 @@ sections:
 - type: split-image-right
   image: "/uploads/lasalle-9.jpg"
 - type: text
+  title: Bi-Weekly Responsibilities
+  body: Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
+    non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
+    tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
+    ut felis.
+  price: 1000
+- type: full-width-image
+  image: "/uploads/lasalle-4.jpg"
+- type: text
   title: Monthly Responsibilities
   body: Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
     non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
