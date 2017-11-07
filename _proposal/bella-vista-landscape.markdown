@@ -59,7 +59,7 @@ sections:
 
     * Researching and sharing at least 3 articles within the sector to demonstrate credibility.
 
-    * Connecting with relevant property management firms throughout Northern California to build trust and attempt to forge strategic partnerships.
+    * Connecting with relevant property management firms throughout Northern California via LinkedIn and other channels to build trust and attempt to forge strategic partnerships.
   price: 500
 - type: split-image-right
   image: "/uploads/lasalle-9.jpg"
