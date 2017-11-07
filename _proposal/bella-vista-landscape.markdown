@@ -14,6 +14,9 @@ team:
 - role: Film Production • KWB Creative
 sections:
 - type: full-width-image
+  title: 
+  body: 
+  price: 
   image: "/uploads/lasalle-7.jpg"
 - title: Executive Summary
   type: text
@@ -37,43 +40,49 @@ sections:
   image: "/uploads/lasalle-2.jpg"
 - type: text
   title: Daily Responsibilities
-  body: |-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
-    lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
-    ipsum. Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
-    non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
-    tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
-    ut felis.
+  body: "Daily responsibilities will include:\n\n* Curating and preparing weekly content.
+    \n\n* 1-2 social media posts as content is prepared.\n\n* Interacting and engaging
+    with users via social media channels. "
   price: 500
 - type: split-image-left
   image: "/uploads/lasalle-8.jpg"
 - type: text
   title: Weekly Responsibilities
-  body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor rutrum
-    lorem et vestibulum. Vivamus orci nunc, tristique non luctus et, vulputate vitae
-    ipsum.\n\n* Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi.
-    \n* Vestibulum non faucibus ligula. \n\nSuspendisse eu felis vel leo vulputate
-    ornare. Fusce vehicula, tortor quis accumsan elementum, eros lacus tempus sapien,
-    non lacinia diam purus ut felis."
+  body: |-
+    Weekly responsibilities will include:
+
+    * 10-12 engaging Twitter posts.
+
+    * 1-3 Instagram uploads.
+
+    * 5-8 Facebook actions.
+
+    * Researching and sharing at least 3 articles within the sector to demonstrate credibility.
+
+    * Connecting with relevant property management firms throughout Northern California to build trust and attempt to forge strategic partnerships.
   price: 500
 - type: split-image-right
   image: "/uploads/lasalle-9.jpg"
 - type: text
   title: Bi-Weekly Responsibilities
-  body: Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
-    non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
-    tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
-    ut felis.
+  body: |-
+    Bi-Weekly Responsibilities will include:
+
+    * Researching and preparing one original piece of written content.
+
+    * Designing and sharing one piece of art directed, visual content on major social media channels.
   price: 1000
 - type: full-width-image
   image: "/uploads/lasalle-4.jpg"
 - type: text
   title: Monthly Responsibilities
-  body: Maecenas a elit scelerisque, malesuada ipsum eget, vestibulum nisi. Vestibulum
-    non faucibus ligula. Suspendisse eu felis vel leo vulputate ornare. Fusce vehicula,
-    tortor quis accumsan elementum, eros lacus tempus sapien, non lacinia diam purus
-    ut felis.
-  price: 1000
+  body: |-
+    Monthly responsibilities include:
+
+    * Photographing 1-2 relevant properties maintained or built my Bella Vista. Preparing and releasing photos via social media channels.
+
+    * Creating 1 strategic short film piece between 1-2 minutes long with our creative partner, KWB Creative. Releasing and promoting via relevant social media channels.
+  price: '1000 (additional costs for short film evaluated on a per project basis) '
 ---
 
 This proposal is for strategization, upkeep, and management of Bella Vista Landscape Services social media. 
