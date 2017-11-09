@@ -83,7 +83,6 @@ sections:
   title: Total
   body: The agency collects payments on a monthly billing cycle. This is the total
     cost for our services.
-  price: 
 ---
 
 This proposal is for strategization, upkeep, and management of Bella Vista Landscape Services social media. 

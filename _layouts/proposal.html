@@ -44,7 +44,7 @@ class: proposal
   {% for price in page.sections %}
     {% assign total = total | plus: price.price %}
   {% endfor %}
-  <div class="call-to-action content-block">
+  <div class="content-block">
     <div class="text">
       <div class="container row align-center">
         <p class="total price heading">Total Price <span>{{ total | prepend: "$" }} {{ page.billing_type | downcase }}</span></p>
