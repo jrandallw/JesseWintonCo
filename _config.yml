@@ -85,7 +85,7 @@ defaults:
     type: pages
   values:
     permalink: "/journal"
-    layout: journal    
+    layout: journal
 - scope:
     path: contact.markdown
     type: pages
