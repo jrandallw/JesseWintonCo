@@ -81,6 +81,12 @@ defaults:
     permalink: "/work"
     layout: work
 - scope:
+    path: journal.markdown
+    type: pages
+  values:
+    permalink: "/journal"
+    layout: journal    
+- scope:
     path: contact.markdown
     type: pages
   values:
