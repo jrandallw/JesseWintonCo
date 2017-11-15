@@ -25,6 +25,8 @@
 	width: $half-viewport-width;
 	height: $full-viewport-height;
 	background: $dark-color;
+	@include prefix(background-size, cover !important, webkit moz);
+	background-position: center !important;
 
 	h4 {
 		color: $light-color;
