@@ -47,6 +47,7 @@ $half-viewport-height: 50vh;
 // Breakpoints
 $break-large: "screen and (max-width: 768px)";
 $break-medium: "screen and (max-width: 438px)";
+$break-small: "screen and (min-width: 768px)";
 
 @import
 	"base",
