@@ -20,6 +20,13 @@
 		}
   }
 
+  @media #{$break-small} {
+    .description {
+      width: $full - 10%;
+      font-size: $base-font-size + 10px !important;
+    }
+  }
+
   @media #{$break-medium} {
     .description {
       width: $full - 10%;
