@@ -20,7 +20,7 @@
 		}
   }
 
-  @media #{$break-small} {
+  @media #{$break-large} {
     .description {
       width: $full - 10%;
       font-size: $base-font-size + 10px !important;
@@ -47,10 +47,11 @@
     }
 
 		.bio-image {
-			width: 300px;
+      width: 300px;
+      display: none;
       margin: 100px auto 0 auto;
       
-      @media #{$break-small} {
+      @media #{$break-large} {
         & {
           display: none;
         }
