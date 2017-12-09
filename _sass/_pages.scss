@@ -27,12 +27,6 @@
     }
   }
 
-  @media #{$break-medium} {
-    .description {
-      width: $full - 10%;
-      font-size: $base-font-size + 13px !important;
-    }
-  }
 
 	&.about {
     .container {
@@ -68,7 +62,7 @@
 
 .project {
   margin: $gutter auto;
-  flex: 0 0 calc(33.333% - 100px);
+  flex: 0 0 calc(33.333% - 20px);
 
   figcaption {
     margin-top: $gutter;

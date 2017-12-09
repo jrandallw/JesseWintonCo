@@ -76,7 +76,8 @@
     min-height: $footer-height;
 
     .container {
-        max-width: $half;
+        max-width: $full - 25%;
+        width: $full;
     }
 
     .content-block {
