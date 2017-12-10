@@ -6,7 +6,7 @@ general:
   project_year: 2017
   cover_image: "/uploads/blog-cover.jpg"
 services:
-- type: Layout
+- type: Exploration
 sections:
 - type: full-width-image
   image: "/uploads/blog.jpg"
