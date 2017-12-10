@@ -1,6 +1,11 @@
 ---
 title: Blog Design
 date: 2017-12-10 22:56:00 Z
+categories:
+- work
+- design
+- creative direction
+- layout
 general:
   client: Personal Project
   project_year: 2017
