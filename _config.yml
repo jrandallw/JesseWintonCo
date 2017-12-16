@@ -43,8 +43,6 @@ defaults:
       cover_image: 
     services:
     - type: 
-    credits:
-    - type: 
     sections:
     - type: text
       body: 
