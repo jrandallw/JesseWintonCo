@@ -14,7 +14,8 @@ class: page
     </div>
 
     <div class="info grid-one-half row">
-      {% if page.services %}
+      {% assign services = page.services | strip_newlines %}
+      {% if services != '' %}
       <div class="services grid-one-half">
         <h6 class="heading">Services</h6>   
         <ul>
@@ -25,7 +26,8 @@ class: page
       </div>
       {% endif %}
 
-      {% if page.credits %}
+      {% assign credits = page.credits | strip_newlines %}
+      {% if credits != '' %}
       <div class="credits grid-one-half">
         <h6 class="heading">Credits</h6>
         <ul>

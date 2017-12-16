@@ -11,6 +11,12 @@
         width: 80%;
     }
 
+    .intro {
+        padding-right: $gutter + 10px;
+        box-sizing: border-box;
+        text-align: justify;
+    }
+
     .intro,
     .info {
         flex: 0 0 calc(50% - #{$gutter * 2});
@@ -26,7 +32,7 @@
     }    
 
     .heading {
-        font-size: $base-font-size - 2px;
+        font-size: $base-font-size - 3px;
         font-family: $heading-font-stack;
         text-transform: uppercase;
         margin-bottom: $gutter;
