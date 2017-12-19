@@ -3,12 +3,12 @@ title: Eric Stern
 date: 2017-12-19 04:49:00 Z
 is_split: false
 purpose: Portfolio Design & Development
-services:
-- type: Layout Design
-- type: Development
 client:
 - info: Eric Stern
 - info: Austin, TX • 214.802.4015
+services:
+- type: Layout Design
+- type: Development
 sections:
 - type: text
   title: Executive Summary
@@ -17,6 +17,7 @@ sections:
     to create content within the Siteleaf content management system that will be flexible,
     and can adapt to allow for multiple presentations based on the project’s type
     i.e. different layouts for video vs. garment design.
+  price: 
 - type: text
   title: Design
   body: In the design process, we create the layouts for each page, incorporating
