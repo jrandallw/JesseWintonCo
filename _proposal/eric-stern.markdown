@@ -28,7 +28,7 @@ sections:
   price: 1750
 - type: text
   title: Development
-  body: One the design process is completed and approved, I’ll take the completed,
+  body: Once the design process is completed and approved, I’ll take the completed,
     approved designs and turn them into a fully functioning website, built with the
     Siteleaf content management system. Siteleaf will allow you to update your website
     as necessary, easily add in new work, and deploy your site for relatively low
