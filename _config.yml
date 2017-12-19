@@ -57,8 +57,6 @@ defaults:
     purpose: 
     services:
     - type: 
-    team:
-    - role: 
     sections:
     - type: 
       title: 
