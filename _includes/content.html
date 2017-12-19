@@ -7,9 +7,8 @@
 {% when 'text' %}
 <div class="{{ block.type }} content-block">
   <div class="container">
-    {% if block.title %}<h6>{{ block.title | downcase }}</h6>{% endif %}
+    {% if block.title %}<h6>{{ block.title | downcase }}{% if block.price %} • {{ block.price | prepend: "$" }}{% endif%}</h6>{% endif %}
     {{ block.body | markdownify | downcase }}
-    {% if block.price %}<h6 class="total price heading">Your Price <span>${{ block.price }} {{ page.billing_type }}</span></h6>{% endif %}
   </div>
 </div>  
 {% when 'byline' %}
