@@ -9,9 +9,6 @@ services:
 - type: Landscape Photography
 - type: Visual Designs
 - type: Film
-team:
-- role: Creative Direction • In-house
-- role: Film Production • KWB Creative
 sections:
 - type: full-width-image
   title: 
