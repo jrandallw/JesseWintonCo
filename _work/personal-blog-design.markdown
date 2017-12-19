@@ -15,7 +15,7 @@ services:
 - type: Creative Direction
 - type: Exploration
 sections:
-- type: full-width-image
+- type: split-image-left
   image: "/uploads/blog.jpg"
 ---
 
