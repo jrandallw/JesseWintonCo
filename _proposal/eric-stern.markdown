@@ -37,10 +37,15 @@ sections:
   price: 500
 - type: text
   title: Final Thoughts
-  body: The goal with this site is to create something that stands out. In any creative
+  body: "The goal with this site is to create something that stands out. In any creative
     sectors, there are many competitors, but the majority of them that I've seen have
     less than stellar portfolio sites. They are too generic, too old, too busy, poorly
-    designed. We will make this portfolio stand out through a number of factors.
+    designed. We will make this portfolio stand out through a number of factors.\n\n*
+    Beautiful, clean design.\n* Solid projects layouts that showcase your work in
+    the strongest possible formats.\n* An easy to maintain, flexible content management
+    system that will allow you to build your content quickly.\n\nWith these things
+    in mind, we'll be able to build you something powerful and easy to use that will
+    give you the ability to move forward in your industry with a solid foundation. "
 ---
 
 This proposal is for the design and development of a portfolio website for Eric Stern, showcasing film and advertising work. 
