@@ -17,14 +17,14 @@ sections:
   body: In the design process, we create the layouts for each page, incorporating
     many elements including the needs of each page, the requirements for displaying
     different project types etc.
-  price: 400
+  price: 600
 - type: text
   title: Development
   body: Once the design process is completed and approved, I’ll take the completed,
     approved designs and turn them into a fully functioning website, built with the
     Siteleaf content management system. Included in this part of the process will
     be a time of training.
-  price: 400
+  price: 300
 - type: text
   title: Final Thoughts
   body: "The goal with this site is to create something that stands out, and we will
