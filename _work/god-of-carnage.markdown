@@ -8,6 +8,7 @@ categories:
 tags:
 - design
 - art direction
+position: 3
 general:
   client: Personal Project
   project_year: 2017

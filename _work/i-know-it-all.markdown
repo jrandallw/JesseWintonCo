@@ -8,6 +8,7 @@ categories:
 tags:
 - design
 - writing
+position: 2
 general:
   client: Personal Project
   project_year: 2016-2017

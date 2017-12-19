@@ -1,6 +1,7 @@
 ---
 title: Winter Portraits
 date: 2017-12-19 22:29:00 Z
+position: 1
 general:
   client: Personal Project
   project_year: 2017

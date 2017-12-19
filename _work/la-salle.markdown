@@ -6,6 +6,7 @@ categories:
 - photography
 tags:
 - photography
+position: 4
 general:
   client: Bella Vista Landscape
   project_year: 2017

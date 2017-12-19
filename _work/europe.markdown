@@ -7,6 +7,7 @@ categories:
 - personal
 tags:
 - photography
+position: 5
 general:
   client: Personal Project
   project_year: 2015-2016

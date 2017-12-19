@@ -6,6 +6,7 @@ categories:
 - design
 - creative direction
 - layout
+position: 0
 general:
   client: Personal Project
   project_year: 2017
