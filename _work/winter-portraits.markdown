@@ -10,6 +10,7 @@ services:
 - type: Photography
 sections:
 - type: split-image-left
+  body: 
   image: "/uploads/winter-1-0613da.JPG"
   caption: Model • Jake Bennet
 - type: split-image-right
@@ -47,4 +48,4 @@ sections:
   caption: Model • Mason Diab
 ---
 
-A collection of portraits I shot in December of 2017. Auburn, CA. 7:30am.
+A collection of portraits I shot in December of 2017. Auburn, CA- 7:30am. Shot on Mark III and Zeiss.
