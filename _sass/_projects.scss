@@ -60,12 +60,12 @@
             .info {
                 margin: $gutter 0 0 0;
                 flex-direction: column;
-            }
 
-            .credits {
-                margin-top: $gutter * 2;
+                .services {
+                    margin-left: 0 !important;
+                }
             }
-
+            
             .content-block {
                 margin: $gutter * 3 auto;
             }
@@ -102,6 +102,11 @@
     .split-image-right {
         width: 100%;
         background: $dark-color;
+
+        .caption {
+            margin-top: $gutter;
+            width: $full;
+        }
     }
 
     .split-image-left::after,
@@ -111,14 +116,16 @@
         clear: both;
     }
 
-    .split-image-left img {
-        float: left;
+    .split-image-left figure {
         width: $half;
+        float: left;
+        position: relative;
     }
 
-    .split-image-right img {
-        float: right;
+    .split-image-right figure {
         width: $half;
+        float: right;
+        position: relative;
     }
 
     .video {

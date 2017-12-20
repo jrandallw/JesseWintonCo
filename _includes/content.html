@@ -2,7 +2,10 @@
 {% case block.type %}
 {% when 'full-width-image' or 'center-image' or 'split-image-left' or 'split-image-right' %}
 <div class="{{ block.type }} content-block">
-  <img src="{{ block.image }}"> 
+  <figure>
+    <img src="{{ block.image }}"> 
+    <figcaption class="caption text-center pin-horizontal-center">{{ block.caption | downcase }}</figcaption>
+  </figure>
 </div>  
 {% when 'text' %}
 <div class="{{ block.type }} content-block">

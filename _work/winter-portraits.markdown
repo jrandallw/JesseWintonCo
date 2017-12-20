@@ -10,54 +10,41 @@ services:
 - type: Photography
 sections:
 - type: split-image-left
-  body: 
   image: "/uploads/winter-1-0613da.JPG"
-- type: text
-  body: Model • Jake Bennet
+  caption: Model • Jake Bennet
 - type: split-image-right
   image: "/uploads/winter-2.JPG"
-- type: text
-  body: Model • Jake Bennet
+  caption: Model • Jake Bennet
 - type: split-image-left
   image: "/uploads/winter-3.JPG"
-- type: text
-  body: Model • Jake Bennet
+  caption: Model • Jake Bennet
 - type: split-image-right
   image: "/uploads/winter-4.JPG"
-- type: text
-  body: Model • Jake Bennet
+  caption: Model • Jake Bennet
 - type: split-image-left
   image: "/uploads/winter-5.JPG"
-- type: text
-  body: Model • Jake Bennet
+  caption: Model • Jake Bennet
 - type: split-image-right
   image: "/uploads/winter-6.JPG"
-- type: text
-  body: Model • Jake Bennet
+  caption: Model • Jake Bennet
 - type: split-image-left
   image: "/uploads/winter-7.JPG"
-- type: text
-  body: Model • Mason Diab
+  caption: Model • Mason Diab
 - type: split-image-right
   image: "/uploads/winter-8.JPG"
-- type: text
-  body: Model • Zach Vavra
+  caption: Model • Zach Vavra
 - type: split-image-left
   image: "/uploads/winter-9.JPG"
-- type: text
-  body: Model • Zach Vavra
+  caption: Model • Zach Vavra
 - type: split-image-right
   image: "/uploads/winter-10.JPG"
-- type: text
-  body: Model • Zach Vavra
+  caption: Model • Zach Vavra
 - type: split-image-left
   image: "/uploads/winter-11.JPG"
-- type: text
-  body: Model • Jake Bennet
+  caption: Model • Jack Bennet
 - type: split-image-right
   image: "/uploads/winter-12.JPG"
-- type: text
-  body: Model • Mason Diab
+  caption: Model • Mason Diab
 ---
 
 A collection of portraits I shot in December of 2017. Auburn, CA. 7:30am.
