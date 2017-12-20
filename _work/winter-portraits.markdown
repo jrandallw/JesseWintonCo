@@ -48,4 +48,4 @@ sections:
   caption: Model • Mason Diab
 ---
 
-A collection of portraits I shot in December of 2017. Auburn, CA- 7:30am. Shot on Mark III and Zeiss.
+A collection of portraits I shot in December of 2017. Auburn, CA- 7:30am. Shot on Mark III with Zeiss 85.
