@@ -7,7 +7,7 @@ class: proposal
   <div class="container row">
     <div class="intro grid-one-half">
       <h6 class="heading">{{ page.title }} • {{ page.purpose }}</h6>
-      {{ page.content | remove: '<p>' | remove: '</p>' }}
+      <p class="content">{{ page.content | remove: '<p>' | remove: '</p>' }}</p>
     </div>
 
     <div class="info grid-one-half row">
