@@ -1,6 +1,7 @@
 ---
 title: God of Carnage
 date: 2017-10-20 06:36:00 Z
+published: false
 categories:
 - work
 - design
