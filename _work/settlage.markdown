@@ -5,7 +5,7 @@ position: 0
 general:
   client: Josh Settlage 
   project_year: 2018
-  cover_image: "/uploads/winter-1.JPG"
+  cover_image: "/uploads/settlage-4.JPG"
 services:
 - type: Photography
 - type: Creative Direction
