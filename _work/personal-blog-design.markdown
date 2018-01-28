@@ -1,6 +1,7 @@
 ---
 title: Blog Design
 date: 2017-12-10 22:56:00 Z
+published: false
 categories:
 - work
 - design
