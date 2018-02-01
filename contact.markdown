@@ -9,3 +9,4 @@ page_heading:
 layout: contact
 ---
 
+Shoot me an email at [{{ site.email }}](mailto:{{ site.email }}?subject=Let's work together.). Let's talk.
