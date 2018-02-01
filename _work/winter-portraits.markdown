@@ -5,45 +5,46 @@ position: 1
 general:
   client: Personal Project
   project_year: 2017
-  cover_image: "/uploads/winter-1.jpg"
+  cover_image: "/uploads/winter-1.JPG"
 services:
 - type: Photography
 sections:
 - type: split-image-left
-  image: "/uploads/winter-1.jpg"
+  body: 
+  image: "/uploads/winter-1.JPG"
   caption: Model • Jake Bennet
 - type: split-image-right
-  image: "/uploads/winter-2.jpg"
+  image: "/uploads/winter-2.JPG"
   caption: Model • Jake Bennet
 - type: split-image-left
-  image: "/uploads/winter-3.jpg"
+  image: "/uploads/winter-3.JPG"
   caption: Model • Jake Bennet
 - type: split-image-right
-  image: "/uploads/winter-4.jpg"
+  image: "/uploads/winter-4.JPG"
   caption: Model • Jake Bennet
 - type: split-image-left
-  image: "/uploads/winter-5.jpg"
+  image: "/uploads/winter-5.JPG"
   caption: Model • Jake Bennet
 - type: split-image-right
-  image: "/uploads/winter-6.jpg"
+  image: "/uploads/winter-6.JPG"
   caption: Model • Jake Bennet
 - type: split-image-left
-  image: "/uploads/winter-7.jpg"
+  image: "/uploads/winter-7.JPG"
   caption: Model • Mason Diab
 - type: split-image-right
-  image: "/uploads/winter-8.jpg"
+  image: "/uploads/winter-8.JPG"
   caption: Model • Zach Vavra
 - type: split-image-left
-  image: "/uploads/winter-9.jpg"
+  image: "/uploads/winter-9.JPG"
   caption: Model • Zach Vavra
 - type: split-image-right
-  image: "/uploads/winter-10.jpg"
+  image: "/uploads/winter-10.JPG"
   caption: Model • Zach Vavra
 - type: split-image-left
-  image: "/uploads/winter-11.jpg"
+  image: "/uploads/winter-11.JPG"
   caption: Model • Jack Bennet
 - type: split-image-right
-  image: "/uploads/winter-12.jpg"
+  image: "/uploads/winter-12.JPG"
   caption: Model • Mason Diab
 ---
 
