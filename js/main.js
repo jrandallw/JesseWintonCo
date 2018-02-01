@@ -3,18 +3,1764 @@ Filename: main.js
 */
 
 // animation
-$(document).ready(function(){var t=new TimelineMax;
-  t.from(".description",.5,{opacity:0},0);
-  t.staggerFrom(".proposal-overview > div",.5,{opacity:0},0.1);
-  t.from(".intro .content",.5,{opacity:0},.5);
-  t.staggerFrom(".info ul li",.5,{opacity:0},0.1);
-  t.staggerFrom(".content-block, .project",.5,{opacity:0},0.1);
+$(document).ready(function(){
+  
+  window.tl = new TimelineLite();
+  
+  tl.from(".description",.5,{opacity:0},0);
+  tl.staggerFrom(".proposal-overview > div, .project-overview .container > div",.5,{opacity:0},0.1);
+  tl.staggerFrom(".info ul li",.5,{opacity:0},0.1);
+  tl.staggerFrom(".content-block",.5,{opacity:0},0.1);
+  tl.staggerFrom(".project",.8,{opacity:0,y:50, ease: Power1.easeOut},0.2);
 });
 
-// greensock
-var _gsScope="undefined"!=typeof module&&module.exports&&"undefined"!=typeof global?global:this||window;(_gsScope._gsQueue||(_gsScope._gsQueue=[])).push(function(){"use strict";_gsScope._gsDefine("TweenMax",["core.Animation","core.SimpleTimeline","TweenLite"],function(t,e,i){var s=function(t){var e,i=[],s=t.length;for(e=0;e!==s;i.push(t[e++]));return i},r=function(t,e,s){i.call(this,t,e,s),this._cycle=0,this._yoyo=this.vars.yoyo===!0,this._repeat=this.vars.repeat||0,this._repeatDelay=this.vars.repeatDelay||0,this._dirty=!0,this.render=r.prototype.render},n=1e-10,o=i._internals,a=o.isSelector,l=o.isArray,h=r.prototype=i.to({},.1,{}),d=[];r.version="1.16.1",h.constructor=r,h.kill()._gc=!1,r.killTweensOf=r.killDelayedCallsTo=i.killTweensOf,r.getTweensOf=i.getTweensOf,r.lagSmoothing=i.lagSmoothing,r.ticker=i.ticker,r.render=i.render,h.invalidate=function(){return this._yoyo=this.vars.yoyo===!0,this._repeat=this.vars.repeat||0,this._repeatDelay=this.vars.repeatDelay||0,this._uncache(!0),i.prototype.invalidate.call(this)},h.updateTo=function(t,e){var s,r=this.ratio,n=this.vars.immediateRender||t.immediateRender;e&&this._startTime<this._timeline._time&&(this._startTime=this._timeline._time,this._uncache(!1),this._gc?this._enabled(!0,!1):this._timeline.insert(this,this._startTime-this._delay));for(s in t)this.vars[s]=t[s];if(this._initted||n)if(e)this._initted=!1,n&&this.render(0,!0,!0);else if(this._gc&&this._enabled(!0,!1),this._notifyPluginsOfEnabled&&this._firstPT&&i._onPluginEvent("_onDisable",this),this._time/this._duration>.998){var o=this._time;this.render(0,!0,!1),this._initted=!1,this.render(o,!0,!1)}else if(this._time>0||n){this._initted=!1,this._init();for(var a,l=1/(1-r),h=this._firstPT;h;)a=h.s+h.c,h.c*=l,h.s=a-h.c,h=h._next}return this},h.render=function(t,e,i){this._initted||0===this._duration&&this.vars.repeat&&this.invalidate();var s,r,a,l,h,p,c,u,f=this._dirty?this.totalDuration():this._totalDuration,_=this._time,m=this._totalTime,g=this._cycle,v=this._duration,y=this._rawPrevTime;if(t>=f?(this._totalTime=f,this._cycle=this._repeat,this._yoyo&&0!==(1&this._cycle)?(this._time=0,this.ratio=this._ease._calcEnd?this._ease.getRatio(0):0):(this._time=v,this.ratio=this._ease._calcEnd?this._ease.getRatio(1):1),this._reversed||(s=!0,r="onComplete",i=i||this._timeline.autoRemoveChildren),0===v&&(this._initted||!this.vars.lazy||i)&&(this._startTime===this._timeline._duration&&(t=0),(0===t||0>y||y===n)&&y!==t&&(i=!0,y>n&&(r="onReverseComplete")),this._rawPrevTime=u=!e||t||y===t?t:n)):1e-7>t?(this._totalTime=this._time=this._cycle=0,this.ratio=this._ease._calcEnd?this._ease.getRatio(0):0,(0!==m||0===v&&y>0)&&(r="onReverseComplete",s=this._reversed),0>t&&(this._active=!1,0===v&&(this._initted||!this.vars.lazy||i)&&(y>=0&&(i=!0),this._rawPrevTime=u=!e||t||y===t?t:n)),this._initted||(i=!0)):(this._totalTime=this._time=t,0!==this._repeat&&(l=v+this._repeatDelay,this._cycle=this._totalTime/l>>0,0!==this._cycle&&this._cycle===this._totalTime/l&&this._cycle--,this._time=this._totalTime-this._cycle*l,this._yoyo&&0!==(1&this._cycle)&&(this._time=v-this._time),this._time>v?this._time=v:0>this._time&&(this._time=0)),this._easeType?(h=this._time/v,p=this._easeType,c=this._easePower,(1===p||3===p&&h>=.5)&&(h=1-h),3===p&&(h*=2),1===c?h*=h:2===c?h*=h*h:3===c?h*=h*h*h:4===c&&(h*=h*h*h*h),this.ratio=1===p?1-h:2===p?h:.5>this._time/v?h/2:1-h/2):this.ratio=this._ease.getRatio(this._time/v)),_===this._time&&!i&&g===this._cycle)return void(m!==this._totalTime&&this._onUpdate&&(e||this._onUpdate.apply(this.vars.onUpdateScope||this,this.vars.onUpdateParams||d)));if(!this._initted){if(this._init(),!this._initted||this._gc)return;if(!i&&this._firstPT&&(this.vars.lazy!==!1&&this._duration||this.vars.lazy&&!this._duration))return this._time=_,this._totalTime=m,this._rawPrevTime=y,this._cycle=g,o.lazyTweens.push(this),void(this._lazy=[t,e]);this._time&&!s?this.ratio=this._ease.getRatio(this._time/v):s&&this._ease._calcEnd&&(this.ratio=this._ease.getRatio(0===this._time?0:1))}for(this._lazy!==!1&&(this._lazy=!1),this._active||!this._paused&&this._time!==_&&t>=0&&(this._active=!0),0===m&&(2===this._initted&&t>0&&this._init(),this._startAt&&(t>=0?this._startAt.render(t,e,i):r||(r="_dummyGS")),this.vars.onStart&&(0!==this._totalTime||0===v)&&(e||this.vars.onStart.apply(this.vars.onStartScope||this,this.vars.onStartParams||d))),a=this._firstPT;a;)a.f?a.t[a.p](a.c*this.ratio+a.s):a.t[a.p]=a.c*this.ratio+a.s,a=a._next;this._onUpdate&&(0>t&&this._startAt&&this._startTime&&this._startAt.render(t,e,i),e||(this._totalTime!==m||s)&&this._onUpdate.apply(this.vars.onUpdateScope||this,this.vars.onUpdateParams||d)),this._cycle!==g&&(e||this._gc||this.vars.onRepeat&&this.vars.onRepeat.apply(this.vars.onRepeatScope||this,this.vars.onRepeatParams||d)),r&&(!this._gc||i)&&(0>t&&this._startAt&&!this._onUpdate&&this._startTime&&this._startAt.render(t,e,i),s&&(this._timeline.autoRemoveChildren&&this._enabled(!1,!1),this._active=!1),!e&&this.vars[r]&&this.vars[r].apply(this.vars[r+"Scope"]||this,this.vars[r+"Params"]||d),0===v&&this._rawPrevTime===n&&u!==n&&(this._rawPrevTime=0))},r.to=function(t,e,i){return new r(t,e,i)},r.from=function(t,e,i){return i.runBackwards=!0,i.immediateRender=0!=i.immediateRender,new r(t,e,i)},r.fromTo=function(t,e,i,s){return s.startAt=i,s.immediateRender=0!=s.immediateRender&&0!=i.immediateRender,new r(t,e,s)},r.staggerTo=r.allTo=function(t,e,n,o,h,p,c){o=o||0;var u,f,_,m,g=n.delay||0,v=[],y=function(){n.onComplete&&n.onComplete.apply(n.onCompleteScope||this,arguments),h.apply(c||this,p||d)};for(l(t)||("string"==typeof t&&(t=i.selector(t)||t),a(t)&&(t=s(t))),t=t||[],0>o&&(t=s(t),t.reverse(),o*=-1),u=t.length-1,_=0;u>=_;_++){f={};for(m in n)f[m]=n[m];f.delay=g,_===u&&h&&(f.onComplete=y),v[_]=new r(t[_],e,f),g+=o}return v},r.staggerFrom=r.allFrom=function(t,e,i,s,n,o,a){return i.runBackwards=!0,i.immediateRender=0!=i.immediateRender,r.staggerTo(t,e,i,s,n,o,a)},r.staggerFromTo=r.allFromTo=function(t,e,i,s,n,o,a,l){return s.startAt=i,s.immediateRender=0!=s.immediateRender&&0!=i.immediateRender,r.staggerTo(t,e,s,n,o,a,l)},r.delayedCall=function(t,e,i,s,n){return new r(e,0,{delay:t,onComplete:e,onCompleteParams:i,onCompleteScope:s,onReverseComplete:e,onReverseCompleteParams:i,onReverseCompleteScope:s,immediateRender:!1,useFrames:n,overwrite:0})},r.set=function(t,e){return new r(t,0,e)},r.isTweening=function(t){return i.getTweensOf(t,!0).length>0};var p=function(t,e){for(var s=[],r=0,n=t._first;n;)n instanceof i?s[r++]=n:(e&&(s[r++]=n),s=s.concat(p(n,e)),r=s.length),n=n._next;return s},c=r.getAllTweens=function(e){return p(t._rootTimeline,e).concat(p(t._rootFramesTimeline,e))};r.killAll=function(t,i,s,r){null==i&&(i=!0),null==s&&(s=!0);var n,o,a,l=c(0!=r),h=l.length,d=i&&s&&r;for(a=0;h>a;a++)o=l[a],(d||o instanceof e||(n=o.target===o.vars.onComplete)&&s||i&&!n)&&(t?o.totalTime(o._reversed?0:o.totalDuration()):o._enabled(!1,!1))},r.killChildTweensOf=function(t,e){if(null!=t){var n,h,d,p,c,u=o.tweenLookup;if("string"==typeof t&&(t=i.selector(t)||t),a(t)&&(t=s(t)),l(t))for(p=t.length;--p>-1;)r.killChildTweensOf(t[p],e);else{n=[];for(d in u)for(h=u[d].target.parentNode;h;)h===t&&(n=n.concat(u[d].tweens)),h=h.parentNode;for(c=n.length,p=0;c>p;p++)e&&n[p].totalTime(n[p].totalDuration()),n[p]._enabled(!1,!1)}}};var u=function(t,i,s,r){i=i!==!1,s=s!==!1,r=r!==!1;for(var n,o,a=c(r),l=i&&s&&r,h=a.length;--h>-1;)o=a[h],(l||o instanceof e||(n=o.target===o.vars.onComplete)&&s||i&&!n)&&o.paused(t)};return r.pauseAll=function(t,e,i){u(!0,t,e,i)},r.resumeAll=function(t,e,i){u(!1,t,e,i)},r.globalTimeScale=function(e){var s=t._rootTimeline,r=i.ticker.time;return arguments.length?(e=e||n,s._startTime=r-(r-s._startTime)*s._timeScale/e,s=t._rootFramesTimeline,r=i.ticker.frame,s._startTime=r-(r-s._startTime)*s._timeScale/e,s._timeScale=t._rootTimeline._timeScale=e,e):s._timeScale},h.progress=function(t){return arguments.length?this.totalTime(this.duration()*(this._yoyo&&0!==(1&this._cycle)?1-t:t)+this._cycle*(this._duration+this._repeatDelay),!1):this._time/this.duration()},h.totalProgress=function(t){return arguments.length?this.totalTime(this.totalDuration()*t,!1):this._totalTime/this.totalDuration()},h.time=function(t,e){return arguments.length?(this._dirty&&this.totalDuration(),t>this._duration&&(t=this._duration),this._yoyo&&0!==(1&this._cycle)?t=this._duration-t+this._cycle*(this._duration+this._repeatDelay):0!==this._repeat&&(t+=this._cycle*(this._duration+this._repeatDelay)),this.totalTime(t,e)):this._time},h.duration=function(e){return arguments.length?t.prototype.duration.call(this,e):this._duration},h.totalDuration=function(t){return arguments.length?-1===this._repeat?this:this.duration((t-this._repeat*this._repeatDelay)/(this._repeat+1)):(this._dirty&&(this._totalDuration=-1===this._repeat?999999999999:this._duration*(this._repeat+1)+this._repeatDelay*this._repeat,this._dirty=!1),this._totalDuration)},h.repeat=function(t){return arguments.length?(this._repeat=t,this._uncache(!0)):this._repeat},h.repeatDelay=function(t){return arguments.length?(this._repeatDelay=t,this._uncache(!0)):this._repeatDelay},h.yoyo=function(t){return arguments.length?(this._yoyo=t,this):this._yoyo},r},!0),_gsScope._gsDefine("TimelineLite",["core.Animation","core.SimpleTimeline","TweenLite"],function(t,e,i){var s=function(t){e.call(this,t),this._labels={},this.autoRemoveChildren=this.vars.autoRemoveChildren===!0,this.smoothChildTiming=this.vars.smoothChildTiming===!0,this._sortChildren=!0,this._onUpdate=this.vars.onUpdate;var i,s,r=this.vars;for(s in r)i=r[s],l(i)&&-1!==i.join("").indexOf("{self}")&&(r[s]=this._swapSelfInParams(i));l(r.tweens)&&this.add(r.tweens,0,r.align,r.stagger)},r=1e-10,n=i._internals,o=s._internals={},a=n.isSelector,l=n.isArray,h=n.lazyTweens,d=n.lazyRender,p=[],c=_gsScope._gsDefine.globals,u=function(t){var e,i={};for(e in t)i[e]=t[e];return i},f=o.pauseCallback=function(t,e,i,s){var n,o=t._timeline,a=o._totalTime,l=t._startTime,h=0>t._rawPrevTime||0===t._rawPrevTime&&o._reversed,d=h?0:r,c=h?r:0;if(e||!this._forcingPlayhead){for(o.pause(l),n=t._prev;n&&n._startTime===l;)n._rawPrevTime=c,n=n._prev;for(n=t._next;n&&n._startTime===l;)n._rawPrevTime=d,n=n._next;e&&e.apply(s||o,i||p),(this._forcingPlayhead||!o._paused)&&o.seek(a)}},_=function(t){var e,i=[],s=t.length;for(e=0;e!==s;i.push(t[e++]));return i},m=s.prototype=new e;return s.version="1.16.1",m.constructor=s,m.kill()._gc=m._forcingPlayhead=!1,m.to=function(t,e,s,r){var n=s.repeat&&c.TweenMax||i;return e?this.add(new n(t,e,s),r):this.set(t,s,r)},m.from=function(t,e,s,r){return this.add((s.repeat&&c.TweenMax||i).from(t,e,s),r)},m.fromTo=function(t,e,s,r,n){var o=r.repeat&&c.TweenMax||i;return e?this.add(o.fromTo(t,e,s,r),n):this.set(t,r,n)},m.staggerTo=function(t,e,r,n,o,l,h,d){var p,c=new s({onComplete:l,onCompleteParams:h,onCompleteScope:d,smoothChildTiming:this.smoothChildTiming});for("string"==typeof t&&(t=i.selector(t)||t),t=t||[],a(t)&&(t=_(t)),n=n||0,0>n&&(t=_(t),t.reverse(),n*=-1),p=0;t.length>p;p++)r.startAt&&(r.startAt=u(r.startAt)),c.to(t[p],e,u(r),p*n);return this.add(c,o)},m.staggerFrom=function(t,e,i,s,r,n,o,a){return i.immediateRender=0!=i.immediateRender,i.runBackwards=!0,this.staggerTo(t,e,i,s,r,n,o,a)},m.staggerFromTo=function(t,e,i,s,r,n,o,a,l){return s.startAt=i,s.immediateRender=0!=s.immediateRender&&0!=i.immediateRender,this.staggerTo(t,e,s,r,n,o,a,l)},m.call=function(t,e,s,r){return this.add(i.delayedCall(0,t,e,s),r)},m.set=function(t,e,s){return s=this._parseTimeOrLabel(s,0,!0),null==e.immediateRender&&(e.immediateRender=s===this._time&&!this._paused),this.add(new i(t,0,e),s)},s.exportRoot=function(t,e){t=t||{},null==t.smoothChildTiming&&(t.smoothChildTiming=!0);var r,n,o=new s(t),a=o._timeline;for(null==e&&(e=!0),a._remove(o,!0),o._startTime=0,o._rawPrevTime=o._time=o._totalTime=a._time,r=a._first;r;)n=r._next,e&&r instanceof i&&r.target===r.vars.onComplete||o.add(r,r._startTime-r._delay),r=n;return a.add(o,0),o},m.add=function(r,n,o,a){var h,d,p,c,u,f;if("number"!=typeof n&&(n=this._parseTimeOrLabel(n,0,!0,r)),!(r instanceof t)){if(r instanceof Array||r&&r.push&&l(r)){for(o=o||"normal",a=a||0,h=n,d=r.length,p=0;d>p;p++)l(c=r[p])&&(c=new s({tweens:c})),this.add(c,h),"string"!=typeof c&&"function"!=typeof c&&("sequence"===o?h=c._startTime+c.totalDuration()/c._timeScale:"start"===o&&(c._startTime-=c.delay())),h+=a;return this._uncache(!0)}if("string"==typeof r)return this.addLabel(r,n);if("function"!=typeof r)throw"Cannot add "+r+" into the timeline; it is not a tween, timeline, function, or string.";r=i.delayedCall(0,r)}if(e.prototype.add.call(this,r,n),(this._gc||this._time===this._duration)&&!this._paused&&this._duration<this.duration())for(u=this,f=u.rawTime()>r._startTime;u._timeline;)f&&u._timeline.smoothChildTiming?u.totalTime(u._totalTime,!0):u._gc&&u._enabled(!0,!1),u=u._timeline;return this},m.remove=function(e){if(e instanceof t)return this._remove(e,!1);if(e instanceof Array||e&&e.push&&l(e)){for(var i=e.length;--i>-1;)this.remove(e[i]);return this}return"string"==typeof e?this.removeLabel(e):this.kill(null,e)},m._remove=function(t,i){e.prototype._remove.call(this,t,i);var s=this._last;return s?this._time>s._startTime+s._totalDuration/s._timeScale&&(this._time=this.duration(),this._totalTime=this._totalDuration):this._time=this._totalTime=this._duration=this._totalDuration=0,this},m.append=function(t,e){return this.add(t,this._parseTimeOrLabel(null,e,!0,t))},m.insert=m.insertMultiple=function(t,e,i,s){return this.add(t,e||0,i,s)},m.appendMultiple=function(t,e,i,s){return this.add(t,this._parseTimeOrLabel(null,e,!0,t),i,s)},m.addLabel=function(t,e){return this._labels[t]=this._parseTimeOrLabel(e),this},m.addPause=function(t,e,s,r){var n=i.delayedCall(0,f,["{self}",e,s,r],this);return n.data="isPause",this.add(n,t)},m.removeLabel=function(t){return delete this._labels[t],this},m.getLabelTime=function(t){return null!=this._labels[t]?this._labels[t]:-1},m._parseTimeOrLabel=function(e,i,s,r){var n;if(r instanceof t&&r.timeline===this)this.remove(r);else if(r&&(r instanceof Array||r.push&&l(r)))for(n=r.length;--n>-1;)r[n]instanceof t&&r[n].timeline===this&&this.remove(r[n]);if("string"==typeof i)return this._parseTimeOrLabel(i,s&&"number"==typeof e&&null==this._labels[i]?e-this.duration():0,s);if(i=i||0,"string"!=typeof e||!isNaN(e)&&null==this._labels[e])null==e&&(e=this.duration());else{if(n=e.indexOf("="),-1===n)return null==this._labels[e]?s?this._labels[e]=this.duration()+i:i:this._labels[e]+i;i=parseInt(e.charAt(n-1)+"1",10)*Number(e.substr(n+1)),e=n>1?this._parseTimeOrLabel(e.substr(0,n-1),0,s):this.duration()}return Number(e)+i},m.seek=function(t,e){return this.totalTime("number"==typeof t?t:this._parseTimeOrLabel(t),e!==!1)},m.stop=function(){return this.paused(!0)},m.gotoAndPlay=function(t,e){return this.play(t,e)},m.gotoAndStop=function(t,e){return this.pause(t,e)},m.render=function(t,e,i){this._gc&&this._enabled(!0,!1);var s,n,o,a,l,c=this._dirty?this.totalDuration():this._totalDuration,u=this._time,f=this._startTime,_=this._timeScale,m=this._paused;if(t>=c)this._totalTime=this._time=c,this._reversed||this._hasPausedChild()||(n=!0,a="onComplete",l=!!this._timeline.autoRemoveChildren,0===this._duration&&(0===t||0>this._rawPrevTime||this._rawPrevTime===r)&&this._rawPrevTime!==t&&this._first&&(l=!0,this._rawPrevTime>r&&(a="onReverseComplete"))),this._rawPrevTime=this._duration||!e||t||this._rawPrevTime===t?t:r,t=c+1e-4;else if(1e-7>t)if(this._totalTime=this._time=0,(0!==u||0===this._duration&&this._rawPrevTime!==r&&(this._rawPrevTime>0||0>t&&this._rawPrevTime>=0))&&(a="onReverseComplete",n=this._reversed),0>t)this._active=!1,this._timeline.autoRemoveChildren&&this._reversed?(l=n=!0,a="onReverseComplete"):this._rawPrevTime>=0&&this._first&&(l=!0),this._rawPrevTime=t;else{if(this._rawPrevTime=this._duration||!e||t||this._rawPrevTime===t?t:r,0===t&&n)for(s=this._first;s&&0===s._startTime;)s._duration||(n=!1),s=s._next;t=0,this._initted||(l=!0)}else this._totalTime=this._time=this._rawPrevTime=t;if(this._time!==u&&this._first||i||l){if(this._initted||(this._initted=!0),this._active||!this._paused&&this._time!==u&&t>0&&(this._active=!0),0===u&&this.vars.onStart&&0!==this._time&&(e||this.vars.onStart.apply(this.vars.onStartScope||this,this.vars.onStartParams||p)),this._time>=u)for(s=this._first;s&&(o=s._next,!this._paused||m);)(s._active||s._startTime<=this._time&&!s._paused&&!s._gc)&&(s._reversed?s.render((s._dirty?s.totalDuration():s._totalDuration)-(t-s._startTime)*s._timeScale,e,i):s.render((t-s._startTime)*s._timeScale,e,i)),s=o;else for(s=this._last;s&&(o=s._prev,!this._paused||m);)(s._active||u>=s._startTime&&!s._paused&&!s._gc)&&(s._reversed?s.render((s._dirty?s.totalDuration():s._totalDuration)-(t-s._startTime)*s._timeScale,e,i):s.render((t-s._startTime)*s._timeScale,e,i)),s=o;this._onUpdate&&(e||(h.length&&d(),this._onUpdate.apply(this.vars.onUpdateScope||this,this.vars.onUpdateParams||p))),a&&(this._gc||(f===this._startTime||_!==this._timeScale)&&(0===this._time||c>=this.totalDuration())&&(n&&(h.length&&d(),this._timeline.autoRemoveChildren&&this._enabled(!1,!1),this._active=!1),!e&&this.vars[a]&&this.vars[a].apply(this.vars[a+"Scope"]||this,this.vars[a+"Params"]||p)))}},m._hasPausedChild=function(){for(var t=this._first;t;){if(t._paused||t instanceof s&&t._hasPausedChild())return!0;t=t._next}return!1},m.getChildren=function(t,e,s,r){r=r||-9999999999;for(var n=[],o=this._first,a=0;o;)r>o._startTime||(o instanceof i?e!==!1&&(n[a++]=o):(s!==!1&&(n[a++]=o),t!==!1&&(n=n.concat(o.getChildren(!0,e,s)),a=n.length))),o=o._next;return n},m.getTweensOf=function(t,e){var s,r,n=this._gc,o=[],a=0;for(n&&this._enabled(!0,!0),s=i.getTweensOf(t),r=s.length;--r>-1;)(s[r].timeline===this||e&&this._contains(s[r]))&&(o[a++]=s[r]);return n&&this._enabled(!1,!0),o},m.recent=function(){return this._recent},m._contains=function(t){for(var e=t.timeline;e;){if(e===this)return!0;e=e.timeline}return!1},m.shiftChildren=function(t,e,i){i=i||0;for(var s,r=this._first,n=this._labels;r;)r._startTime>=i&&(r._startTime+=t),r=r._next;if(e)for(s in n)n[s]>=i&&(n[s]+=t);return this._uncache(!0)},m._kill=function(t,e){if(!t&&!e)return this._enabled(!1,!1);for(var i=e?this.getTweensOf(e):this.getChildren(!0,!0,!1),s=i.length,r=!1;--s>-1;)i[s]._kill(t,e)&&(r=!0);return r},m.clear=function(t){var e=this.getChildren(!1,!0,!0),i=e.length;for(this._time=this._totalTime=0;--i>-1;)e[i]._enabled(!1,!1);return t!==!1&&(this._labels={}),this._uncache(!0)},m.invalidate=function(){for(var e=this._first;e;)e.invalidate(),e=e._next;return t.prototype.invalidate.call(this)},m._enabled=function(t,i){if(t===this._gc)for(var s=this._first;s;)s._enabled(t,!0),s=s._next;return e.prototype._enabled.call(this,t,i)},m.totalTime=function(){this._forcingPlayhead=!0;var e=t.prototype.totalTime.apply(this,arguments);return this._forcingPlayhead=!1,e},m.duration=function(t){return arguments.length?(0!==this.duration()&&0!==t&&this.timeScale(this._duration/t),this):(this._dirty&&this.totalDuration(),this._duration)},m.totalDuration=function(t){if(!arguments.length){if(this._dirty){for(var e,i,s=0,r=this._last,n=999999999999;r;)e=r._prev,r._dirty&&r.totalDuration(),r._startTime>n&&this._sortChildren&&!r._paused?this.add(r,r._startTime-r._delay):n=r._startTime,0>r._startTime&&!r._paused&&(s-=r._startTime,this._timeline.smoothChildTiming&&(this._startTime+=r._startTime/this._timeScale),this.shiftChildren(-r._startTime,!1,-9999999999),n=0),i=r._startTime+r._totalDuration/r._timeScale,i>s&&(s=i),r=e;this._duration=this._totalDuration=s,this._dirty=!1}return this._totalDuration}return 0!==this.totalDuration()&&0!==t&&this.timeScale(this._totalDuration/t),this},m.paused=function(e){if(!e)for(var i=this._first,s=this._time;i;)i._startTime===s&&"isPause"===i.data&&(i._rawPrevTime=0),i=i._next;return t.prototype.paused.apply(this,arguments)},m.usesFrames=function(){for(var e=this._timeline;e._timeline;)e=e._timeline;return e===t._rootFramesTimeline},m.rawTime=function(){return this._paused?this._totalTime:(this._timeline.rawTime()-this._startTime)*this._timeScale},s},!0),_gsScope._gsDefine("TimelineMax",["TimelineLite","TweenLite","easing.Ease"],function(t,e,i){var s=function(e){t.call(this,e),this._repeat=this.vars.repeat||0,this._repeatDelay=this.vars.repeatDelay||0,this._cycle=0,this._yoyo=this.vars.yoyo===!0,this._dirty=!0},r=1e-10,n=[],o=e._internals,a=o.lazyTweens,l=o.lazyRender,h=new i(null,null,1,0),d=s.prototype=new t;return d.constructor=s,d.kill()._gc=!1,s.version="1.16.1",d.invalidate=function(){return this._yoyo=this.vars.yoyo===!0,this._repeat=this.vars.repeat||0,this._repeatDelay=this.vars.repeatDelay||0,this._uncache(!0),t.prototype.invalidate.call(this)},d.addCallback=function(t,i,s,r){return this.add(e.delayedCall(0,t,s,r),i)},d.removeCallback=function(t,e){if(t)if(null==e)this._kill(null,t);else for(var i=this.getTweensOf(t,!1),s=i.length,r=this._parseTimeOrLabel(e);--s>-1;)i[s]._startTime===r&&i[s]._enabled(!1,!1);return this},d.removePause=function(e){return this.removeCallback(t._internals.pauseCallback,e)},d.tweenTo=function(t,i){i=i||{};var s,r,o,a={ease:h,useFrames:this.usesFrames(),immediateRender:!1};for(r in i)a[r]=i[r];return a.time=this._parseTimeOrLabel(t),s=Math.abs(Number(a.time)-this._time)/this._timeScale||.001,o=new e(this,s,a),a.onStart=function(){o.target.paused(!0),o.vars.time!==o.target.time()&&s===o.duration()&&o.duration(Math.abs(o.vars.time-o.target.time())/o.target._timeScale),i.onStart&&i.onStart.apply(i.onStartScope||o,i.onStartParams||n)},o},d.tweenFromTo=function(t,e,i){i=i||{},t=this._parseTimeOrLabel(t),i.startAt={onComplete:this.seek,onCompleteParams:[t],onCompleteScope:this},i.immediateRender=i.immediateRender!==!1;var s=this.tweenTo(e,i);return s.duration(Math.abs(s.vars.time-t)/this._timeScale||.001)},d.render=function(t,e,i){this._gc&&this._enabled(!0,!1);var s,o,h,d,p,c,u=this._dirty?this.totalDuration():this._totalDuration,f=this._duration,_=this._time,m=this._totalTime,g=this._startTime,v=this._timeScale,y=this._rawPrevTime,T=this._paused,w=this._cycle;if(t>=u)this._locked||(this._totalTime=u,this._cycle=this._repeat),this._reversed||this._hasPausedChild()||(o=!0,d="onComplete",p=!!this._timeline.autoRemoveChildren,0===this._duration&&(0===t||0>y||y===r)&&y!==t&&this._first&&(p=!0,y>r&&(d="onReverseComplete"))),this._rawPrevTime=this._duration||!e||t||this._rawPrevTime===t?t:r,this._yoyo&&0!==(1&this._cycle)?this._time=t=0:(this._time=f,t=f+1e-4);else if(1e-7>t)if(this._locked||(this._totalTime=this._cycle=0),this._time=0,(0!==_||0===f&&y!==r&&(y>0||0>t&&y>=0)&&!this._locked)&&(d="onReverseComplete",o=this._reversed),0>t)this._active=!1,this._timeline.autoRemoveChildren&&this._reversed?(p=o=!0,d="onReverseComplete"):y>=0&&this._first&&(p=!0),this._rawPrevTime=t;else{if(this._rawPrevTime=f||!e||t||this._rawPrevTime===t?t:r,0===t&&o)for(s=this._first;s&&0===s._startTime;)s._duration||(o=!1),s=s._next;t=0,this._initted||(p=!0)}else 0===f&&0>y&&(p=!0),this._time=this._rawPrevTime=t,this._locked||(this._totalTime=t,0!==this._repeat&&(c=f+this._repeatDelay,this._cycle=this._totalTime/c>>0,0!==this._cycle&&this._cycle===this._totalTime/c&&this._cycle--,this._time=this._totalTime-this._cycle*c,this._yoyo&&0!==(1&this._cycle)&&(this._time=f-this._time),this._time>f?(this._time=f,t=f+1e-4):0>this._time?this._time=t=0:t=this._time));if(this._cycle!==w&&!this._locked){var x=this._yoyo&&0!==(1&w),b=x===(this._yoyo&&0!==(1&this._cycle)),k=this._totalTime,S=this._cycle,P=this._rawPrevTime,C=this._time;if(this._totalTime=w*f,w>this._cycle?x=!x:this._totalTime+=f,this._time=_,this._rawPrevTime=0===f?y-1e-4:y,this._cycle=w,this._locked=!0,_=x?0:f,this.render(_,e,0===f),e||this._gc||this.vars.onRepeat&&this.vars.onRepeat.apply(this.vars.onRepeatScope||this,this.vars.onRepeatParams||n),b&&(_=x?f+1e-4:-1e-4,this.render(_,!0,!1)),this._locked=!1,this._paused&&!T)return;this._time=C,this._totalTime=k,this._cycle=S,this._rawPrevTime=P}if(!(this._time!==_&&this._first||i||p))return void(m!==this._totalTime&&this._onUpdate&&(e||this._onUpdate.apply(this.vars.onUpdateScope||this,this.vars.onUpdateParams||n)));if(this._initted||(this._initted=!0),this._active||!this._paused&&this._totalTime!==m&&t>0&&(this._active=!0),0===m&&this.vars.onStart&&0!==this._totalTime&&(e||this.vars.onStart.apply(this.vars.onStartScope||this,this.vars.onStartParams||n)),this._time>=_)for(s=this._first;s&&(h=s._next,!this._paused||T);)(s._active||s._startTime<=this._time&&!s._paused&&!s._gc)&&(s._reversed?s.render((s._dirty?s.totalDuration():s._totalDuration)-(t-s._startTime)*s._timeScale,e,i):s.render((t-s._startTime)*s._timeScale,e,i)),s=h;else for(s=this._last;s&&(h=s._prev,!this._paused||T);)(s._active||_>=s._startTime&&!s._paused&&!s._gc)&&(s._reversed?s.render((s._dirty?s.totalDuration():s._totalDuration)-(t-s._startTime)*s._timeScale,e,i):s.render((t-s._startTime)*s._timeScale,e,i)),s=h;this._onUpdate&&(e||(a.length&&l(),this._onUpdate.apply(this.vars.onUpdateScope||this,this.vars.onUpdateParams||n))),d&&(this._locked||this._gc||(g===this._startTime||v!==this._timeScale)&&(0===this._time||u>=this.totalDuration())&&(o&&(a.length&&l(),this._timeline.autoRemoveChildren&&this._enabled(!1,!1),this._active=!1),!e&&this.vars[d]&&this.vars[d].apply(this.vars[d+"Scope"]||this,this.vars[d+"Params"]||n)))},d.getActive=function(t,e,i){null==t&&(t=!0),null==e&&(e=!0),null==i&&(i=!1);var s,r,n=[],o=this.getChildren(t,e,i),a=0,l=o.length;for(s=0;l>s;s++)r=o[s],r.isActive()&&(n[a++]=r);return n},d.getLabelAfter=function(t){t||0!==t&&(t=this._time);var e,i=this.getLabelsArray(),s=i.length;for(e=0;s>e;e++)if(i[e].time>t)return i[e].name;return null},d.getLabelBefore=function(t){null==t&&(t=this._time);for(var e=this.getLabelsArray(),i=e.length;--i>-1;)if(t>e[i].time)return e[i].name;return null},d.getLabelsArray=function(){var t,e=[],i=0;for(t in this._labels)e[i++]={time:this._labels[t],name:t};return e.sort(function(t,e){return t.time-e.time}),e},d.progress=function(t,e){return arguments.length?this.totalTime(this.duration()*(this._yoyo&&0!==(1&this._cycle)?1-t:t)+this._cycle*(this._duration+this._repeatDelay),e):this._time/this.duration()},d.totalProgress=function(t,e){return arguments.length?this.totalTime(this.totalDuration()*t,e):this._totalTime/this.totalDuration()},d.totalDuration=function(e){return arguments.length?-1===this._repeat?this:this.duration((e-this._repeat*this._repeatDelay)/(this._repeat+1)):(this._dirty&&(t.prototype.totalDuration.call(this),this._totalDuration=-1===this._repeat?999999999999:this._duration*(this._repeat+1)+this._repeatDelay*this._repeat),this._totalDuration)},d.time=function(t,e){return arguments.length?(this._dirty&&this.totalDuration(),t>this._duration&&(t=this._duration),this._yoyo&&0!==(1&this._cycle)?t=this._duration-t+this._cycle*(this._duration+this._repeatDelay):0!==this._repeat&&(t+=this._cycle*(this._duration+this._repeatDelay)),this.totalTime(t,e)):this._time},d.repeat=function(t){return arguments.length?(this._repeat=t,this._uncache(!0)):this._repeat},d.repeatDelay=function(t){return arguments.length?(this._repeatDelay=t,this._uncache(!0)):this._repeatDelay},d.yoyo=function(t){return arguments.length?(this._yoyo=t,this):this._yoyo},d.currentLabel=function(t){return arguments.length?this.seek(t,!0):this.getLabelBefore(this._time+1e-8)},s},!0),function(){var t=180/Math.PI,e=[],i=[],s=[],r={},n=_gsScope._gsDefine.globals,o=function(t,e,i,s){this.a=t,this.b=e,this.c=i,this.d=s,this.da=s-t,this.ca=i-t,this.ba=e-t},a=",x,y,z,left,top,right,bottom,marginTop,marginLeft,marginRight,marginBottom,paddingLeft,paddingTop,paddingRight,paddingBottom,backgroundPosition,backgroundPosition_y,",l=function(t,e,i,s){var r={a:t},n={},o={},a={c:s},l=(t+e)/2,h=(e+i)/2,d=(i+s)/2,p=(l+h)/2,c=(h+d)/2,u=(c-p)/8;return r.b=l+(t-l)/4,n.b=p+u,r.c=n.a=(r.b+n.b)/2,n.c=o.a=(p+c)/2,o.b=c-u,a.b=d+(s-d)/4,o.c=a.a=(o.b+a.b)/2,[r,n,o,a]},h=function(t,r,n,o,a){var h,d,p,c,u,f,_,m,g,v,y,T,w,x=t.length-1,b=0,k=t[0].a;for(h=0;x>h;h++)u=t[b],d=u.a,p=u.d,c=t[b+1].d,a?(y=e[h],T=i[h],w=.25*(T+y)*r/(o?.5:s[h]||.5),f=p-(p-d)*(o?.5*r:0!==y?w/y:0),_=p+(c-p)*(o?.5*r:0!==T?w/T:0),m=p-(f+((_-f)*(3*y/(y+T)+.5)/4||0))):(f=p-.5*(p-d)*r,_=p+.5*(c-p)*r,m=p-(f+_)/2),f+=m,_+=m,u.c=g=f,u.b=0!==h?k:k=u.a+.6*(u.c-u.a),u.da=p-d,u.ca=g-d,u.ba=k-d,n?(v=l(d,k,g,p),t.splice(b,1,v[0],v[1],v[2],v[3]),b+=4):b++,k=_;u=t[b],u.b=k,u.c=k+.4*(u.d-k),u.da=u.d-u.a,u.ca=u.c-u.a,u.ba=k-u.a,n&&(v=l(u.a,k,u.c,u.d),t.splice(b,1,v[0],v[1],v[2],v[3]))},d=function(t,s,r,n){var a,l,h,d,p,c,u=[];if(n)for(t=[n].concat(t),l=t.length;--l>-1;)"string"==typeof(c=t[l][s])&&"="===c.charAt(1)&&(t[l][s]=n[s]+Number(c.charAt(0)+c.substr(2)));if(a=t.length-2,0>a)return u[0]=new o(t[0][s],0,0,t[-1>a?0:1][s]),u;for(l=0;a>l;l++)h=t[l][s],d=t[l+1][s],u[l]=new o(h,0,0,d),r&&(p=t[l+2][s],e[l]=(e[l]||0)+(d-h)*(d-h),i[l]=(i[l]||0)+(p-d)*(p-d));return u[l]=new o(t[l][s],0,0,t[l+1][s]),u},p=function(t,n,o,l,p,c){var u,f,_,m,g,v,y,T,w={},x=[],b=c||t[0];p="string"==typeof p?","+p+",":a,null==n&&(n=1);for(f in t[0])x.push(f);if(t.length>1){for(T=t[t.length-1],y=!0,u=x.length;--u>-1;)if(f=x[u],Math.abs(b[f]-T[f])>.05){y=!1;break}y&&(t=t.concat(),c&&t.unshift(c),t.push(t[1]),c=t[t.length-3])}for(e.length=i.length=s.length=0,u=x.length;--u>-1;)f=x[u],r[f]=-1!==p.indexOf(","+f+","),w[f]=d(t,f,r[f],c);for(u=e.length;--u>-1;)e[u]=Math.sqrt(e[u]),i[u]=Math.sqrt(i[u]);if(!l){for(u=x.length;--u>-1;)if(r[f])for(_=w[x[u]],v=_.length-1,m=0;v>m;m++)g=_[m+1].da/i[m]+_[m].da/e[m],s[m]=(s[m]||0)+g*g;for(u=s.length;--u>-1;)s[u]=Math.sqrt(s[u])}for(u=x.length,m=o?4:1;--u>-1;)f=x[u],_=w[f],h(_,n,o,l,r[f]),y&&(_.splice(0,m),_.splice(_.length-m,m));return w},c=function(t,e,i){e=e||"soft";var s,r,n,a,l,h,d,p,c,u,f,_={},m="cubic"===e?3:2,g="soft"===e,v=[];if(g&&i&&(t=[i].concat(t)),null==t||m+1>t.length)throw"invalid Bezier data";for(c in t[0])v.push(c);for(h=v.length;--h>-1;){for(c=v[h],_[c]=l=[],u=0,p=t.length,d=0;p>d;d++)s=null==i?t[d][c]:"string"==typeof(f=t[d][c])&&"="===f.charAt(1)?i[c]+Number(f.charAt(0)+f.substr(2)):Number(f),g&&d>1&&p-1>d&&(l[u++]=(s+l[u-2])/2),l[u++]=s;for(p=u-m+1,u=0,d=0;p>d;d+=m)s=l[d],r=l[d+1],n=l[d+2],a=2===m?0:l[d+3],l[u++]=f=3===m?new o(s,r,n,a):new o(s,(2*r+s)/3,(2*r+n)/3,n);l.length=u}return _},u=function(t,e,i){for(var s,r,n,o,a,l,h,d,p,c,u,f=1/i,_=t.length;--_>-1;)for(c=t[_],n=c.a,o=c.d-n,a=c.c-n,l=c.b-n,s=r=0,d=1;i>=d;d++)h=f*d,p=1-h,s=r-(r=(h*h*o+3*p*(h*a+p*l))*h),u=_*i+d-1,e[u]=(e[u]||0)+s*s},f=function(t,e){e=e>>0||6;var i,s,r,n,o=[],a=[],l=0,h=0,d=e-1,p=[],c=[];for(i in t)u(t[i],o,e);for(r=o.length,s=0;r>s;s++)l+=Math.sqrt(o[s]),n=s%e,c[n]=l,n===d&&(h+=l,n=s/e>>0,p[n]=c,a[n]=h,l=0,c=[]);return{length:h,lengths:a,segments:p}},_=_gsScope._gsDefine.plugin({propName:"bezier",priority:-1,version:"1.3.4",API:2,global:!0,init:function(t,e,i){this._target=t,e instanceof Array&&(e={values:e}),this._func={},this._round={},this._props=[],this._timeRes=null==e.timeResolution?6:parseInt(e.timeResolution,10);var s,r,n,o,a,l=e.values||[],h={},d=l[0],u=e.autoRotate||i.vars.orientToBezier;this._autoRotate=u?u instanceof Array?u:[["x","y","rotation",u===!0?0:Number(u)||0]]:null;for(s in d)this._props.push(s);for(n=this._props.length;--n>-1;)s=this._props[n],this._overwriteProps.push(s),r=this._func[s]="function"==typeof t[s],h[s]=r?t[s.indexOf("set")||"function"!=typeof t["get"+s.substr(3)]?s:"get"+s.substr(3)]():parseFloat(t[s]),a||h[s]!==l[0][s]&&(a=h);if(this._beziers="cubic"!==e.type&&"quadratic"!==e.type&&"soft"!==e.type?p(l,isNaN(e.curviness)?1:e.curviness,!1,"thruBasic"===e.type,e.correlate,a):c(l,e.type,h),this._segCount=this._beziers[s].length,this._timeRes){var _=f(this._beziers,this._timeRes);this._length=_.length,this._lengths=_.lengths,this._segments=_.segments,this._l1=this._li=this._s1=this._si=0,this._l2=this._lengths[0],this._curSeg=this._segments[0],
-this._s2=this._curSeg[0],this._prec=1/this._curSeg.length}if(u=this._autoRotate)for(this._initialRotations=[],u[0]instanceof Array||(this._autoRotate=u=[u]),n=u.length;--n>-1;){for(o=0;3>o;o++)s=u[n][o],this._func[s]="function"==typeof t[s]?t[s.indexOf("set")||"function"!=typeof t["get"+s.substr(3)]?s:"get"+s.substr(3)]:!1;s=u[n][2],this._initialRotations[n]=this._func[s]?this._func[s].call(this._target):this._target[s]}return this._startRatio=i.vars.runBackwards?1:0,!0},set:function(e){var i,s,r,n,o,a,l,h,d,p,c=this._segCount,u=this._func,f=this._target,_=e!==this._startRatio;if(this._timeRes){if(d=this._lengths,p=this._curSeg,e*=this._length,r=this._li,e>this._l2&&c-1>r){for(h=c-1;h>r&&e>=(this._l2=d[++r]););this._l1=d[r-1],this._li=r,this._curSeg=p=this._segments[r],this._s2=p[this._s1=this._si=0]}else if(this._l1>e&&r>0){for(;r>0&&(this._l1=d[--r])>=e;);0===r&&this._l1>e?this._l1=0:r++,this._l2=d[r],this._li=r,this._curSeg=p=this._segments[r],this._s1=p[(this._si=p.length-1)-1]||0,this._s2=p[this._si]}if(i=r,e-=this._l1,r=this._si,e>this._s2&&p.length-1>r){for(h=p.length-1;h>r&&e>=(this._s2=p[++r]););this._s1=p[r-1],this._si=r}else if(this._s1>e&&r>0){for(;r>0&&(this._s1=p[--r])>=e;);0===r&&this._s1>e?this._s1=0:r++,this._s2=p[r],this._si=r}a=(r+(e-this._s1)/(this._s2-this._s1))*this._prec}else i=0>e?0:e>=1?c-1:c*e>>0,a=(e-i*(1/c))*c;for(s=1-a,r=this._props.length;--r>-1;)n=this._props[r],o=this._beziers[n][i],l=(a*a*o.da+3*s*(a*o.ca+s*o.ba))*a+o.a,this._round[n]&&(l=Math.round(l)),u[n]?f[n](l):f[n]=l;if(this._autoRotate){var m,g,v,y,T,w,x,b=this._autoRotate;for(r=b.length;--r>-1;)n=b[r][2],w=b[r][3]||0,x=b[r][4]===!0?1:t,o=this._beziers[b[r][0]],m=this._beziers[b[r][1]],o&&m&&(o=o[i],m=m[i],g=o.a+(o.b-o.a)*a,y=o.b+(o.c-o.b)*a,g+=(y-g)*a,y+=(o.c+(o.d-o.c)*a-y)*a,v=m.a+(m.b-m.a)*a,T=m.b+(m.c-m.b)*a,v+=(T-v)*a,T+=(m.c+(m.d-m.c)*a-T)*a,l=_?Math.atan2(T-v,y-g)*x+w:this._initialRotations[r],u[n]?f[n](l):f[n]=l)}}}),m=_.prototype;_.bezierThrough=p,_.cubicToQuadratic=l,_._autoCSS=!0,_.quadraticToCubic=function(t,e,i){return new o(t,(2*e+t)/3,(2*e+i)/3,i)},_._cssRegister=function(){var t=n.CSSPlugin;if(t){var e=t._internals,i=e._parseToProxy,s=e._setPluginRatio,r=e.CSSPropTween;e._registerComplexSpecialProp("bezier",{parser:function(t,e,n,o,a,l){e instanceof Array&&(e={values:e}),l=new _;var h,d,p,c=e.values,u=c.length-1,f=[],m={};if(0>u)return a;for(h=0;u>=h;h++)p=i(t,c[h],o,a,l,u!==h),f[h]=p.end;for(d in e)m[d]=e[d];return m.values=f,a=new r(t,"bezier",0,0,p.pt,2),a.data=p,a.plugin=l,a.setRatio=s,0===m.autoRotate&&(m.autoRotate=!0),!m.autoRotate||m.autoRotate instanceof Array||(h=m.autoRotate===!0?0:Number(m.autoRotate),m.autoRotate=null!=p.end.left?[["left","top","rotation",h,!1]]:null!=p.end.x?[["x","y","rotation",h,!1]]:!1),m.autoRotate&&(o._transform||o._enableTransforms(!1),p.autoRotate=o._target._gsTransform),l._onInitTween(p.proxy,m,o._tween),a}})}},m._roundProps=function(t,e){for(var i=this._overwriteProps,s=i.length;--s>-1;)(t[i[s]]||t.bezier||t.bezierThrough)&&(this._round[i[s]]=e)},m._kill=function(t){var e,i,s=this._props;for(e in this._beziers)if(e in t)for(delete this._beziers[e],delete this._func[e],i=s.length;--i>-1;)s[i]===e&&s.splice(i,1);return this._super._kill.call(this,t)}}(),_gsScope._gsDefine("plugins.CSSPlugin",["plugins.TweenPlugin","TweenLite"],function(t,e){var i,s,r,n,o=function(){t.call(this,"css"),this._overwriteProps.length=0,this.setRatio=o.prototype.setRatio},a=_gsScope._gsDefine.globals,l={},h=o.prototype=new t("css");h.constructor=o,o.version="1.16.1",o.API=2,o.defaultTransformPerspective=0,o.defaultSkewType="compensated",h="px",o.suffixMap={top:h,right:h,bottom:h,left:h,width:h,height:h,fontSize:h,padding:h,margin:h,perspective:h,lineHeight:""};var d,p,c,u,f,_,m=/(?:\d|\-\d|\.\d|\-\.\d)+/g,g=/(?:\d|\-\d|\.\d|\-\.\d|\+=\d|\-=\d|\+=.\d|\-=\.\d)+/g,v=/(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b)/gi,y=/(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,T=/(?:\d|\-|\+|=|#|\.)*/g,w=/opacity *= *([^)]*)/i,x=/opacity:([^;]*)/i,b=/alpha\(opacity *=.+?\)/i,k=/^(rgb|hsl)/,S=/([A-Z])/g,P=/-([a-z])/gi,C=/(^(?:url\(\"|url\())|(?:(\"\))$|\)$)/gi,O=function(t,e){return e.toUpperCase()},A=/(?:Left|Right|Width)/i,$=/(M11|M12|M21|M22)=[\d\-\.e]+/gi,R=/progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,M=/,(?=[^\)]*(?:\(|$))/gi,D=Math.PI/180,z=180/Math.PI,L={},I=document,E=function(t){return I.createElementNS?I.createElementNS("http://www.w3.org/1999/xhtml",t):I.createElement(t)},F=E("div"),N=E("img"),X=o._internals={_specialProps:l},j=navigator.userAgent,H=function(){var t=j.indexOf("Android"),e=E("a");return c=-1!==j.indexOf("Safari")&&-1===j.indexOf("Chrome")&&(-1===t||Number(j.substr(t+8,1))>3),f=c&&6>Number(j.substr(j.indexOf("Version/")+8,1)),u=-1!==j.indexOf("Firefox"),(/MSIE ([0-9]{1,}[\.0-9]{0,})/.exec(j)||/Trident\/.*rv:([0-9]{1,}[\.0-9]{0,})/.exec(j))&&(_=parseFloat(RegExp.$1)),e?(e.style.cssText="top:1px;opacity:.55;",/^0.55/.test(e.style.opacity)):!1}(),U=function(t){return w.test("string"==typeof t?t:(t.currentStyle?t.currentStyle.filter:t.style.filter)||"")?parseFloat(RegExp.$1)/100:1},Y=function(t){window.console&&console.log(t)},B="",W="",q=function(t,e){e=e||F;var i,s,r=e.style;if(void 0!==r[t])return t;for(t=t.charAt(0).toUpperCase()+t.substr(1),i=["O","Moz","ms","Ms","Webkit"],s=5;--s>-1&&void 0===r[i[s]+t];);return s>=0?(W=3===s?"ms":i[s],B="-"+W.toLowerCase()+"-",W+t):null},V=I.defaultView?I.defaultView.getComputedStyle:function(){},Z=o.getStyle=function(t,e,i,s,r){var n;return H||"opacity"!==e?(!s&&t.style[e]?n=t.style[e]:(i=i||V(t))?n=i[e]||i.getPropertyValue(e)||i.getPropertyValue(e.replace(S,"-$1").toLowerCase()):t.currentStyle&&(n=t.currentStyle[e]),null==r||n&&"none"!==n&&"auto"!==n&&"auto auto"!==n?n:r):U(t)},G=X.convertToPixels=function(t,i,s,r,n){if("px"===r||!r)return s;if("auto"===r||!s)return 0;var a,l,h,d=A.test(i),p=t,c=F.style,u=0>s;if(u&&(s=-s),"%"===r&&-1!==i.indexOf("border"))a=s/100*(d?t.clientWidth:t.clientHeight);else{if(c.cssText="border:0 solid red;position:"+Z(t,"position")+";line-height:0;","%"!==r&&p.appendChild)c[d?"borderLeftWidth":"borderTopWidth"]=s+r;else{if(p=t.parentNode||I.body,l=p._gsCache,h=e.ticker.frame,l&&d&&l.time===h)return l.width*s/100;c[d?"width":"height"]=s+r}p.appendChild(F),a=parseFloat(F[d?"offsetWidth":"offsetHeight"]),p.removeChild(F),d&&"%"===r&&o.cacheWidths!==!1&&(l=p._gsCache=p._gsCache||{},l.time=h,l.width=100*(a/s)),0!==a||n||(a=G(t,i,s,r,!0))}return u?-a:a},Q=X.calculateOffset=function(t,e,i){if("absolute"!==Z(t,"position",i))return 0;var s="left"===e?"Left":"Top",r=Z(t,"margin"+s,i);return t["offset"+s]-(G(t,e,parseFloat(r),r.replace(T,""))||0)},K=function(t,e){var i,s,r,n={};if(e=e||V(t,null))if(i=e.length)for(;--i>-1;)r=e[i],(-1===r.indexOf("-transform")||bt===r)&&(n[r.replace(P,O)]=e.getPropertyValue(r));else for(i in e)(-1===i.indexOf("Transform")||xt===i)&&(n[i]=e[i]);else if(e=t.currentStyle||t.style)for(i in e)"string"==typeof i&&void 0===n[i]&&(n[i.replace(P,O)]=e[i]);return H||(n.opacity=U(t)),s=Mt(t,e,!1),n.rotation=s.rotation,n.skewX=s.skewX,n.scaleX=s.scaleX,n.scaleY=s.scaleY,n.x=s.x,n.y=s.y,St&&(n.z=s.z,n.rotationX=s.rotationX,n.rotationY=s.rotationY,n.scaleZ=s.scaleZ),n.filters&&delete n.filters,n},J=function(t,e,i,s,r){var n,o,a,l={},h=t.style;for(o in i)"cssText"!==o&&"length"!==o&&isNaN(o)&&(e[o]!==(n=i[o])||r&&r[o])&&-1===o.indexOf("Origin")&&("number"==typeof n||"string"==typeof n)&&(l[o]="auto"!==n||"left"!==o&&"top"!==o?""!==n&&"auto"!==n&&"none"!==n||"string"!=typeof e[o]||""===e[o].replace(y,"")?n:0:Q(t,o),void 0!==h[o]&&(a=new ut(h,o,h[o],a)));if(s)for(o in s)"className"!==o&&(l[o]=s[o]);return{difs:l,firstMPT:a}},tt={width:["Left","Right"],height:["Top","Bottom"]},et=["marginLeft","marginRight","marginTop","marginBottom"],it=function(t,e,i){var s=parseFloat("width"===e?t.offsetWidth:t.offsetHeight),r=tt[e],n=r.length;for(i=i||V(t,null);--n>-1;)s-=parseFloat(Z(t,"padding"+r[n],i,!0))||0,s-=parseFloat(Z(t,"border"+r[n]+"Width",i,!0))||0;return s},st=function(t,e){(null==t||""===t||"auto"===t||"auto auto"===t)&&(t="0 0");var i=t.split(" "),s=-1!==t.indexOf("left")?"0%":-1!==t.indexOf("right")?"100%":i[0],r=-1!==t.indexOf("top")?"0%":-1!==t.indexOf("bottom")?"100%":i[1];return null==r?r="center"===s?"50%":"0":"center"===r&&(r="50%"),("center"===s||isNaN(parseFloat(s))&&-1===(s+"").indexOf("="))&&(s="50%"),t=s+" "+r+(i.length>2?" "+i[2]:""),e&&(e.oxp=-1!==s.indexOf("%"),e.oyp=-1!==r.indexOf("%"),e.oxr="="===s.charAt(1),e.oyr="="===r.charAt(1),e.ox=parseFloat(s.replace(y,"")),e.oy=parseFloat(r.replace(y,"")),e.v=t),e||t},rt=function(t,e){return"string"==typeof t&&"="===t.charAt(1)?parseInt(t.charAt(0)+"1",10)*parseFloat(t.substr(2)):parseFloat(t)-parseFloat(e)},nt=function(t,e){return null==t?e:"string"==typeof t&&"="===t.charAt(1)?parseInt(t.charAt(0)+"1",10)*parseFloat(t.substr(2))+e:parseFloat(t)},ot=function(t,e,i,s){var r,n,o,a,l,h=1e-6;return null==t?a=e:"number"==typeof t?a=t:(r=360,n=t.split("_"),l="="===t.charAt(1),o=(l?parseInt(t.charAt(0)+"1",10)*parseFloat(n[0].substr(2)):parseFloat(n[0]))*(-1===t.indexOf("rad")?1:z)-(l?0:e),n.length&&(s&&(s[i]=e+o),-1!==t.indexOf("short")&&(o%=r,o!==o%(r/2)&&(o=0>o?o+r:o-r)),-1!==t.indexOf("_cw")&&0>o?o=(o+9999999999*r)%r-(0|o/r)*r:-1!==t.indexOf("ccw")&&o>0&&(o=(o-9999999999*r)%r-(0|o/r)*r)),a=e+o),h>a&&a>-h&&(a=0),a},at={aqua:[0,255,255],lime:[0,255,0],silver:[192,192,192],black:[0,0,0],maroon:[128,0,0],teal:[0,128,128],blue:[0,0,255],navy:[0,0,128],white:[255,255,255],fuchsia:[255,0,255],olive:[128,128,0],yellow:[255,255,0],orange:[255,165,0],gray:[128,128,128],purple:[128,0,128],green:[0,128,0],red:[255,0,0],pink:[255,192,203],cyan:[0,255,255],transparent:[255,255,255,0]},lt=function(t,e,i){return t=0>t?t+1:t>1?t-1:t,0|255*(1>6*t?e+6*(i-e)*t:.5>t?i:2>3*t?e+6*(i-e)*(2/3-t):e)+.5},ht=o.parseColor=function(t){var e,i,s,r,n,o;return t&&""!==t?"number"==typeof t?[t>>16,255&t>>8,255&t]:(","===t.charAt(t.length-1)&&(t=t.substr(0,t.length-1)),at[t]?at[t]:"#"===t.charAt(0)?(4===t.length&&(e=t.charAt(1),i=t.charAt(2),s=t.charAt(3),t="#"+e+e+i+i+s+s),t=parseInt(t.substr(1),16),[t>>16,255&t>>8,255&t]):"hsl"===t.substr(0,3)?(t=t.match(m),r=Number(t[0])%360/360,n=Number(t[1])/100,o=Number(t[2])/100,i=.5>=o?o*(n+1):o+n-o*n,e=2*o-i,t.length>3&&(t[3]=Number(t[3])),t[0]=lt(r+1/3,e,i),t[1]=lt(r,e,i),t[2]=lt(r-1/3,e,i),t):(t=t.match(m)||at.transparent,t[0]=Number(t[0]),t[1]=Number(t[1]),t[2]=Number(t[2]),t.length>3&&(t[3]=Number(t[3])),t)):at.black},dt="(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#.+?\\b";for(h in at)dt+="|"+h+"\\b";dt=RegExp(dt+")","gi");var pt=function(t,e,i,s){if(null==t)return function(t){return t};var r,n=e?(t.match(dt)||[""])[0]:"",o=t.split(n).join("").match(v)||[],a=t.substr(0,t.indexOf(o[0])),l=")"===t.charAt(t.length-1)?")":"",h=-1!==t.indexOf(" ")?" ":",",d=o.length,p=d>0?o[0].replace(m,""):"";return d?r=e?function(t){var e,c,u,f;if("number"==typeof t)t+=p;else if(s&&M.test(t)){for(f=t.replace(M,"|").split("|"),u=0;f.length>u;u++)f[u]=r(f[u]);return f.join(",")}if(e=(t.match(dt)||[n])[0],c=t.split(e).join("").match(v)||[],u=c.length,d>u--)for(;d>++u;)c[u]=i?c[0|(u-1)/2]:o[u];return a+c.join(h)+h+e+l+(-1!==t.indexOf("inset")?" inset":"")}:function(t){var e,n,c;if("number"==typeof t)t+=p;else if(s&&M.test(t)){for(n=t.replace(M,"|").split("|"),c=0;n.length>c;c++)n[c]=r(n[c]);return n.join(",")}if(e=t.match(v)||[],c=e.length,d>c--)for(;d>++c;)e[c]=i?e[0|(c-1)/2]:o[c];return a+e.join(h)+l}:function(t){return t}},ct=function(t){return t=t.split(","),function(e,i,s,r,n,o,a){var l,h=(i+"").split(" ");for(a={},l=0;4>l;l++)a[t[l]]=h[l]=h[l]||h[(l-1)/2>>0];return r.parse(e,a,n,o)}},ut=(X._setPluginRatio=function(t){this.plugin.setRatio(t);for(var e,i,s,r,n=this.data,o=n.proxy,a=n.firstMPT,l=1e-6;a;)e=o[a.v],a.r?e=Math.round(e):l>e&&e>-l&&(e=0),a.t[a.p]=e,a=a._next;if(n.autoRotate&&(n.autoRotate.rotation=o.rotation),1===t)for(a=n.firstMPT;a;){if(i=a.t,i.type){if(1===i.type){for(r=i.xs0+i.s+i.xs1,s=1;i.l>s;s++)r+=i["xn"+s]+i["xs"+(s+1)];i.e=r}}else i.e=i.s+i.xs0;a=a._next}},function(t,e,i,s,r){this.t=t,this.p=e,this.v=i,this.r=r,s&&(s._prev=this,this._next=s)}),ft=(X._parseToProxy=function(t,e,i,s,r,n){var o,a,l,h,d,p=s,c={},u={},f=i._transform,_=L;for(i._transform=null,L=e,s=d=i.parse(t,e,s,r),L=_,n&&(i._transform=f,p&&(p._prev=null,p._prev&&(p._prev._next=null)));s&&s!==p;){if(1>=s.type&&(a=s.p,u[a]=s.s+s.c,c[a]=s.s,n||(h=new ut(s,"s",a,h,s.r),s.c=0),1===s.type))for(o=s.l;--o>0;)l="xn"+o,a=s.p+"_"+l,u[a]=s.data[l],c[a]=s[l],n||(h=new ut(s,l,a,h,s.rxp[l]));s=s._next}return{proxy:c,end:u,firstMPT:h,pt:d}},X.CSSPropTween=function(t,e,s,r,o,a,l,h,d,p,c){this.t=t,this.p=e,this.s=s,this.c=r,this.n=l||e,t instanceof ft||n.push(this.n),this.r=h,this.type=a||0,d&&(this.pr=d,i=!0),this.b=void 0===p?s:p,this.e=void 0===c?s+r:c,o&&(this._next=o,o._prev=this)}),_t=o.parseComplex=function(t,e,i,s,r,n,o,a,l,h){i=i||n||"",o=new ft(t,e,0,0,o,h?2:1,null,!1,a,i,s),s+="";var p,c,u,f,_,v,y,T,w,x,b,S,P=i.split(", ").join(",").split(" "),C=s.split(", ").join(",").split(" "),O=P.length,A=d!==!1;for((-1!==s.indexOf(",")||-1!==i.indexOf(","))&&(P=P.join(" ").replace(M,", ").split(" "),C=C.join(" ").replace(M,", ").split(" "),O=P.length),O!==C.length&&(P=(n||"").split(" "),O=P.length),o.plugin=l,o.setRatio=h,p=0;O>p;p++)if(f=P[p],_=C[p],T=parseFloat(f),T||0===T)o.appendXtra("",T,rt(_,T),_.replace(g,""),A&&-1!==_.indexOf("px"),!0);else if(r&&("#"===f.charAt(0)||at[f]||k.test(f)))S=","===_.charAt(_.length-1)?"),":")",f=ht(f),_=ht(_),w=f.length+_.length>6,w&&!H&&0===_[3]?(o["xs"+o.l]+=o.l?" transparent":"transparent",o.e=o.e.split(C[p]).join("transparent")):(H||(w=!1),o.appendXtra(w?"rgba(":"rgb(",f[0],_[0]-f[0],",",!0,!0).appendXtra("",f[1],_[1]-f[1],",",!0).appendXtra("",f[2],_[2]-f[2],w?",":S,!0),w&&(f=4>f.length?1:f[3],o.appendXtra("",f,(4>_.length?1:_[3])-f,S,!1)));else if(v=f.match(m)){if(y=_.match(g),!y||y.length!==v.length)return o;for(u=0,c=0;v.length>c;c++)b=v[c],x=f.indexOf(b,u),o.appendXtra(f.substr(u,x-u),Number(b),rt(y[c],b),"",A&&"px"===f.substr(x+b.length,2),0===c),u=x+b.length;o["xs"+o.l]+=f.substr(u)}else o["xs"+o.l]+=o.l?" "+f:f;if(-1!==s.indexOf("=")&&o.data){for(S=o.xs0+o.data.s,p=1;o.l>p;p++)S+=o["xs"+p]+o.data["xn"+p];o.e=S+o["xs"+p]}return o.l||(o.type=-1,o.xs0=o.e),o.xfirst||o},mt=9;for(h=ft.prototype,h.l=h.pr=0;--mt>0;)h["xn"+mt]=0,h["xs"+mt]="";h.xs0="",h._next=h._prev=h.xfirst=h.data=h.plugin=h.setRatio=h.rxp=null,h.appendXtra=function(t,e,i,s,r,n){var o=this,a=o.l;return o["xs"+a]+=n&&a?" "+t:t||"",i||0===a||o.plugin?(o.l++,o.type=o.setRatio?2:1,o["xs"+o.l]=s||"",a>0?(o.data["xn"+a]=e+i,o.rxp["xn"+a]=r,o["xn"+a]=e,o.plugin||(o.xfirst=new ft(o,"xn"+a,e,i,o.xfirst||o,0,o.n,r,o.pr),o.xfirst.xs0=0),o):(o.data={s:e+i},o.rxp={},o.s=e,o.c=i,o.r=r,o)):(o["xs"+a]+=e+(s||""),o)};var gt=function(t,e){e=e||{},this.p=e.prefix?q(t)||t:t,l[t]=l[this.p]=this,this.format=e.formatter||pt(e.defaultValue,e.color,e.collapsible,e.multi),e.parser&&(this.parse=e.parser),this.clrs=e.color,this.multi=e.multi,this.keyword=e.keyword,this.dflt=e.defaultValue,this.pr=e.priority||0},vt=X._registerComplexSpecialProp=function(t,e,i){"object"!=typeof e&&(e={parser:i});var s,r,n=t.split(","),o=e.defaultValue;for(i=i||[o],s=0;n.length>s;s++)e.prefix=0===s&&e.prefix,e.defaultValue=i[s]||o,r=new gt(n[s],e)},yt=function(t){if(!l[t]){var e=t.charAt(0).toUpperCase()+t.substr(1)+"Plugin";vt(t,{parser:function(t,i,s,r,n,o,h){var d=a.com.greensock.plugins[e];return d?(d._cssRegister(),l[s].parse(t,i,s,r,n,o,h)):(Y("Error: "+e+" js file not loaded."),n)}})}};h=gt.prototype,h.parseComplex=function(t,e,i,s,r,n){var o,a,l,h,d,p,c=this.keyword;if(this.multi&&(M.test(i)||M.test(e)?(a=e.replace(M,"|").split("|"),l=i.replace(M,"|").split("|")):c&&(a=[e],l=[i])),l){for(h=l.length>a.length?l.length:a.length,o=0;h>o;o++)e=a[o]=a[o]||this.dflt,i=l[o]=l[o]||this.dflt,c&&(d=e.indexOf(c),p=i.indexOf(c),d!==p&&(-1===p?a[o]=a[o].split(c).join(""):-1===d&&(a[o]+=" "+c)));e=a.join(", "),i=l.join(", ")}return _t(t,this.p,e,i,this.clrs,this.dflt,s,this.pr,r,n)},h.parse=function(t,e,i,s,n,o){return this.parseComplex(t.style,this.format(Z(t,this.p,r,!1,this.dflt)),this.format(e),n,o)},o.registerSpecialProp=function(t,e,i){vt(t,{parser:function(t,s,r,n,o,a){var l=new ft(t,r,0,0,o,2,r,!1,i);return l.plugin=a,l.setRatio=e(t,s,n._tween,r),l},priority:i})},o.useSVGTransformAttr=c;var Tt,wt="scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(","),xt=q("transform"),bt=B+"transform",kt=q("transformOrigin"),St=null!==q("perspective"),Pt=X.Transform=function(){this.perspective=parseFloat(o.defaultTransformPerspective)||0,this.force3D=o.defaultForce3D!==!1&&St?o.defaultForce3D||"auto":!1},Ct=window.SVGElement,Ot=function(t,e,i){var s,r=I.createElementNS("http://www.w3.org/2000/svg",t),n=/([a-z])([A-Z])/g;for(s in i)r.setAttributeNS(null,s.replace(n,"$1-$2").toLowerCase(),i[s]);return e.appendChild(r),r},At=I.documentElement,$t=function(){var t,e,i,s=_||/Android/i.test(j)&&!window.chrome;return I.createElementNS&&!s&&(t=Ot("svg",At),e=Ot("rect",t,{width:100,height:50,x:100}),i=e.getBoundingClientRect().width,e.style[kt]="50% 50%",e.style[xt]="scaleX(0.5)",s=i===e.getBoundingClientRect().width&&!(u&&St),At.removeChild(t)),s}(),Rt=function(t,e,i,s){var r,n;s&&(n=s.split(" ")).length||(r=t.getBBox(),e=st(e).split(" "),n=[(-1!==e[0].indexOf("%")?parseFloat(e[0])/100*r.width:parseFloat(e[0]))+r.x,(-1!==e[1].indexOf("%")?parseFloat(e[1])/100*r.height:parseFloat(e[1]))+r.y]),i.xOrigin=parseFloat(n[0]),i.yOrigin=parseFloat(n[1]),t.setAttribute("data-svg-origin",n.join(" "))},Mt=X.getTransform=function(t,e,i,s){if(t._gsTransform&&i&&!s)return t._gsTransform;var n,a,l,h,d,p,c,u,f,_,m=i?t._gsTransform||new Pt:new Pt,g=0>m.scaleX,v=2e-5,y=1e5,T=St?parseFloat(Z(t,kt,e,!1,"0 0 0").split(" ")[2])||m.zOrigin||0:0,w=parseFloat(o.defaultTransformPerspective)||0;if(xt?a=Z(t,bt,e,!0):t.currentStyle&&(a=t.currentStyle.filter.match($),a=a&&4===a.length?[a[0].substr(4),Number(a[2].substr(4)),Number(a[1].substr(4)),a[3].substr(4),m.x||0,m.y||0].join(","):""),n=!a||"none"===a||"matrix(1, 0, 0, 1, 0, 0)"===a,m.svg=!!(Ct&&"function"==typeof t.getBBox&&t.getCTM&&(!t.parentNode||t.parentNode.getBBox&&t.parentNode.getCTM)),m.svg&&(n&&-1!==(t.style[xt]+"").indexOf("matrix")&&(a=t.style[xt],n=!1),Rt(t,Z(t,kt,r,!1,"50% 50%")+"",m,t.getAttribute("data-svg-origin")),Tt=o.useSVGTransformAttr||$t,l=t.getAttribute("transform"),n&&l&&-1!==l.indexOf("matrix")&&(a=l,n=0)),!n){for(l=(a||"").match(/(?:\-|\b)[\d\-\.e]+\b/gi)||[],h=l.length;--h>-1;)d=Number(l[h]),l[h]=(p=d-(d|=0))?(0|p*y+(0>p?-.5:.5))/y+d:d;if(16===l.length){var x,b,k,S,P,C=l[0],O=l[1],A=l[2],R=l[3],M=l[4],D=l[5],L=l[6],I=l[7],E=l[8],F=l[9],N=l[10],X=l[12],j=l[13],H=l[14],U=l[11],Y=Math.atan2(L,N);m.zOrigin&&(H=-m.zOrigin,X=E*H-l[12],j=F*H-l[13],H=N*H+m.zOrigin-l[14]),m.rotationX=Y*z,Y&&(S=Math.cos(-Y),P=Math.sin(-Y),x=M*S+E*P,b=D*S+F*P,k=L*S+N*P,E=M*-P+E*S,F=D*-P+F*S,N=L*-P+N*S,U=I*-P+U*S,M=x,D=b,L=k),Y=Math.atan2(E,N),m.rotationY=Y*z,Y&&(S=Math.cos(-Y),P=Math.sin(-Y),x=C*S-E*P,b=O*S-F*P,k=A*S-N*P,F=O*P+F*S,N=A*P+N*S,U=R*P+U*S,C=x,O=b,A=k),Y=Math.atan2(O,C),m.rotation=Y*z,Y&&(S=Math.cos(-Y),P=Math.sin(-Y),C=C*S+M*P,b=O*S+D*P,D=O*-P+D*S,L=A*-P+L*S,O=b),m.rotationX&&Math.abs(m.rotationX)+Math.abs(m.rotation)>359.9&&(m.rotationX=m.rotation=0,m.rotationY+=180),m.scaleX=(0|Math.sqrt(C*C+O*O)*y+.5)/y,m.scaleY=(0|Math.sqrt(D*D+F*F)*y+.5)/y,m.scaleZ=(0|Math.sqrt(L*L+N*N)*y+.5)/y,m.skewX=0,m.perspective=U?1/(0>U?-U:U):0,m.x=X,m.y=j,m.z=H,m.svg&&(m.x-=m.xOrigin-(m.xOrigin*C-m.yOrigin*M),m.y-=m.yOrigin-(m.yOrigin*O-m.xOrigin*D))}else if(!(St&&!s&&l.length&&m.x===l[4]&&m.y===l[5]&&(m.rotationX||m.rotationY)||void 0!==m.x&&"none"===Z(t,"display",e))){var B=l.length>=6,W=B?l[0]:1,q=l[1]||0,V=l[2]||0,G=B?l[3]:1;m.x=l[4]||0,m.y=l[5]||0,c=Math.sqrt(W*W+q*q),u=Math.sqrt(G*G+V*V),f=W||q?Math.atan2(q,W)*z:m.rotation||0,_=V||G?Math.atan2(V,G)*z+f:m.skewX||0,Math.abs(_)>90&&270>Math.abs(_)&&(g?(c*=-1,_+=0>=f?180:-180,f+=0>=f?180:-180):(u*=-1,_+=0>=_?180:-180)),m.scaleX=c,m.scaleY=u,m.rotation=f,m.skewX=_,St&&(m.rotationX=m.rotationY=m.z=0,m.perspective=w,m.scaleZ=1),m.svg&&(m.x-=m.xOrigin-(m.xOrigin*W-m.yOrigin*q),m.y-=m.yOrigin-(m.yOrigin*G-m.xOrigin*V))}m.zOrigin=T;for(h in m)v>m[h]&&m[h]>-v&&(m[h]=0)}return i&&(t._gsTransform=m,m.svg&&(Tt&&t.style[xt]?It(t.style,xt):!Tt&&t.getAttribute("transform")&&t.removeAttribute("transform"))),m},Dt=function(t){var e,i,s=this.data,r=-s.rotation*D,n=r+s.skewX*D,o=1e5,a=(0|Math.cos(r)*s.scaleX*o)/o,l=(0|Math.sin(r)*s.scaleX*o)/o,h=(0|Math.sin(n)*-s.scaleY*o)/o,d=(0|Math.cos(n)*s.scaleY*o)/o,p=this.t.style,c=this.t.currentStyle;if(c){i=l,l=-h,h=-i,e=c.filter,p.filter="";var u,f,m=this.t.offsetWidth,g=this.t.offsetHeight,v="absolute"!==c.position,y="progid:DXImageTransform.Microsoft.Matrix(M11="+a+", M12="+l+", M21="+h+", M22="+d,x=s.x+m*s.xPercent/100,b=s.y+g*s.yPercent/100;if(null!=s.ox&&(u=(s.oxp?.01*m*s.ox:s.ox)-m/2,f=(s.oyp?.01*g*s.oy:s.oy)-g/2,x+=u-(u*a+f*l),b+=f-(u*h+f*d)),v?(u=m/2,f=g/2,y+=", Dx="+(u-(u*a+f*l)+x)+", Dy="+(f-(u*h+f*d)+b)+")"):y+=", sizingMethod='auto expand')",p.filter=-1!==e.indexOf("DXImageTransform.Microsoft.Matrix(")?e.replace(R,y):y+" "+e,(0===t||1===t)&&1===a&&0===l&&0===h&&1===d&&(v&&-1===y.indexOf("Dx=0, Dy=0")||w.test(e)&&100!==parseFloat(RegExp.$1)||-1===e.indexOf(e.indexOf("Alpha"))&&p.removeAttribute("filter")),!v){var k,S,P,C=8>_?1:-1;for(u=s.ieOffsetX||0,f=s.ieOffsetY||0,s.ieOffsetX=Math.round((m-((0>a?-a:a)*m+(0>l?-l:l)*g))/2+x),s.ieOffsetY=Math.round((g-((0>d?-d:d)*g+(0>h?-h:h)*m))/2+b),mt=0;4>mt;mt++)S=et[mt],k=c[S],i=-1!==k.indexOf("px")?parseFloat(k):G(this.t,S,parseFloat(k),k.replace(T,""))||0,P=i!==s[S]?2>mt?-s.ieOffsetX:-s.ieOffsetY:2>mt?u-s.ieOffsetX:f-s.ieOffsetY,p[S]=(s[S]=Math.round(i-P*(0===mt||2===mt?1:C)))+"px"}}},zt=X.set3DTransformRatio=X.setTransformRatio=function(t){var e,i,s,r,n,o,a,l,h,d,p,c,f,_,m,g,v,y,T,w,x,b,k,S=this.data,P=this.t.style,C=S.rotation,O=S.rotationX,A=S.rotationY,$=S.scaleX,R=S.scaleY,M=S.scaleZ,z=S.x,L=S.y,I=S.z,E=S.svg,F=S.perspective,N=S.force3D;if(!((1!==t&&0!==t||"auto"!==N||this.tween._totalTime!==this.tween._totalDuration&&this.tween._totalTime)&&N||I||F||A||O)||Tt&&E||!St)return void(C||S.skewX||E?(C*=D,b=S.skewX*D,k=1e5,e=Math.cos(C)*$,r=Math.sin(C)*$,i=Math.sin(C-b)*-R,n=Math.cos(C-b)*R,b&&"simple"===S.skewType&&(v=Math.tan(b),v=Math.sqrt(1+v*v),i*=v,n*=v),E&&(z+=S.xOrigin-(S.xOrigin*e+S.yOrigin*i),L+=S.yOrigin-(S.xOrigin*r+S.yOrigin*n),_=1e-6,_>z&&z>-_&&(z=0),_>L&&L>-_&&(L=0)),T=(0|e*k)/k+","+(0|r*k)/k+","+(0|i*k)/k+","+(0|n*k)/k+","+z+","+L+")",E&&Tt?this.t.setAttribute("transform","matrix("+T):P[xt]=(S.xPercent||S.yPercent?"translate("+S.xPercent+"%,"+S.yPercent+"%) matrix(":"matrix(")+T):P[xt]=(S.xPercent||S.yPercent?"translate("+S.xPercent+"%,"+S.yPercent+"%) matrix(":"matrix(")+$+",0,0,"+R+","+z+","+L+")");if(u&&(_=1e-4,_>$&&$>-_&&($=M=2e-5),_>R&&R>-_&&(R=M=2e-5),!F||S.z||S.rotationX||S.rotationY||(F=0)),C||S.skewX)C*=D,m=e=Math.cos(C),g=r=Math.sin(C),S.skewX&&(C-=S.skewX*D,m=Math.cos(C),g=Math.sin(C),"simple"===S.skewType&&(v=Math.tan(S.skewX*D),v=Math.sqrt(1+v*v),m*=v,g*=v)),i=-g,n=m;else{if(!(A||O||1!==M||F||E))return void(P[xt]=(S.xPercent||S.yPercent?"translate("+S.xPercent+"%,"+S.yPercent+"%) translate3d(":"translate3d(")+z+"px,"+L+"px,"+I+"px)"+(1!==$||1!==R?" scale("+$+","+R+")":""));e=n=1,i=r=0}h=1,s=o=a=l=d=p=0,c=F?-1/F:0,f=S.zOrigin,_=1e-6,w=",",x="0",C=A*D,C&&(m=Math.cos(C),g=Math.sin(C),a=-g,d=c*-g,s=e*g,o=r*g,h=m,c*=m,e*=m,r*=m),C=O*D,C&&(m=Math.cos(C),g=Math.sin(C),v=i*m+s*g,y=n*m+o*g,l=h*g,p=c*g,s=i*-g+s*m,o=n*-g+o*m,h*=m,c*=m,i=v,n=y),1!==M&&(s*=M,o*=M,h*=M,c*=M),1!==R&&(i*=R,n*=R,l*=R,p*=R),1!==$&&(e*=$,r*=$,a*=$,d*=$),(f||E)&&(f&&(z+=s*-f,L+=o*-f,I+=h*-f+f),E&&(z+=S.xOrigin-(S.xOrigin*e+S.yOrigin*i),L+=S.yOrigin-(S.xOrigin*r+S.yOrigin*n)),_>z&&z>-_&&(z=x),_>L&&L>-_&&(L=x),_>I&&I>-_&&(I=0)),T=S.xPercent||S.yPercent?"translate("+S.xPercent+"%,"+S.yPercent+"%) matrix3d(":"matrix3d(",T+=(_>e&&e>-_?x:e)+w+(_>r&&r>-_?x:r)+w+(_>a&&a>-_?x:a),T+=w+(_>d&&d>-_?x:d)+w+(_>i&&i>-_?x:i)+w+(_>n&&n>-_?x:n),O||A?(T+=w+(_>l&&l>-_?x:l)+w+(_>p&&p>-_?x:p)+w+(_>s&&s>-_?x:s),T+=w+(_>o&&o>-_?x:o)+w+(_>h&&h>-_?x:h)+w+(_>c&&c>-_?x:c)+w):T+=",0,0,0,0,1,0,",T+=z+w+L+w+I+w+(F?1+-I/F:1)+")",P[xt]=T};h=Pt.prototype,h.x=h.y=h.z=h.skewX=h.skewY=h.rotation=h.rotationX=h.rotationY=h.zOrigin=h.xPercent=h.yPercent=0,h.scaleX=h.scaleY=h.scaleZ=1,vt("transform,scale,scaleX,scaleY,scaleZ,x,y,z,rotation,rotationX,rotationY,rotationZ,skewX,skewY,shortRotation,shortRotationX,shortRotationY,shortRotationZ,transformOrigin,svgOrigin,transformPerspective,directionalRotation,parseTransform,force3D,skewType,xPercent,yPercent",{parser:function(t,e,i,s,n,a,l){if(s._lastParsedTransform===l)return n;s._lastParsedTransform=l;var h,d,p,c,u,f,_,m=s._transform=Mt(t,r,!0,l.parseTransform),g=t.style,v=1e-6,y=wt.length,T=l,w={};if("string"==typeof T.transform&&xt)p=F.style,p[xt]=T.transform,p.display="block",p.position="absolute",I.body.appendChild(F),h=Mt(F,null,!1),I.body.removeChild(F);else if("object"==typeof T){if(h={scaleX:nt(null!=T.scaleX?T.scaleX:T.scale,m.scaleX),scaleY:nt(null!=T.scaleY?T.scaleY:T.scale,m.scaleY),scaleZ:nt(T.scaleZ,m.scaleZ),x:nt(T.x,m.x),y:nt(T.y,m.y),z:nt(T.z,m.z),xPercent:nt(T.xPercent,m.xPercent),yPercent:nt(T.yPercent,m.yPercent),perspective:nt(T.transformPerspective,m.perspective)},_=T.directionalRotation,null!=_)if("object"==typeof _)for(p in _)T[p]=_[p];else T.rotation=_;"string"==typeof T.x&&-1!==T.x.indexOf("%")&&(h.x=0,h.xPercent=nt(T.x,m.xPercent)),"string"==typeof T.y&&-1!==T.y.indexOf("%")&&(h.y=0,h.yPercent=nt(T.y,m.yPercent)),h.rotation=ot("rotation"in T?T.rotation:"shortRotation"in T?T.shortRotation+"_short":"rotationZ"in T?T.rotationZ:m.rotation,m.rotation,"rotation",w),St&&(h.rotationX=ot("rotationX"in T?T.rotationX:"shortRotationX"in T?T.shortRotationX+"_short":m.rotationX||0,m.rotationX,"rotationX",w),h.rotationY=ot("rotationY"in T?T.rotationY:"shortRotationY"in T?T.shortRotationY+"_short":m.rotationY||0,m.rotationY,"rotationY",w)),h.skewX=null==T.skewX?m.skewX:ot(T.skewX,m.skewX),h.skewY=null==T.skewY?m.skewY:ot(T.skewY,m.skewY),(d=h.skewY-m.skewY)&&(h.skewX+=d,h.rotation+=d)}for(St&&null!=T.force3D&&(m.force3D=T.force3D,f=!0),m.skewType=T.skewType||m.skewType||o.defaultSkewType,u=m.force3D||m.z||m.rotationX||m.rotationY||h.z||h.rotationX||h.rotationY||h.perspective,u||null==T.scale||(h.scaleZ=1);--y>-1;)i=wt[y],c=h[i]-m[i],(c>v||-v>c||null!=T[i]||null!=L[i])&&(f=!0,n=new ft(m,i,m[i],c,n),i in w&&(n.e=w[i]),n.xs0=0,n.plugin=a,s._overwriteProps.push(n.n));return c=T.transformOrigin,m.svg&&(c||T.svgOrigin)&&(Rt(t,st(c),h,T.svgOrigin),n=new ft(m,"xOrigin",m.xOrigin,h.xOrigin-m.xOrigin,n,-1,"transformOrigin"),n.b=m.xOrigin,n.e=n.xs0=h.xOrigin,n=new ft(m,"yOrigin",m.yOrigin,h.yOrigin-m.yOrigin,n,-1,"transformOrigin"),n.b=m.yOrigin,n.e=n.xs0=h.yOrigin,c=Tt?null:"0px 0px"),(c||St&&u&&m.zOrigin)&&(xt?(f=!0,i=kt,c=(c||Z(t,i,r,!1,"50% 50%"))+"",n=new ft(g,i,0,0,n,-1,"transformOrigin"),n.b=g[i],n.plugin=a,St?(p=m.zOrigin,c=c.split(" "),m.zOrigin=(c.length>2&&(0===p||"0px"!==c[2])?parseFloat(c[2]):p)||0,n.xs0=n.e=c[0]+" "+(c[1]||"50%")+" 0px",n=new ft(m,"zOrigin",0,0,n,-1,n.n),n.b=p,n.xs0=n.e=m.zOrigin):n.xs0=n.e=c):st(c+"",m)),f&&(s._transformType=m.svg&&Tt||!u&&3!==this._transformType?2:3),n},prefix:!0}),vt("boxShadow",{defaultValue:"0px 0px 0px 0px #999",prefix:!0,color:!0,multi:!0,keyword:"inset"}),vt("borderRadius",{defaultValue:"0px",parser:function(t,e,i,n,o){e=this.format(e);var a,l,h,d,p,c,u,f,_,m,g,v,y,T,w,x,b=["borderTopLeftRadius","borderTopRightRadius","borderBottomRightRadius","borderBottomLeftRadius"],k=t.style;for(_=parseFloat(t.offsetWidth),m=parseFloat(t.offsetHeight),a=e.split(" "),l=0;b.length>l;l++)this.p.indexOf("border")&&(b[l]=q(b[l])),p=d=Z(t,b[l],r,!1,"0px"),-1!==p.indexOf(" ")&&(d=p.split(" "),p=d[0],d=d[1]),c=h=a[l],u=parseFloat(p),v=p.substr((u+"").length),y="="===c.charAt(1),y?(f=parseInt(c.charAt(0)+"1",10),c=c.substr(2),f*=parseFloat(c),g=c.substr((f+"").length-(0>f?1:0))||""):(f=parseFloat(c),g=c.substr((f+"").length)),""===g&&(g=s[i]||v),g!==v&&(T=G(t,"borderLeft",u,v),w=G(t,"borderTop",u,v),"%"===g?(p=100*(T/_)+"%",d=100*(w/m)+"%"):"em"===g?(x=G(t,"borderLeft",1,"em"),p=T/x+"em",d=w/x+"em"):(p=T+"px",d=w+"px"),y&&(c=parseFloat(p)+f+g,h=parseFloat(d)+f+g)),o=_t(k,b[l],p+" "+d,c+" "+h,!1,"0px",o);return o},prefix:!0,formatter:pt("0px 0px 0px 0px",!1,!0)}),vt("backgroundPosition",{defaultValue:"0 0",parser:function(t,e,i,s,n,o){var a,l,h,d,p,c,u="background-position",f=r||V(t,null),m=this.format((f?_?f.getPropertyValue(u+"-x")+" "+f.getPropertyValue(u+"-y"):f.getPropertyValue(u):t.currentStyle.backgroundPositionX+" "+t.currentStyle.backgroundPositionY)||"0 0"),g=this.format(e);if(-1!==m.indexOf("%")!=(-1!==g.indexOf("%"))&&(c=Z(t,"backgroundImage").replace(C,""),c&&"none"!==c)){for(a=m.split(" "),l=g.split(" "),N.setAttribute("src",c),h=2;--h>-1;)m=a[h],d=-1!==m.indexOf("%"),d!==(-1!==l[h].indexOf("%"))&&(p=0===h?t.offsetWidth-N.width:t.offsetHeight-N.height,a[h]=d?parseFloat(m)/100*p+"px":100*(parseFloat(m)/p)+"%");m=a.join(" ")}return this.parseComplex(t.style,m,g,n,o)},formatter:st}),vt("backgroundSize",{defaultValue:"0 0",formatter:st}),vt("perspective",{defaultValue:"0px",prefix:!0}),vt("perspectiveOrigin",{defaultValue:"50% 50%",prefix:!0}),vt("transformStyle",{prefix:!0}),vt("backfaceVisibility",{prefix:!0}),vt("userSelect",{prefix:!0}),vt("margin",{parser:ct("marginTop,marginRight,marginBottom,marginLeft")}),vt("padding",{parser:ct("paddingTop,paddingRight,paddingBottom,paddingLeft")}),vt("clip",{defaultValue:"rect(0px,0px,0px,0px)",parser:function(t,e,i,s,n,o){var a,l,h;return 9>_?(l=t.currentStyle,h=8>_?" ":",",a="rect("+l.clipTop+h+l.clipRight+h+l.clipBottom+h+l.clipLeft+")",e=this.format(e).split(",").join(h)):(a=this.format(Z(t,this.p,r,!1,this.dflt)),e=this.format(e)),this.parseComplex(t.style,a,e,n,o)}}),vt("textShadow",{defaultValue:"0px 0px 0px #999",color:!0,multi:!0}),vt("autoRound,strictUnits",{parser:function(t,e,i,s,r){return r}}),vt("border",{defaultValue:"0px solid #000",parser:function(t,e,i,s,n,o){return this.parseComplex(t.style,this.format(Z(t,"borderTopWidth",r,!1,"0px")+" "+Z(t,"borderTopStyle",r,!1,"solid")+" "+Z(t,"borderTopColor",r,!1,"#000")),this.format(e),n,o)},color:!0,formatter:function(t){var e=t.split(" ");return e[0]+" "+(e[1]||"solid")+" "+(t.match(dt)||["#000"])[0]}}),vt("borderWidth",{parser:ct("borderTopWidth,borderRightWidth,borderBottomWidth,borderLeftWidth")}),vt("float,cssFloat,styleFloat",{parser:function(t,e,i,s,r){var n=t.style,o="cssFloat"in n?"cssFloat":"styleFloat";return new ft(n,o,0,0,r,-1,i,!1,0,n[o],e)}});var Lt=function(t){var e,i=this.t,s=i.filter||Z(this.data,"filter")||"",r=0|this.s+this.c*t;100===r&&(-1===s.indexOf("atrix(")&&-1===s.indexOf("radient(")&&-1===s.indexOf("oader(")?(i.removeAttribute("filter"),e=!Z(this.data,"filter")):(i.filter=s.replace(b,""),e=!0)),e||(this.xn1&&(i.filter=s=s||"alpha(opacity="+r+")"),-1===s.indexOf("pacity")?0===r&&this.xn1||(i.filter=s+" alpha(opacity="+r+")"):i.filter=s.replace(w,"opacity="+r))};vt("opacity,alpha,autoAlpha",{defaultValue:"1",parser:function(t,e,i,s,n,o){var a=parseFloat(Z(t,"opacity",r,!1,"1")),l=t.style,h="autoAlpha"===i;return"string"==typeof e&&"="===e.charAt(1)&&(e=("-"===e.charAt(0)?-1:1)*parseFloat(e.substr(2))+a),h&&1===a&&"hidden"===Z(t,"visibility",r)&&0!==e&&(a=0),H?n=new ft(l,"opacity",a,e-a,n):(n=new ft(l,"opacity",100*a,100*(e-a),n),n.xn1=h?1:0,l.zoom=1,n.type=2,n.b="alpha(opacity="+n.s+")",n.e="alpha(opacity="+(n.s+n.c)+")",n.data=t,n.plugin=o,n.setRatio=Lt),h&&(n=new ft(l,"visibility",0,0,n,-1,null,!1,0,0!==a?"inherit":"hidden",0===e?"hidden":"inherit"),n.xs0="inherit",s._overwriteProps.push(n.n),s._overwriteProps.push(i)),n}});var It=function(t,e){e&&(t.removeProperty?(("ms"===e.substr(0,2)||"webkit"===e.substr(0,6))&&(e="-"+e),t.removeProperty(e.replace(S,"-$1").toLowerCase())):t.removeAttribute(e));
-},Et=function(t){if(this.t._gsClassPT=this,1===t||0===t){this.t.setAttribute("class",0===t?this.b:this.e);for(var e=this.data,i=this.t.style;e;)e.v?i[e.p]=e.v:It(i,e.p),e=e._next;1===t&&this.t._gsClassPT===this&&(this.t._gsClassPT=null)}else this.t.getAttribute("class")!==this.e&&this.t.setAttribute("class",this.e)};vt("className",{parser:function(t,e,s,n,o,a,l){var h,d,p,c,u,f=t.getAttribute("class")||"",_=t.style.cssText;if(o=n._classNamePT=new ft(t,s,0,0,o,2),o.setRatio=Et,o.pr=-11,i=!0,o.b=f,d=K(t,r),p=t._gsClassPT){for(c={},u=p.data;u;)c[u.p]=1,u=u._next;p.setRatio(1)}return t._gsClassPT=o,o.e="="!==e.charAt(1)?e:f.replace(RegExp("\\s*\\b"+e.substr(2)+"\\b"),"")+("+"===e.charAt(0)?" "+e.substr(2):""),t.setAttribute("class",o.e),h=J(t,d,K(t),l,c),t.setAttribute("class",f),o.data=h.firstMPT,t.style.cssText=_,o=o.xfirst=n.parse(t,h.difs,o,a)}});var Ft=function(t){if((1===t||0===t)&&this.data._totalTime===this.data._totalDuration&&"isFromStart"!==this.data.data){var e,i,s,r,n,o=this.t.style,a=l.transform.parse;if("all"===this.e)o.cssText="",r=!0;else for(e=this.e.split(" ").join("").split(","),s=e.length;--s>-1;)i=e[s],l[i]&&(l[i].parse===a?r=!0:i="transformOrigin"===i?kt:l[i].p),It(o,i);r&&(It(o,xt),n=this.t._gsTransform,n&&(n.svg&&this.t.removeAttribute("data-svg-origin"),delete this.t._gsTransform))}};for(vt("clearProps",{parser:function(t,e,s,r,n){return n=new ft(t,s,0,0,n,2),n.setRatio=Ft,n.e=e,n.pr=-10,n.data=r._tween,i=!0,n}}),h="bezier,throwProps,physicsProps,physics2D".split(","),mt=h.length;mt--;)yt(h[mt]);h=o.prototype,h._firstPT=h._lastParsedTransform=h._transform=null,h._onInitTween=function(t,e,a){if(!t.nodeType)return!1;this._target=t,this._tween=a,this._vars=e,d=e.autoRound,i=!1,s=e.suffixMap||o.suffixMap,r=V(t,""),n=this._overwriteProps;var h,u,_,m,g,v,y,T,w,b=t.style;if(p&&""===b.zIndex&&(h=Z(t,"zIndex",r),("auto"===h||""===h)&&this._addLazySet(b,"zIndex",0)),"string"==typeof e&&(m=b.cssText,h=K(t,r),b.cssText=m+";"+e,h=J(t,h,K(t)).difs,!H&&x.test(e)&&(h.opacity=parseFloat(RegExp.$1)),e=h,b.cssText=m),this._firstPT=u=e.className?l.className.parse(t,e.className,"className",this,null,null,e):this.parse(t,e,null),this._transformType){for(w=3===this._transformType,xt?c&&(p=!0,""===b.zIndex&&(y=Z(t,"zIndex",r),("auto"===y||""===y)&&this._addLazySet(b,"zIndex",0)),f&&this._addLazySet(b,"WebkitBackfaceVisibility",this._vars.WebkitBackfaceVisibility||(w?"visible":"hidden"))):b.zoom=1,_=u;_&&_._next;)_=_._next;T=new ft(t,"transform",0,0,null,2),this._linkCSSP(T,null,_),T.setRatio=xt?zt:Dt,T.data=this._transform||Mt(t,r,!0),T.tween=a,T.pr=-1,n.pop()}if(i){for(;u;){for(v=u._next,_=m;_&&_.pr>u.pr;)_=_._next;(u._prev=_?_._prev:g)?u._prev._next=u:m=u,(u._next=_)?_._prev=u:g=u,u=v}this._firstPT=m}return!0},h.parse=function(t,e,i,n){var o,a,h,p,c,u,f,_,m,g,v=t.style;for(o in e)u=e[o],a=l[o],a?i=a.parse(t,u,o,this,i,n,e):(c=Z(t,o,r)+"",m="string"==typeof u,"color"===o||"fill"===o||"stroke"===o||-1!==o.indexOf("Color")||m&&k.test(u)?(m||(u=ht(u),u=(u.length>3?"rgba(":"rgb(")+u.join(",")+")"),i=_t(v,o,c,u,!0,"transparent",i,0,n)):!m||-1===u.indexOf(" ")&&-1===u.indexOf(",")?(h=parseFloat(c),f=h||0===h?c.substr((h+"").length):"",(""===c||"auto"===c)&&("width"===o||"height"===o?(h=it(t,o,r),f="px"):"left"===o||"top"===o?(h=Q(t,o,r),f="px"):(h="opacity"!==o?0:1,f="")),g=m&&"="===u.charAt(1),g?(p=parseInt(u.charAt(0)+"1",10),u=u.substr(2),p*=parseFloat(u),_=u.replace(T,"")):(p=parseFloat(u),_=m?u.replace(T,""):""),""===_&&(_=o in s?s[o]:f),u=p||0===p?(g?p+h:p)+_:e[o],f!==_&&""!==_&&(p||0===p)&&h&&(h=G(t,o,h,f),"%"===_?(h/=G(t,o,100,"%")/100,e.strictUnits!==!0&&(c=h+"%")):"em"===_?h/=G(t,o,1,"em"):"px"!==_&&(p=G(t,o,p,_),_="px"),g&&(p||0===p)&&(u=p+h+_)),g&&(p+=h),!h&&0!==h||!p&&0!==p?void 0!==v[o]&&(u||"NaN"!=u+""&&null!=u)?(i=new ft(v,o,p||h||0,0,i,-1,o,!1,0,c,u),i.xs0="none"!==u||"display"!==o&&-1===o.indexOf("Style")?u:c):Y("invalid "+o+" tween value: "+e[o]):(i=new ft(v,o,h,p-h,i,0,o,d!==!1&&("px"===_||"zIndex"===o),0,c,u),i.xs0=_)):i=_t(v,o,c,u,!0,null,i,0,n)),n&&i&&!i.plugin&&(i.plugin=n);return i},h.setRatio=function(t){var e,i,s,r=this._firstPT,n=1e-6;if(1!==t||this._tween._time!==this._tween._duration&&0!==this._tween._time)if(t||this._tween._time!==this._tween._duration&&0!==this._tween._time||this._tween._rawPrevTime===-1e-6)for(;r;){if(e=r.c*t+r.s,r.r?e=Math.round(e):n>e&&e>-n&&(e=0),r.type)if(1===r.type)if(s=r.l,2===s)r.t[r.p]=r.xs0+e+r.xs1+r.xn1+r.xs2;else if(3===s)r.t[r.p]=r.xs0+e+r.xs1+r.xn1+r.xs2+r.xn2+r.xs3;else if(4===s)r.t[r.p]=r.xs0+e+r.xs1+r.xn1+r.xs2+r.xn2+r.xs3+r.xn3+r.xs4;else if(5===s)r.t[r.p]=r.xs0+e+r.xs1+r.xn1+r.xs2+r.xn2+r.xs3+r.xn3+r.xs4+r.xn4+r.xs5;else{for(i=r.xs0+e+r.xs1,s=1;r.l>s;s++)i+=r["xn"+s]+r["xs"+(s+1)];r.t[r.p]=i}else-1===r.type?r.t[r.p]=r.xs0:r.setRatio&&r.setRatio(t);else r.t[r.p]=e+r.xs0;r=r._next}else for(;r;)2!==r.type?r.t[r.p]=r.b:r.setRatio(t),r=r._next;else for(;r;)2!==r.type?r.t[r.p]=r.e:r.setRatio(t),r=r._next},h._enableTransforms=function(t){this._transform=this._transform||Mt(this._target,r,!0),this._transformType=this._transform.svg&&Tt||!t&&3!==this._transformType?2:3};var Nt=function(){this.t[this.p]=this.e,this.data._linkCSSP(this,this._next,null,!0)};h._addLazySet=function(t,e,i){var s=this._firstPT=new ft(t,e,0,0,this._firstPT,2);s.e=i,s.setRatio=Nt,s.data=this},h._linkCSSP=function(t,e,i,s){return t&&(e&&(e._prev=t),t._next&&(t._next._prev=t._prev),t._prev?t._prev._next=t._next:this._firstPT===t&&(this._firstPT=t._next,s=!0),i?i._next=t:s||null!==this._firstPT||(this._firstPT=t),t._next=e,t._prev=i),t},h._kill=function(e){var i,s,r,n=e;if(e.autoAlpha||e.alpha){n={};for(s in e)n[s]=e[s];n.opacity=1,n.autoAlpha&&(n.visibility=1)}return e.className&&(i=this._classNamePT)&&(r=i.xfirst,r&&r._prev?this._linkCSSP(r._prev,i._next,r._prev._prev):r===this._firstPT&&(this._firstPT=i._next),i._next&&this._linkCSSP(i._next,i._next._next,r._prev),this._classNamePT=null),t.prototype._kill.call(this,n)};var Xt=function(t,e,i){var s,r,n,o;if(t.slice)for(r=t.length;--r>-1;)Xt(t[r],e,i);else for(s=t.childNodes,r=s.length;--r>-1;)n=s[r],o=n.type,n.style&&(e.push(K(n)),i&&i.push(n)),1!==o&&9!==o&&11!==o||!n.childNodes.length||Xt(n,e,i)};return o.cascadeTo=function(t,i,s){var r,n,o,a,l=e.to(t,i,s),h=[l],d=[],p=[],c=[],u=e._internals.reservedProps;for(t=l._targets||l.target,Xt(t,d,c),l.render(i,!0,!0),Xt(t,p),l.render(0,!0,!0),l._enabled(!0),r=c.length;--r>-1;)if(n=J(c[r],d[r],p[r]),n.firstMPT){n=n.difs;for(o in s)u[o]&&(n[o]=s[o]);a={};for(o in n)a[o]=d[r][o];h.push(e.fromTo(c[r],i,a,n))}return h},t.activate([o]),o},!0),function(){var t=_gsScope._gsDefine.plugin({propName:"roundProps",priority:-1,API:2,init:function(t,e,i){return this._tween=i,!0}}),e=t.prototype;e._onInitAllProps=function(){for(var t,e,i,s=this._tween,r=s.vars.roundProps instanceof Array?s.vars.roundProps:s.vars.roundProps.split(","),n=r.length,o={},a=s._propLookup.roundProps;--n>-1;)o[r[n]]=1;for(n=r.length;--n>-1;)for(t=r[n],e=s._firstPT;e;)i=e._next,e.pg?e.t._roundProps(o,!0):e.n===t&&(this._add(e.t,t,e.s,e.c),i&&(i._prev=e._prev),e._prev?e._prev._next=i:s._firstPT===e&&(s._firstPT=i),e._next=e._prev=null,s._propLookup[t]=a),e=i;return!1},e._add=function(t,e,i,s){this._addTween(t,e,i,i+s,e,!0),this._overwriteProps.push(e)}}(),_gsScope._gsDefine.plugin({propName:"attr",API:2,version:"0.3.3",init:function(t,e){var i,s,r;if("function"!=typeof t.setAttribute)return!1;this._target=t,this._proxy={},this._start={},this._end={};for(i in e)this._start[i]=this._proxy[i]=s=t.getAttribute(i),r=this._addTween(this._proxy,i,parseFloat(s),e[i],i),this._end[i]=r?r.s+r.c:e[i],this._overwriteProps.push(i);return!0},set:function(t){this._super.setRatio.call(this,t);for(var e,i=this._overwriteProps,s=i.length,r=1===t?this._end:t?this._proxy:this._start;--s>-1;)e=i[s],this._target.setAttribute(e,r[e]+"")}}),_gsScope._gsDefine.plugin({propName:"directionalRotation",version:"0.2.1",API:2,init:function(t,e){"object"!=typeof e&&(e={rotation:e}),this.finals={};var i,s,r,n,o,a,l=e.useRadians===!0?2*Math.PI:360,h=1e-6;for(i in e)"useRadians"!==i&&(a=(e[i]+"").split("_"),s=a[0],r=parseFloat("function"!=typeof t[i]?t[i]:t[i.indexOf("set")||"function"!=typeof t["get"+i.substr(3)]?i:"get"+i.substr(3)]()),n=this.finals[i]="string"==typeof s&&"="===s.charAt(1)?r+parseInt(s.charAt(0)+"1",10)*Number(s.substr(2)):Number(s)||0,o=n-r,a.length&&(s=a.join("_"),-1!==s.indexOf("short")&&(o%=l,o!==o%(l/2)&&(o=0>o?o+l:o-l)),-1!==s.indexOf("_cw")&&0>o?o=(o+9999999999*l)%l-(0|o/l)*l:-1!==s.indexOf("ccw")&&o>0&&(o=(o-9999999999*l)%l-(0|o/l)*l)),(o>h||-h>o)&&(this._addTween(t,i,r,r+o,i),this._overwriteProps.push(i)));return!0},set:function(t){var e;if(1!==t)this._super.setRatio.call(this,t);else for(e=this._firstPT;e;)e.f?e.t[e.p](this.finals[e.p]):e.t[e.p]=this.finals[e.p],e=e._next}})._autoCSS=!0,_gsScope._gsDefine("easing.Back",["easing.Ease"],function(t){var e,i,s,r=_gsScope.GreenSockGlobals||_gsScope,n=r.com.greensock,o=2*Math.PI,a=Math.PI/2,l=n._class,h=function(e,i){var s=l("easing."+e,function(){},!0),r=s.prototype=new t;return r.constructor=s,r.getRatio=i,s},d=t.register||function(){},p=function(t,e,i,s){var r=l("easing."+t,{easeOut:new e,easeIn:new i,easeInOut:new s},!0);return d(r,t),r},c=function(t,e,i){this.t=t,this.v=e,i&&(this.next=i,i.prev=this,this.c=i.v-e,this.gap=i.t-t)},u=function(e,i){var s=l("easing."+e,function(t){this._p1=t||0===t?t:1.70158,this._p2=1.525*this._p1},!0),r=s.prototype=new t;return r.constructor=s,r.getRatio=i,r.config=function(t){return new s(t)},s},f=p("Back",u("BackOut",function(t){return(t-=1)*t*((this._p1+1)*t+this._p1)+1}),u("BackIn",function(t){return t*t*((this._p1+1)*t-this._p1)}),u("BackInOut",function(t){return 1>(t*=2)?.5*t*t*((this._p2+1)*t-this._p2):.5*((t-=2)*t*((this._p2+1)*t+this._p2)+2)})),_=l("easing.SlowMo",function(t,e,i){e=e||0===e?e:.7,null==t?t=.7:t>1&&(t=1),this._p=1!==t?e:0,this._p1=(1-t)/2,this._p2=t,this._p3=this._p1+this._p2,this._calcEnd=i===!0},!0),m=_.prototype=new t;return m.constructor=_,m.getRatio=function(t){var e=t+(.5-t)*this._p;return this._p1>t?this._calcEnd?1-(t=1-t/this._p1)*t:e-(t=1-t/this._p1)*t*t*t*e:t>this._p3?this._calcEnd?1-(t=(t-this._p3)/this._p1)*t:e+(t-e)*(t=(t-this._p3)/this._p1)*t*t*t:this._calcEnd?1:e},_.ease=new _(.7,.7),m.config=_.config=function(t,e,i){return new _(t,e,i)},e=l("easing.SteppedEase",function(t){t=t||1,this._p1=1/t,this._p2=t+1},!0),m=e.prototype=new t,m.constructor=e,m.getRatio=function(t){return 0>t?t=0:t>=1&&(t=.999999999),(this._p2*t>>0)*this._p1},m.config=e.config=function(t){return new e(t)},i=l("easing.RoughEase",function(e){e=e||{};for(var i,s,r,n,o,a,l=e.taper||"none",h=[],d=0,p=0|(e.points||20),u=p,f=e.randomize!==!1,_=e.clamp===!0,m=e.template instanceof t?e.template:null,g="number"==typeof e.strength?.4*e.strength:.4;--u>-1;)i=f?Math.random():1/p*u,s=m?m.getRatio(i):i,"none"===l?r=g:"out"===l?(n=1-i,r=n*n*g):"in"===l?r=i*i*g:.5>i?(n=2*i,r=.5*n*n*g):(n=2*(1-i),r=.5*n*n*g),f?s+=Math.random()*r-.5*r:u%2?s+=.5*r:s-=.5*r,_&&(s>1?s=1:0>s&&(s=0)),h[d++]={x:i,y:s};for(h.sort(function(t,e){return t.x-e.x}),a=new c(1,1,null),u=p;--u>-1;)o=h[u],a=new c(o.x,o.y,a);this._prev=new c(0,0,0!==a.t?a:a.next)},!0),m=i.prototype=new t,m.constructor=i,m.getRatio=function(t){var e=this._prev;if(t>e.t){for(;e.next&&t>=e.t;)e=e.next;e=e.prev}else for(;e.prev&&e.t>=t;)e=e.prev;return this._prev=e,e.v+(t-e.t)/e.gap*e.c},m.config=function(t){return new i(t)},i.ease=new i,p("Bounce",h("BounceOut",function(t){return 1/2.75>t?7.5625*t*t:2/2.75>t?7.5625*(t-=1.5/2.75)*t+.75:2.5/2.75>t?7.5625*(t-=2.25/2.75)*t+.9375:7.5625*(t-=2.625/2.75)*t+.984375}),h("BounceIn",function(t){return 1/2.75>(t=1-t)?1-7.5625*t*t:2/2.75>t?1-(7.5625*(t-=1.5/2.75)*t+.75):2.5/2.75>t?1-(7.5625*(t-=2.25/2.75)*t+.9375):1-(7.5625*(t-=2.625/2.75)*t+.984375)}),h("BounceInOut",function(t){var e=.5>t;return t=e?1-2*t:2*t-1,t=1/2.75>t?7.5625*t*t:2/2.75>t?7.5625*(t-=1.5/2.75)*t+.75:2.5/2.75>t?7.5625*(t-=2.25/2.75)*t+.9375:7.5625*(t-=2.625/2.75)*t+.984375,e?.5*(1-t):.5*t+.5})),p("Circ",h("CircOut",function(t){return Math.sqrt(1-(t-=1)*t)}),h("CircIn",function(t){return-(Math.sqrt(1-t*t)-1)}),h("CircInOut",function(t){return 1>(t*=2)?-.5*(Math.sqrt(1-t*t)-1):.5*(Math.sqrt(1-(t-=2)*t)+1)})),s=function(e,i,s){var r=l("easing."+e,function(t,e){this._p1=t>=1?t:1,this._p2=(e||s)/(1>t?t:1),this._p3=this._p2/o*(Math.asin(1/this._p1)||0),this._p2=o/this._p2},!0),n=r.prototype=new t;return n.constructor=r,n.getRatio=i,n.config=function(t,e){return new r(t,e)},r},p("Elastic",s("ElasticOut",function(t){return this._p1*Math.pow(2,-10*t)*Math.sin((t-this._p3)*this._p2)+1},.3),s("ElasticIn",function(t){return-(this._p1*Math.pow(2,10*(t-=1))*Math.sin((t-this._p3)*this._p2))},.3),s("ElasticInOut",function(t){return 1>(t*=2)?-.5*this._p1*Math.pow(2,10*(t-=1))*Math.sin((t-this._p3)*this._p2):.5*this._p1*Math.pow(2,-10*(t-=1))*Math.sin((t-this._p3)*this._p2)+1},.45)),p("Expo",h("ExpoOut",function(t){return 1-Math.pow(2,-10*t)}),h("ExpoIn",function(t){return Math.pow(2,10*(t-1))-.001}),h("ExpoInOut",function(t){return 1>(t*=2)?.5*Math.pow(2,10*(t-1)):.5*(2-Math.pow(2,-10*(t-1)))})),p("Sine",h("SineOut",function(t){return Math.sin(t*a)}),h("SineIn",function(t){return-Math.cos(t*a)+1}),h("SineInOut",function(t){return-.5*(Math.cos(Math.PI*t)-1)})),l("easing.EaseLookup",{find:function(e){return t.map[e]}},!0),d(r.SlowMo,"SlowMo","ease,"),d(i,"RoughEase","ease,"),d(e,"SteppedEase","ease,"),f},!0)}),_gsScope._gsDefine&&_gsScope._gsQueue.pop()(),function(t,e){"use strict";var i=t.GreenSockGlobals=t.GreenSockGlobals||t;if(!i.TweenLite){var s,r,n,o,a,l=function(t){var e,s=t.split("."),r=i;for(e=0;s.length>e;e++)r[s[e]]=r=r[s[e]]||{};return r},h=l("com.greensock"),d=1e-10,p=function(t){var e,i=[],s=t.length;for(e=0;e!==s;i.push(t[e++]));return i},c=function(){},u=function(){var t=Object.prototype.toString,e=t.call([]);return function(i){return null!=i&&(i instanceof Array||"object"==typeof i&&!!i.push&&t.call(i)===e)}}(),f={},_=function(s,r,n,o){this.sc=f[s]?f[s].sc:[],f[s]=this,this.gsClass=null,this.func=n;var a=[];this.check=function(h){for(var d,p,c,u,m=r.length,g=m;--m>-1;)(d=f[r[m]]||new _(r[m],[])).gsClass?(a[m]=d.gsClass,g--):h&&d.sc.push(this);if(0===g&&n)for(p=("com.greensock."+s).split("."),c=p.pop(),u=l(p.join("."))[c]=this.gsClass=n.apply(n,a),o&&(i[c]=u,"function"==typeof define&&define.amd?define((t.GreenSockAMDPath?t.GreenSockAMDPath+"/":"")+s.split(".").pop(),[],function(){return u}):s===e&&"undefined"!=typeof module&&module.exports&&(module.exports=u)),m=0;this.sc.length>m;m++)this.sc[m].check()},this.check(!0)},m=t._gsDefine=function(t,e,i,s){return new _(t,e,i,s)},g=h._class=function(t,e,i){return e=e||function(){},m(t,[],function(){return e},i),e};m.globals=i;var v=[0,0,1,1],y=[],T=g("easing.Ease",function(t,e,i,s){this._func=t,this._type=i||0,this._power=s||0,this._params=e?v.concat(e):v},!0),w=T.map={},x=T.register=function(t,e,i,s){for(var r,n,o,a,l=e.split(","),d=l.length,p=(i||"easeIn,easeOut,easeInOut").split(",");--d>-1;)for(n=l[d],r=s?g("easing."+n,null,!0):h.easing[n]||{},o=p.length;--o>-1;)a=p[o],w[n+"."+a]=w[a+n]=r[a]=t.getRatio?t:t[a]||new t};for(n=T.prototype,n._calcEnd=!1,n.getRatio=function(t){if(this._func)return this._params[0]=t,this._func.apply(null,this._params);var e=this._type,i=this._power,s=1===e?1-t:2===e?t:.5>t?2*t:2*(1-t);return 1===i?s*=s:2===i?s*=s*s:3===i?s*=s*s*s:4===i&&(s*=s*s*s*s),1===e?1-s:2===e?s:.5>t?s/2:1-s/2},s=["Linear","Quad","Cubic","Quart","Quint,Strong"],r=s.length;--r>-1;)n=s[r]+",Power"+r,x(new T(null,null,1,r),n,"easeOut",!0),x(new T(null,null,2,r),n,"easeIn"+(0===r?",easeNone":"")),x(new T(null,null,3,r),n,"easeInOut");w.linear=h.easing.Linear.easeIn,w.swing=h.easing.Quad.easeInOut;var b=g("events.EventDispatcher",function(t){this._listeners={},this._eventTarget=t||this});n=b.prototype,n.addEventListener=function(t,e,i,s,r){r=r||0;var n,l,h=this._listeners[t],d=0;for(null==h&&(this._listeners[t]=h=[]),l=h.length;--l>-1;)n=h[l],n.c===e&&n.s===i?h.splice(l,1):0===d&&r>n.pr&&(d=l+1);h.splice(d,0,{c:e,s:i,up:s,pr:r}),this!==o||a||o.wake()},n.removeEventListener=function(t,e){var i,s=this._listeners[t];if(s)for(i=s.length;--i>-1;)if(s[i].c===e)return void s.splice(i,1)},n.dispatchEvent=function(t){var e,i,s,r=this._listeners[t];if(r)for(e=r.length,i=this._eventTarget;--e>-1;)s=r[e],s&&(s.up?s.c.call(s.s||i,{type:t,target:i}):s.c.call(s.s||i))};var k=t.requestAnimationFrame,S=t.cancelAnimationFrame,P=Date.now||function(){return(new Date).getTime()},C=P();for(s=["ms","moz","webkit","o"],r=s.length;--r>-1&&!k;)k=t[s[r]+"RequestAnimationFrame"],S=t[s[r]+"CancelAnimationFrame"]||t[s[r]+"CancelRequestAnimationFrame"];g("Ticker",function(t,e){var i,s,r,n,l,h=this,p=P(),u=e!==!1&&k,f=500,_=33,m="tick",g=function(t){var e,o,a=P()-C;a>f&&(p+=a-_),C+=a,h.time=(C-p)/1e3,e=h.time-l,(!i||e>0||t===!0)&&(h.frame++,l+=e+(e>=n?.004:n-e),o=!0),t!==!0&&(r=s(g)),o&&h.dispatchEvent(m)};b.call(h),h.time=h.frame=0,h.tick=function(){g(!0)},h.lagSmoothing=function(t,e){f=t||1/d,_=Math.min(e,f,0)},h.sleep=function(){null!=r&&(u&&S?S(r):clearTimeout(r),s=c,r=null,h===o&&(a=!1))},h.wake=function(){null!==r?h.sleep():h.frame>10&&(C=P()-f+5),s=0===i?c:u&&k?k:function(t){return setTimeout(t,0|1e3*(l-h.time)+1)},h===o&&(a=!0),g(2)},h.fps=function(t){return arguments.length?(i=t,n=1/(i||60),l=this.time+n,void h.wake()):i},h.useRAF=function(t){return arguments.length?(h.sleep(),u=t,void h.fps(i)):u},h.fps(t),setTimeout(function(){u&&5>h.frame&&h.useRAF(!1)},1500)}),n=h.Ticker.prototype=new h.events.EventDispatcher,n.constructor=h.Ticker;var O=g("core.Animation",function(t,e){if(this.vars=e=e||{},this._duration=this._totalDuration=t||0,this._delay=Number(e.delay)||0,this._timeScale=1,this._active=e.immediateRender===!0,this.data=e.data,this._reversed=e.reversed===!0,U){a||o.wake();var i=this.vars.useFrames?H:U;i.add(this,i._time),this.vars.paused&&this.paused(!0)}});o=O.ticker=new h.Ticker,n=O.prototype,n._dirty=n._gc=n._initted=n._paused=!1,n._totalTime=n._time=0,n._rawPrevTime=-1,n._next=n._last=n._onUpdate=n._timeline=n.timeline=null,n._paused=!1;var A=function(){a&&P()-C>2e3&&o.wake(),setTimeout(A,2e3)};A(),n.play=function(t,e){return null!=t&&this.seek(t,e),this.reversed(!1).paused(!1)},n.pause=function(t,e){return null!=t&&this.seek(t,e),this.paused(!0)},n.resume=function(t,e){return null!=t&&this.seek(t,e),this.paused(!1)},n.seek=function(t,e){return this.totalTime(Number(t),e!==!1)},n.restart=function(t,e){return this.reversed(!1).paused(!1).totalTime(t?-this._delay:0,e!==!1,!0)},n.reverse=function(t,e){return null!=t&&this.seek(t||this.totalDuration(),e),this.reversed(!0).paused(!1)},n.render=function(){},n.invalidate=function(){return this._time=this._totalTime=0,this._initted=this._gc=!1,this._rawPrevTime=-1,(this._gc||!this.timeline)&&this._enabled(!0),this},n.isActive=function(){var t,e=this._timeline,i=this._startTime;return!e||!this._gc&&!this._paused&&e.isActive()&&(t=e.rawTime())>=i&&i+this.totalDuration()/this._timeScale>t},n._enabled=function(t,e){return a||o.wake(),this._gc=!t,this._active=this.isActive(),e!==!0&&(t&&!this.timeline?this._timeline.add(this,this._startTime-this._delay):!t&&this.timeline&&this._timeline._remove(this,!0)),!1},n._kill=function(){return this._enabled(!1,!1)},n.kill=function(t,e){return this._kill(t,e),this},n._uncache=function(t){for(var e=t?this:this.timeline;e;)e._dirty=!0,e=e.timeline;return this},n._swapSelfInParams=function(t){for(var e=t.length,i=t.concat();--e>-1;)"{self}"===t[e]&&(i[e]=this);return i},n.eventCallback=function(t,e,i,s){if("on"===(t||"").substr(0,2)){var r=this.vars;if(1===arguments.length)return r[t];null==e?delete r[t]:(r[t]=e,r[t+"Params"]=u(i)&&-1!==i.join("").indexOf("{self}")?this._swapSelfInParams(i):i,r[t+"Scope"]=s),"onUpdate"===t&&(this._onUpdate=e)}return this},n.delay=function(t){return arguments.length?(this._timeline.smoothChildTiming&&this.startTime(this._startTime+t-this._delay),this._delay=t,this):this._delay},n.duration=function(t){return arguments.length?(this._duration=this._totalDuration=t,this._uncache(!0),this._timeline.smoothChildTiming&&this._time>0&&this._time<this._duration&&0!==t&&this.totalTime(this._totalTime*(t/this._duration),!0),this):(this._dirty=!1,this._duration)},n.totalDuration=function(t){return this._dirty=!1,arguments.length?this.duration(t):this._totalDuration},n.time=function(t,e){return arguments.length?(this._dirty&&this.totalDuration(),this.totalTime(t>this._duration?this._duration:t,e)):this._time},n.totalTime=function(t,e,i){if(a||o.wake(),!arguments.length)return this._totalTime;if(this._timeline){if(0>t&&!i&&(t+=this.totalDuration()),this._timeline.smoothChildTiming){this._dirty&&this.totalDuration();var s=this._totalDuration,r=this._timeline;if(t>s&&!i&&(t=s),this._startTime=(this._paused?this._pauseTime:r._time)-(this._reversed?s-t:t)/this._timeScale,r._dirty||this._uncache(!1),r._timeline)for(;r._timeline;)r._timeline._time!==(r._startTime+r._totalTime)/r._timeScale&&r.totalTime(r._totalTime,!0),r=r._timeline}this._gc&&this._enabled(!0,!1),(this._totalTime!==t||0===this._duration)&&(this.render(t,e,!1),z.length&&B())}return this},n.progress=n.totalProgress=function(t,e){return arguments.length?this.totalTime(this.duration()*t,e):this._time/this.duration()},n.startTime=function(t){return arguments.length?(t!==this._startTime&&(this._startTime=t,this.timeline&&this.timeline._sortChildren&&this.timeline.add(this,t-this._delay)),this):this._startTime},n.endTime=function(t){return this._startTime+(0!=t?this.totalDuration():this.duration())/this._timeScale},n.timeScale=function(t){if(!arguments.length)return this._timeScale;if(t=t||d,this._timeline&&this._timeline.smoothChildTiming){var e=this._pauseTime,i=e||0===e?e:this._timeline.totalTime();this._startTime=i-(i-this._startTime)*this._timeScale/t}return this._timeScale=t,this._uncache(!1)},n.reversed=function(t){return arguments.length?(t!=this._reversed&&(this._reversed=t,this.totalTime(this._timeline&&!this._timeline.smoothChildTiming?this.totalDuration()-this._totalTime:this._totalTime,!0)),this):this._reversed},n.paused=function(t){if(!arguments.length)return this._paused;var e,i,s=this._timeline;return t!=this._paused&&s&&(a||t||o.wake(),e=s.rawTime(),i=e-this._pauseTime,!t&&s.smoothChildTiming&&(this._startTime+=i,this._uncache(!1)),this._pauseTime=t?e:null,this._paused=t,this._active=this.isActive(),!t&&0!==i&&this._initted&&this.duration()&&this.render(s.smoothChildTiming?this._totalTime:(e-this._startTime)/this._timeScale,!0,!0)),this._gc&&!t&&this._enabled(!0,!1),this};var $=g("core.SimpleTimeline",function(t){O.call(this,0,t),this.autoRemoveChildren=this.smoothChildTiming=!0});n=$.prototype=new O,n.constructor=$,n.kill()._gc=!1,n._first=n._last=n._recent=null,n._sortChildren=!1,n.add=n.insert=function(t,e){var i,s;if(t._startTime=Number(e||0)+t._delay,t._paused&&this!==t._timeline&&(t._pauseTime=t._startTime+(this.rawTime()-t._startTime)/t._timeScale),t.timeline&&t.timeline._remove(t,!0),t.timeline=t._timeline=this,t._gc&&t._enabled(!0,!0),i=this._last,this._sortChildren)for(s=t._startTime;i&&i._startTime>s;)i=i._prev;return i?(t._next=i._next,i._next=t):(t._next=this._first,this._first=t),t._next?t._next._prev=t:this._last=t,t._prev=i,this._recent=t,this._timeline&&this._uncache(!0),this},n._remove=function(t,e){return t.timeline===this&&(e||t._enabled(!1,!0),t._prev?t._prev._next=t._next:this._first===t&&(this._first=t._next),t._next?t._next._prev=t._prev:this._last===t&&(this._last=t._prev),t._next=t._prev=t.timeline=null,t===this._recent&&(this._recent=this._last),this._timeline&&this._uncache(!0)),this},n.render=function(t,e,i){var s,r=this._first;for(this._totalTime=this._time=this._rawPrevTime=t;r;)s=r._next,(r._active||t>=r._startTime&&!r._paused)&&(r._reversed?r.render((r._dirty?r.totalDuration():r._totalDuration)-(t-r._startTime)*r._timeScale,e,i):r.render((t-r._startTime)*r._timeScale,e,i)),r=s},n.rawTime=function(){return a||o.wake(),this._totalTime};var R=g("TweenLite",function(e,i,s){if(O.call(this,i,s),this.render=R.prototype.render,null==e)throw"Cannot tween a null target.";this.target=e="string"!=typeof e?e:R.selector(e)||e;var r,n,o,a=e.jquery||e.length&&e!==t&&e[0]&&(e[0]===t||e[0].nodeType&&e[0].style&&!e.nodeType),l=this.vars.overwrite;if(this._overwrite=l=null==l?j[R.defaultOverwrite]:"number"==typeof l?l>>0:j[l],(a||e instanceof Array||e.push&&u(e))&&"number"!=typeof e[0])for(this._targets=o=p(e),this._propLookup=[],this._siblings=[],r=0;o.length>r;r++)n=o[r],n?"string"!=typeof n?n.length&&n!==t&&n[0]&&(n[0]===t||n[0].nodeType&&n[0].style&&!n.nodeType)?(o.splice(r--,1),this._targets=o=o.concat(p(n))):(this._siblings[r]=W(n,this,!1),1===l&&this._siblings[r].length>1&&V(n,this,null,1,this._siblings[r])):(n=o[r--]=R.selector(n),"string"==typeof n&&o.splice(r+1,1)):o.splice(r--,1);else this._propLookup={},this._siblings=W(e,this,!1),1===l&&this._siblings.length>1&&V(e,this,null,1,this._siblings);(this.vars.immediateRender||0===i&&0===this._delay&&this.vars.immediateRender!==!1)&&(this._time=-d,this.render(-this._delay))},!0),M=function(e){return e&&e.length&&e!==t&&e[0]&&(e[0]===t||e[0].nodeType&&e[0].style&&!e.nodeType)},D=function(t,e){var i,s={};for(i in t)X[i]||i in e&&"transform"!==i&&"x"!==i&&"y"!==i&&"width"!==i&&"height"!==i&&"className"!==i&&"border"!==i||!(!E[i]||E[i]&&E[i]._autoCSS)||(s[i]=t[i],delete t[i]);t.css=s};n=R.prototype=new O,n.constructor=R,n.kill()._gc=!1,n.ratio=0,n._firstPT=n._targets=n._overwrittenProps=n._startAt=null,n._notifyPluginsOfEnabled=n._lazy=!1,R.version="1.16.1",R.defaultEase=n._ease=new T(null,null,1,1),R.defaultOverwrite="auto",R.ticker=o,R.autoSleep=120,R.lagSmoothing=function(t,e){o.lagSmoothing(t,e)},R.selector=t.$||t.jQuery||function(e){var i=t.$||t.jQuery;return i?(R.selector=i,i(e)):"undefined"==typeof document?e:document.querySelectorAll?document.querySelectorAll(e):document.getElementById("#"===e.charAt(0)?e.substr(1):e)};var z=[],L={},I=R._internals={isArray:u,isSelector:M,lazyTweens:z},E=R._plugins={},F=I.tweenLookup={},N=0,X=I.reservedProps={ease:1,delay:1,overwrite:1,onComplete:1,onCompleteParams:1,onCompleteScope:1,useFrames:1,runBackwards:1,startAt:1,onUpdate:1,onUpdateParams:1,onUpdateScope:1,onStart:1,onStartParams:1,onStartScope:1,onReverseComplete:1,onReverseCompleteParams:1,onReverseCompleteScope:1,onRepeat:1,onRepeatParams:1,onRepeatScope:1,easeParams:1,yoyo:1,immediateRender:1,repeat:1,repeatDelay:1,data:1,paused:1,reversed:1,autoCSS:1,lazy:1,onOverwrite:1},j={none:0,all:1,auto:2,concurrent:3,allOnStart:4,preexisting:5,"true":1,"false":0},H=O._rootFramesTimeline=new $,U=O._rootTimeline=new $,Y=30,B=I.lazyRender=function(){var t,e=z.length;for(L={};--e>-1;)t=z[e],t&&t._lazy!==!1&&(t.render(t._lazy[0],t._lazy[1],!0),t._lazy=!1);z.length=0};U._startTime=o.time,H._startTime=o.frame,U._active=H._active=!0,setTimeout(B,1),O._updateRoot=R.render=function(){var t,e,i;if(z.length&&B(),U.render((o.time-U._startTime)*U._timeScale,!1,!1),H.render((o.frame-H._startTime)*H._timeScale,!1,!1),z.length&&B(),o.frame>=Y){Y=o.frame+(parseInt(R.autoSleep,10)||120);for(i in F){for(e=F[i].tweens,t=e.length;--t>-1;)e[t]._gc&&e.splice(t,1);0===e.length&&delete F[i]}if(i=U._first,(!i||i._paused)&&R.autoSleep&&!H._first&&1===o._listeners.tick.length){for(;i&&i._paused;)i=i._next;i||o.sleep()}}},o.addEventListener("tick",O._updateRoot);var W=function(t,e,i){var s,r,n=t._gsTweenID;if(F[n||(t._gsTweenID=n="t"+N++)]||(F[n]={target:t,tweens:[]}),e&&(s=F[n].tweens,s[r=s.length]=e,i))for(;--r>-1;)s[r]===e&&s.splice(r,1);return F[n].tweens},q=function(t,e,i,s){var r,n,o=t.vars.onOverwrite;return o&&(r=o(t,e,i,s)),o=R.onOverwrite,o&&(n=o(t,e,i,s)),r!==!1&&n!==!1},V=function(t,e,i,s,r){var n,o,a,l;if(1===s||s>=4){for(l=r.length,n=0;l>n;n++)if((a=r[n])!==e)a._gc||q(a,e)&&a._enabled(!1,!1)&&(o=!0);else if(5===s)break;return o}var h,p=e._startTime+d,c=[],u=0,f=0===e._duration;for(n=r.length;--n>-1;)(a=r[n])===e||a._gc||a._paused||(a._timeline!==e._timeline?(h=h||Z(e,0,f),0===Z(a,h,f)&&(c[u++]=a)):p>=a._startTime&&a._startTime+a.totalDuration()/a._timeScale>p&&((f||!a._initted)&&2e-10>=p-a._startTime||(c[u++]=a)));for(n=u;--n>-1;)if(a=c[n],2===s&&a._kill(i,t,e)&&(o=!0),2!==s||!a._firstPT&&a._initted){if(2!==s&&!q(a,e))continue;a._enabled(!1,!1)&&(o=!0)}return o},Z=function(t,e,i){for(var s=t._timeline,r=s._timeScale,n=t._startTime;s._timeline;){if(n+=s._startTime,r*=s._timeScale,s._paused)return-100;s=s._timeline}return n/=r,n>e?n-e:i&&n===e||!t._initted&&2*d>n-e?d:(n+=t.totalDuration()/t._timeScale/r)>e+d?0:n-e-d};n._init=function(){var t,e,i,s,r,n=this.vars,o=this._overwrittenProps,a=this._duration,l=!!n.immediateRender,h=n.ease;if(n.startAt){this._startAt&&(this._startAt.render(-1,!0),this._startAt.kill()),r={};for(s in n.startAt)r[s]=n.startAt[s];if(r.overwrite=!1,r.immediateRender=!0,r.lazy=l&&n.lazy!==!1,r.startAt=r.delay=null,this._startAt=R.to(this.target,0,r),l)if(this._time>0)this._startAt=null;else if(0!==a)return}else if(n.runBackwards&&0!==a)if(this._startAt)this._startAt.render(-1,!0),this._startAt.kill(),this._startAt=null;else{0!==this._time&&(l=!1),i={};for(s in n)X[s]&&"autoCSS"!==s||(i[s]=n[s]);if(i.overwrite=0,i.data="isFromStart",i.lazy=l&&n.lazy!==!1,i.immediateRender=l,this._startAt=R.to(this.target,0,i),l){if(0===this._time)return}else this._startAt._init(),this._startAt._enabled(!1),this.vars.immediateRender&&(this._startAt=null)}if(this._ease=h=h?h instanceof T?h:"function"==typeof h?new T(h,n.easeParams):w[h]||R.defaultEase:R.defaultEase,n.easeParams instanceof Array&&h.config&&(this._ease=h.config.apply(h,n.easeParams)),this._easeType=this._ease._type,this._easePower=this._ease._power,this._firstPT=null,this._targets)for(t=this._targets.length;--t>-1;)this._initProps(this._targets[t],this._propLookup[t]={},this._siblings[t],o?o[t]:null)&&(e=!0);else e=this._initProps(this.target,this._propLookup,this._siblings,o);if(e&&R._onPluginEvent("_onInitAllProps",this),o&&(this._firstPT||"function"!=typeof this.target&&this._enabled(!1,!1)),n.runBackwards)for(i=this._firstPT;i;)i.s+=i.c,i.c=-i.c,i=i._next;this._onUpdate=n.onUpdate,this._initted=!0},n._initProps=function(e,i,s,r){var n,o,a,l,h,d;if(null==e)return!1;L[e._gsTweenID]&&B(),this.vars.css||e.style&&e!==t&&e.nodeType&&E.css&&this.vars.autoCSS!==!1&&D(this.vars,e);for(n in this.vars){if(d=this.vars[n],X[n])d&&(d instanceof Array||d.push&&u(d))&&-1!==d.join("").indexOf("{self}")&&(this.vars[n]=d=this._swapSelfInParams(d,this));else if(E[n]&&(l=new E[n])._onInitTween(e,this.vars[n],this)){for(this._firstPT=h={_next:this._firstPT,t:l,p:"setRatio",s:0,c:1,f:!0,n:n,pg:!0,pr:l._priority},o=l._overwriteProps.length;--o>-1;)i[l._overwriteProps[o]]=this._firstPT;(l._priority||l._onInitAllProps)&&(a=!0),(l._onDisable||l._onEnable)&&(this._notifyPluginsOfEnabled=!0)}else this._firstPT=i[n]=h={_next:this._firstPT,t:e,p:n,f:"function"==typeof e[n],n:n,pg:!1,pr:0},h.s=h.f?e[n.indexOf("set")||"function"!=typeof e["get"+n.substr(3)]?n:"get"+n.substr(3)]():parseFloat(e[n]),h.c="string"==typeof d&&"="===d.charAt(1)?parseInt(d.charAt(0)+"1",10)*Number(d.substr(2)):Number(d)-h.s||0;h&&h._next&&(h._next._prev=h)}return r&&this._kill(r,e)?this._initProps(e,i,s,r):this._overwrite>1&&this._firstPT&&s.length>1&&V(e,this,i,this._overwrite,s)?(this._kill(i,e),this._initProps(e,i,s,r)):(this._firstPT&&(this.vars.lazy!==!1&&this._duration||this.vars.lazy&&!this._duration)&&(L[e._gsTweenID]=!0),a)},n.render=function(t,e,i){var s,r,n,o,a=this._time,l=this._duration,h=this._rawPrevTime;if(t>=l)this._totalTime=this._time=l,this.ratio=this._ease._calcEnd?this._ease.getRatio(1):1,this._reversed||(s=!0,r="onComplete",i=i||this._timeline.autoRemoveChildren),0===l&&(this._initted||!this.vars.lazy||i)&&(this._startTime===this._timeline._duration&&(t=0),(0===t||0>h||h===d&&"isPause"!==this.data)&&h!==t&&(i=!0,h>d&&(r="onReverseComplete")),this._rawPrevTime=o=!e||t||h===t?t:d);else if(1e-7>t)this._totalTime=this._time=0,
-this.ratio=this._ease._calcEnd?this._ease.getRatio(0):0,(0!==a||0===l&&h>0)&&(r="onReverseComplete",s=this._reversed),0>t&&(this._active=!1,0===l&&(this._initted||!this.vars.lazy||i)&&(h>=0&&(h!==d||"isPause"!==this.data)&&(i=!0),this._rawPrevTime=o=!e||t||h===t?t:d)),this._initted||(i=!0);else if(this._totalTime=this._time=t,this._easeType){var p=t/l,c=this._easeType,u=this._easePower;(1===c||3===c&&p>=.5)&&(p=1-p),3===c&&(p*=2),1===u?p*=p:2===u?p*=p*p:3===u?p*=p*p*p:4===u&&(p*=p*p*p*p),this.ratio=1===c?1-p:2===c?p:.5>t/l?p/2:1-p/2}else this.ratio=this._ease.getRatio(t/l);if(this._time!==a||i){if(!this._initted){if(this._init(),!this._initted||this._gc)return;if(!i&&this._firstPT&&(this.vars.lazy!==!1&&this._duration||this.vars.lazy&&!this._duration))return this._time=this._totalTime=a,this._rawPrevTime=h,z.push(this),void(this._lazy=[t,e]);this._time&&!s?this.ratio=this._ease.getRatio(this._time/l):s&&this._ease._calcEnd&&(this.ratio=this._ease.getRatio(0===this._time?0:1))}for(this._lazy!==!1&&(this._lazy=!1),this._active||!this._paused&&this._time!==a&&t>=0&&(this._active=!0),0===a&&(this._startAt&&(t>=0?this._startAt.render(t,e,i):r||(r="_dummyGS")),this.vars.onStart&&(0!==this._time||0===l)&&(e||this.vars.onStart.apply(this.vars.onStartScope||this,this.vars.onStartParams||y))),n=this._firstPT;n;)n.f?n.t[n.p](n.c*this.ratio+n.s):n.t[n.p]=n.c*this.ratio+n.s,n=n._next;this._onUpdate&&(0>t&&this._startAt&&t!==-1e-4&&this._startAt.render(t,e,i),e||(this._time!==a||s)&&this._onUpdate.apply(this.vars.onUpdateScope||this,this.vars.onUpdateParams||y)),r&&(!this._gc||i)&&(0>t&&this._startAt&&!this._onUpdate&&t!==-1e-4&&this._startAt.render(t,e,i),s&&(this._timeline.autoRemoveChildren&&this._enabled(!1,!1),this._active=!1),!e&&this.vars[r]&&this.vars[r].apply(this.vars[r+"Scope"]||this,this.vars[r+"Params"]||y),0===l&&this._rawPrevTime===d&&o!==d&&(this._rawPrevTime=0))}},n._kill=function(t,e,i){if("all"===t&&(t=null),null==t&&(null==e||e===this.target))return this._lazy=!1,this._enabled(!1,!1);e="string"!=typeof e?e||this._targets||this.target:R.selector(e)||e;var s,r,n,o,a,l,h,d,p;if((u(e)||M(e))&&"number"!=typeof e[0])for(s=e.length;--s>-1;)this._kill(t,e[s])&&(l=!0);else{if(this._targets){for(s=this._targets.length;--s>-1;)if(e===this._targets[s]){a=this._propLookup[s]||{},this._overwrittenProps=this._overwrittenProps||[],r=this._overwrittenProps[s]=t?this._overwrittenProps[s]||{}:"all";break}}else{if(e!==this.target)return!1;a=this._propLookup,r=this._overwrittenProps=t?this._overwrittenProps||{}:"all"}if(a){if(h=t||a,d=t!==r&&"all"!==r&&t!==a&&("object"!=typeof t||!t._tempKill),i&&(R.onOverwrite||this.vars.onOverwrite)){for(n in h)a[n]&&(p||(p=[]),p.push(n));if(!q(this,i,e,p))return!1}for(n in h)(o=a[n])&&(o.pg&&o.t._kill(h)&&(l=!0),o.pg&&0!==o.t._overwriteProps.length||(o._prev?o._prev._next=o._next:o===this._firstPT&&(this._firstPT=o._next),o._next&&(o._next._prev=o._prev),o._next=o._prev=null),delete a[n]),d&&(r[n]=1);!this._firstPT&&this._initted&&this._enabled(!1,!1)}}return l},n.invalidate=function(){return this._notifyPluginsOfEnabled&&R._onPluginEvent("_onDisable",this),this._firstPT=this._overwrittenProps=this._startAt=this._onUpdate=null,this._notifyPluginsOfEnabled=this._active=this._lazy=!1,this._propLookup=this._targets?{}:[],O.prototype.invalidate.call(this),this.vars.immediateRender&&(this._time=-d,this.render(-this._delay)),this},n._enabled=function(t,e){if(a||o.wake(),t&&this._gc){var i,s=this._targets;if(s)for(i=s.length;--i>-1;)this._siblings[i]=W(s[i],this,!0);else this._siblings=W(this.target,this,!0)}return O.prototype._enabled.call(this,t,e),this._notifyPluginsOfEnabled&&this._firstPT?R._onPluginEvent(t?"_onEnable":"_onDisable",this):!1},R.to=function(t,e,i){return new R(t,e,i)},R.from=function(t,e,i){return i.runBackwards=!0,i.immediateRender=0!=i.immediateRender,new R(t,e,i)},R.fromTo=function(t,e,i,s){return s.startAt=i,s.immediateRender=0!=s.immediateRender&&0!=i.immediateRender,new R(t,e,s)},R.delayedCall=function(t,e,i,s,r){return new R(e,0,{delay:t,onComplete:e,onCompleteParams:i,onCompleteScope:s,onReverseComplete:e,onReverseCompleteParams:i,onReverseCompleteScope:s,immediateRender:!1,lazy:!1,useFrames:r,overwrite:0})},R.set=function(t,e){return new R(t,0,e)},R.getTweensOf=function(t,e){if(null==t)return[];t="string"!=typeof t?t:R.selector(t)||t;var i,s,r,n;if((u(t)||M(t))&&"number"!=typeof t[0]){for(i=t.length,s=[];--i>-1;)s=s.concat(R.getTweensOf(t[i],e));for(i=s.length;--i>-1;)for(n=s[i],r=i;--r>-1;)n===s[r]&&s.splice(i,1)}else for(s=W(t).concat(),i=s.length;--i>-1;)(s[i]._gc||e&&!s[i].isActive())&&s.splice(i,1);return s},R.killTweensOf=R.killDelayedCallsTo=function(t,e,i){"object"==typeof e&&(i=e,e=!1);for(var s=R.getTweensOf(t,e),r=s.length;--r>-1;)s[r]._kill(i,t)};var G=g("plugins.TweenPlugin",function(t,e){this._overwriteProps=(t||"").split(","),this._propName=this._overwriteProps[0],this._priority=e||0,this._super=G.prototype},!0);if(n=G.prototype,G.version="1.10.1",G.API=2,n._firstPT=null,n._addTween=function(t,e,i,s,r,n){var o,a;return null!=s&&(o="number"==typeof s||"="!==s.charAt(1)?Number(s)-i:parseInt(s.charAt(0)+"1",10)*Number(s.substr(2)))?(this._firstPT=a={_next:this._firstPT,t:t,p:e,s:i,c:o,f:"function"==typeof t[e],n:r||e,r:n},a._next&&(a._next._prev=a),a):void 0},n.setRatio=function(t){for(var e,i=this._firstPT,s=1e-6;i;)e=i.c*t+i.s,i.r?e=Math.round(e):s>e&&e>-s&&(e=0),i.f?i.t[i.p](e):i.t[i.p]=e,i=i._next},n._kill=function(t){var e,i=this._overwriteProps,s=this._firstPT;if(null!=t[this._propName])this._overwriteProps=[];else for(e=i.length;--e>-1;)null!=t[i[e]]&&i.splice(e,1);for(;s;)null!=t[s.n]&&(s._next&&(s._next._prev=s._prev),s._prev?(s._prev._next=s._next,s._prev=null):this._firstPT===s&&(this._firstPT=s._next)),s=s._next;return!1},n._roundProps=function(t,e){for(var i=this._firstPT;i;)(t[this._propName]||null!=i.n&&t[i.n.split(this._propName+"_").join("")])&&(i.r=e),i=i._next},R._onPluginEvent=function(t,e){var i,s,r,n,o,a=e._firstPT;if("_onInitAllProps"===t){for(;a;){for(o=a._next,s=r;s&&s.pr>a.pr;)s=s._next;(a._prev=s?s._prev:n)?a._prev._next=a:r=a,(a._next=s)?s._prev=a:n=a,a=o}a=e._firstPT=r}for(;a;)a.pg&&"function"==typeof a.t[t]&&a.t[t]()&&(i=!0),a=a._next;return i},G.activate=function(t){for(var e=t.length;--e>-1;)t[e].API===G.API&&(E[(new t[e])._propName]=t[e]);return!0},m.plugin=function(t){if(!(t&&t.propName&&t.init&&t.API))throw"illegal plugin definition.";var e,i=t.propName,s=t.priority||0,r=t.overwriteProps,n={init:"_onInitTween",set:"setRatio",kill:"_kill",round:"_roundProps",initAll:"_onInitAllProps"},o=g("plugins."+i.charAt(0).toUpperCase()+i.substr(1)+"Plugin",function(){G.call(this,i,s),this._overwriteProps=r||[]},t.global===!0),a=o.prototype=new G(i);a.constructor=o,o.API=t.API;for(e in n)"function"==typeof t[e]&&(a[n[e]]=t[e]);return o.version=t.version,G.activate([o]),o},s=t._gsQueue){for(r=0;s.length>r;r++)s[r]();for(n in f)f[n].func||t.console.log("GSAP encountered missing dependency: com.greensock."+n)}a=!1}}("undefined"!=typeof module&&module.exports&&"undefined"!=typeof global?global:this||window,"TweenMax"),!function(t){"use strict";"function"==typeof define&&define.amd?define(["jquery"],t):"undefined"!=typeof exports?module.exports=t(require("jquery")):t(jQuery)}(function(t){"use strict";var e=window.Slick||{};e=function(){function e(e,s){var r,n=this;n.defaults={accessibility:!0,adaptiveHeight:!1,appendArrows:t(e),appendDots:t(e),arrows:!0,asNavFor:null,prevArrow:'<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',nextArrow:'<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',autoplay:!1,autoplaySpeed:3e3,centerMode:!1,centerPadding:"50px",cssEase:"ease",customPaging:function(e,i){return t('<button type="button" data-role="none" role="button" tabindex="0" />').text(i+1)},dots:!1,dotsClass:"slick-dots",draggable:!0,easing:"linear",edgeFriction:.35,fade:!1,focusOnSelect:!1,infinite:!0,initialSlide:0,lazyLoad:"ondemand",mobileFirst:!1,pauseOnHover:!0,pauseOnFocus:!0,pauseOnDotsHover:!1,respondTo:"window",responsive:null,rows:1,rtl:!1,slide:"",slidesPerRow:1,slidesToShow:1,slidesToScroll:1,speed:500,swipe:!0,swipeToSlide:!1,touchMove:!0,touchThreshold:5,useCSS:!0,useTransform:!0,variableWidth:!1,vertical:!1,verticalSwiping:!1,waitForAnimate:!0,zIndex:1e3},n.initials={animating:!1,dragging:!1,autoPlayTimer:null,currentDirection:0,currentLeft:null,currentSlide:0,direction:1,$dots:null,listWidth:null,listHeight:null,loadIndex:0,$nextArrow:null,$prevArrow:null,slideCount:null,slideWidth:null,$slideTrack:null,$slides:null,sliding:!1,slideOffset:0,swipeLeft:null,$list:null,touchObject:{},transformsEnabled:!1,unslicked:!1},t.extend(n,n.initials),n.activeBreakpoint=null,n.animType=null,n.animProp=null,n.breakpoints=[],n.breakpointSettings=[],n.cssTransitions=!1,n.focussed=!1,n.interrupted=!1,n.hidden="hidden",n.paused=!0,n.positionProp=null,n.respondTo=null,n.rowCount=1,n.shouldClick=!0,n.$slider=t(e),n.$slidesCache=null,n.transformType=null,n.transitionType=null,n.visibilityChange="visibilitychange",n.windowWidth=0,n.windowTimer=null,r=t(e).data("slick")||{},n.options=t.extend({},n.defaults,s,r),n.currentSlide=n.options.initialSlide,n.originalSettings=n.options,"undefined"!=typeof document.mozHidden?(n.hidden="mozHidden",n.visibilityChange="mozvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(n.hidden="webkitHidden",n.visibilityChange="webkitvisibilitychange"),n.autoPlay=t.proxy(n.autoPlay,n),n.autoPlayClear=t.proxy(n.autoPlayClear,n),n.autoPlayIterator=t.proxy(n.autoPlayIterator,n),n.changeSlide=t.proxy(n.changeSlide,n),n.clickHandler=t.proxy(n.clickHandler,n),n.selectHandler=t.proxy(n.selectHandler,n),n.setPosition=t.proxy(n.setPosition,n),n.swipeHandler=t.proxy(n.swipeHandler,n),n.dragHandler=t.proxy(n.dragHandler,n),n.keyHandler=t.proxy(n.keyHandler,n),n.instanceUid=i++,n.htmlExpr=/^(?:\s*(<[\w\W]+>)[^>]*)$/,n.registerBreakpoints(),n.init(!0)}var i=0;return e}(),e.prototype.activateADA=function(){var t=this;t.$slideTrack.find(".slick-active").attr({"aria-hidden":"false"}).find("a, input, button, select").attr({tabindex:"0"})},e.prototype.addSlide=e.prototype.slickAdd=function(e,i,s){var r=this;if("boolean"==typeof i)s=i,i=null;else if(0>i||i>=r.slideCount)return!1;r.unload(),"number"==typeof i?0===i&&0===r.$slides.length?t(e).appendTo(r.$slideTrack):s?t(e).insertBefore(r.$slides.eq(i)):t(e).insertAfter(r.$slides.eq(i)):s===!0?t(e).prependTo(r.$slideTrack):t(e).appendTo(r.$slideTrack),r.$slides=r.$slideTrack.children(this.options.slide),r.$slideTrack.children(this.options.slide).detach(),r.$slideTrack.append(r.$slides),r.$slides.each(function(e,i){t(i).attr("data-slick-index",e)}),r.$slidesCache=r.$slides,r.reinit()},e.prototype.animateHeight=function(){var t=this;if(1===t.options.slidesToShow&&t.options.adaptiveHeight===!0&&t.options.vertical===!1){var e=t.$slides.eq(t.currentSlide).outerHeight(!0);t.$list.animate({height:e},t.options.speed)}},e.prototype.animateSlide=function(e,i){var s={},r=this;r.animateHeight(),r.options.rtl===!0&&r.options.vertical===!1&&(e=-e),r.transformsEnabled===!1?r.options.vertical===!1?r.$slideTrack.animate({left:e},r.options.speed,r.options.easing,i):r.$slideTrack.animate({top:e},r.options.speed,r.options.easing,i):r.cssTransitions===!1?(r.options.rtl===!0&&(r.currentLeft=-r.currentLeft),t({animStart:r.currentLeft}).animate({animStart:e},{duration:r.options.speed,easing:r.options.easing,step:function(t){t=Math.ceil(t),r.options.vertical===!1?(s[r.animType]="translate("+t+"px, 0px)",r.$slideTrack.css(s)):(s[r.animType]="translate(0px,"+t+"px)",r.$slideTrack.css(s))},complete:function(){i&&i.call()}})):(r.applyTransition(),e=Math.ceil(e),r.options.vertical===!1?s[r.animType]="translate3d("+e+"px, 0px, 0px)":s[r.animType]="translate3d(0px,"+e+"px, 0px)",r.$slideTrack.css(s),i&&setTimeout(function(){r.disableTransition(),i.call()},r.options.speed))},e.prototype.getNavTarget=function(){var e=this,i=e.options.asNavFor;return i&&null!==i&&(i=t(i).not(e.$slider)),i},e.prototype.asNavFor=function(e){var i=this,s=i.getNavTarget();null!==s&&"object"==typeof s&&s.each(function(){var i=t(this).slick("getSlick");i.unslicked||i.slideHandler(e,!0)})},e.prototype.applyTransition=function(t){var e=this,i={};e.options.fade===!1?i[e.transitionType]=e.transformType+" "+e.options.speed+"ms "+e.options.cssEase:i[e.transitionType]="opacity "+e.options.speed+"ms "+e.options.cssEase,e.options.fade===!1?e.$slideTrack.css(i):e.$slides.eq(t).css(i)},e.prototype.autoPlay=function(){var t=this;t.autoPlayClear(),t.slideCount>t.options.slidesToShow&&(t.autoPlayTimer=setInterval(t.autoPlayIterator,t.options.autoplaySpeed))},e.prototype.autoPlayClear=function(){var t=this;t.autoPlayTimer&&clearInterval(t.autoPlayTimer)},e.prototype.autoPlayIterator=function(){var t=this,e=t.currentSlide+t.options.slidesToScroll;t.paused||t.interrupted||t.focussed||(t.options.infinite===!1&&(1===t.direction&&t.currentSlide+1===t.slideCount-1?t.direction=0:0===t.direction&&(e=t.currentSlide-t.options.slidesToScroll,t.currentSlide-1===0&&(t.direction=1))),t.slideHandler(e))},e.prototype.buildArrows=function(){var e=this;e.options.arrows===!0&&(e.$prevArrow=t(e.options.prevArrow).addClass("slick-arrow"),e.$nextArrow=t(e.options.nextArrow).addClass("slick-arrow"),e.slideCount>e.options.slidesToShow?(e.$prevArrow.removeClass("slick-hidden").removeAttr("aria-hidden tabindex"),e.$nextArrow.removeClass("slick-hidden").removeAttr("aria-hidden tabindex"),e.htmlExpr.test(e.options.prevArrow)&&e.$prevArrow.prependTo(e.options.appendArrows),e.htmlExpr.test(e.options.nextArrow)&&e.$nextArrow.appendTo(e.options.appendArrows),e.options.infinite!==!0&&e.$prevArrow.addClass("slick-disabled").attr("aria-disabled","true")):e.$prevArrow.add(e.$nextArrow).addClass("slick-hidden").attr({"aria-disabled":"true",tabindex:"-1"}))},e.prototype.buildDots=function(){var e,i,s=this;if(s.options.dots===!0&&s.slideCount>s.options.slidesToShow){for(s.$slider.addClass("slick-dotted"),i=t("<ul />").addClass(s.options.dotsClass),e=0;e<=s.getDotCount();e+=1)i.append(t("<li />").append(s.options.customPaging.call(this,s,e)));s.$dots=i.appendTo(s.options.appendDots),s.$dots.find("li").first().addClass("slick-active").attr("aria-hidden","false")}},e.prototype.buildOut=function(){var e=this;e.$slides=e.$slider.children(e.options.slide+":not(.slick-cloned)").addClass("slick-slide"),e.slideCount=e.$slides.length,e.$slides.each(function(e,i){t(i).attr("data-slick-index",e).data("originalStyling",t(i).attr("style")||"")}),e.$slider.addClass("slick-slider"),e.$slideTrack=0===e.slideCount?t('<div class="slick-track"/>').appendTo(e.$slider):e.$slides.wrapAll('<div class="slick-track"/>').parent(),e.$list=e.$slideTrack.wrap('<div aria-live="polite" class="slick-list"/>').parent(),e.$slideTrack.css("opacity",0),(e.options.centerMode===!0||e.options.swipeToSlide===!0)&&(e.options.slidesToScroll=1),t("img[data-lazy]",e.$slider).not("[src]").addClass("slick-loading"),e.setupInfinite(),e.buildArrows(),e.buildDots(),e.updateDots(),e.setSlideClasses("number"==typeof e.currentSlide?e.currentSlide:0),e.options.draggable===!0&&e.$list.addClass("draggable")},e.prototype.buildRows=function(){var t,e,i,s,r,n,o,a=this;if(s=document.createDocumentFragment(),n=a.$slider.children(),a.options.rows>1){for(o=a.options.slidesPerRow*a.options.rows,r=Math.ceil(n.length/o),t=0;r>t;t++){var l=document.createElement("div");for(e=0;e<a.options.rows;e++){var h=document.createElement("div");for(i=0;i<a.options.slidesPerRow;i++){var d=t*o+(e*a.options.slidesPerRow+i);n.get(d)&&h.appendChild(n.get(d))}l.appendChild(h)}s.appendChild(l)}a.$slider.empty().append(s),a.$slider.children().children().children().css({width:100/a.options.slidesPerRow+"%",display:"inline-block"})}},e.prototype.checkResponsive=function(e,i){var s,r,n,o=this,a=!1,l=o.$slider.width(),h=window.innerWidth||t(window).width();if("window"===o.respondTo?n=h:"slider"===o.respondTo?n=l:"min"===o.respondTo&&(n=Math.min(h,l)),o.options.responsive&&o.options.responsive.length&&null!==o.options.responsive){r=null;for(s in o.breakpoints)o.breakpoints.hasOwnProperty(s)&&(o.originalSettings.mobileFirst===!1?n<o.breakpoints[s]&&(r=o.breakpoints[s]):n>o.breakpoints[s]&&(r=o.breakpoints[s]));null!==r?null!==o.activeBreakpoint?(r!==o.activeBreakpoint||i)&&(o.activeBreakpoint=r,"unslick"===o.breakpointSettings[r]?o.unslick(r):(o.options=t.extend({},o.originalSettings,o.breakpointSettings[r]),e===!0&&(o.currentSlide=o.options.initialSlide),o.refresh(e)),a=r):(o.activeBreakpoint=r,"unslick"===o.breakpointSettings[r]?o.unslick(r):(o.options=t.extend({},o.originalSettings,o.breakpointSettings[r]),e===!0&&(o.currentSlide=o.options.initialSlide),o.refresh(e)),a=r):null!==o.activeBreakpoint&&(o.activeBreakpoint=null,o.options=o.originalSettings,e===!0&&(o.currentSlide=o.options.initialSlide),o.refresh(e),a=r),e||a===!1||o.$slider.trigger("breakpoint",[o,a])}},e.prototype.changeSlide=function(e,i){var s,r,n,o=this,a=t(e.currentTarget);switch(a.is("a")&&e.preventDefault(),a.is("li")||(a=a.closest("li")),n=o.slideCount%o.options.slidesToScroll!==0,s=n?0:(o.slideCount-o.currentSlide)%o.options.slidesToScroll,e.data.message){case"previous":r=0===s?o.options.slidesToScroll:o.options.slidesToShow-s,o.slideCount>o.options.slidesToShow&&o.slideHandler(o.currentSlide-r,!1,i);break;case"next":r=0===s?o.options.slidesToScroll:s,o.slideCount>o.options.slidesToShow&&o.slideHandler(o.currentSlide+r,!1,i);break;case"index":var l=0===e.data.index?0:e.data.index||a.index()*o.options.slidesToScroll;o.slideHandler(o.checkNavigable(l),!1,i),a.children().trigger("focus");break;default:return}},e.prototype.checkNavigable=function(t){var e,i,s=this;if(e=s.getNavigableIndexes(),i=0,t>e[e.length-1])t=e[e.length-1];else for(var r in e){if(t<e[r]){t=i;break}i=e[r]}return t},e.prototype.cleanUpEvents=function(){var e=this;e.options.dots&&null!==e.$dots&&t("li",e.$dots).off("click.slick",e.changeSlide).off("mouseenter.slick",t.proxy(e.interrupt,e,!0)).off("mouseleave.slick",t.proxy(e.interrupt,e,!1)),e.$slider.off("focus.slick blur.slick"),e.options.arrows===!0&&e.slideCount>e.options.slidesToShow&&(e.$prevArrow&&e.$prevArrow.off("click.slick",e.changeSlide),e.$nextArrow&&e.$nextArrow.off("click.slick",e.changeSlide)),e.$list.off("touchstart.slick mousedown.slick",e.swipeHandler),e.$list.off("touchmove.slick mousemove.slick",e.swipeHandler),e.$list.off("touchend.slick mouseup.slick",e.swipeHandler),e.$list.off("touchcancel.slick mouseleave.slick",e.swipeHandler),e.$list.off("click.slick",e.clickHandler),t(document).off(e.visibilityChange,e.visibility),e.cleanUpSlideEvents(),e.options.accessibility===!0&&e.$list.off("keydown.slick",e.keyHandler),e.options.focusOnSelect===!0&&t(e.$slideTrack).children().off("click.slick",e.selectHandler),t(window).off("orientationchange.slick.slick-"+e.instanceUid,e.orientationChange),t(window).off("resize.slick.slick-"+e.instanceUid,e.resize),t("[draggable!=true]",e.$slideTrack).off("dragstart",e.preventDefault),t(window).off("load.slick.slick-"+e.instanceUid,e.setPosition),t(document).off("ready.slick.slick-"+e.instanceUid,e.setPosition)},e.prototype.cleanUpSlideEvents=function(){var e=this;e.$list.off("mouseenter.slick",t.proxy(e.interrupt,e,!0)),e.$list.off("mouseleave.slick",t.proxy(e.interrupt,e,!1))},e.prototype.cleanUpRows=function(){var t,e=this;e.options.rows>1&&(t=e.$slides.children().children(),t.removeAttr("style"),e.$slider.empty().append(t))},e.prototype.clickHandler=function(t){var e=this;e.shouldClick===!1&&(t.stopImmediatePropagation(),t.stopPropagation(),t.preventDefault())},e.prototype.destroy=function(e){var i=this;i.autoPlayClear(),i.touchObject={},i.cleanUpEvents(),t(".slick-cloned",i.$slider).detach(),i.$dots&&i.$dots.remove(),i.$prevArrow&&i.$prevArrow.length&&(i.$prevArrow.removeClass("slick-disabled slick-arrow slick-hidden").removeAttr("aria-hidden aria-disabled tabindex").css("display",""),i.htmlExpr.test(i.options.prevArrow)&&i.$prevArrow.remove()),i.$nextArrow&&i.$nextArrow.length&&(i.$nextArrow.removeClass("slick-disabled slick-arrow slick-hidden").removeAttr("aria-hidden aria-disabled tabindex").css("display",""),i.htmlExpr.test(i.options.nextArrow)&&i.$nextArrow.remove()),i.$slides&&(i.$slides.removeClass("slick-slide slick-active slick-center slick-visible slick-current").removeAttr("aria-hidden").removeAttr("data-slick-index").each(function(){t(this).attr("style",t(this).data("originalStyling"))}),i.$slideTrack.children(this.options.slide).detach(),i.$slideTrack.detach(),i.$list.detach(),i.$slider.append(i.$slides)),i.cleanUpRows(),i.$slider.removeClass("slick-slider"),i.$slider.removeClass("slick-initialized"),i.$slider.removeClass("slick-dotted"),i.unslicked=!0,e||i.$slider.trigger("destroy",[i])},e.prototype.disableTransition=function(t){var e=this,i={};i[e.transitionType]="",e.options.fade===!1?e.$slideTrack.css(i):e.$slides.eq(t).css(i)},e.prototype.fadeSlide=function(t,e){var i=this;i.cssTransitions===!1?(i.$slides.eq(t).css({zIndex:i.options.zIndex}),i.$slides.eq(t).animate({opacity:1},i.options.speed,i.options.easing,e)):(i.applyTransition(t),i.$slides.eq(t).css({opacity:1,zIndex:i.options.zIndex}),e&&setTimeout(function(){i.disableTransition(t),e.call()},i.options.speed))},e.prototype.fadeSlideOut=function(t){var e=this;e.cssTransitions===!1?e.$slides.eq(t).animate({opacity:0,zIndex:e.options.zIndex-2},e.options.speed,e.options.easing):(e.applyTransition(t),e.$slides.eq(t).css({opacity:0,zIndex:e.options.zIndex-2}))},e.prototype.filterSlides=e.prototype.slickFilter=function(t){var e=this;null!==t&&(e.$slidesCache=e.$slides,e.unload(),e.$slideTrack.children(this.options.slide).detach(),e.$slidesCache.filter(t).appendTo(e.$slideTrack),e.reinit())},e.prototype.focusHandler=function(){var e=this;e.$slider.off("focus.slick blur.slick").on("focus.slick blur.slick","*:not(.slick-arrow)",function(i){i.stopImmediatePropagation();var s=t(this);setTimeout(function(){e.options.pauseOnFocus&&(e.focussed=s.is(":focus"),e.autoPlay())},0)})},e.prototype.getCurrent=e.prototype.slickCurrentSlide=function(){var t=this;return t.currentSlide},e.prototype.getDotCount=function(){var t=this,e=0,i=0,s=0;if(t.options.infinite===!0)for(;e<t.slideCount;)++s,e=i+t.options.slidesToScroll,i+=t.options.slidesToScroll<=t.options.slidesToShow?t.options.slidesToScroll:t.options.slidesToShow;else if(t.options.centerMode===!0)s=t.slideCount;else if(t.options.asNavFor)for(;e<t.slideCount;)++s,e=i+t.options.slidesToScroll,i+=t.options.slidesToScroll<=t.options.slidesToShow?t.options.slidesToScroll:t.options.slidesToShow;else s=1+Math.ceil((t.slideCount-t.options.slidesToShow)/t.options.slidesToScroll);return s-1},e.prototype.getLeft=function(t){var e,i,s,r=this,n=0;return r.slideOffset=0,i=r.$slides.first().outerHeight(!0),r.options.infinite===!0?(r.slideCount>r.options.slidesToShow&&(r.slideOffset=r.slideWidth*r.options.slidesToShow*-1,n=i*r.options.slidesToShow*-1),r.slideCount%r.options.slidesToScroll!==0&&t+r.options.slidesToScroll>r.slideCount&&r.slideCount>r.options.slidesToShow&&(t>r.slideCount?(r.slideOffset=(r.options.slidesToShow-(t-r.slideCount))*r.slideWidth*-1,n=(r.options.slidesToShow-(t-r.slideCount))*i*-1):(r.slideOffset=r.slideCount%r.options.slidesToScroll*r.slideWidth*-1,n=r.slideCount%r.options.slidesToScroll*i*-1))):t+r.options.slidesToShow>r.slideCount&&(r.slideOffset=(t+r.options.slidesToShow-r.slideCount)*r.slideWidth,n=(t+r.options.slidesToShow-r.slideCount)*i),r.slideCount<=r.options.slidesToShow&&(r.slideOffset=0,n=0),r.options.centerMode===!0&&r.options.infinite===!0?r.slideOffset+=r.slideWidth*Math.floor(r.options.slidesToShow/2)-r.slideWidth:r.options.centerMode===!0&&(r.slideOffset=0,r.slideOffset+=r.slideWidth*Math.floor(r.options.slidesToShow/2)),e=r.options.vertical===!1?t*r.slideWidth*-1+r.slideOffset:t*i*-1+n,r.options.variableWidth===!0&&(s=r.slideCount<=r.options.slidesToShow||r.options.infinite===!1?r.$slideTrack.children(".slick-slide").eq(t):r.$slideTrack.children(".slick-slide").eq(t+r.options.slidesToShow),e=r.options.rtl===!0?s[0]?-1*(r.$slideTrack.width()-s[0].offsetLeft-s.width()):0:s[0]?-1*s[0].offsetLeft:0,r.options.centerMode===!0&&(s=r.slideCount<=r.options.slidesToShow||r.options.infinite===!1?r.$slideTrack.children(".slick-slide").eq(t):r.$slideTrack.children(".slick-slide").eq(t+r.options.slidesToShow+1),e=r.options.rtl===!0?s[0]?-1*(r.$slideTrack.width()-s[0].offsetLeft-s.width()):0:s[0]?-1*s[0].offsetLeft:0,e+=(r.$list.width()-s.outerWidth())/2)),e},e.prototype.getOption=e.prototype.slickGetOption=function(t){var e=this;return e.options[t]},e.prototype.getNavigableIndexes=function(){var t,e=this,i=0,s=0,r=[];for(e.options.infinite===!1?t=e.slideCount:(i=-1*e.options.slidesToScroll,s=-1*e.options.slidesToScroll,t=2*e.slideCount);t>i;)r.push(i),i=s+e.options.slidesToScroll,s+=e.options.slidesToScroll<=e.options.slidesToShow?e.options.slidesToScroll:e.options.slidesToShow;return r},e.prototype.getSlick=function(){return this},e.prototype.getSlideCount=function(){var e,i,s,r=this;return s=r.options.centerMode===!0?r.slideWidth*Math.floor(r.options.slidesToShow/2):0,r.options.swipeToSlide===!0?(r.$slideTrack.find(".slick-slide").each(function(e,n){return n.offsetLeft-s+t(n).outerWidth()/2>-1*r.swipeLeft?(i=n,!1):void 0}),e=Math.abs(t(i).attr("data-slick-index")-r.currentSlide)||1):r.options.slidesToScroll},e.prototype.goTo=e.prototype.slickGoTo=function(t,e){var i=this;i.changeSlide({data:{message:"index",index:parseInt(t)}},e)},e.prototype.init=function(e){var i=this;t(i.$slider).hasClass("slick-initialized")||(t(i.$slider).addClass("slick-initialized"),i.buildRows(),i.buildOut(),i.setProps(),i.startLoad(),i.loadSlider(),i.initializeEvents(),i.updateArrows(),i.updateDots(),i.checkResponsive(!0),i.focusHandler()),e&&i.$slider.trigger("init",[i]),i.options.accessibility===!0&&i.initADA(),i.options.autoplay&&(i.paused=!1,i.autoPlay())},e.prototype.initADA=function(){var e=this;e.$slides.add(e.$slideTrack.find(".slick-cloned")).attr({"aria-hidden":"true",tabindex:"-1"}).find("a, input, button, select").attr({tabindex:"-1"}),e.$slideTrack.attr("role","listbox"),e.$slides.not(e.$slideTrack.find(".slick-cloned")).each(function(i){t(this).attr({role:"option","aria-describedby":"slick-slide"+e.instanceUid+i})}),null!==e.$dots&&e.$dots.attr("role","tablist").find("li").each(function(i){t(this).attr({role:"presentation","aria-selected":"false","aria-controls":"navigation"+e.instanceUid+i,id:"slick-slide"+e.instanceUid+i})}).first().attr("aria-selected","true").end().find("button").attr("role","button").end().closest("div").attr("role","toolbar"),e.activateADA()},e.prototype.initArrowEvents=function(){var t=this;t.options.arrows===!0&&t.slideCount>t.options.slidesToShow&&(t.$prevArrow.off("click.slick").on("click.slick",{message:"previous"},t.changeSlide),t.$nextArrow.off("click.slick").on("click.slick",{message:"next"},t.changeSlide))},e.prototype.initDotEvents=function(){var e=this;e.options.dots===!0&&e.slideCount>e.options.slidesToShow&&t("li",e.$dots).on("click.slick",{message:"index"},e.changeSlide),e.options.dots===!0&&e.options.pauseOnDotsHover===!0&&t("li",e.$dots).on("mouseenter.slick",t.proxy(e.interrupt,e,!0)).on("mouseleave.slick",t.proxy(e.interrupt,e,!1))},e.prototype.initSlideEvents=function(){var e=this;e.options.pauseOnHover&&(e.$list.on("mouseenter.slick",t.proxy(e.interrupt,e,!0)),e.$list.on("mouseleave.slick",t.proxy(e.interrupt,e,!1)))},e.prototype.initializeEvents=function(){var e=this;e.initArrowEvents(),e.initDotEvents(),e.initSlideEvents(),e.$list.on("touchstart.slick mousedown.slick",{action:"start"},e.swipeHandler),e.$list.on("touchmove.slick mousemove.slick",{action:"move"},e.swipeHandler),e.$list.on("touchend.slick mouseup.slick",{action:"end"},e.swipeHandler),e.$list.on("touchcancel.slick mouseleave.slick",{action:"end"},e.swipeHandler),e.$list.on("click.slick",e.clickHandler),t(document).on(e.visibilityChange,t.proxy(e.visibility,e)),e.options.accessibility===!0&&e.$list.on("keydown.slick",e.keyHandler),e.options.focusOnSelect===!0&&t(e.$slideTrack).children().on("click.slick",e.selectHandler),t(window).on("orientationchange.slick.slick-"+e.instanceUid,t.proxy(e.orientationChange,e)),t(window).on("resize.slick.slick-"+e.instanceUid,t.proxy(e.resize,e)),t("[draggable!=true]",e.$slideTrack).on("dragstart",e.preventDefault),t(window).on("load.slick.slick-"+e.instanceUid,e.setPosition),t(document).on("ready.slick.slick-"+e.instanceUid,e.setPosition)},e.prototype.initUI=function(){var t=this;t.options.arrows===!0&&t.slideCount>t.options.slidesToShow&&(t.$prevArrow.show(),t.$nextArrow.show()),t.options.dots===!0&&t.slideCount>t.options.slidesToShow&&t.$dots.show()},e.prototype.keyHandler=function(t){var e=this;t.target.tagName.match("TEXTAREA|INPUT|SELECT")||(37===t.keyCode&&e.options.accessibility===!0?e.changeSlide({data:{message:e.options.rtl===!0?"next":"previous"}}):39===t.keyCode&&e.options.accessibility===!0&&e.changeSlide({data:{message:e.options.rtl===!0?"previous":"next"}}))},e.prototype.lazyLoad=function(){function e(e){t("img[data-lazy]",e).each(function(){var e=t(this),i=t(this).attr("data-lazy"),s=document.createElement("img");s.onload=function(){e.animate({opacity:0},100,function(){e.attr("src",i).animate({opacity:1},200,function(){e.removeAttr("data-lazy").removeClass("slick-loading")}),o.$slider.trigger("lazyLoaded",[o,e,i])})},s.onerror=function(){e.removeAttr("data-lazy").removeClass("slick-loading").addClass("slick-lazyload-error"),o.$slider.trigger("lazyLoadError",[o,e,i])},s.src=i})}var i,s,r,n,o=this;o.options.centerMode===!0?o.options.infinite===!0?(r=o.currentSlide+(o.options.slidesToShow/2+1),n=r+o.options.slidesToShow+2):(r=Math.max(0,o.currentSlide-(o.options.slidesToShow/2+1)),n=2+(o.options.slidesToShow/2+1)+o.currentSlide):(r=o.options.infinite?o.options.slidesToShow+o.currentSlide:o.currentSlide,n=Math.ceil(r+o.options.slidesToShow),o.options.fade===!0&&(r>0&&r--,n<=o.slideCount&&n++)),i=o.$slider.find(".slick-slide").slice(r,n),e(i),o.slideCount<=o.options.slidesToShow?(s=o.$slider.find(".slick-slide"),e(s)):o.currentSlide>=o.slideCount-o.options.slidesToShow?(s=o.$slider.find(".slick-cloned").slice(0,o.options.slidesToShow),e(s)):0===o.currentSlide&&(s=o.$slider.find(".slick-cloned").slice(-1*o.options.slidesToShow),e(s))},e.prototype.loadSlider=function(){var t=this;t.setPosition(),t.$slideTrack.css({opacity:1}),t.$slider.removeClass("slick-loading"),t.initUI(),"progressive"===t.options.lazyLoad&&t.progressiveLazyLoad()},e.prototype.next=e.prototype.slickNext=function(){var t=this;t.changeSlide({data:{message:"next"}})},e.prototype.orientationChange=function(){var t=this;t.checkResponsive(),t.setPosition()},e.prototype.pause=e.prototype.slickPause=function(){var t=this;t.autoPlayClear(),t.paused=!0},e.prototype.play=e.prototype.slickPlay=function(){var t=this;t.autoPlay(),t.options.autoplay=!0,t.paused=!1,t.focussed=!1,t.interrupted=!1},e.prototype.postSlide=function(t){var e=this;e.unslicked||(e.$slider.trigger("afterChange",[e,t]),e.animating=!1,e.setPosition(),e.swipeLeft=null,e.options.autoplay&&e.autoPlay(),e.options.accessibility===!0&&e.initADA())},e.prototype.prev=e.prototype.slickPrev=function(){var t=this;t.changeSlide({data:{message:"previous"}})},e.prototype.preventDefault=function(t){t.preventDefault()},e.prototype.progressiveLazyLoad=function(e){e=e||1;var i,s,r,n=this,o=t("img[data-lazy]",n.$slider);o.length?(i=o.first(),s=i.attr("data-lazy"),r=document.createElement("img"),r.onload=function(){i.attr("src",s).removeAttr("data-lazy").removeClass("slick-loading"),n.options.adaptiveHeight===!0&&n.setPosition(),n.$slider.trigger("lazyLoaded",[n,i,s]),n.progressiveLazyLoad()},r.onerror=function(){3>e?setTimeout(function(){n.progressiveLazyLoad(e+1)},500):(i.removeAttr("data-lazy").removeClass("slick-loading").addClass("slick-lazyload-error"),
-n.$slider.trigger("lazyLoadError",[n,i,s]),n.progressiveLazyLoad())},r.src=s):n.$slider.trigger("allImagesLoaded",[n])},e.prototype.refresh=function(e){var i,s,r=this;s=r.slideCount-r.options.slidesToShow,!r.options.infinite&&r.currentSlide>s&&(r.currentSlide=s),r.slideCount<=r.options.slidesToShow&&(r.currentSlide=0),i=r.currentSlide,r.destroy(!0),t.extend(r,r.initials,{currentSlide:i}),r.init(),e||r.changeSlide({data:{message:"index",index:i}},!1)},e.prototype.registerBreakpoints=function(){var e,i,s,r=this,n=r.options.responsive||null;if("array"===t.type(n)&&n.length){r.respondTo=r.options.respondTo||"window";for(e in n)if(s=r.breakpoints.length-1,i=n[e].breakpoint,n.hasOwnProperty(e)){for(;s>=0;)r.breakpoints[s]&&r.breakpoints[s]===i&&r.breakpoints.splice(s,1),s--;r.breakpoints.push(i),r.breakpointSettings[i]=n[e].settings}r.breakpoints.sort(function(t,e){return r.options.mobileFirst?t-e:e-t})}},e.prototype.reinit=function(){var e=this;e.$slides=e.$slideTrack.children(e.options.slide).addClass("slick-slide"),e.slideCount=e.$slides.length,e.currentSlide>=e.slideCount&&0!==e.currentSlide&&(e.currentSlide=e.currentSlide-e.options.slidesToScroll),e.slideCount<=e.options.slidesToShow&&(e.currentSlide=0),e.registerBreakpoints(),e.setProps(),e.setupInfinite(),e.buildArrows(),e.updateArrows(),e.initArrowEvents(),e.buildDots(),e.updateDots(),e.initDotEvents(),e.cleanUpSlideEvents(),e.initSlideEvents(),e.checkResponsive(!1,!0),e.options.focusOnSelect===!0&&t(e.$slideTrack).children().on("click.slick",e.selectHandler),e.setSlideClasses("number"==typeof e.currentSlide?e.currentSlide:0),e.setPosition(),e.focusHandler(),e.paused=!e.options.autoplay,e.autoPlay(),e.$slider.trigger("reInit",[e])},e.prototype.resize=function(){var e=this;t(window).width()!==e.windowWidth&&(clearTimeout(e.windowDelay),e.windowDelay=window.setTimeout(function(){e.windowWidth=t(window).width(),e.checkResponsive(),e.unslicked||e.setPosition()},50))},e.prototype.removeSlide=e.prototype.slickRemove=function(t,e,i){var s=this;return"boolean"==typeof t?(e=t,t=e===!0?0:s.slideCount-1):t=e===!0?--t:t,s.slideCount<1||0>t||t>s.slideCount-1?!1:(s.unload(),i===!0?s.$slideTrack.children().remove():s.$slideTrack.children(this.options.slide).eq(t).remove(),s.$slides=s.$slideTrack.children(this.options.slide),s.$slideTrack.children(this.options.slide).detach(),s.$slideTrack.append(s.$slides),s.$slidesCache=s.$slides,void s.reinit())},e.prototype.setCSS=function(t){var e,i,s=this,r={};s.options.rtl===!0&&(t=-t),e="left"==s.positionProp?Math.ceil(t)+"px":"0px",i="top"==s.positionProp?Math.ceil(t)+"px":"0px",r[s.positionProp]=t,s.transformsEnabled===!1?s.$slideTrack.css(r):(r={},s.cssTransitions===!1?(r[s.animType]="translate("+e+", "+i+")",s.$slideTrack.css(r)):(r[s.animType]="translate3d("+e+", "+i+", 0px)",s.$slideTrack.css(r)))},e.prototype.setDimensions=function(){var t=this;t.options.vertical===!1?t.options.centerMode===!0&&t.$list.css({padding:"0px "+t.options.centerPadding}):(t.$list.height(t.$slides.first().outerHeight(!0)*t.options.slidesToShow),t.options.centerMode===!0&&t.$list.css({padding:t.options.centerPadding+" 0px"})),t.listWidth=t.$list.width(),t.listHeight=t.$list.height(),t.options.vertical===!1&&t.options.variableWidth===!1?(t.slideWidth=Math.ceil(t.listWidth/t.options.slidesToShow),t.$slideTrack.width(Math.ceil(t.slideWidth*t.$slideTrack.children(".slick-slide").length))):t.options.variableWidth===!0?t.$slideTrack.width(5e3*t.slideCount):(t.slideWidth=Math.ceil(t.listWidth),t.$slideTrack.height(Math.ceil(t.$slides.first().outerHeight(!0)*t.$slideTrack.children(".slick-slide").length)));var e=t.$slides.first().outerWidth(!0)-t.$slides.first().width();t.options.variableWidth===!1&&t.$slideTrack.children(".slick-slide").width(t.slideWidth-e)},e.prototype.setFade=function(){var e,i=this;i.$slides.each(function(s,r){e=i.slideWidth*s*-1,i.options.rtl===!0?t(r).css({position:"relative",right:e,top:0,zIndex:i.options.zIndex-2,opacity:0}):t(r).css({position:"relative",left:e,top:0,zIndex:i.options.zIndex-2,opacity:0})}),i.$slides.eq(i.currentSlide).css({zIndex:i.options.zIndex-1,opacity:1})},e.prototype.setHeight=function(){var t=this;if(1===t.options.slidesToShow&&t.options.adaptiveHeight===!0&&t.options.vertical===!1){var e=t.$slides.eq(t.currentSlide).outerHeight(!0);t.$list.css("height",e)}},e.prototype.setOption=e.prototype.slickSetOption=function(){var e,i,s,r,n,o=this,a=!1;if("object"===t.type(arguments[0])?(s=arguments[0],a=arguments[1],n="multiple"):"string"===t.type(arguments[0])&&(s=arguments[0],r=arguments[1],a=arguments[2],"responsive"===arguments[0]&&"array"===t.type(arguments[1])?n="responsive":"undefined"!=typeof arguments[1]&&(n="single")),"single"===n)o.options[s]=r;else if("multiple"===n)t.each(s,function(t,e){o.options[t]=e});else if("responsive"===n)for(i in r)if("array"!==t.type(o.options.responsive))o.options.responsive=[r[i]];else{for(e=o.options.responsive.length-1;e>=0;)o.options.responsive[e].breakpoint===r[i].breakpoint&&o.options.responsive.splice(e,1),e--;o.options.responsive.push(r[i])}a&&(o.unload(),o.reinit())},e.prototype.setPosition=function(){var t=this;t.setDimensions(),t.setHeight(),t.options.fade===!1?t.setCSS(t.getLeft(t.currentSlide)):t.setFade(),t.$slider.trigger("setPosition",[t])},e.prototype.setProps=function(){var t=this,e=document.body.style;t.positionProp=t.options.vertical===!0?"top":"left","top"===t.positionProp?t.$slider.addClass("slick-vertical"):t.$slider.removeClass("slick-vertical"),(void 0!==e.WebkitTransition||void 0!==e.MozTransition||void 0!==e.msTransition)&&t.options.useCSS===!0&&(t.cssTransitions=!0),t.options.fade&&("number"==typeof t.options.zIndex?t.options.zIndex<3&&(t.options.zIndex=3):t.options.zIndex=t.defaults.zIndex),void 0!==e.OTransform&&(t.animType="OTransform",t.transformType="-o-transform",t.transitionType="OTransition",void 0===e.perspectiveProperty&&void 0===e.webkitPerspective&&(t.animType=!1)),void 0!==e.MozTransform&&(t.animType="MozTransform",t.transformType="-moz-transform",t.transitionType="MozTransition",void 0===e.perspectiveProperty&&void 0===e.MozPerspective&&(t.animType=!1)),void 0!==e.webkitTransform&&(t.animType="webkitTransform",t.transformType="-webkit-transform",t.transitionType="webkitTransition",void 0===e.perspectiveProperty&&void 0===e.webkitPerspective&&(t.animType=!1)),void 0!==e.msTransform&&(t.animType="msTransform",t.transformType="-ms-transform",t.transitionType="msTransition",void 0===e.msTransform&&(t.animType=!1)),void 0!==e.transform&&t.animType!==!1&&(t.animType="transform",t.transformType="transform",t.transitionType="transition"),t.transformsEnabled=t.options.useTransform&&null!==t.animType&&t.animType!==!1},e.prototype.setSlideClasses=function(t){var e,i,s,r,n=this;i=n.$slider.find(".slick-slide").removeClass("slick-active slick-center slick-current").attr("aria-hidden","true"),n.$slides.eq(t).addClass("slick-current"),n.options.centerMode===!0?(e=Math.floor(n.options.slidesToShow/2),n.options.infinite===!0&&(t>=e&&t<=n.slideCount-1-e?n.$slides.slice(t-e,t+e+1).addClass("slick-active").attr("aria-hidden","false"):(s=n.options.slidesToShow+t,i.slice(s-e+1,s+e+2).addClass("slick-active").attr("aria-hidden","false")),0===t?i.eq(i.length-1-n.options.slidesToShow).addClass("slick-center"):t===n.slideCount-1&&i.eq(n.options.slidesToShow).addClass("slick-center")),n.$slides.eq(t).addClass("slick-center")):t>=0&&t<=n.slideCount-n.options.slidesToShow?n.$slides.slice(t,t+n.options.slidesToShow).addClass("slick-active").attr("aria-hidden","false"):i.length<=n.options.slidesToShow?i.addClass("slick-active").attr("aria-hidden","false"):(r=n.slideCount%n.options.slidesToShow,s=n.options.infinite===!0?n.options.slidesToShow+t:t,n.options.slidesToShow==n.options.slidesToScroll&&n.slideCount-t<n.options.slidesToShow?i.slice(s-(n.options.slidesToShow-r),s+r).addClass("slick-active").attr("aria-hidden","false"):i.slice(s,s+n.options.slidesToShow).addClass("slick-active").attr("aria-hidden","false")),"ondemand"===n.options.lazyLoad&&n.lazyLoad()},e.prototype.setupInfinite=function(){var e,i,s,r=this;if(r.options.fade===!0&&(r.options.centerMode=!1),r.options.infinite===!0&&r.options.fade===!1&&(i=null,r.slideCount>r.options.slidesToShow)){for(s=r.options.centerMode===!0?r.options.slidesToShow+1:r.options.slidesToShow,e=r.slideCount;e>r.slideCount-s;e-=1)i=e-1,t(r.$slides[i]).clone(!0).attr("id","").attr("data-slick-index",i-r.slideCount).prependTo(r.$slideTrack).addClass("slick-cloned");for(e=0;s>e;e+=1)i=e,t(r.$slides[i]).clone(!0).attr("id","").attr("data-slick-index",i+r.slideCount).appendTo(r.$slideTrack).addClass("slick-cloned");r.$slideTrack.find(".slick-cloned").find("[id]").each(function(){t(this).attr("id","")})}},e.prototype.interrupt=function(t){var e=this;t||e.autoPlay(),e.interrupted=t},e.prototype.selectHandler=function(e){var i=this,s=t(e.target).is(".slick-slide")?t(e.target):t(e.target).parents(".slick-slide"),r=parseInt(s.attr("data-slick-index"));return r||(r=0),i.slideCount<=i.options.slidesToShow?(i.setSlideClasses(r),void i.asNavFor(r)):void i.slideHandler(r)},e.prototype.slideHandler=function(t,e,i){var s,r,n,o,a,l=null,h=this;return e=e||!1,h.animating===!0&&h.options.waitForAnimate===!0||h.options.fade===!0&&h.currentSlide===t||h.slideCount<=h.options.slidesToShow?void 0:(e===!1&&h.asNavFor(t),s=t,l=h.getLeft(s),o=h.getLeft(h.currentSlide),h.currentLeft=null===h.swipeLeft?o:h.swipeLeft,h.options.infinite===!1&&h.options.centerMode===!1&&(0>t||t>h.getDotCount()*h.options.slidesToScroll)?void(h.options.fade===!1&&(s=h.currentSlide,i!==!0?h.animateSlide(o,function(){h.postSlide(s)}):h.postSlide(s))):h.options.infinite===!1&&h.options.centerMode===!0&&(0>t||t>h.slideCount-h.options.slidesToScroll)?void(h.options.fade===!1&&(s=h.currentSlide,i!==!0?h.animateSlide(o,function(){h.postSlide(s)}):h.postSlide(s))):(h.options.autoplay&&clearInterval(h.autoPlayTimer),r=0>s?h.slideCount%h.options.slidesToScroll!==0?h.slideCount-h.slideCount%h.options.slidesToScroll:h.slideCount+s:s>=h.slideCount?h.slideCount%h.options.slidesToScroll!==0?0:s-h.slideCount:s,h.animating=!0,h.$slider.trigger("beforeChange",[h,h.currentSlide,r]),n=h.currentSlide,h.currentSlide=r,h.setSlideClasses(h.currentSlide),h.options.asNavFor&&(a=h.getNavTarget(),a=a.slick("getSlick"),a.slideCount<=a.options.slidesToShow&&a.setSlideClasses(h.currentSlide)),h.updateDots(),h.updateArrows(),h.options.fade===!0?(i!==!0?(h.fadeSlideOut(n),h.fadeSlide(r,function(){h.postSlide(r)})):h.postSlide(r),void h.animateHeight()):void(i!==!0?h.animateSlide(l,function(){h.postSlide(r)}):h.postSlide(r))))},e.prototype.startLoad=function(){var t=this;t.options.arrows===!0&&t.slideCount>t.options.slidesToShow&&(t.$prevArrow.hide(),t.$nextArrow.hide()),t.options.dots===!0&&t.slideCount>t.options.slidesToShow&&t.$dots.hide(),t.$slider.addClass("slick-loading")},e.prototype.swipeDirection=function(){var t,e,i,s,r=this;return t=r.touchObject.startX-r.touchObject.curX,e=r.touchObject.startY-r.touchObject.curY,i=Math.atan2(e,t),s=Math.round(180*i/Math.PI),0>s&&(s=360-Math.abs(s)),45>=s&&s>=0?r.options.rtl===!1?"left":"right":360>=s&&s>=315?r.options.rtl===!1?"left":"right":s>=135&&225>=s?r.options.rtl===!1?"right":"left":r.options.verticalSwiping===!0?s>=35&&135>=s?"down":"up":"vertical"},e.prototype.swipeEnd=function(t){var e,i,s=this;if(s.dragging=!1,s.interrupted=!1,s.shouldClick=s.touchObject.swipeLength>10?!1:!0,void 0===s.touchObject.curX)return!1;if(s.touchObject.edgeHit===!0&&s.$slider.trigger("edge",[s,s.swipeDirection()]),s.touchObject.swipeLength>=s.touchObject.minSwipe){switch(i=s.swipeDirection()){case"left":case"down":e=s.options.swipeToSlide?s.checkNavigable(s.currentSlide+s.getSlideCount()):s.currentSlide+s.getSlideCount(),s.currentDirection=0;break;case"right":case"up":e=s.options.swipeToSlide?s.checkNavigable(s.currentSlide-s.getSlideCount()):s.currentSlide-s.getSlideCount(),s.currentDirection=1}"vertical"!=i&&(s.slideHandler(e),s.touchObject={},s.$slider.trigger("swipe",[s,i]))}else s.touchObject.startX!==s.touchObject.curX&&(s.slideHandler(s.currentSlide),s.touchObject={})},e.prototype.swipeHandler=function(t){var e=this;if(!(e.options.swipe===!1||"ontouchend"in document&&e.options.swipe===!1||e.options.draggable===!1&&-1!==t.type.indexOf("mouse")))switch(e.touchObject.fingerCount=t.originalEvent&&void 0!==t.originalEvent.touches?t.originalEvent.touches.length:1,e.touchObject.minSwipe=e.listWidth/e.options.touchThreshold,e.options.verticalSwiping===!0&&(e.touchObject.minSwipe=e.listHeight/e.options.touchThreshold),t.data.action){case"start":e.swipeStart(t);break;case"move":e.swipeMove(t);break;case"end":e.swipeEnd(t)}},e.prototype.swipeMove=function(t){var e,i,s,r,n,o=this;return n=void 0!==t.originalEvent?t.originalEvent.touches:null,!o.dragging||n&&1!==n.length?!1:(e=o.getLeft(o.currentSlide),o.touchObject.curX=void 0!==n?n[0].pageX:t.clientX,o.touchObject.curY=void 0!==n?n[0].pageY:t.clientY,o.touchObject.swipeLength=Math.round(Math.sqrt(Math.pow(o.touchObject.curX-o.touchObject.startX,2))),o.options.verticalSwiping===!0&&(o.touchObject.swipeLength=Math.round(Math.sqrt(Math.pow(o.touchObject.curY-o.touchObject.startY,2)))),i=o.swipeDirection(),"vertical"!==i?(void 0!==t.originalEvent&&o.touchObject.swipeLength>4&&t.preventDefault(),r=(o.options.rtl===!1?1:-1)*(o.touchObject.curX>o.touchObject.startX?1:-1),o.options.verticalSwiping===!0&&(r=o.touchObject.curY>o.touchObject.startY?1:-1),s=o.touchObject.swipeLength,o.touchObject.edgeHit=!1,o.options.infinite===!1&&(0===o.currentSlide&&"right"===i||o.currentSlide>=o.getDotCount()&&"left"===i)&&(s=o.touchObject.swipeLength*o.options.edgeFriction,o.touchObject.edgeHit=!0),o.options.vertical===!1?o.swipeLeft=e+s*r:o.swipeLeft=e+s*(o.$list.height()/o.listWidth)*r,o.options.verticalSwiping===!0&&(o.swipeLeft=e+s*r),o.options.fade===!0||o.options.touchMove===!1?!1:o.animating===!0?(o.swipeLeft=null,!1):void o.setCSS(o.swipeLeft)):void 0)},e.prototype.swipeStart=function(t){var e,i=this;return i.interrupted=!0,1!==i.touchObject.fingerCount||i.slideCount<=i.options.slidesToShow?(i.touchObject={},!1):(void 0!==t.originalEvent&&void 0!==t.originalEvent.touches&&(e=t.originalEvent.touches[0]),i.touchObject.startX=i.touchObject.curX=void 0!==e?e.pageX:t.clientX,i.touchObject.startY=i.touchObject.curY=void 0!==e?e.pageY:t.clientY,void(i.dragging=!0))},e.prototype.unfilterSlides=e.prototype.slickUnfilter=function(){var t=this;null!==t.$slidesCache&&(t.unload(),t.$slideTrack.children(this.options.slide).detach(),t.$slidesCache.appendTo(t.$slideTrack),t.reinit())},e.prototype.unload=function(){var e=this;t(".slick-cloned",e.$slider).remove(),e.$dots&&e.$dots.remove(),e.$prevArrow&&e.htmlExpr.test(e.options.prevArrow)&&e.$prevArrow.remove(),e.$nextArrow&&e.htmlExpr.test(e.options.nextArrow)&&e.$nextArrow.remove(),e.$slides.removeClass("slick-slide slick-active slick-visible slick-current").attr("aria-hidden","true").css("width","")},e.prototype.unslick=function(t){var e=this;e.$slider.trigger("unslick",[e,t]),e.destroy()},e.prototype.updateArrows=function(){var t,e=this;t=Math.floor(e.options.slidesToShow/2),e.options.arrows===!0&&e.slideCount>e.options.slidesToShow&&!e.options.infinite&&(e.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false"),e.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false"),0===e.currentSlide?(e.$prevArrow.addClass("slick-disabled").attr("aria-disabled","true"),e.$nextArrow.removeClass("slick-disabled").attr("aria-disabled","false")):e.currentSlide>=e.slideCount-e.options.slidesToShow&&e.options.centerMode===!1?(e.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),e.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")):e.currentSlide>=e.slideCount-1&&e.options.centerMode===!0&&(e.$nextArrow.addClass("slick-disabled").attr("aria-disabled","true"),e.$prevArrow.removeClass("slick-disabled").attr("aria-disabled","false")))},e.prototype.updateDots=function(){var t=this;null!==t.$dots&&(t.$dots.find("li").removeClass("slick-active").attr("aria-hidden","true"),t.$dots.find("li").eq(Math.floor(t.currentSlide/t.options.slidesToScroll)).addClass("slick-active").attr("aria-hidden","false"))},e.prototype.visibility=function(){var t=this;t.options.autoplay&&(document[t.hidden]?t.interrupted=!0:t.interrupted=!1)},t.fn.slick=function(){var t,i,s=this,r=arguments[0],n=Array.prototype.slice.call(arguments,1),o=s.length;for(t=0;o>t;t++)if("object"==typeof r||"undefined"==typeof r?s[t].slick=new e(s[t],r):i=s[t].slick[r].apply(s[t].slick,n),"undefined"!=typeof i)return i;return s}});
-
+! function(a, b) {
+  "use strict";
+  var c = {},
+      d = a.document,
+      e = a.GreenSockGlobals = a.GreenSockGlobals || a;
+  if (!e.TweenLite) {
+      var f, g, h, i, j, k = function(a) {
+              var b, c = a.split("."),
+                  d = e;
+              for (b = 0; b < c.length; b++) d[c[b]] = d = d[c[b]] || {};
+              return d
+          },
+          l = k("com.greensock"),
+          m = 1e-10,
+          n = function(a) {
+              var b, c = [],
+                  d = a.length;
+              for (b = 0; b !== d; c.push(a[b++]));
+              return c
+          },
+          o = function() {},
+          p = function() {
+              var a = Object.prototype.toString,
+                  b = a.call([]);
+              return function(c) {
+                  return null != c && (c instanceof Array || "object" == typeof c && !!c.push && a.call(c) === b)
+              }
+          }(),
+          q = {},
+          r = function(d, f, g, h) {
+              this.sc = q[d] ? q[d].sc : [], q[d] = this, this.gsClass = null, this.func = g;
+              var i = [];
+              this.check = function(j) {
+                  for (var l, m, n, o, p = f.length, s = p; --p > -1;)(l = q[f[p]] || new r(f[p], [])).gsClass ? (i[p] = l.gsClass, s--) : j && l.sc.push(this);
+                  if (0 === s && g) {
+                      if (m = ("com.greensock." + d).split("."), n = m.pop(), o = k(m.join("."))[n] = this.gsClass = g.apply(g, i), h)
+                          if (e[n] = c[n] = o, "undefined" != typeof module && module.exports)
+                              if (d === b) {
+                                  module.exports = c[b] = o;
+                                  for (p in c) o[p] = c[p]
+                              } else c[b] && (c[b][n] = o);
+                      else "function" == typeof define && define.amd && define((a.GreenSockAMDPath ? a.GreenSockAMDPath + "/" : "") + d.split(".").pop(), [], function() {
+                          return o
+                      });
+                      for (p = 0; p < this.sc.length; p++) this.sc[p].check()
+                  }
+              }, this.check(!0)
+          },
+          s = a._gsDefine = function(a, b, c, d) {
+              return new r(a, b, c, d)
+          },
+          t = l._class = function(a, b, c) {
+              return b = b || function() {}, s(a, [], function() {
+                  return b
+              }, c), b
+          };
+      s.globals = e;
+      var u = [0, 0, 1, 1],
+          v = t("easing.Ease", function(a, b, c, d) {
+              this._func = a, this._type = c || 0, this._power = d || 0, this._params = b ? u.concat(b) : u
+          }, !0),
+          w = v.map = {},
+          x = v.register = function(a, b, c, d) {
+              for (var e, f, g, h, i = b.split(","), j = i.length, k = (c || "easeIn,easeOut,easeInOut").split(","); --j > -1;)
+                  for (f = i[j], e = d ? t("easing." + f, null, !0) : l.easing[f] || {}, g = k.length; --g > -1;) h = k[g], w[f + "." + h] = w[h + f] = e[h] = a.getRatio ? a : a[h] || new a
+          };
+      for (h = v.prototype, h._calcEnd = !1, h.getRatio = function(a) {
+              if (this._func) return this._params[0] = a, this._func.apply(null, this._params);
+              var b = this._type,
+                  c = this._power,
+                  d = 1 === b ? 1 - a : 2 === b ? a : .5 > a ? 2 * a : 2 * (1 - a);
+              return 1 === c ? d *= d : 2 === c ? d *= d * d : 3 === c ? d *= d * d * d : 4 === c && (d *= d * d * d * d), 1 === b ? 1 - d : 2 === b ? d : .5 > a ? d / 2 : 1 - d / 2
+          }, f = ["Linear", "Quad", "Cubic", "Quart", "Quint,Strong"], g = f.length; --g > -1;) h = f[g] + ",Power" + g, x(new v(null, null, 1, g), h, "easeOut", !0), x(new v(null, null, 2, g), h, "easeIn" + (0 === g ? ",easeNone" : "")), x(new v(null, null, 3, g), h, "easeInOut");
+      w.linear = l.easing.Linear.easeIn, w.swing = l.easing.Quad.easeInOut;
+      var y = t("events.EventDispatcher", function(a) {
+          this._listeners = {}, this._eventTarget = a || this
+      });
+      h = y.prototype, h.addEventListener = function(a, b, c, d, e) {
+          e = e || 0;
+          var f, g, h = this._listeners[a],
+              k = 0;
+          for (this !== i || j || i.wake(), null == h && (this._listeners[a] = h = []), g = h.length; --g > -1;) f = h[g], f.c === b && f.s === c ? h.splice(g, 1) : 0 === k && f.pr < e && (k = g + 1);
+          h.splice(k, 0, {
+              c: b,
+              s: c,
+              up: d,
+              pr: e
+          })
+      }, h.removeEventListener = function(a, b) {
+          var c, d = this._listeners[a];
+          if (d)
+              for (c = d.length; --c > -1;)
+                  if (d[c].c === b) return void d.splice(c, 1)
+      }, h.dispatchEvent = function(a) {
+          var b, c, d, e = this._listeners[a];
+          if (e)
+              for (b = e.length, b > 1 && (e = e.slice(0)), c = this._eventTarget; --b > -1;) d = e[b], d && (d.up ? d.c.call(d.s || c, {
+                  type: a,
+                  target: c
+              }) : d.c.call(d.s || c))
+      };
+      var z = a.requestAnimationFrame,
+          A = a.cancelAnimationFrame,
+          B = Date.now || function() {
+              return (new Date).getTime()
+          },
+          C = B();
+      for (f = ["ms", "moz", "webkit", "o"], g = f.length; --g > -1 && !z;) z = a[f[g] + "RequestAnimationFrame"], A = a[f[g] + "CancelAnimationFrame"] || a[f[g] + "CancelRequestAnimationFrame"];
+      t("Ticker", function(a, b) {
+          var c, e, f, g, h, k = this,
+              l = B(),
+              n = b !== !1 && z ? "auto" : !1,
+              p = 500,
+              q = 33,
+              r = "tick",
+              s = function(a) {
+                  var b, d, i = B() - C;
+                  i > p && (l += i - q), C += i, k.time = (C - l) / 1e3, b = k.time - h, (!c || b > 0 || a === !0) && (k.frame++, h += b + (b >= g ? .004 : g - b), d = !0), a !== !0 && (f = e(s)), d && k.dispatchEvent(r)
+              };
+          y.call(k), k.time = k.frame = 0, k.tick = function() {
+              s(!0)
+          }, k.lagSmoothing = function(a, b) {
+              return arguments.length ? (p = a || 1 / m, void(q = Math.min(b, p, 0))) : 1 / m > p
+          }, k.sleep = function() {
+              null != f && (n && A ? A(f) : clearTimeout(f), e = o, f = null, k === i && (j = !1))
+          }, k.wake = function(a) {
+              null !== f ? k.sleep() : a ? l += -C + (C = B()) : k.frame > 10 && (C = B() - p + 5), e = 0 === c ? o : n && z ? z : function(a) {
+                  return setTimeout(a, 1e3 * (h - k.time) + 1 | 0)
+              }, k === i && (j = !0), s(2)
+          }, k.fps = function(a) {
+              return arguments.length ? (c = a, g = 1 / (c || 60), h = this.time + g, void k.wake()) : c
+          }, k.useRAF = function(a) {
+              return arguments.length ? (k.sleep(), n = a, void k.fps(c)) : n
+          }, k.fps(a), setTimeout(function() {
+              "auto" === n && k.frame < 5 && "hidden" !== d.visibilityState && k.useRAF(!1)
+          }, 1500)
+      }), h = l.Ticker.prototype = new l.events.EventDispatcher, h.constructor = l.Ticker;
+      var D = t("core.Animation", function(a, b) {
+          if (this.vars = b = b || {}, this._duration = this._totalDuration = a || 0, this._delay = Number(b.delay) || 0, this._timeScale = 1, this._active = b.immediateRender === !0, this.data = b.data, this._reversed = b.reversed === !0, X) {
+              j || i.wake();
+              var c = this.vars.useFrames ? W : X;
+              c.add(this, c._time), this.vars.paused && this.paused(!0)
+          }
+      });
+      i = D.ticker = new l.Ticker, h = D.prototype, h._dirty = h._gc = h._initted = h._paused = !1, h._totalTime = h._time = 0, h._rawPrevTime = -1, h._next = h._last = h._onUpdate = h._timeline = h.timeline = null, h._paused = !1;
+      var E = function() {
+          j && B() - C > 2e3 && ("hidden" !== d.visibilityState || !i.lagSmoothing()) && i.wake();
+          var a = setTimeout(E, 2e3);
+          a.unref && a.unref()
+      };
+      E(), h.play = function(a, b) {
+          return null != a && this.seek(a, b), this.reversed(!1).paused(!1)
+      }, h.pause = function(a, b) {
+          return null != a && this.seek(a, b), this.paused(!0)
+      }, h.resume = function(a, b) {
+          return null != a && this.seek(a, b), this.paused(!1)
+      }, h.seek = function(a, b) {
+          return this.totalTime(Number(a), b !== !1)
+      }, h.restart = function(a, b) {
+          return this.reversed(!1).paused(!1).totalTime(a ? -this._delay : 0, b !== !1, !0)
+      }, h.reverse = function(a, b) {
+          return null != a && this.seek(a || this.totalDuration(), b), this.reversed(!0).paused(!1)
+      }, h.render = function(a, b, c) {}, h.invalidate = function() {
+          return this._time = this._totalTime = 0, this._initted = this._gc = !1, this._rawPrevTime = -1, (this._gc || !this.timeline) && this._enabled(!0), this
+      }, h.isActive = function() {
+          var a, b = this._timeline,
+              c = this._startTime;
+          return !b || !this._gc && !this._paused && b.isActive() && (a = b.rawTime(!0)) >= c && a < c + this.totalDuration() / this._timeScale - 1e-7
+      }, h._enabled = function(a, b) {
+          return j || i.wake(), this._gc = !a, this._active = this.isActive(), b !== !0 && (a && !this.timeline ? this._timeline.add(this, this._startTime - this._delay) : !a && this.timeline && this._timeline._remove(this, !0)), !1
+      }, h._kill = function(a, b) {
+          return this._enabled(!1, !1)
+      }, h.kill = function(a, b) {
+          return this._kill(a, b), this
+      }, h._uncache = function(a) {
+          for (var b = a ? this : this.timeline; b;) b._dirty = !0, b = b.timeline;
+          return this
+      }, h._swapSelfInParams = function(a) {
+          for (var b = a.length, c = a.concat(); --b > -1;) "{self}" === a[b] && (c[b] = this);
+          return c
+      }, h._callback = function(a) {
+          var b = this.vars,
+              c = b[a],
+              d = b[a + "Params"],
+              e = b[a + "Scope"] || b.callbackScope || this,
+              f = d ? d.length : 0;
+          switch (f) {
+              case 0:
+                  c.call(e);
+                  break;
+              case 1:
+                  c.call(e, d[0]);
+                  break;
+              case 2:
+                  c.call(e, d[0], d[1]);
+                  break;
+              default:
+                  c.apply(e, d)
+          }
+      }, h.eventCallback = function(a, b, c, d) {
+          if ("on" === (a || "").substr(0, 2)) {
+              var e = this.vars;
+              if (1 === arguments.length) return e[a];
+              null == b ? delete e[a] : (e[a] = b, e[a + "Params"] = p(c) && -1 !== c.join("").indexOf("{self}") ? this._swapSelfInParams(c) : c, e[a + "Scope"] = d), "onUpdate" === a && (this._onUpdate = b)
+          }
+          return this
+      }, h.delay = function(a) {
+          return arguments.length ? (this._timeline.smoothChildTiming && this.startTime(this._startTime + a - this._delay), this._delay = a, this) : this._delay
+      }, h.duration = function(a) {
+          return arguments.length ? (this._duration = this._totalDuration = a, this._uncache(!0), this._timeline.smoothChildTiming && this._time > 0 && this._time < this._duration && 0 !== a && this.totalTime(this._totalTime * (a / this._duration), !0), this) : (this._dirty = !1, this._duration)
+      }, h.totalDuration = function(a) {
+          return this._dirty = !1, arguments.length ? this.duration(a) : this._totalDuration
+      }, h.time = function(a, b) {
+          return arguments.length ? (this._dirty && this.totalDuration(), this.totalTime(a > this._duration ? this._duration : a, b)) : this._time
+      }, h.totalTime = function(a, b, c) {
+          if (j || i.wake(), !arguments.length) return this._totalTime;
+          if (this._timeline) {
+              if (0 > a && !c && (a += this.totalDuration()), this._timeline.smoothChildTiming) {
+                  this._dirty && this.totalDuration();
+                  var d = this._totalDuration,
+                      e = this._timeline;
+                  if (a > d && !c && (a = d), this._startTime = (this._paused ? this._pauseTime : e._time) - (this._reversed ? d - a : a) / this._timeScale, e._dirty || this._uncache(!1), e._timeline)
+                      for (; e._timeline;) e._timeline._time !== (e._startTime + e._totalTime) / e._timeScale && e.totalTime(e._totalTime, !0), e = e._timeline
+              }
+              this._gc && this._enabled(!0, !1), (this._totalTime !== a || 0 === this._duration) && (J.length && Z(), this.render(a, b, !1), J.length && Z())
+          }
+          return this
+      }, h.progress = h.totalProgress = function(a, b) {
+          var c = this.duration();
+          return arguments.length ? this.totalTime(c * a, b) : c ? this._time / c : this.ratio
+      }, h.startTime = function(a) {
+          return arguments.length ? (a !== this._startTime && (this._startTime = a, this.timeline && this.timeline._sortChildren && this.timeline.add(this, a - this._delay)), this) : this._startTime
+      }, h.endTime = function(a) {
+          return this._startTime + (0 != a ? this.totalDuration() : this.duration()) / this._timeScale
+      }, h.timeScale = function(a) {
+          if (!arguments.length) return this._timeScale;
+          var b, c;
+          for (a = a || m, this._timeline && this._timeline.smoothChildTiming && (b = this._pauseTime, c = b || 0 === b ? b : this._timeline.totalTime(), this._startTime = c - (c - this._startTime) * this._timeScale / a), this._timeScale = a, c = this.timeline; c && c.timeline;) c._dirty = !0, c.totalDuration(), c = c.timeline;
+          return this
+      }, h.reversed = function(a) {
+          return arguments.length ? (a != this._reversed && (this._reversed = a, this.totalTime(this._timeline && !this._timeline.smoothChildTiming ? this.totalDuration() - this._totalTime : this._totalTime, !0)), this) : this._reversed
+      }, h.paused = function(a) {
+          if (!arguments.length) return this._paused;
+          var b, c, d = this._timeline;
+          return a != this._paused && d && (j || a || i.wake(), b = d.rawTime(), c = b - this._pauseTime, !a && d.smoothChildTiming && (this._startTime += c, this._uncache(!1)), this._pauseTime = a ? b : null, this._paused = a, this._active = this.isActive(), !a && 0 !== c && this._initted && this.duration() && (b = d.smoothChildTiming ? this._totalTime : (b - this._startTime) / this._timeScale, this.render(b, b === this._totalTime, !0))), this._gc && !a && this._enabled(!0, !1), this
+      };
+      var F = t("core.SimpleTimeline", function(a) {
+          D.call(this, 0, a), this.autoRemoveChildren = this.smoothChildTiming = !0
+      });
+      h = F.prototype = new D, h.constructor = F, h.kill()._gc = !1, h._first = h._last = h._recent = null, h._sortChildren = !1, h.add = h.insert = function(a, b, c, d) {
+          var e, f;
+          if (a._startTime = Number(b || 0) + a._delay, a._paused && this !== a._timeline && (a._pauseTime = a._startTime + (this.rawTime() - a._startTime) / a._timeScale), a.timeline && a.timeline._remove(a, !0), a.timeline = a._timeline = this, a._gc && a._enabled(!0, !0), e = this._last, this._sortChildren)
+              for (f = a._startTime; e && e._startTime > f;) e = e._prev;
+          return e ? (a._next = e._next, e._next = a) : (a._next = this._first, this._first = a), a._next ? a._next._prev = a : this._last = a, a._prev = e, this._recent = a, this._timeline && this._uncache(!0), this
+      }, h._remove = function(a, b) {
+          return a.timeline === this && (b || a._enabled(!1, !0), a._prev ? a._prev._next = a._next : this._first === a && (this._first = a._next), a._next ? a._next._prev = a._prev : this._last === a && (this._last = a._prev), a._next = a._prev = a.timeline = null, a === this._recent && (this._recent = this._last), this._timeline && this._uncache(!0)), this
+      }, h.render = function(a, b, c) {
+          var d, e = this._first;
+          for (this._totalTime = this._time = this._rawPrevTime = a; e;) d = e._next, (e._active || a >= e._startTime && !e._paused && !e._gc) && (e._reversed ? e.render((e._dirty ? e.totalDuration() : e._totalDuration) - (a - e._startTime) * e._timeScale, b, c) : e.render((a - e._startTime) * e._timeScale, b, c)), e = d
+      }, h.rawTime = function() {
+          return j || i.wake(), this._totalTime
+      };
+      var G = t("TweenLite", function(b, c, d) {
+              if (D.call(this, c, d), this.render = G.prototype.render, null == b) throw "Cannot tween a null target.";
+              this.target = b = "string" != typeof b ? b : G.selector(b) || b;
+              var e, f, g, h = b.jquery || b.length && b !== a && b[0] && (b[0] === a || b[0].nodeType && b[0].style && !b.nodeType),
+                  i = this.vars.overwrite;
+              if (this._overwrite = i = null == i ? V[G.defaultOverwrite] : "number" == typeof i ? i >> 0 : V[i], (h || b instanceof Array || b.push && p(b)) && "number" != typeof b[0])
+                  for (this._targets = g = n(b), this._propLookup = [], this._siblings = [], e = 0; e < g.length; e++) f = g[e], f ? "string" != typeof f ? f.length && f !== a && f[0] && (f[0] === a || f[0].nodeType && f[0].style && !f.nodeType) ? (g.splice(e--, 1), this._targets = g = g.concat(n(f))) : (this._siblings[e] = $(f, this, !1), 1 === i && this._siblings[e].length > 1 && aa(f, this, null, 1, this._siblings[e])) : (f = g[e--] = G.selector(f), "string" == typeof f && g.splice(e + 1, 1)) : g.splice(e--, 1);
+              else this._propLookup = {}, this._siblings = $(b, this, !1), 1 === i && this._siblings.length > 1 && aa(b, this, null, 1, this._siblings);
+              (this.vars.immediateRender || 0 === c && 0 === this._delay && this.vars.immediateRender !== !1) && (this._time = -m, this.render(Math.min(0, -this._delay)))
+          }, !0),
+          H = function(b) {
+              return b && b.length && b !== a && b[0] && (b[0] === a || b[0].nodeType && b[0].style && !b.nodeType)
+          },
+          I = function(a, b) {
+              var c, d = {};
+              for (c in a) U[c] || c in b && "transform" !== c && "x" !== c && "y" !== c && "width" !== c && "height" !== c && "className" !== c && "border" !== c || !(!R[c] || R[c] && R[c]._autoCSS) || (d[c] = a[c], delete a[c]);
+              a.css = d
+          };
+      h = G.prototype = new D, h.constructor = G, h.kill()._gc = !1, h.ratio = 0, h._firstPT = h._targets = h._overwrittenProps = h._startAt = null, h._notifyPluginsOfEnabled = h._lazy = !1, G.version = "1.20.3", G.defaultEase = h._ease = new v(null, null, 1, 1), G.defaultOverwrite = "auto", G.ticker = i, G.autoSleep = 120, G.lagSmoothing = function(a, b) {
+          i.lagSmoothing(a, b)
+      }, G.selector = a.$ || a.jQuery || function(b) {
+          var c = a.$ || a.jQuery;
+          return c ? (G.selector = c, c(b)) : "undefined" == typeof d ? b : d.querySelectorAll ? d.querySelectorAll(b) : d.getElementById("#" === b.charAt(0) ? b.substr(1) : b)
+      };
+      var J = [],
+          K = {},
+          L = /(?:(-|-=|\+=)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/gi,
+          M = /[\+-]=-?[\.\d]/,
+          N = function(a) {
+              for (var b, c = this._firstPT, d = 1e-6; c;) b = c.blob ? 1 === a && null != this.end ? this.end : a ? this.join("") : this.start : c.c * a + c.s, c.m ? b = c.m(b, this._target || c.t) : d > b && b > -d && !c.blob && (b = 0), c.f ? c.fp ? c.t[c.p](c.fp, b) : c.t[c.p](b) : c.t[c.p] = b, c = c._next
+          },
+          O = function(a, b, c, d) {
+              var e, f, g, h, i, j, k, l = [],
+                  m = 0,
+                  n = "",
+                  o = 0;
+              for (l.start = a, l.end = b, a = l[0] = a + "", b = l[1] = b + "", c && (c(l), a = l[0], b = l[1]), l.length = 0, e = a.match(L) || [], f = b.match(L) || [], d && (d._next = null, d.blob = 1, l._firstPT = l._applyPT = d), i = f.length, h = 0; i > h; h++) k = f[h], j = b.substr(m, b.indexOf(k, m) - m), n += j || !h ? j : ",", m += j.length, o ? o = (o + 1) % 5 : "rgba(" === j.substr(-5) && (o = 1), k === e[h] || e.length <= h ? n += k : (n && (l.push(n), n = ""), g = parseFloat(e[h]), l.push(g), l._firstPT = {
+                  _next: l._firstPT,
+                  t: l,
+                  p: l.length - 1,
+                  s: g,
+                  c: ("=" === k.charAt(1) ? parseInt(k.charAt(0) + "1", 10) * parseFloat(k.substr(2)) : parseFloat(k) - g) || 0,
+                  f: 0,
+                  m: o && 4 > o ? Math.round : 0
+              }), m += k.length;
+              return n += b.substr(m), n && l.push(n), l.setRatio = N, M.test(b) && (l.end = null), l
+          },
+          P = function(a, b, c, d, e, f, g, h, i) {
+              "function" == typeof d && (d = d(i || 0, a));
+              var j, k = typeof a[b],
+                  l = "function" !== k ? "" : b.indexOf("set") || "function" != typeof a["get" + b.substr(3)] ? b : "get" + b.substr(3),
+                  m = "get" !== c ? c : l ? g ? a[l](g) : a[l]() : a[b],
+                  n = "string" == typeof d && "=" === d.charAt(1),
+                  o = {
+                      t: a,
+                      p: b,
+                      s: m,
+                      f: "function" === k,
+                      pg: 0,
+                      n: e || b,
+                      m: f ? "function" == typeof f ? f : Math.round : 0,
+                      pr: 0,
+                      c: n ? parseInt(d.charAt(0) + "1", 10) * parseFloat(d.substr(2)) : parseFloat(d) - m || 0
+                  };
+              return ("number" != typeof m || "number" != typeof d && !n) && (g || isNaN(m) || !n && isNaN(d) || "boolean" == typeof m || "boolean" == typeof d ? (o.fp = g, j = O(m, n ? parseFloat(o.s) + o.c : d, h || G.defaultStringFilter, o), o = {
+                  t: j,
+                  p: "setRatio",
+                  s: 0,
+                  c: 1,
+                  f: 2,
+                  pg: 0,
+                  n: e || b,
+                  pr: 0,
+                  m: 0
+              }) : (o.s = parseFloat(m), n || (o.c = parseFloat(d) - o.s || 0))), o.c ? ((o._next = this._firstPT) && (o._next._prev = o), this._firstPT = o, o) : void 0
+          },
+          Q = G._internals = {
+              isArray: p,
+              isSelector: H,
+              lazyTweens: J,
+              blobDif: O
+          },
+          R = G._plugins = {},
+          S = Q.tweenLookup = {},
+          T = 0,
+          U = Q.reservedProps = {
+              ease: 1,
+              delay: 1,
+              overwrite: 1,
+              onComplete: 1,
+              onCompleteParams: 1,
+              onCompleteScope: 1,
+              useFrames: 1,
+              runBackwards: 1,
+              startAt: 1,
+              onUpdate: 1,
+              onUpdateParams: 1,
+              onUpdateScope: 1,
+              onStart: 1,
+              onStartParams: 1,
+              onStartScope: 1,
+              onReverseComplete: 1,
+              onReverseCompleteParams: 1,
+              onReverseCompleteScope: 1,
+              onRepeat: 1,
+              onRepeatParams: 1,
+              onRepeatScope: 1,
+              easeParams: 1,
+              yoyo: 1,
+              immediateRender: 1,
+              repeat: 1,
+              repeatDelay: 1,
+              data: 1,
+              paused: 1,
+              reversed: 1,
+              autoCSS: 1,
+              lazy: 1,
+              onOverwrite: 1,
+              callbackScope: 1,
+              stringFilter: 1,
+              id: 1,
+              yoyoEase: 1
+          },
+          V = {
+              none: 0,
+              all: 1,
+              auto: 2,
+              concurrent: 3,
+              allOnStart: 4,
+              preexisting: 5,
+              "true": 1,
+              "false": 0
+          },
+          W = D._rootFramesTimeline = new F,
+          X = D._rootTimeline = new F,
+          Y = 30,
+          Z = Q.lazyRender = function() {
+              var a, b = J.length;
+              for (K = {}; --b > -1;) a = J[b], a && a._lazy !== !1 && (a.render(a._lazy[0], a._lazy[1], !0), a._lazy = !1);
+              J.length = 0
+          };
+      X._startTime = i.time, W._startTime = i.frame, X._active = W._active = !0, setTimeout(Z, 1), D._updateRoot = G.render = function() {
+          var a, b, c;
+          if (J.length && Z(), X.render((i.time - X._startTime) * X._timeScale, !1, !1), W.render((i.frame - W._startTime) * W._timeScale, !1, !1), J.length && Z(), i.frame >= Y) {
+              Y = i.frame + (parseInt(G.autoSleep, 10) || 120);
+              for (c in S) {
+                  for (b = S[c].tweens, a = b.length; --a > -1;) b[a]._gc && b.splice(a, 1);
+                  0 === b.length && delete S[c]
+              }
+              if (c = X._first, (!c || c._paused) && G.autoSleep && !W._first && 1 === i._listeners.tick.length) {
+                  for (; c && c._paused;) c = c._next;
+                  c || i.sleep()
+              }
+          }
+      }, i.addEventListener("tick", D._updateRoot);
+      var $ = function(a, b, c) {
+              var d, e, f = a._gsTweenID;
+              if (S[f || (a._gsTweenID = f = "t" + T++)] || (S[f] = {
+                      target: a,
+                      tweens: []
+                  }), b && (d = S[f].tweens, d[e = d.length] = b, c))
+                  for (; --e > -1;) d[e] === b && d.splice(e, 1);
+              return S[f].tweens
+          },
+          _ = function(a, b, c, d) {
+              var e, f, g = a.vars.onOverwrite;
+              return g && (e = g(a, b, c, d)), g = G.onOverwrite, g && (f = g(a, b, c, d)), e !== !1 && f !== !1
+          },
+          aa = function(a, b, c, d, e) {
+              var f, g, h, i;
+              if (1 === d || d >= 4) {
+                  for (i = e.length, f = 0; i > f; f++)
+                      if ((h = e[f]) !== b) h._gc || h._kill(null, a, b) && (g = !0);
+                      else if (5 === d) break;
+                  return g
+              }
+              var j, k = b._startTime + m,
+                  l = [],
+                  n = 0,
+                  o = 0 === b._duration;
+              for (f = e.length; --f > -1;)(h = e[f]) === b || h._gc || h._paused || (h._timeline !== b._timeline ? (j = j || ba(b, 0, o), 0 === ba(h, j, o) && (l[n++] = h)) : h._startTime <= k && h._startTime + h.totalDuration() / h._timeScale > k && ((o || !h._initted) && k - h._startTime <= 2e-10 || (l[n++] = h)));
+              for (f = n; --f > -1;)
+                  if (h = l[f], 2 === d && h._kill(c, a, b) && (g = !0), 2 !== d || !h._firstPT && h._initted) {
+                      if (2 !== d && !_(h, b)) continue;
+                      h._enabled(!1, !1) && (g = !0)
+                  }
+              return g
+          },
+          ba = function(a, b, c) {
+              for (var d = a._timeline, e = d._timeScale, f = a._startTime; d._timeline;) {
+                  if (f += d._startTime, e *= d._timeScale, d._paused) return -100;
+                  d = d._timeline
+              }
+              return f /= e, f > b ? f - b : c && f === b || !a._initted && 2 * m > f - b ? m : (f += a.totalDuration() / a._timeScale / e) > b + m ? 0 : f - b - m
+          };
+      h._init = function() {
+          var a, b, c, d, e, f, g = this.vars,
+              h = this._overwrittenProps,
+              i = this._duration,
+              j = !!g.immediateRender,
+              k = g.ease;
+          if (g.startAt) {
+              this._startAt && (this._startAt.render(-1, !0), this._startAt.kill()), e = {};
+              for (d in g.startAt) e[d] = g.startAt[d];
+              if (e.data = "isStart", e.overwrite = !1, e.immediateRender = !0, e.lazy = j && g.lazy !== !1, e.startAt = e.delay = null, e.onUpdate = g.onUpdate, e.onUpdateParams = g.onUpdateParams, e.onUpdateScope = g.onUpdateScope || g.callbackScope || this, this._startAt = G.to(this.target, 0, e), j)
+                  if (this._time > 0) this._startAt = null;
+                  else if (0 !== i) return
+          } else if (g.runBackwards && 0 !== i)
+              if (this._startAt) this._startAt.render(-1, !0), this._startAt.kill(), this._startAt = null;
+              else {
+                  0 !== this._time && (j = !1), c = {};
+                  for (d in g) U[d] && "autoCSS" !== d || (c[d] = g[d]);
+                  if (c.overwrite = 0, c.data = "isFromStart", c.lazy = j && g.lazy !== !1, c.immediateRender = j, this._startAt = G.to(this.target, 0, c), j) {
+                      if (0 === this._time) return
+                  } else this._startAt._init(), this._startAt._enabled(!1), this.vars.immediateRender && (this._startAt = null)
+              }
+          if (this._ease = k = k ? k instanceof v ? k : "function" == typeof k ? new v(k, g.easeParams) : w[k] || G.defaultEase : G.defaultEase, g.easeParams instanceof Array && k.config && (this._ease = k.config.apply(k, g.easeParams)), this._easeType = this._ease._type, this._easePower = this._ease._power, this._firstPT = null, this._targets)
+              for (f = this._targets.length, a = 0; f > a; a++) this._initProps(this._targets[a], this._propLookup[a] = {}, this._siblings[a], h ? h[a] : null, a) && (b = !0);
+          else b = this._initProps(this.target, this._propLookup, this._siblings, h, 0);
+          if (b && G._onPluginEvent("_onInitAllProps", this), h && (this._firstPT || "function" != typeof this.target && this._enabled(!1, !1)), g.runBackwards)
+              for (c = this._firstPT; c;) c.s += c.c, c.c = -c.c, c = c._next;
+          this._onUpdate = g.onUpdate, this._initted = !0
+      }, h._initProps = function(b, c, d, e, f) {
+          var g, h, i, j, k, l;
+          if (null == b) return !1;
+          K[b._gsTweenID] && Z(), this.vars.css || b.style && b !== a && b.nodeType && R.css && this.vars.autoCSS !== !1 && I(this.vars, b);
+          for (g in this.vars)
+              if (l = this.vars[g], U[g]) l && (l instanceof Array || l.push && p(l)) && -1 !== l.join("").indexOf("{self}") && (this.vars[g] = l = this._swapSelfInParams(l, this));
+              else if (R[g] && (j = new R[g])._onInitTween(b, this.vars[g], this, f)) {
+              for (this._firstPT = k = {
+                      _next: this._firstPT,
+                      t: j,
+                      p: "setRatio",
+                      s: 0,
+                      c: 1,
+                      f: 1,
+                      n: g,
+                      pg: 1,
+                      pr: j._priority,
+                      m: 0
+                  }, h = j._overwriteProps.length; --h > -1;) c[j._overwriteProps[h]] = this._firstPT;
+              (j._priority || j._onInitAllProps) && (i = !0), (j._onDisable || j._onEnable) && (this._notifyPluginsOfEnabled = !0), k._next && (k._next._prev = k)
+          } else c[g] = P.call(this, b, g, "get", l, g, 0, null, this.vars.stringFilter, f);
+          return e && this._kill(e, b) ? this._initProps(b, c, d, e, f) : this._overwrite > 1 && this._firstPT && d.length > 1 && aa(b, this, c, this._overwrite, d) ? (this._kill(c, b), this._initProps(b, c, d, e, f)) : (this._firstPT && (this.vars.lazy !== !1 && this._duration || this.vars.lazy && !this._duration) && (K[b._gsTweenID] = !0), i)
+      }, h.render = function(a, b, c) {
+          var d, e, f, g, h = this._time,
+              i = this._duration,
+              j = this._rawPrevTime;
+          if (a >= i - 1e-7 && a >= 0) this._totalTime = this._time = i, this.ratio = this._ease._calcEnd ? this._ease.getRatio(1) : 1, this._reversed || (d = !0, e = "onComplete", c = c || this._timeline.autoRemoveChildren), 0 === i && (this._initted || !this.vars.lazy || c) && (this._startTime === this._timeline._duration && (a = 0), (0 > j || 0 >= a && a >= -1e-7 || j === m && "isPause" !== this.data) && j !== a && (c = !0, j > m && (e = "onReverseComplete")), this._rawPrevTime = g = !b || a || j === a ? a : m);
+          else if (1e-7 > a) this._totalTime = this._time = 0, this.ratio = this._ease._calcEnd ? this._ease.getRatio(0) : 0, (0 !== h || 0 === i && j > 0) && (e = "onReverseComplete", d = this._reversed), 0 > a && (this._active = !1, 0 === i && (this._initted || !this.vars.lazy || c) && (j >= 0 && (j !== m || "isPause" !== this.data) && (c = !0), this._rawPrevTime = g = !b || a || j === a ? a : m)), (!this._initted || this._startAt && this._startAt.progress()) && (c = !0);
+          else if (this._totalTime = this._time = a, this._easeType) {
+              var k = a / i,
+                  l = this._easeType,
+                  n = this._easePower;
+              (1 === l || 3 === l && k >= .5) && (k = 1 - k), 3 === l && (k *= 2), 1 === n ? k *= k : 2 === n ? k *= k * k : 3 === n ? k *= k * k * k : 4 === n && (k *= k * k * k * k), 1 === l ? this.ratio = 1 - k : 2 === l ? this.ratio = k : .5 > a / i ? this.ratio = k / 2 : this.ratio = 1 - k / 2
+          } else this.ratio = this._ease.getRatio(a / i);
+          if (this._time !== h || c) {
+              if (!this._initted) {
+                  if (this._init(), !this._initted || this._gc) return;
+                  if (!c && this._firstPT && (this.vars.lazy !== !1 && this._duration || this.vars.lazy && !this._duration)) return this._time = this._totalTime = h, this._rawPrevTime = j, J.push(this), void(this._lazy = [a, b]);
+                  this._time && !d ? this.ratio = this._ease.getRatio(this._time / i) : d && this._ease._calcEnd && (this.ratio = this._ease.getRatio(0 === this._time ? 0 : 1))
+              }
+              for (this._lazy !== !1 && (this._lazy = !1), this._active || !this._paused && this._time !== h && a >= 0 && (this._active = !0), 0 === h && (this._startAt && (a >= 0 ? this._startAt.render(a, !0, c) : e || (e = "_dummyGS")), this.vars.onStart && (0 !== this._time || 0 === i) && (b || this._callback("onStart"))), f = this._firstPT; f;) f.f ? f.t[f.p](f.c * this.ratio + f.s) : f.t[f.p] = f.c * this.ratio + f.s, f = f._next;
+              this._onUpdate && (0 > a && this._startAt && a !== -1e-4 && this._startAt.render(a, !0, c), b || (this._time !== h || d || c) && this._callback("onUpdate")), e && (!this._gc || c) && (0 > a && this._startAt && !this._onUpdate && a !== -1e-4 && this._startAt.render(a, !0, c), d && (this._timeline.autoRemoveChildren && this._enabled(!1, !1), this._active = !1), !b && this.vars[e] && this._callback(e), 0 === i && this._rawPrevTime === m && g !== m && (this._rawPrevTime = 0))
+          }
+      }, h._kill = function(a, b, c) {
+          if ("all" === a && (a = null), null == a && (null == b || b === this.target)) return this._lazy = !1, this._enabled(!1, !1);
+          b = "string" != typeof b ? b || this._targets || this.target : G.selector(b) || b;
+          var d, e, f, g, h, i, j, k, l, m = c && this._time && c._startTime === this._startTime && this._timeline === c._timeline;
+          if ((p(b) || H(b)) && "number" != typeof b[0])
+              for (d = b.length; --d > -1;) this._kill(a, b[d], c) && (i = !0);
+          else {
+              if (this._targets) {
+                  for (d = this._targets.length; --d > -1;)
+                      if (b === this._targets[d]) {
+                          h = this._propLookup[d] || {}, this._overwrittenProps = this._overwrittenProps || [], e = this._overwrittenProps[d] = a ? this._overwrittenProps[d] || {} : "all";
+                          break
+                      }
+              } else {
+                  if (b !== this.target) return !1;
+                  h = this._propLookup, e = this._overwrittenProps = a ? this._overwrittenProps || {} : "all"
+              }
+              if (h) {
+                  if (j = a || h, k = a !== e && "all" !== e && a !== h && ("object" != typeof a || !a._tempKill), c && (G.onOverwrite || this.vars.onOverwrite)) {
+                      for (f in j) h[f] && (l || (l = []), l.push(f));
+                      if ((l || !a) && !_(this, c, b, l)) return !1
+                  }
+                  for (f in j)(g = h[f]) && (m && (g.f ? g.t[g.p](g.s) : g.t[g.p] = g.s, i = !0), g.pg && g.t._kill(j) && (i = !0), g.pg && 0 !== g.t._overwriteProps.length || (g._prev ? g._prev._next = g._next : g === this._firstPT && (this._firstPT = g._next), g._next && (g._next._prev = g._prev), g._next = g._prev = null), delete h[f]), k && (e[f] = 1);
+                  !this._firstPT && this._initted && this._enabled(!1, !1)
+              }
+          }
+          return i
+      }, h.invalidate = function() {
+          return this._notifyPluginsOfEnabled && G._onPluginEvent("_onDisable", this), this._firstPT = this._overwrittenProps = this._startAt = this._onUpdate = null, this._notifyPluginsOfEnabled = this._active = this._lazy = !1, this._propLookup = this._targets ? {} : [], D.prototype.invalidate.call(this), this.vars.immediateRender && (this._time = -m, this.render(Math.min(0, -this._delay))), this
+      }, h._enabled = function(a, b) {
+          if (j || i.wake(), a && this._gc) {
+              var c, d = this._targets;
+              if (d)
+                  for (c = d.length; --c > -1;) this._siblings[c] = $(d[c], this, !0);
+              else this._siblings = $(this.target, this, !0)
+          }
+          return D.prototype._enabled.call(this, a, b), this._notifyPluginsOfEnabled && this._firstPT ? G._onPluginEvent(a ? "_onEnable" : "_onDisable", this) : !1
+      }, G.to = function(a, b, c) {
+          return new G(a, b, c)
+      }, G.from = function(a, b, c) {
+          return c.runBackwards = !0, c.immediateRender = 0 != c.immediateRender, new G(a, b, c)
+      }, G.fromTo = function(a, b, c, d) {
+          return d.startAt = c, d.immediateRender = 0 != d.immediateRender && 0 != c.immediateRender, new G(a, b, d)
+      }, G.delayedCall = function(a, b, c, d, e) {
+          return new G(b, 0, {
+              delay: a,
+              onComplete: b,
+              onCompleteParams: c,
+              callbackScope: d,
+              onReverseComplete: b,
+              onReverseCompleteParams: c,
+              immediateRender: !1,
+              lazy: !1,
+              useFrames: e,
+              overwrite: 0
+          })
+      }, G.set = function(a, b) {
+          return new G(a, 0, b)
+      }, G.getTweensOf = function(a, b) {
+          if (null == a) return [];
+          a = "string" != typeof a ? a : G.selector(a) || a;
+          var c, d, e, f;
+          if ((p(a) || H(a)) && "number" != typeof a[0]) {
+              for (c = a.length, d = []; --c > -1;) d = d.concat(G.getTweensOf(a[c], b));
+              for (c = d.length; --c > -1;)
+                  for (f = d[c], e = c; --e > -1;) f === d[e] && d.splice(c, 1)
+          } else if (a._gsTweenID)
+              for (d = $(a).concat(), c = d.length; --c > -1;)(d[c]._gc || b && !d[c].isActive()) && d.splice(c, 1);
+          return d || []
+      }, G.killTweensOf = G.killDelayedCallsTo = function(a, b, c) {
+          "object" == typeof b && (c = b, b = !1);
+          for (var d = G.getTweensOf(a, b), e = d.length; --e > -1;) d[e]._kill(c, a)
+      };
+      var ca = t("plugins.TweenPlugin", function(a, b) {
+          this._overwriteProps = (a || "").split(","), this._propName = this._overwriteProps[0], this._priority = b || 0, this._super = ca.prototype
+      }, !0);
+      if (h = ca.prototype, ca.version = "1.19.0", ca.API = 2, h._firstPT = null, h._addTween = P, h.setRatio = N, h._kill = function(a) {
+              var b, c = this._overwriteProps,
+                  d = this._firstPT;
+              if (null != a[this._propName]) this._overwriteProps = [];
+              else
+                  for (b = c.length; --b > -1;) null != a[c[b]] && c.splice(b, 1);
+              for (; d;) null != a[d.n] && (d._next && (d._next._prev = d._prev), d._prev ? (d._prev._next = d._next, d._prev = null) : this._firstPT === d && (this._firstPT = d._next)), d = d._next;
+              return !1
+          }, h._mod = h._roundProps = function(a) {
+              for (var b, c = this._firstPT; c;) b = a[this._propName] || null != c.n && a[c.n.split(this._propName + "_").join("")], b && "function" == typeof b && (2 === c.f ? c.t._applyPT.m = b : c.m = b), c = c._next
+          }, G._onPluginEvent = function(a, b) {
+              var c, d, e, f, g, h = b._firstPT;
+              if ("_onInitAllProps" === a) {
+                  for (; h;) {
+                      for (g = h._next, d = e; d && d.pr > h.pr;) d = d._next;
+                      (h._prev = d ? d._prev : f) ? h._prev._next = h: e = h, (h._next = d) ? d._prev = h : f = h, h = g
+                  }
+                  h = b._firstPT = e
+              }
+              for (; h;) h.pg && "function" == typeof h.t[a] && h.t[a]() && (c = !0), h = h._next;
+              return c
+          }, ca.activate = function(a) {
+              for (var b = a.length; --b > -1;) a[b].API === ca.API && (R[(new a[b])._propName] = a[b]);
+              return !0
+          }, s.plugin = function(a) {
+              if (!(a && a.propName && a.init && a.API)) throw "illegal plugin definition.";
+              var b, c = a.propName,
+                  d = a.priority || 0,
+                  e = a.overwriteProps,
+                  f = {
+                      init: "_onInitTween",
+                      set: "setRatio",
+                      kill: "_kill",
+                      round: "_mod",
+                      mod: "_mod",
+                      initAll: "_onInitAllProps"
+                  },
+                  g = t("plugins." + c.charAt(0).toUpperCase() + c.substr(1) + "Plugin", function() {
+                      ca.call(this, c, d), this._overwriteProps = e || []
+                  }, a.global === !0),
+                  h = g.prototype = new ca(c);
+              h.constructor = g, g.API = a.API;
+              for (b in f) "function" == typeof a[b] && (h[f[b]] = a[b]);
+              return g.version = a.version, ca.activate([g]), g
+          }, f = a._gsQueue) {
+          for (g = 0; g < f.length; g++) f[g]();
+          for (h in q) q[h].func || a.console.log("GSAP encountered missing dependency: " + h)
+      }
+      j = !1
+  }
+}("undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this || window, "TweenLite");
+var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this || window;
+(_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function() {
+      "use strict";
+      _gsScope._gsDefine("TimelineLite", ["core.Animation", "core.SimpleTimeline", "TweenLite"], function(a, b, c) {
+          var d = function(a) {
+                  b.call(this, a), this._labels = {}, this.autoRemoveChildren = this.vars.autoRemoveChildren === !0, this.smoothChildTiming = this.vars.smoothChildTiming === !0, this._sortChildren = !0, this._onUpdate = this.vars.onUpdate;
+                  var c, d, e = this.vars;
+                  for (d in e) c = e[d], i(c) && -1 !== c.join("").indexOf("{self}") && (e[d] = this._swapSelfInParams(c));
+                  i(e.tweens) && this.add(e.tweens, 0, e.align, e.stagger)
+              },
+              e = 1e-10,
+              f = c._internals,
+              g = d._internals = {},
+              h = f.isSelector,
+              i = f.isArray,
+              j = f.lazyTweens,
+              k = f.lazyRender,
+              l = _gsScope._gsDefine.globals,
+              m = function(a) {
+                  var b, c = {};
+                  for (b in a) c[b] = a[b];
+                  return c
+              },
+              n = function(a, b, c) {
+                  var d, e, f = a.cycle;
+                  for (d in f) e = f[d], a[d] = "function" == typeof e ? e(c, b[c]) : e[c % e.length];
+                  delete a.cycle
+              },
+              o = g.pauseCallback = function() {},
+              p = function(a) {
+                  var b, c = [],
+                      d = a.length;
+                  for (b = 0; b !== d; c.push(a[b++]));
+                  return c
+              },
+              q = d.prototype = new b;
+          return d.version = "1.20.3", q.constructor = d, q.kill()._gc = q._forcingPlayhead = q._hasPause = !1, q.to = function(a, b, d, e) {
+              var f = d.repeat && l.TweenMax || c;
+              return b ? this.add(new f(a, b, d), e) : this.set(a, d, e)
+          }, q.from = function(a, b, d, e) {
+              return this.add((d.repeat && l.TweenMax || c).from(a, b, d), e)
+          }, q.fromTo = function(a, b, d, e, f) {
+              var g = e.repeat && l.TweenMax || c;
+              return b ? this.add(g.fromTo(a, b, d, e), f) : this.set(a, e, f)
+          }, q.staggerTo = function(a, b, e, f, g, i, j, k) {
+              var l, o, q = new d({
+                      onComplete: i,
+                      onCompleteParams: j,
+                      callbackScope: k,
+                      smoothChildTiming: this.smoothChildTiming
+                  }),
+                  r = e.cycle;
+              for ("string" == typeof a && (a = c.selector(a) || a), a = a || [], h(a) && (a = p(a)), f = f || 0, 0 > f && (a = p(a), a.reverse(), f *= -1), o = 0; o < a.length; o++) l = m(e), l.startAt && (l.startAt = m(l.startAt), l.startAt.cycle && n(l.startAt, a, o)), r && (n(l, a, o), null != l.duration && (b = l.duration, delete l.duration)), q.to(a[o], b, l, o * f);
+              return this.add(q, g)
+          }, q.staggerFrom = function(a, b, c, d, e, f, g, h) {
+              return c.immediateRender = 0 != c.immediateRender, c.runBackwards = !0, this.staggerTo(a, b, c, d, e, f, g, h)
+          }, q.staggerFromTo = function(a, b, c, d, e, f, g, h, i) {
+              return d.startAt = c, d.immediateRender = 0 != d.immediateRender && 0 != c.immediateRender, this.staggerTo(a, b, d, e, f, g, h, i)
+          }, q.call = function(a, b, d, e) {
+              return this.add(c.delayedCall(0, a, b, d), e)
+          }, q.set = function(a, b, d) {
+              return d = this._parseTimeOrLabel(d, 0, !0), null == b.immediateRender && (b.immediateRender = d === this._time && !this._paused), this.add(new c(a, 0, b), d)
+          }, d.exportRoot = function(a, b) {
+              a = a || {}, null == a.smoothChildTiming && (a.smoothChildTiming = !0);
+              var e, f, g, h, i = new d(a),
+                  j = i._timeline;
+              for (null == b && (b = !0), j._remove(i, !0), i._startTime = 0, i._rawPrevTime = i._time = i._totalTime = j._time, g = j._first; g;) h = g._next, b && g instanceof c && g.target === g.vars.onComplete || (f = g._startTime - g._delay, 0 > f && (e = 1), i.add(g, f)), g = h;
+              return j.add(i, 0), e && i.totalDuration(), i
+          }, q.add = function(e, f, g, h) {
+              var j, k, l, m, n, o;
+              if ("number" != typeof f && (f = this._parseTimeOrLabel(f, 0, !0, e)), !(e instanceof a)) {
+                  if (e instanceof Array || e && e.push && i(e)) {
+                      for (g = g || "normal", h = h || 0, j = f, k = e.length, l = 0; k > l; l++) i(m = e[l]) && (m = new d({
+                          tweens: m
+                      })), this.add(m, j), "string" != typeof m && "function" != typeof m && ("sequence" === g ? j = m._startTime + m.totalDuration() / m._timeScale : "start" === g && (m._startTime -= m.delay())), j += h;
+                      return this._uncache(!0)
+                  }
+                  if ("string" == typeof e) return this.addLabel(e, f);
+                  if ("function" != typeof e) throw "Cannot add " + e + " into the timeline; it is not a tween, timeline, function, or string.";
+                  e = c.delayedCall(0, e)
+              }
+              if (b.prototype.add.call(this, e, f), e._time && e.render((this.rawTime() - e._startTime) * e._timeScale, !1, !1), (this._gc || this._time === this._duration) && !this._paused && this._duration < this.duration())
+                  for (n = this, o = n.rawTime() > e._startTime; n._timeline;) o && n._timeline.smoothChildTiming ? n.totalTime(n._totalTime, !0) : n._gc && n._enabled(!0, !1), n = n._timeline;
+              return this
+          }, q.remove = function(b) {
+              if (b instanceof a) {
+                  this._remove(b, !1);
+                  var c = b._timeline = b.vars.useFrames ? a._rootFramesTimeline : a._rootTimeline;
+                  return b._startTime = (b._paused ? b._pauseTime : c._time) - (b._reversed ? b.totalDuration() - b._totalTime : b._totalTime) / b._timeScale, this
+              }
+              if (b instanceof Array || b && b.push && i(b)) {
+                  for (var d = b.length; --d > -1;) this.remove(b[d]);
+                  return this
+              }
+              return "string" == typeof b ? this.removeLabel(b) : this.kill(null, b)
+          }, q._remove = function(a, c) {
+              b.prototype._remove.call(this, a, c);
+              var d = this._last;
+              return d ? this._time > this.duration() && (this._time = this._duration, this._totalTime = this._totalDuration) : this._time = this._totalTime = this._duration = this._totalDuration = 0, this
+          }, q.append = function(a, b) {
+              return this.add(a, this._parseTimeOrLabel(null, b, !0, a))
+          }, q.insert = q.insertMultiple = function(a, b, c, d) {
+              return this.add(a, b || 0, c, d)
+          }, q.appendMultiple = function(a, b, c, d) {
+              return this.add(a, this._parseTimeOrLabel(null, b, !0, a), c, d)
+          }, q.addLabel = function(a, b) {
+              return this._labels[a] = this._parseTimeOrLabel(b), this
+          }, q.addPause = function(a, b, d, e) {
+              var f = c.delayedCall(0, o, d, e || this);
+              return f.vars.onComplete = f.vars.onReverseComplete = b, f.data = "isPause", this._hasPause = !0, this.add(f, a)
+          }, q.removeLabel = function(a) {
+              return delete this._labels[a], this
+          }, q.getLabelTime = function(a) {
+              return null != this._labels[a] ? this._labels[a] : -1
+          }, q._parseTimeOrLabel = function(b, c, d, e) {
+              var f, g;
+              if (e instanceof a && e.timeline === this) this.remove(e);
+              else if (e && (e instanceof Array || e.push && i(e)))
+                  for (g = e.length; --g > -1;) e[g] instanceof a && e[g].timeline === this && this.remove(e[g]);
+              if (f = "number" != typeof b || c ? this.duration() > 99999999999 ? this.recent().endTime(!1) : this._duration : 0, "string" == typeof c) return this._parseTimeOrLabel(c, d && "number" == typeof b && null == this._labels[c] ? b - f : 0, d);
+              if (c = c || 0, "string" != typeof b || !isNaN(b) && null == this._labels[b]) null == b && (b = f);
+              else {
+                  if (g = b.indexOf("="), -1 === g) return null == this._labels[b] ? d ? this._labels[b] = f + c : c : this._labels[b] + c;
+                  c = parseInt(b.charAt(g - 1) + "1", 10) * Number(b.substr(g + 1)), b = g > 1 ? this._parseTimeOrLabel(b.substr(0, g - 1), 0, d) : f
+              }
+              return Number(b) + c
+          }, q.seek = function(a, b) {
+              return this.totalTime("number" == typeof a ? a : this._parseTimeOrLabel(a), b !== !1)
+          }, q.stop = function() {
+              return this.paused(!0)
+          }, q.gotoAndPlay = function(a, b) {
+              return this.play(a, b)
+          }, q.gotoAndStop = function(a, b) {
+              return this.pause(a, b)
+          }, q.render = function(a, b, c) {
+              this._gc && this._enabled(!0, !1);
+              var d, f, g, h, i, l, m, n = this._time,
+                  o = this._dirty ? this.totalDuration() : this._totalDuration,
+                  p = this._startTime,
+                  q = this._timeScale,
+                  r = this._paused;
+              if (n !== this._time && (a += this._time - n), a >= o - 1e-7 && a >= 0) this._totalTime = this._time = o, this._reversed || this._hasPausedChild() || (f = !0, h = "onComplete", i = !!this._timeline.autoRemoveChildren, 0 === this._duration && (0 >= a && a >= -1e-7 || this._rawPrevTime < 0 || this._rawPrevTime === e) && this._rawPrevTime !== a && this._first && (i = !0, this._rawPrevTime > e && (h = "onReverseComplete"))), this._rawPrevTime = this._duration || !b || a || this._rawPrevTime === a ? a : e, a = o + 1e-4;
+              else if (1e-7 > a)
+                  if (this._totalTime = this._time = 0, (0 !== n || 0 === this._duration && this._rawPrevTime !== e && (this._rawPrevTime > 0 || 0 > a && this._rawPrevTime >= 0)) && (h = "onReverseComplete", f = this._reversed), 0 > a) this._active = !1, this._timeline.autoRemoveChildren && this._reversed ? (i = f = !0, h = "onReverseComplete") : this._rawPrevTime >= 0 && this._first && (i = !0), this._rawPrevTime = a;
+                  else {
+                      if (this._rawPrevTime = this._duration || !b || a || this._rawPrevTime === a ? a : e, 0 === a && f)
+                          for (d = this._first; d && 0 === d._startTime;) d._duration || (f = !1), d = d._next;
+                      a = 0, this._initted || (i = !0)
+                  }
+              else {
+                  if (this._hasPause && !this._forcingPlayhead && !b) {
+                      if (a >= n)
+                          for (d = this._first; d && d._startTime <= a && !l;) d._duration || "isPause" !== d.data || d.ratio || 0 === d._startTime && 0 === this._rawPrevTime || (l = d), d = d._next;
+                      else
+                          for (d = this._last; d && d._startTime >= a && !l;) d._duration || "isPause" === d.data && d._rawPrevTime > 0 && (l = d), d = d._prev;
+                      l && (this._time = a = l._startTime, this._totalTime = a + this._cycle * (this._totalDuration + this._repeatDelay))
+                  }
+                  this._totalTime = this._time = this._rawPrevTime = a
+              }
+              if (this._time !== n && this._first || c || i || l) {
+                  if (this._initted || (this._initted = !0), this._active || !this._paused && this._time !== n && a > 0 && (this._active = !0), 0 === n && this.vars.onStart && (0 === this._time && this._duration || b || this._callback("onStart")), m = this._time, m >= n)
+                      for (d = this._first; d && (g = d._next, m === this._time && (!this._paused || r));)(d._active || d._startTime <= m && !d._paused && !d._gc) && (l === d && this.pause(), d._reversed ? d.render((d._dirty ? d.totalDuration() : d._totalDuration) - (a - d._startTime) * d._timeScale, b, c) : d.render((a - d._startTime) * d._timeScale, b, c)), d = g;
+                  else
+                      for (d = this._last; d && (g = d._prev, m === this._time && (!this._paused || r));) {
+                          if (d._active || d._startTime <= n && !d._paused && !d._gc) {
+                              if (l === d) {
+                                  for (l = d._prev; l && l.endTime() > this._time;) l.render(l._reversed ? l.totalDuration() - (a - l._startTime) * l._timeScale : (a - l._startTime) * l._timeScale, b, c), l = l._prev;
+                                  l = null, this.pause()
+                              }
+                              d._reversed ? d.render((d._dirty ? d.totalDuration() : d._totalDuration) - (a - d._startTime) * d._timeScale, b, c) : d.render((a - d._startTime) * d._timeScale, b, c)
+                          }
+                          d = g
+                      }
+                  this._onUpdate && (b || (j.length && k(), this._callback("onUpdate"))), h && (this._gc || (p === this._startTime || q !== this._timeScale) && (0 === this._time || o >= this.totalDuration()) && (f && (j.length && k(), this._timeline.autoRemoveChildren && this._enabled(!1, !1), this._active = !1), !b && this.vars[h] && this._callback(h)))
+              }
+          }, q._hasPausedChild = function() {
+              for (var a = this._first; a;) {
+                  if (a._paused || a instanceof d && a._hasPausedChild()) return !0;
+                  a = a._next
+              }
+              return !1
+          }, q.getChildren = function(a, b, d, e) {
+              e = e || -9999999999;
+              for (var f = [], g = this._first, h = 0; g;) g._startTime < e || (g instanceof c ? b !== !1 && (f[h++] = g) : (d !== !1 && (f[h++] = g), a !== !1 && (f = f.concat(g.getChildren(!0, b, d)), h = f.length))), g = g._next;
+              return f
+          }, q.getTweensOf = function(a, b) {
+              var d, e, f = this._gc,
+                  g = [],
+                  h = 0;
+              for (f && this._enabled(!0, !0), d = c.getTweensOf(a), e = d.length; --e > -1;)(d[e].timeline === this || b && this._contains(d[e])) && (g[h++] = d[e]);
+              return f && this._enabled(!1, !0), g
+          }, q.recent = function() {
+              return this._recent
+          }, q._contains = function(a) {
+              for (var b = a.timeline; b;) {
+                  if (b === this) return !0;
+                  b = b.timeline
+              }
+              return !1
+          }, q.shiftChildren = function(a, b, c) {
+              c = c || 0;
+              for (var d, e = this._first, f = this._labels; e;) e._startTime >= c && (e._startTime += a), e = e._next;
+              if (b)
+                  for (d in f) f[d] >= c && (f[d] += a);
+              return this._uncache(!0)
+          }, q._kill = function(a, b) {
+              if (!a && !b) return this._enabled(!1, !1);
+              for (var c = b ? this.getTweensOf(b) : this.getChildren(!0, !0, !1), d = c.length, e = !1; --d > -1;) c[d]._kill(a, b) && (e = !0);
+              return e
+          }, q.clear = function(a) {
+              var b = this.getChildren(!1, !0, !0),
+                  c = b.length;
+              for (this._time = this._totalTime = 0; --c > -1;) b[c]._enabled(!1, !1);
+              return a !== !1 && (this._labels = {}), this._uncache(!0)
+          }, q.invalidate = function() {
+              for (var b = this._first; b;) b.invalidate(), b = b._next;
+              return a.prototype.invalidate.call(this)
+          }, q._enabled = function(a, c) {
+              if (a === this._gc)
+                  for (var d = this._first; d;) d._enabled(a, !0), d = d._next;
+              return b.prototype._enabled.call(this, a, c)
+          }, q.totalTime = function(b, c, d) {
+              this._forcingPlayhead = !0;
+              var e = a.prototype.totalTime.apply(this, arguments);
+              return this._forcingPlayhead = !1, e
+          }, q.duration = function(a) {
+              return arguments.length ? (0 !== this.duration() && 0 !== a && this.timeScale(this._duration / a), this) : (this._dirty && this.totalDuration(), this._duration)
+          }, q.totalDuration = function(a) {
+              if (!arguments.length) {
+                  if (this._dirty) {
+                      for (var b, c, d = 0, e = this._last, f = 999999999999; e;) b = e._prev, e._dirty && e.totalDuration(), e._startTime > f && this._sortChildren && !e._paused && !this._calculatingDuration ? (this._calculatingDuration = 1, this.add(e, e._startTime - e._delay), this._calculatingDuration = 0) : f = e._startTime, e._startTime < 0 && !e._paused && (d -= e._startTime, this._timeline.smoothChildTiming && (this._startTime += e._startTime / this._timeScale, this._time -= e._startTime, this._totalTime -= e._startTime, this._rawPrevTime -= e._startTime), this.shiftChildren(-e._startTime, !1, -9999999999), f = 0), c = e._startTime + e._totalDuration / e._timeScale, c > d && (d = c), e = b;
+                      this._duration = this._totalDuration = d, this._dirty = !1
+                  }
+                  return this._totalDuration
+              }
+              return a && this.totalDuration() ? this.timeScale(this._totalDuration / a) : this
+          }, q.paused = function(b) {
+              if (!b)
+                  for (var c = this._first, d = this._time; c;) c._startTime === d && "isPause" === c.data && (c._rawPrevTime = 0), c = c._next;
+              return a.prototype.paused.apply(this, arguments)
+          }, q.usesFrames = function() {
+              for (var b = this._timeline; b._timeline;) b = b._timeline;
+              return b === a._rootFramesTimeline
+          }, q.rawTime = function(a) {
+              return a && (this._paused || this._repeat && this.time() > 0 && this.totalProgress() < 1) ? this._totalTime % (this._duration + this._repeatDelay) : this._paused ? this._totalTime : (this._timeline.rawTime(a) - this._startTime) * this._timeScale
+          }, d
+      }, !0)
+  }), _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
+  function(a) {
+      "use strict";
+      var b = function() {
+          return (_gsScope.GreenSockGlobals || _gsScope)[a]
+      };
+      "undefined" != typeof module && module.exports ? (require("./TweenLite.min.js"), module.exports = b()) : "function" == typeof define && define.amd && define(["TweenLite"], b)
+  }("TimelineLite");
+var _gsScope = "undefined" != typeof module && module.exports && "undefined" != typeof global ? global : this || window;
+(_gsScope._gsQueue || (_gsScope._gsQueue = [])).push(function() {
+      "use strict";
+      _gsScope._gsDefine("plugins.CSSPlugin", ["plugins.TweenPlugin", "TweenLite"], function(a, b) {
+          var c, d, e, f, g = function() {
+                  a.call(this, "css"), this._overwriteProps.length = 0, this.setRatio = g.prototype.setRatio
+              },
+              h = _gsScope._gsDefine.globals,
+              i = {},
+              j = g.prototype = new a("css");
+          j.constructor = g, g.version = "1.20.3", g.API = 2, g.defaultTransformPerspective = 0, g.defaultSkewType = "compensated", g.defaultSmoothOrigin = !0, j = "px", g.suffixMap = {
+              top: j,
+              right: j,
+              bottom: j,
+              left: j,
+              width: j,
+              height: j,
+              fontSize: j,
+              padding: j,
+              margin: j,
+              perspective: j,
+              lineHeight: ""
+          };
+          var k, l, m, n, o, p, q, r, s = /(?:\-|\.|\b)(\d|\.|e\-)+/g,
+              t = /(?:\d|\-\d|\.\d|\-\.\d|\+=\d|\-=\d|\+=.\d|\-=\.\d)+/g,
+              u = /(?:\+=|\-=|\-|\b)[\d\-\.]+[a-zA-Z0-9]*(?:%|\b)/gi,
+              v = /(?![+-]?\d*\.?\d+|[+-]|e[+-]\d+)[^0-9]/g,
+              w = /(?:\d|\-|\+|=|#|\.)*/g,
+              x = /opacity *= *([^)]*)/i,
+              y = /opacity:([^;]*)/i,
+              z = /alpha\(opacity *=.+?\)/i,
+              A = /^(rgb|hsl)/,
+              B = /([A-Z])/g,
+              C = /-([a-z])/gi,
+              D = /(^(?:url\(\"|url\())|(?:(\"\))$|\)$)/gi,
+              E = function(a, b) {
+                  return b.toUpperCase()
+              },
+              F = /(?:Left|Right|Width)/i,
+              G = /(M11|M12|M21|M22)=[\d\-\.e]+/gi,
+              H = /progid\:DXImageTransform\.Microsoft\.Matrix\(.+?\)/i,
+              I = /,(?=[^\)]*(?:\(|$))/gi,
+              J = /[\s,\(]/i,
+              K = Math.PI / 180,
+              L = 180 / Math.PI,
+              M = {},
+              N = {
+                  style: {}
+              },
+              O = _gsScope.document || {
+                  createElement: function() {
+                      return N
+                  }
+              },
+              P = function(a, b) {
+                  return O.createElementNS ? O.createElementNS(b || "http://www.w3.org/1999/xhtml", a) : O.createElement(a)
+              },
+              Q = P("div"),
+              R = P("img"),
+              S = g._internals = {
+                  _specialProps: i
+              },
+              T = (_gsScope.navigator || {}).userAgent || "",
+              U = function() {
+                  var a = T.indexOf("Android"),
+                      b = P("a");
+                  return m = -1 !== T.indexOf("Safari") && -1 === T.indexOf("Chrome") && (-1 === a || parseFloat(T.substr(a + 8, 2)) > 3), o = m && parseFloat(T.substr(T.indexOf("Version/") + 8, 2)) < 6, n = -1 !== T.indexOf("Firefox"), (/MSIE ([0-9]{1,}[\.0-9]{0,})/.exec(T) || /Trident\/.*rv:([0-9]{1,}[\.0-9]{0,})/.exec(T)) && (p = parseFloat(RegExp.$1)), b ? (b.style.cssText = "top:1px;opacity:.55;", /^0.55/.test(b.style.opacity)) : !1
+              }(),
+              V = function(a) {
+                  return x.test("string" == typeof a ? a : (a.currentStyle ? a.currentStyle.filter : a.style.filter) || "") ? parseFloat(RegExp.$1) / 100 : 1
+              },
+              W = function(a) {
+                  _gsScope.console && console.log(a)
+              },
+              X = "",
+              Y = "",
+              Z = function(a, b) {
+                  b = b || Q;
+                  var c, d, e = b.style;
+                  if (void 0 !== e[a]) return a;
+                  for (a = a.charAt(0).toUpperCase() + a.substr(1), c = ["O", "Moz", "ms", "Ms", "Webkit"], d = 5; --d > -1 && void 0 === e[c[d] + a];);
+                  return d >= 0 ? (Y = 3 === d ? "ms" : c[d], X = "-" + Y.toLowerCase() + "-", Y + a) : null
+              },
+              $ = O.defaultView ? O.defaultView.getComputedStyle : function() {},
+              _ = g.getStyle = function(a, b, c, d, e) {
+                  var f;
+                  return U || "opacity" !== b ? (!d && a.style[b] ? f = a.style[b] : (c = c || $(a)) ? f = c[b] || c.getPropertyValue(b) || c.getPropertyValue(b.replace(B, "-$1").toLowerCase()) : a.currentStyle && (f = a.currentStyle[b]), null == e || f && "none" !== f && "auto" !== f && "auto auto" !== f ? f : e) : V(a)
+              },
+              aa = S.convertToPixels = function(a, c, d, e, f) {
+                  if ("px" === e || !e && "lineHeight" !== c) return d;
+                  if ("auto" === e || !d) return 0;
+                  var h, i, j, k = F.test(c),
+                      l = a,
+                      m = Q.style,
+                      n = 0 > d,
+                      o = 1 === d;
+                  if (n && (d = -d), o && (d *= 100), "lineHeight" !== c || e)
+                      if ("%" === e && -1 !== c.indexOf("border")) h = d / 100 * (k ? a.clientWidth : a.clientHeight);
+                      else {
+                          if (m.cssText = "border:0 solid red;position:" + _(a, "position") + ";line-height:0;", "%" !== e && l.appendChild && "v" !== e.charAt(0) && "rem" !== e) m[k ? "borderLeftWidth" : "borderTopWidth"] = d + e;
+                          else {
+                              if (l = a.parentNode || O.body, -1 !== _(l, "display").indexOf("flex") && (m.position = "absolute"), i = l._gsCache, j = b.ticker.frame, i && k && i.time === j) return i.width * d / 100;
+                              m[k ? "width" : "height"] = d + e
+                          }
+                          l.appendChild(Q), h = parseFloat(Q[k ? "offsetWidth" : "offsetHeight"]), l.removeChild(Q), k && "%" === e && g.cacheWidths !== !1 && (i = l._gsCache = l._gsCache || {}, i.time = j, i.width = h / d * 100), 0 !== h || f || (h = aa(a, c, d, e, !0))
+                      }
+                  else i = $(a).lineHeight, a.style.lineHeight = d, h = parseFloat($(a).lineHeight), a.style.lineHeight = i;
+                  return o && (h /= 100), n ? -h : h
+              },
+              ba = S.calculateOffset = function(a, b, c) {
+                  if ("absolute" !== _(a, "position", c)) return 0;
+                  var d = "left" === b ? "Left" : "Top",
+                      e = _(a, "margin" + d, c);
+                  return a["offset" + d] - (aa(a, b, parseFloat(e), e.replace(w, "")) || 0)
+              },
+              ca = function(a, b) {
+                  var c, d, e, f = {};
+                  if (b = b || $(a, null))
+                      if (c = b.length)
+                          for (; --c > -1;) e = b[c], (-1 === e.indexOf("-transform") || Da === e) && (f[e.replace(C, E)] = b.getPropertyValue(e));
+                      else
+                          for (c in b)(-1 === c.indexOf("Transform") || Ca === c) && (f[c] = b[c]);
+                  else if (b = a.currentStyle || a.style)
+                      for (c in b) "string" == typeof c && void 0 === f[c] && (f[c.replace(C, E)] = b[c]);
+                  return U || (f.opacity = V(a)), d = Ra(a, b, !1), f.rotation = d.rotation, f.skewX = d.skewX, f.scaleX = d.scaleX, f.scaleY = d.scaleY, f.x = d.x, f.y = d.y, Fa && (f.z = d.z, f.rotationX = d.rotationX, f.rotationY = d.rotationY, f.scaleZ = d.scaleZ), f.filters && delete f.filters, f
+              },
+              da = function(a, b, c, d, e) {
+                  var f, g, h, i = {},
+                      j = a.style;
+                  for (g in c) "cssText" !== g && "length" !== g && isNaN(g) && (b[g] !== (f = c[g]) || e && e[g]) && -1 === g.indexOf("Origin") && ("number" == typeof f || "string" == typeof f) && (i[g] = "auto" !== f || "left" !== g && "top" !== g ? "" !== f && "auto" !== f && "none" !== f || "string" != typeof b[g] || "" === b[g].replace(v, "") ? f : 0 : ba(a, g), void 0 !== j[g] && (h = new sa(j, g, j[g], h)));
+                  if (d)
+                      for (g in d) "className" !== g && (i[g] = d[g]);
+                  return {
+                      difs: i,
+                      firstMPT: h
+                  }
+              },
+              ea = {
+                  width: ["Left", "Right"],
+                  height: ["Top", "Bottom"]
+              },
+              fa = ["marginLeft", "marginRight", "marginTop", "marginBottom"],
+              ga = function(a, b, c) {
+                  if ("svg" === (a.nodeName + "").toLowerCase()) return (c || $(a))[b] || 0;
+                  if (a.getCTM && Oa(a)) return a.getBBox()[b] || 0;
+                  var d = parseFloat("width" === b ? a.offsetWidth : a.offsetHeight),
+                      e = ea[b],
+                      f = e.length;
+                  for (c = c || $(a, null); --f > -1;) d -= parseFloat(_(a, "padding" + e[f], c, !0)) || 0, d -= parseFloat(_(a, "border" + e[f] + "Width", c, !0)) || 0;
+                  return d
+              },
+              ha = function(a, b) {
+                  if ("contain" === a || "auto" === a || "auto auto" === a) return a + " ";
+                  (null == a || "" === a) && (a = "0 0");
+                  var c, d = a.split(" "),
+                      e = -1 !== a.indexOf("left") ? "0%" : -1 !== a.indexOf("right") ? "100%" : d[0],
+                      f = -1 !== a.indexOf("top") ? "0%" : -1 !== a.indexOf("bottom") ? "100%" : d[1];
+                  if (d.length > 3 && !b) {
+                      for (d = a.split(", ").join(",").split(","), a = [], c = 0; c < d.length; c++) a.push(ha(d[c]));
+                      return a.join(",")
+                  }
+                  return null == f ? f = "center" === e ? "50%" : "0" : "center" === f && (f = "50%"), ("center" === e || isNaN(parseFloat(e)) && -1 === (e + "").indexOf("=")) && (e = "50%"), a = e + " " + f + (d.length > 2 ? " " + d[2] : ""), b && (b.oxp = -1 !== e.indexOf("%"), b.oyp = -1 !== f.indexOf("%"), b.oxr = "=" === e.charAt(1), b.oyr = "=" === f.charAt(1), b.ox = parseFloat(e.replace(v, "")), b.oy = parseFloat(f.replace(v, "")), b.v = a), b || a
+              },
+              ia = function(a, b) {
+                  return "function" == typeof a && (a = a(r, q)), "string" == typeof a && "=" === a.charAt(1) ? parseInt(a.charAt(0) + "1", 10) * parseFloat(a.substr(2)) : parseFloat(a) - parseFloat(b) || 0
+              },
+              ja = function(a, b) {
+                  return "function" == typeof a && (a = a(r, q)), null == a ? b : "string" == typeof a && "=" === a.charAt(1) ? parseInt(a.charAt(0) + "1", 10) * parseFloat(a.substr(2)) + b : parseFloat(a) || 0
+              },
+              ka = function(a, b, c, d) {
+                  var e, f, g, h, i, j = 1e-6;
+                  return "function" == typeof a && (a = a(r, q)), null == a ? h = b : "number" == typeof a ? h = a : (e = 360, f = a.split("_"), i = "=" === a.charAt(1), g = (i ? parseInt(a.charAt(0) + "1", 10) * parseFloat(f[0].substr(2)) : parseFloat(f[0])) * (-1 === a.indexOf("rad") ? 1 : L) - (i ? 0 : b), f.length && (d && (d[c] = b + g), -1 !== a.indexOf("short") && (g %= e, g !== g % (e / 2) && (g = 0 > g ? g + e : g - e)), -1 !== a.indexOf("_cw") && 0 > g ? g = (g + 9999999999 * e) % e - (g / e | 0) * e : -1 !== a.indexOf("ccw") && g > 0 && (g = (g - 9999999999 * e) % e - (g / e | 0) * e)), h = b + g), j > h && h > -j && (h = 0), h
+              },
+              la = {
+                  aqua: [0, 255, 255],
+                  lime: [0, 255, 0],
+                  silver: [192, 192, 192],
+                  black: [0, 0, 0],
+                  maroon: [128, 0, 0],
+                  teal: [0, 128, 128],
+                  blue: [0, 0, 255],
+                  navy: [0, 0, 128],
+                  white: [255, 255, 255],
+                  fuchsia: [255, 0, 255],
+                  olive: [128, 128, 0],
+                  yellow: [255, 255, 0],
+                  orange: [255, 165, 0],
+                  gray: [128, 128, 128],
+                  purple: [128, 0, 128],
+                  green: [0, 128, 0],
+                  red: [255, 0, 0],
+                  pink: [255, 192, 203],
+                  cyan: [0, 255, 255],
+                  transparent: [255, 255, 255, 0]
+              },
+              ma = function(a, b, c) {
+                  return a = 0 > a ? a + 1 : a > 1 ? a - 1 : a, 255 * (1 > 6 * a ? b + (c - b) * a * 6 : .5 > a ? c : 2 > 3 * a ? b + (c - b) * (2 / 3 - a) * 6 : b) + .5 | 0
+              },
+              na = g.parseColor = function(a, b) {
+                  var c, d, e, f, g, h, i, j, k, l, m;
+                  if (a)
+                      if ("number" == typeof a) c = [a >> 16, a >> 8 & 255, 255 & a];
+                      else {
+                          if ("," === a.charAt(a.length - 1) && (a = a.substr(0, a.length - 1)), la[a]) c = la[a];
+                          else if ("#" === a.charAt(0)) 4 === a.length && (d = a.charAt(1), e = a.charAt(2), f = a.charAt(3), a = "#" + d + d + e + e + f + f), a = parseInt(a.substr(1), 16), c = [a >> 16, a >> 8 & 255, 255 & a];
+                          else if ("hsl" === a.substr(0, 3))
+                              if (c = m = a.match(s), b) {
+                                  if (-1 !== a.indexOf("=")) return a.match(t)
+                              } else g = Number(c[0]) % 360 / 360, h = Number(c[1]) / 100, i = Number(c[2]) / 100, e = .5 >= i ? i * (h + 1) : i + h - i * h, d = 2 * i - e, c.length > 3 && (c[3] = Number(c[3])), c[0] = ma(g + 1 / 3, d, e), c[1] = ma(g, d, e), c[2] = ma(g - 1 / 3, d, e);
+                          else c = a.match(s) || la.transparent;
+                          c[0] = Number(c[0]), c[1] = Number(c[1]), c[2] = Number(c[2]), c.length > 3 && (c[3] = Number(c[3]))
+                      }
+                  else c = la.black;
+                  return b && !m && (d = c[0] / 255, e = c[1] / 255, f = c[2] / 255, j = Math.max(d, e, f), k = Math.min(d, e, f), i = (j + k) / 2, j === k ? g = h = 0 : (l = j - k, h = i > .5 ? l / (2 - j - k) : l / (j + k), g = j === d ? (e - f) / l + (f > e ? 6 : 0) : j === e ? (f - d) / l + 2 : (d - e) / l + 4, g *= 60), c[0] = g + .5 | 0, c[1] = 100 * h + .5 | 0, c[2] = 100 * i + .5 | 0), c
+              },
+              oa = function(a, b) {
+                  var c, d, e, f = a.match(pa) || [],
+                      g = 0,
+                      h = "";
+                  if (!f.length) return a;
+                  for (c = 0; c < f.length; c++) d = f[c], e = a.substr(g, a.indexOf(d, g) - g), g += e.length + d.length, d = na(d, b), 3 === d.length && d.push(1), h += e + (b ? "hsla(" + d[0] + "," + d[1] + "%," + d[2] + "%," + d[3] : "rgba(" + d.join(",")) + ")";
+                  return h + a.substr(g)
+              },
+              pa = "(?:\\b(?:(?:rgb|rgba|hsl|hsla)\\(.+?\\))|\\B#(?:[0-9a-f]{3}){1,2}\\b";
+          for (j in la) pa += "|" + j + "\\b";
+          pa = new RegExp(pa + ")", "gi"), g.colorStringFilter = function(a) {
+              var b, c = a[0] + " " + a[1];
+              pa.test(c) && (b = -1 !== c.indexOf("hsl(") || -1 !== c.indexOf("hsla("), a[0] = oa(a[0], b), a[1] = oa(a[1], b)), pa.lastIndex = 0
+          }, b.defaultStringFilter || (b.defaultStringFilter = g.colorStringFilter);
+          var qa = function(a, b, c, d) {
+                  if (null == a) return function(a) {
+                      return a
+                  };
+                  var e, f = b ? (a.match(pa) || [""])[0] : "",
+                      g = a.split(f).join("").match(u) || [],
+                      h = a.substr(0, a.indexOf(g[0])),
+                      i = ")" === a.charAt(a.length - 1) ? ")" : "",
+                      j = -1 !== a.indexOf(" ") ? " " : ",",
+                      k = g.length,
+                      l = k > 0 ? g[0].replace(s, "") : "";
+                  return k ? e = b ? function(a) {
+                      var b, m, n, o;
+                      if ("number" == typeof a) a += l;
+                      else if (d && I.test(a)) {
+                          for (o = a.replace(I, "|").split("|"), n = 0; n < o.length; n++) o[n] = e(o[n]);
+                          return o.join(",")
+                      }
+                      if (b = (a.match(pa) || [f])[0], m = a.split(b).join("").match(u) || [], n = m.length, k > n--)
+                          for (; ++n < k;) m[n] = c ? m[(n - 1) / 2 | 0] : g[n];
+                      return h + m.join(j) + j + b + i + (-1 !== a.indexOf("inset") ? " inset" : "")
+                  } : function(a) {
+                      var b, f, m;
+                      if ("number" == typeof a) a += l;
+                      else if (d && I.test(a)) {
+                          for (f = a.replace(I, "|").split("|"), m = 0; m < f.length; m++) f[m] = e(f[m]);
+                          return f.join(",")
+                      }
+                      if (b = a.match(u) || [], m = b.length, k > m--)
+                          for (; ++m < k;) b[m] = c ? b[(m - 1) / 2 | 0] : g[m];
+                      return h + b.join(j) + i
+                  } : function(a) {
+                      return a
+                  }
+              },
+              ra = function(a) {
+                  return a = a.split(","),
+                      function(b, c, d, e, f, g, h) {
+                          var i, j = (c + "").split(" ");
+                          for (h = {}, i = 0; 4 > i; i++) h[a[i]] = j[i] = j[i] || j[(i - 1) / 2 >> 0];
+                          return e.parse(b, h, f, g)
+                      }
+              },
+              sa = (S._setPluginRatio = function(a) {
+                  this.plugin.setRatio(a);
+                  for (var b, c, d, e, f, g = this.data, h = g.proxy, i = g.firstMPT, j = 1e-6; i;) b = h[i.v], i.r ? b = Math.round(b) : j > b && b > -j && (b = 0), i.t[i.p] = b, i = i._next;
+                  if (g.autoRotate && (g.autoRotate.rotation = g.mod ? g.mod(h.rotation, this.t) : h.rotation), 1 === a || 0 === a)
+                      for (i = g.firstMPT, f = 1 === a ? "e" : "b"; i;) {
+                          if (c = i.t, c.type) {
+                              if (1 === c.type) {
+                                  for (e = c.xs0 + c.s + c.xs1, d = 1; d < c.l; d++) e += c["xn" + d] + c["xs" + (d + 1)];
+                                  c[f] = e
+                              }
+                          } else c[f] = c.s + c.xs0;
+                          i = i._next
+                      }
+              }, function(a, b, c, d, e) {
+                  this.t = a, this.p = b, this.v = c, this.r = e, d && (d._prev = this, this._next = d)
+              }),
+              ta = (S._parseToProxy = function(a, b, c, d, e, f) {
+                  var g, h, i, j, k, l = d,
+                      m = {},
+                      n = {},
+                      o = c._transform,
+                      p = M;
+                  for (c._transform = null, M = b, d = k = c.parse(a, b, d, e), M = p, f && (c._transform = o, l && (l._prev = null, l._prev && (l._prev._next = null))); d && d !== l;) {
+                      if (d.type <= 1 && (h = d.p, n[h] = d.s + d.c, m[h] = d.s, f || (j = new sa(d, "s", h, j, d.r), d.c = 0), 1 === d.type))
+                          for (g = d.l; --g > 0;) i = "xn" + g, h = d.p + "_" + i, n[h] = d.data[i], m[h] = d[i], f || (j = new sa(d, i, h, j, d.rxp[i]));
+                      d = d._next
+                  }
+                  return {
+                      proxy: m,
+                      end: n,
+                      firstMPT: j,
+                      pt: k
+                  }
+              }, S.CSSPropTween = function(a, b, d, e, g, h, i, j, k, l, m) {
+                  this.t = a, this.p = b, this.s = d, this.c = e, this.n = i || b, a instanceof ta || f.push(this.n), this.r = j, this.type = h || 0, k && (this.pr = k, c = !0), this.b = void 0 === l ? d : l, this.e = void 0 === m ? d + e : m, g && (this._next = g, g._prev = this)
+              }),
+              ua = function(a, b, c, d, e, f) {
+                  var g = new ta(a, b, c, d - c, e, -1, f);
+                  return g.b = c, g.e = g.xs0 = d, g
+              },
+              va = g.parseComplex = function(a, b, c, d, e, f, h, i, j, l) {
+                  c = c || f || "", "function" == typeof d && (d = d(r, q)), h = new ta(a, b, 0, 0, h, l ? 2 : 1, null, !1, i, c, d), d += "", e && pa.test(d + c) && (d = [c, d], g.colorStringFilter(d), c = d[0], d = d[1]);
+                  var m, n, o, p, u, v, w, x, y, z, A, B, C, D = c.split(", ").join(",").split(" "),
+                      E = d.split(", ").join(",").split(" "),
+                      F = D.length,
+                      G = k !== !1;
+                  for ((-1 !== d.indexOf(",") || -1 !== c.indexOf(",")) && (-1 !== (d + c).indexOf("rgb") || -1 !== (d + c).indexOf("hsl") ? (D = D.join(" ").replace(I, ", ").split(" "), E = E.join(" ").replace(I, ", ").split(" ")) : (D = D.join(" ").split(",").join(", ").split(" "), E = E.join(" ").split(",").join(", ").split(" ")), F = D.length), F !== E.length && (D = (f || "").split(" "), F = D.length), h.plugin = j, h.setRatio = l, pa.lastIndex = 0, m = 0; F > m; m++)
+                      if (p = D[m], u = E[m], x = parseFloat(p), x || 0 === x) h.appendXtra("", x, ia(u, x), u.replace(t, ""), G && -1 !== u.indexOf("px"), !0);
+                      else if (e && pa.test(p)) B = u.indexOf(")") + 1, B = ")" + (B ? u.substr(B) : ""), C = -1 !== u.indexOf("hsl") && U, z = u, p = na(p, C), u = na(u, C), y = p.length + u.length > 6, y && !U && 0 === u[3] ? (h["xs" + h.l] += h.l ? " transparent" : "transparent", h.e = h.e.split(E[m]).join("transparent")) : (U || (y = !1), C ? h.appendXtra(z.substr(0, z.indexOf("hsl")) + (y ? "hsla(" : "hsl("), p[0], ia(u[0], p[0]), ",", !1, !0).appendXtra("", p[1], ia(u[1], p[1]), "%,", !1).appendXtra("", p[2], ia(u[2], p[2]), y ? "%," : "%" + B, !1) : h.appendXtra(z.substr(0, z.indexOf("rgb")) + (y ? "rgba(" : "rgb("), p[0], u[0] - p[0], ",", !0, !0).appendXtra("", p[1], u[1] - p[1], ",", !0).appendXtra("", p[2], u[2] - p[2], y ? "," : B, !0), y && (p = p.length < 4 ? 1 : p[3], h.appendXtra("", p, (u.length < 4 ? 1 : u[3]) - p, B, !1))), pa.lastIndex = 0;
+                  else if (v = p.match(s)) {
+                      if (w = u.match(t), !w || w.length !== v.length) return h;
+                      for (o = 0, n = 0; n < v.length; n++) A = v[n], z = p.indexOf(A, o), h.appendXtra(p.substr(o, z - o), Number(A), ia(w[n], A), "", G && "px" === p.substr(z + A.length, 2), 0 === n), o = z + A.length;
+                      h["xs" + h.l] += p.substr(o)
+                  } else h["xs" + h.l] += h.l || h["xs" + h.l] ? " " + u : u;
+                  if (-1 !== d.indexOf("=") && h.data) {
+                      for (B = h.xs0 + h.data.s, m = 1; m < h.l; m++) B += h["xs" + m] + h.data["xn" + m];
+                      h.e = B + h["xs" + m]
+                  }
+                  return h.l || (h.type = -1, h.xs0 = h.e), h.xfirst || h
+              },
+              wa = 9;
+          for (j = ta.prototype, j.l = j.pr = 0; --wa > 0;) j["xn" + wa] = 0, j["xs" + wa] = "";
+          j.xs0 = "", j._next = j._prev = j.xfirst = j.data = j.plugin = j.setRatio = j.rxp = null, j.appendXtra = function(a, b, c, d, e, f) {
+              var g = this,
+                  h = g.l;
+              return g["xs" + h] += f && (h || g["xs" + h]) ? " " + a : a || "", c || 0 === h || g.plugin ? (g.l++, g.type = g.setRatio ? 2 : 1, g["xs" + g.l] = d || "", h > 0 ? (g.data["xn" + h] = b + c, g.rxp["xn" + h] = e, g["xn" + h] = b, g.plugin || (g.xfirst = new ta(g, "xn" + h, b, c, g.xfirst || g, 0, g.n, e, g.pr), g.xfirst.xs0 = 0), g) : (g.data = {
+                  s: b + c
+              }, g.rxp = {}, g.s = b, g.c = c, g.r = e, g)) : (g["xs" + h] += b + (d || ""), g)
+          };
+          var xa = function(a, b) {
+                  b = b || {}, this.p = b.prefix ? Z(a) || a : a, i[a] = i[this.p] = this, this.format = b.formatter || qa(b.defaultValue, b.color, b.collapsible, b.multi), b.parser && (this.parse = b.parser), this.clrs = b.color, this.multi = b.multi, this.keyword = b.keyword, this.dflt = b.defaultValue, this.pr = b.priority || 0
+              },
+              ya = S._registerComplexSpecialProp = function(a, b, c) {
+                  "object" != typeof b && (b = {
+                      parser: c
+                  });
+                  var d, e, f = a.split(","),
+                      g = b.defaultValue;
+                  for (c = c || [g], d = 0; d < f.length; d++) b.prefix = 0 === d && b.prefix, b.defaultValue = c[d] || g, e = new xa(f[d], b)
+              },
+              za = S._registerPluginProp = function(a) {
+                  if (!i[a]) {
+                      var b = a.charAt(0).toUpperCase() + a.substr(1) + "Plugin";
+                      ya(a, {
+                          parser: function(a, c, d, e, f, g, j) {
+                              var k = h.com.greensock.plugins[b];
+                              return k ? (k._cssRegister(), i[d].parse(a, c, d, e, f, g, j)) : (W("Error: " + b + " js file not loaded."), f)
+                          }
+                      })
+                  }
+              };
+          j = xa.prototype, j.parseComplex = function(a, b, c, d, e, f) {
+              var g, h, i, j, k, l, m = this.keyword;
+              if (this.multi && (I.test(c) || I.test(b) ? (h = b.replace(I, "|").split("|"), i = c.replace(I, "|").split("|")) : m && (h = [b], i = [c])), i) {
+                  for (j = i.length > h.length ? i.length : h.length, g = 0; j > g; g++) b = h[g] = h[g] || this.dflt, c = i[g] = i[g] || this.dflt, m && (k = b.indexOf(m), l = c.indexOf(m), k !== l && (-1 === l ? h[g] = h[g].split(m).join("") : -1 === k && (h[g] += " " + m)));
+                  b = h.join(", "), c = i.join(", ")
+              }
+              return va(a, this.p, b, c, this.clrs, this.dflt, d, this.pr, e, f)
+          }, j.parse = function(a, b, c, d, f, g, h) {
+              return this.parseComplex(a.style, this.format(_(a, this.p, e, !1, this.dflt)), this.format(b), f, g)
+          }, g.registerSpecialProp = function(a, b, c) {
+              ya(a, {
+                  parser: function(a, d, e, f, g, h, i) {
+                      var j = new ta(a, e, 0, 0, g, 2, e, !1, c);
+                      return j.plugin = h, j.setRatio = b(a, d, f._tween, e), j
+                  },
+                  priority: c
+              })
+          }, g.useSVGTransformAttr = !0;
+          var Aa, Ba = "scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(","),
+              Ca = Z("transform"),
+              Da = X + "transform",
+              Ea = Z("transformOrigin"),
+              Fa = null !== Z("perspective"),
+              Ga = S.Transform = function() {
+                  this.perspective = parseFloat(g.defaultTransformPerspective) || 0, this.force3D = g.defaultForce3D !== !1 && Fa ? g.defaultForce3D || "auto" : !1
+              },
+              Ha = _gsScope.SVGElement,
+              Ia = function(a, b, c) {
+                  var d, e = O.createElementNS("http://www.w3.org/2000/svg", a),
+                      f = /([a-z])([A-Z])/g;
+                  for (d in c) e.setAttributeNS(null, d.replace(f, "$1-$2").toLowerCase(), c[d]);
+                  return b.appendChild(e), e
+              },
+              Ja = O.documentElement || {},
+              Ka = function() {
+                  var a, b, c, d = p || /Android/i.test(T) && !_gsScope.chrome;
+                  return O.createElementNS && !d && (a = Ia("svg", Ja), b = Ia("rect", a, {
+                      width: 100,
+                      height: 50,
+                      x: 100
+                  }), c = b.getBoundingClientRect().width, b.style[Ea] = "50% 50%", b.style[Ca] = "scaleX(0.5)", d = c === b.getBoundingClientRect().width && !(n && Fa), Ja.removeChild(a)), d
+              }(),
+              La = function(a, b, c, d, e, f) {
+                  var h, i, j, k, l, m, n, o, p, q, r, s, t, u, v = a._gsTransform,
+                      w = Qa(a, !0);
+                  v && (t = v.xOrigin, u = v.yOrigin), (!d || (h = d.split(" ")).length < 2) && (n = a.getBBox(), 0 === n.x && 0 === n.y && n.width + n.height === 0 && (n = {
+                      x: parseFloat(a.hasAttribute("x") ? a.getAttribute("x") : a.hasAttribute("cx") ? a.getAttribute("cx") : 0) || 0,
+                      y: parseFloat(a.hasAttribute("y") ? a.getAttribute("y") : a.hasAttribute("cy") ? a.getAttribute("cy") : 0) || 0,
+                      width: 0,
+                      height: 0
+                  }), b = ha(b).split(" "), h = [(-1 !== b[0].indexOf("%") ? parseFloat(b[0]) / 100 * n.width : parseFloat(b[0])) + n.x, (-1 !== b[1].indexOf("%") ? parseFloat(b[1]) / 100 * n.height : parseFloat(b[1])) + n.y]), c.xOrigin = k = parseFloat(h[0]), c.yOrigin = l = parseFloat(h[1]), d && w !== Pa && (m = w[0], n = w[1], o = w[2], p = w[3], q = w[4], r = w[5], s = m * p - n * o, s && (i = k * (p / s) + l * (-o / s) + (o * r - p * q) / s, j = k * (-n / s) + l * (m / s) - (m * r - n * q) / s, k = c.xOrigin = h[0] = i, l = c.yOrigin = h[1] = j)), v && (f && (c.xOffset = v.xOffset, c.yOffset = v.yOffset, v = c), e || e !== !1 && g.defaultSmoothOrigin !== !1 ? (i = k - t, j = l - u, v.xOffset += i * w[0] + j * w[2] - i, v.yOffset += i * w[1] + j * w[3] - j) : v.xOffset = v.yOffset = 0), f || a.setAttribute("data-svg-origin", h.join(" "))
+              },
+              Ma = function(a) {
+                  var b, c = P("svg", this.ownerSVGElement && this.ownerSVGElement.getAttribute("xmlns") || "http://www.w3.org/2000/svg"),
+                      d = this.parentNode,
+                      e = this.nextSibling,
+                      f = this.style.cssText;
+                  if (Ja.appendChild(c), c.appendChild(this), this.style.display = "block", a) try {
+                      b = this.getBBox(), this._originalGetBBox = this.getBBox, this.getBBox = Ma
+                  } catch (g) {} else this._originalGetBBox && (b = this._originalGetBBox());
+                  return e ? d.insertBefore(this, e) : d.appendChild(this), Ja.removeChild(c), this.style.cssText = f, b
+              },
+              Na = function(a) {
+                  try {
+                      return a.getBBox()
+                  } catch (b) {
+                      return Ma.call(a, !0)
+                  }
+              },
+              Oa = function(a) {
+                  return !(!Ha || !a.getCTM || a.parentNode && !a.ownerSVGElement || !Na(a))
+              },
+              Pa = [1, 0, 0, 1, 0, 0],
+              Qa = function(a, b) {
+                  var c, d, e, f, g, h, i = a._gsTransform || new Ga,
+                      j = 1e5,
+                      k = a.style;
+                  if (Ca ? d = _(a, Da, null, !0) : a.currentStyle && (d = a.currentStyle.filter.match(G), d = d && 4 === d.length ? [d[0].substr(4), Number(d[2].substr(4)), Number(d[1].substr(4)), d[3].substr(4), i.x || 0, i.y || 0].join(",") : ""), c = !d || "none" === d || "matrix(1, 0, 0, 1, 0, 0)" === d, !Ca || !(h = !$(a) || "none" === $(a).display) && a.parentNode || (h && (f = k.display, k.display = "block"), a.parentNode || (g = 1, Ja.appendChild(a)), d = _(a, Da, null, !0), c = !d || "none" === d || "matrix(1, 0, 0, 1, 0, 0)" === d, f ? k.display = f : h && Va(k, "display"), g && Ja.removeChild(a)), (i.svg || a.getCTM && Oa(a)) && (c && -1 !== (k[Ca] + "").indexOf("matrix") && (d = k[Ca], c = 0), e = a.getAttribute("transform"), c && e && (-1 !== e.indexOf("matrix") ? (d = e, c = 0) : -1 !== e.indexOf("translate") && (d = "matrix(1,0,0,1," + e.match(/(?:\-|\b)[\d\-\.e]+\b/gi).join(",") + ")", c = 0))), c) return Pa;
+                  for (e = (d || "").match(s) || [], wa = e.length; --wa > -1;) f = Number(e[wa]), e[wa] = (g = f - (f |= 0)) ? (g * j + (0 > g ? -.5 : .5) | 0) / j + f : f;
+                  return b && e.length > 6 ? [e[0], e[1], e[4], e[5], e[12], e[13]] : e
+              },
+              Ra = S.getTransform = function(a, c, d, e) {
+                  if (a._gsTransform && d && !e) return a._gsTransform;
+                  var f, h, i, j, k, l, m = d ? a._gsTransform || new Ga : new Ga,
+                      n = m.scaleX < 0,
+                      o = 2e-5,
+                      p = 1e5,
+                      q = Fa ? parseFloat(_(a, Ea, c, !1, "0 0 0").split(" ")[2]) || m.zOrigin || 0 : 0,
+                      r = parseFloat(g.defaultTransformPerspective) || 0;
+                  if (m.svg = !(!a.getCTM || !Oa(a)), m.svg && (La(a, _(a, Ea, c, !1, "50% 50%") + "", m, a.getAttribute("data-svg-origin")), Aa = g.useSVGTransformAttr || Ka), f = Qa(a), f !== Pa) {
+                      if (16 === f.length) {
+                          var s, t, u, v, w, x = f[0],
+                              y = f[1],
+                              z = f[2],
+                              A = f[3],
+                              B = f[4],
+                              C = f[5],
+                              D = f[6],
+                              E = f[7],
+                              F = f[8],
+                              G = f[9],
+                              H = f[10],
+                              I = f[12],
+                              J = f[13],
+                              K = f[14],
+                              M = f[11],
+                              N = Math.atan2(D, H);
+                          m.zOrigin && (K = -m.zOrigin, I = F * K - f[12], J = G * K - f[13], K = H * K + m.zOrigin - f[14]), m.rotationX = N * L, N && (v = Math.cos(-N), w = Math.sin(-N), s = B * v + F * w, t = C * v + G * w, u = D * v + H * w, F = B * -w + F * v, G = C * -w + G * v, H = D * -w + H * v, M = E * -w + M * v, B = s, C = t, D = u), N = Math.atan2(-z, H), m.rotationY = N * L, N && (v = Math.cos(-N), w = Math.sin(-N), s = x * v - F * w, t = y * v - G * w, u = z * v - H * w, G = y * w + G * v, H = z * w + H * v, M = A * w + M * v, x = s, y = t, z = u), N = Math.atan2(y, x), m.rotation = N * L, N && (v = Math.cos(N), w = Math.sin(N), s = x * v + y * w, t = B * v + C * w, u = F * v + G * w, y = y * v - x * w, C = C * v - B * w, G = G * v - F * w, x = s, B = t, F = u), m.rotationX && Math.abs(m.rotationX) + Math.abs(m.rotation) > 359.9 && (m.rotationX = m.rotation = 0, m.rotationY = 180 - m.rotationY), N = Math.atan2(B, C), m.scaleX = (Math.sqrt(x * x + y * y + z * z) * p + .5 | 0) / p, m.scaleY = (Math.sqrt(C * C + D * D) * p + .5 | 0) / p, m.scaleZ = (Math.sqrt(F * F + G * G + H * H) * p + .5 | 0) / p, x /= m.scaleX, B /= m.scaleY, y /= m.scaleX, C /= m.scaleY, Math.abs(N) > o ? (m.skewX = N * L, B = 0, "simple" !== m.skewType && (m.scaleY *= 1 / Math.cos(N))) : m.skewX = 0, m.perspective = M ? 1 / (0 > M ? -M : M) : 0, m.x = I, m.y = J, m.z = K, m.svg && (m.x -= m.xOrigin - (m.xOrigin * x - m.yOrigin * B), m.y -= m.yOrigin - (m.yOrigin * y - m.xOrigin * C))
+                      } else if (!Fa || e || !f.length || m.x !== f[4] || m.y !== f[5] || !m.rotationX && !m.rotationY) {
+                          var O = f.length >= 6,
+                              P = O ? f[0] : 1,
+                              Q = f[1] || 0,
+                              R = f[2] || 0,
+                              S = O ? f[3] : 1;
+                          m.x = f[4] || 0, m.y = f[5] || 0, i = Math.sqrt(P * P + Q * Q), j = Math.sqrt(S * S + R * R), k = P || Q ? Math.atan2(Q, P) * L : m.rotation || 0, l = R || S ? Math.atan2(R, S) * L + k : m.skewX || 0, m.scaleX = i, m.scaleY = j, m.rotation = k, m.skewX = l, Fa && (m.rotationX = m.rotationY = m.z = 0, m.perspective = r, m.scaleZ = 1), m.svg && (m.x -= m.xOrigin - (m.xOrigin * P + m.yOrigin * R), m.y -= m.yOrigin - (m.xOrigin * Q + m.yOrigin * S))
+                      }
+                      Math.abs(m.skewX) > 90 && Math.abs(m.skewX) < 270 && (n ? (m.scaleX *= -1, m.skewX += m.rotation <= 0 ? 180 : -180, m.rotation += m.rotation <= 0 ? 180 : -180) : (m.scaleY *= -1, m.skewX += m.skewX <= 0 ? 180 : -180)), m.zOrigin = q;
+                      for (h in m) m[h] < o && m[h] > -o && (m[h] = 0)
+                  }
+                  return d && (a._gsTransform = m, m.svg && (Aa && a.style[Ca] ? b.delayedCall(.001, function() {
+                      Va(a.style, Ca)
+                  }) : !Aa && a.getAttribute("transform") && b.delayedCall(.001, function() {
+                      a.removeAttribute("transform")
+                  }))), m
+              },
+              Sa = function(a) {
+                  var b, c, d = this.data,
+                      e = -d.rotation * K,
+                      f = e + d.skewX * K,
+                      g = 1e5,
+                      h = (Math.cos(e) * d.scaleX * g | 0) / g,
+                      i = (Math.sin(e) * d.scaleX * g | 0) / g,
+                      j = (Math.sin(f) * -d.scaleY * g | 0) / g,
+                      k = (Math.cos(f) * d.scaleY * g | 0) / g,
+                      l = this.t.style,
+                      m = this.t.currentStyle;
+                  if (m) {
+                      c = i, i = -j, j = -c, b = m.filter, l.filter = "";
+                      var n, o, q = this.t.offsetWidth,
+                          r = this.t.offsetHeight,
+                          s = "absolute" !== m.position,
+                          t = "progid:DXImageTransform.Microsoft.Matrix(M11=" + h + ", M12=" + i + ", M21=" + j + ", M22=" + k,
+                          u = d.x + q * d.xPercent / 100,
+                          v = d.y + r * d.yPercent / 100;
+                      if (null != d.ox && (n = (d.oxp ? q * d.ox * .01 : d.ox) - q / 2, o = (d.oyp ? r * d.oy * .01 : d.oy) - r / 2, u += n - (n * h + o * i), v += o - (n * j + o * k)), s ? (n = q / 2, o = r / 2, t += ", Dx=" + (n - (n * h + o * i) + u) + ", Dy=" + (o - (n * j + o * k) + v) + ")") : t += ", sizingMethod='auto expand')", -1 !== b.indexOf("DXImageTransform.Microsoft.Matrix(") ? l.filter = b.replace(H, t) : l.filter = t + " " + b, (0 === a || 1 === a) && 1 === h && 0 === i && 0 === j && 1 === k && (s && -1 === t.indexOf("Dx=0, Dy=0") || x.test(b) && 100 !== parseFloat(RegExp.$1) || -1 === b.indexOf(b.indexOf("Alpha")) && l.removeAttribute("filter")), !s) {
+                          var y, z, A, B = 8 > p ? 1 : -1;
+                          for (n = d.ieOffsetX || 0, o = d.ieOffsetY || 0, d.ieOffsetX = Math.round((q - ((0 > h ? -h : h) * q + (0 > i ? -i : i) * r)) / 2 + u), d.ieOffsetY = Math.round((r - ((0 > k ? -k : k) * r + (0 > j ? -j : j) * q)) / 2 + v), wa = 0; 4 > wa; wa++) z = fa[wa], y = m[z], c = -1 !== y.indexOf("px") ? parseFloat(y) : aa(this.t, z, parseFloat(y), y.replace(w, "")) || 0, A = c !== d[z] ? 2 > wa ? -d.ieOffsetX : -d.ieOffsetY : 2 > wa ? n - d.ieOffsetX : o - d.ieOffsetY, l[z] = (d[z] = Math.round(c - A * (0 === wa || 2 === wa ? 1 : B))) + "px"
+                      }
+                  }
+              },
+              Ta = S.set3DTransformRatio = S.setTransformRatio = function(a) {
+                  var b, c, d, e, f, g, h, i, j, k, l, m, o, p, q, r, s, t, u, v, w, x, y, z = this.data,
+                      A = this.t.style,
+                      B = z.rotation,
+                      C = z.rotationX,
+                      D = z.rotationY,
+                      E = z.scaleX,
+                      F = z.scaleY,
+                      G = z.scaleZ,
+                      H = z.x,
+                      I = z.y,
+                      J = z.z,
+                      L = z.svg,
+                      M = z.perspective,
+                      N = z.force3D,
+                      O = z.skewY,
+                      P = z.skewX;
+                  if (O && (P += O, B += O), ((1 === a || 0 === a) && "auto" === N && (this.tween._totalTime === this.tween._totalDuration || !this.tween._totalTime) || !N) && !J && !M && !D && !C && 1 === G || Aa && L || !Fa) return void(B || P || L ? (B *= K, x = P * K, y = 1e5, c = Math.cos(B) * E, f = Math.sin(B) * E, d = Math.sin(B - x) * -F, g = Math.cos(B - x) * F, x && "simple" === z.skewType && (b = Math.tan(x - O * K), b = Math.sqrt(1 + b * b), d *= b, g *= b, O && (b = Math.tan(O * K), b = Math.sqrt(1 + b * b), c *= b, f *= b)), L && (H += z.xOrigin - (z.xOrigin * c + z.yOrigin * d) + z.xOffset, I += z.yOrigin - (z.xOrigin * f + z.yOrigin * g) + z.yOffset, Aa && (z.xPercent || z.yPercent) && (q = this.t.getBBox(), H += .01 * z.xPercent * q.width, I += .01 * z.yPercent * q.height), q = 1e-6, q > H && H > -q && (H = 0), q > I && I > -q && (I = 0)), u = (c * y | 0) / y + "," + (f * y | 0) / y + "," + (d * y | 0) / y + "," + (g * y | 0) / y + "," + H + "," + I + ")", L && Aa ? this.t.setAttribute("transform", "matrix(" + u) : A[Ca] = (z.xPercent || z.yPercent ? "translate(" + z.xPercent + "%," + z.yPercent + "%) matrix(" : "matrix(") + u) : A[Ca] = (z.xPercent || z.yPercent ? "translate(" + z.xPercent + "%," + z.yPercent + "%) matrix(" : "matrix(") + E + ",0,0," + F + "," + H + "," + I + ")");
+                  if (n && (q = 1e-4, q > E && E > -q && (E = G = 2e-5), q > F && F > -q && (F = G = 2e-5), !M || z.z || z.rotationX || z.rotationY || (M = 0)), B || P) B *= K, r = c = Math.cos(B), s = f = Math.sin(B), P && (B -= P * K, r = Math.cos(B), s = Math.sin(B), "simple" === z.skewType && (b = Math.tan((P - O) * K), b = Math.sqrt(1 + b * b), r *= b, s *= b, z.skewY && (b = Math.tan(O * K), b = Math.sqrt(1 + b * b), c *= b, f *= b))), d = -s, g = r;
+                  else {
+                      if (!(D || C || 1 !== G || M || L)) return void(A[Ca] = (z.xPercent || z.yPercent ? "translate(" + z.xPercent + "%," + z.yPercent + "%) translate3d(" : "translate3d(") + H + "px," + I + "px," + J + "px)" + (1 !== E || 1 !== F ? " scale(" + E + "," + F + ")" : ""));
+                      c = g = 1, d = f = 0
+                  }
+                  k = 1, e = h = i = j = l = m = 0, o = M ? -1 / M : 0, p = z.zOrigin, q = 1e-6, v = ",", w = "0", B = D * K, B && (r = Math.cos(B), s = Math.sin(B), i = -s, l = o * -s, e = c * s, h = f * s, k = r, o *= r, c *= r, f *= r), B = C * K, B && (r = Math.cos(B), s = Math.sin(B), b = d * r + e * s, t = g * r + h * s, j = k * s, m = o * s, e = d * -s + e * r, h = g * -s + h * r, k *= r, o *= r, d = b, g = t), 1 !== G && (e *= G, h *= G, k *= G, o *= G), 1 !== F && (d *= F, g *= F, j *= F, m *= F), 1 !== E && (c *= E, f *= E, i *= E, l *= E), (p || L) && (p && (H += e * -p, I += h * -p, J += k * -p + p), L && (H += z.xOrigin - (z.xOrigin * c + z.yOrigin * d) + z.xOffset, I += z.yOrigin - (z.xOrigin * f + z.yOrigin * g) + z.yOffset), q > H && H > -q && (H = w), q > I && I > -q && (I = w), q > J && J > -q && (J = 0)), u = z.xPercent || z.yPercent ? "translate(" + z.xPercent + "%," + z.yPercent + "%) matrix3d(" : "matrix3d(", u += (q > c && c > -q ? w : c) + v + (q > f && f > -q ? w : f) + v + (q > i && i > -q ? w : i), u += v + (q > l && l > -q ? w : l) + v + (q > d && d > -q ? w : d) + v + (q > g && g > -q ? w : g), C || D || 1 !== G ? (u += v + (q > j && j > -q ? w : j) + v + (q > m && m > -q ? w : m) + v + (q > e && e > -q ? w : e), u += v + (q > h && h > -q ? w : h) + v + (q > k && k > -q ? w : k) + v + (q > o && o > -q ? w : o) + v) : u += ",0,0,0,0,1,0,", u += H + v + I + v + J + v + (M ? 1 + -J / M : 1) + ")", A[Ca] = u
+              };
+          j = Ga.prototype, j.x = j.y = j.z = j.skewX = j.skewY = j.rotation = j.rotationX = j.rotationY = j.zOrigin = j.xPercent = j.yPercent = j.xOffset = j.yOffset = 0, j.scaleX = j.scaleY = j.scaleZ = 1, ya("transform,scale,scaleX,scaleY,scaleZ,x,y,z,rotation,rotationX,rotationY,rotationZ,skewX,skewY,shortRotation,shortRotationX,shortRotationY,shortRotationZ,transformOrigin,svgOrigin,transformPerspective,directionalRotation,parseTransform,force3D,skewType,xPercent,yPercent,smoothOrigin", {
+              parser: function(a, b, c, d, f, h, i) {
+                  if (d._lastParsedTransform === i) return f;
+                  d._lastParsedTransform = i;
+                  var j, k = i.scale && "function" == typeof i.scale ? i.scale : 0;
+                  "function" == typeof i[c] && (j = i[c], i[c] = b), k && (i.scale = k(r, a));
+                  var l, m, n, o, p, s, t, u, v, w = a._gsTransform,
+                      x = a.style,
+                      y = 1e-6,
+                      z = Ba.length,
+                      A = i,
+                      B = {},
+                      C = "transformOrigin",
+                      D = Ra(a, e, !0, A.parseTransform),
+                      E = A.transform && ("function" == typeof A.transform ? A.transform(r, q) : A.transform);
+                  if (D.skewType = A.skewType || D.skewType || g.defaultSkewType, d._transform = D, E && "string" == typeof E && Ca) m = Q.style, m[Ca] = E, m.display = "block", m.position = "absolute", O.body.appendChild(Q), l = Ra(Q, null, !1), "simple" === D.skewType && (l.scaleY *= Math.cos(l.skewX * K)), D.svg && (s = D.xOrigin, t = D.yOrigin, l.x -= D.xOffset, l.y -= D.yOffset, (A.transformOrigin || A.svgOrigin) && (E = {}, La(a, ha(A.transformOrigin), E, A.svgOrigin, A.smoothOrigin, !0), s = E.xOrigin, t = E.yOrigin, l.x -= E.xOffset - D.xOffset, l.y -= E.yOffset - D.yOffset), (s || t) && (u = Qa(Q, !0), l.x -= s - (s * u[0] + t * u[2]), l.y -= t - (s * u[1] + t * u[3]))), O.body.removeChild(Q), l.perspective || (l.perspective = D.perspective), null != A.xPercent && (l.xPercent = ja(A.xPercent, D.xPercent)), null != A.yPercent && (l.yPercent = ja(A.yPercent, D.yPercent));
+                  else if ("object" == typeof A) {
+                      if (l = {
+                              scaleX: ja(null != A.scaleX ? A.scaleX : A.scale, D.scaleX),
+                              scaleY: ja(null != A.scaleY ? A.scaleY : A.scale, D.scaleY),
+                              scaleZ: ja(A.scaleZ, D.scaleZ),
+                              x: ja(A.x, D.x),
+                              y: ja(A.y, D.y),
+                              z: ja(A.z, D.z),
+                              xPercent: ja(A.xPercent, D.xPercent),
+                              yPercent: ja(A.yPercent, D.yPercent),
+                              perspective: ja(A.transformPerspective, D.perspective)
+                          }, p = A.directionalRotation, null != p)
+                          if ("object" == typeof p)
+                              for (m in p) A[m] = p[m];
+                          else A.rotation = p;
+                          "string" == typeof A.x && -1 !== A.x.indexOf("%") && (l.x = 0, l.xPercent = ja(A.x, D.xPercent)), "string" == typeof A.y && -1 !== A.y.indexOf("%") && (l.y = 0, l.yPercent = ja(A.y, D.yPercent)), l.rotation = ka("rotation" in A ? A.rotation : "shortRotation" in A ? A.shortRotation + "_short" : "rotationZ" in A ? A.rotationZ : D.rotation, D.rotation, "rotation", B), Fa && (l.rotationX = ka("rotationX" in A ? A.rotationX : "shortRotationX" in A ? A.shortRotationX + "_short" : D.rotationX || 0, D.rotationX, "rotationX", B), l.rotationY = ka("rotationY" in A ? A.rotationY : "shortRotationY" in A ? A.shortRotationY + "_short" : D.rotationY || 0, D.rotationY, "rotationY", B)), l.skewX = ka(A.skewX, D.skewX), l.skewY = ka(A.skewY, D.skewY)
+                  }
+                  for (Fa && null != A.force3D && (D.force3D = A.force3D, o = !0), n = D.force3D || D.z || D.rotationX || D.rotationY || l.z || l.rotationX || l.rotationY || l.perspective, n || null == A.scale || (l.scaleZ = 1); --z > -1;) v = Ba[z], E = l[v] - D[v], (E > y || -y > E || null != A[v] || null != M[v]) && (o = !0, f = new ta(D, v, D[v], E, f), v in B && (f.e = B[v]), f.xs0 = 0, f.plugin = h, d._overwriteProps.push(f.n));
+                  return E = A.transformOrigin, D.svg && (E || A.svgOrigin) && (s = D.xOffset, t = D.yOffset, La(a, ha(E), l, A.svgOrigin, A.smoothOrigin), f = ua(D, "xOrigin", (w ? D : l).xOrigin, l.xOrigin, f, C), f = ua(D, "yOrigin", (w ? D : l).yOrigin, l.yOrigin, f, C), (s !== D.xOffset || t !== D.yOffset) && (f = ua(D, "xOffset", w ? s : D.xOffset, D.xOffset, f, C), f = ua(D, "yOffset", w ? t : D.yOffset, D.yOffset, f, C)), E = "0px 0px"), (E || Fa && n && D.zOrigin) && (Ca ? (o = !0, v = Ea, E = (E || _(a, v, e, !1, "50% 50%")) + "", f = new ta(x, v, 0, 0, f, -1, C), f.b = x[v], f.plugin = h, Fa ? (m = D.zOrigin, E = E.split(" "), D.zOrigin = (E.length > 2 && (0 === m || "0px" !== E[2]) ? parseFloat(E[2]) : m) || 0, f.xs0 = f.e = E[0] + " " + (E[1] || "50%") + " 0px", f = new ta(D, "zOrigin", 0, 0, f, -1, f.n), f.b = m, f.xs0 = f.e = D.zOrigin) : f.xs0 = f.e = E) : ha(E + "", D)), o && (d._transformType = D.svg && Aa || !n && 3 !== this._transformType ? 2 : 3), j && (i[c] = j), k && (i.scale = k), f
+              },
+              prefix: !0
+          }), ya("boxShadow", {
+              defaultValue: "0px 0px 0px 0px #999",
+              prefix: !0,
+              color: !0,
+              multi: !0,
+              keyword: "inset"
+          }), ya("borderRadius", {
+              defaultValue: "0px",
+              parser: function(a, b, c, f, g, h) {
+                  b = this.format(b);
+                  var i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y = ["borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius"],
+                      z = a.style;
+                  for (q = parseFloat(a.offsetWidth), r = parseFloat(a.offsetHeight), i = b.split(" "), j = 0; j < y.length; j++) this.p.indexOf("border") && (y[j] = Z(y[j])), m = l = _(a, y[j], e, !1, "0px"), -1 !== m.indexOf(" ") && (l = m.split(" "), m = l[0], l = l[1]), n = k = i[j], o = parseFloat(m), t = m.substr((o + "").length), u = "=" === n.charAt(1), u ? (p = parseInt(n.charAt(0) + "1", 10), n = n.substr(2), p *= parseFloat(n), s = n.substr((p + "").length - (0 > p ? 1 : 0)) || "") : (p = parseFloat(n), s = n.substr((p + "").length)), "" === s && (s = d[c] || t), s !== t && (v = aa(a, "borderLeft", o, t), w = aa(a, "borderTop", o, t), "%" === s ? (m = v / q * 100 + "%", l = w / r * 100 + "%") : "em" === s ? (x = aa(a, "borderLeft", 1, "em"), m = v / x + "em", l = w / x + "em") : (m = v + "px", l = w + "px"), u && (n = parseFloat(m) + p + s, k = parseFloat(l) + p + s)), g = va(z, y[j], m + " " + l, n + " " + k, !1, "0px", g);
+                  return g
+              },
+              prefix: !0,
+              formatter: qa("0px 0px 0px 0px", !1, !0)
+          }), ya("borderBottomLeftRadius,borderBottomRightRadius,borderTopLeftRadius,borderTopRightRadius", {
+              defaultValue: "0px",
+              parser: function(a, b, c, d, f, g) {
+                  return va(a.style, c, this.format(_(a, c, e, !1, "0px 0px")), this.format(b), !1, "0px", f)
+              },
+              prefix: !0,
+              formatter: qa("0px 0px", !1, !0)
+          }), ya("backgroundPosition", {
+              defaultValue: "0 0",
+              parser: function(a, b, c, d, f, g) {
+                  var h, i, j, k, l, m, n = "background-position",
+                      o = e || $(a, null),
+                      q = this.format((o ? p ? o.getPropertyValue(n + "-x") + " " + o.getPropertyValue(n + "-y") : o.getPropertyValue(n) : a.currentStyle.backgroundPositionX + " " + a.currentStyle.backgroundPositionY) || "0 0"),
+                      r = this.format(b);
+                  if (-1 !== q.indexOf("%") != (-1 !== r.indexOf("%")) && r.split(",").length < 2 && (m = _(a, "backgroundImage").replace(D, ""), m && "none" !== m)) {
+                      for (h = q.split(" "), i = r.split(" "), R.setAttribute("src", m), j = 2; --j > -1;) q = h[j], k = -1 !== q.indexOf("%"), k !== (-1 !== i[j].indexOf("%")) && (l = 0 === j ? a.offsetWidth - R.width : a.offsetHeight - R.height, h[j] = k ? parseFloat(q) / 100 * l + "px" : parseFloat(q) / l * 100 + "%");
+                      q = h.join(" ")
+                  }
+                  return this.parseComplex(a.style, q, r, f, g)
+              },
+              formatter: ha
+          }), ya("backgroundSize", {
+              defaultValue: "0 0",
+              formatter: function(a) {
+                  return a += "", ha(-1 === a.indexOf(" ") ? a + " " + a : a)
+              }
+          }), ya("perspective", {
+              defaultValue: "0px",
+              prefix: !0
+          }), ya("perspectiveOrigin", {
+              defaultValue: "50% 50%",
+              prefix: !0
+          }), ya("transformStyle", {
+              prefix: !0
+          }), ya("backfaceVisibility", {
+              prefix: !0
+          }), ya("userSelect", {
+              prefix: !0
+          }), ya("margin", {
+              parser: ra("marginTop,marginRight,marginBottom,marginLeft")
+          }), ya("padding", {
+              parser: ra("paddingTop,paddingRight,paddingBottom,paddingLeft")
+          }), ya("clip", {
+              defaultValue: "rect(0px,0px,0px,0px)",
+              parser: function(a, b, c, d, f, g) {
+                  var h, i, j;
+                  return 9 > p ? (i = a.currentStyle, j = 8 > p ? " " : ",", h = "rect(" + i.clipTop + j + i.clipRight + j + i.clipBottom + j + i.clipLeft + ")", b = this.format(b).split(",").join(j)) : (h = this.format(_(a, this.p, e, !1, this.dflt)), b = this.format(b)), this.parseComplex(a.style, h, b, f, g)
+              }
+          }), ya("textShadow", {
+              defaultValue: "0px 0px 0px #999",
+              color: !0,
+              multi: !0
+          }), ya("autoRound,strictUnits", {
+              parser: function(a, b, c, d, e) {
+                  return e
+              }
+          }), ya("border", {
+              defaultValue: "0px solid #000",
+              parser: function(a, b, c, d, f, g) {
+                  var h = _(a, "borderTopWidth", e, !1, "0px"),
+                      i = this.format(b).split(" "),
+                      j = i[0].replace(w, "");
+                  return "px" !== j && (h = parseFloat(h) / aa(a, "borderTopWidth", 1, j) + j), this.parseComplex(a.style, this.format(h + " " + _(a, "borderTopStyle", e, !1, "solid") + " " + _(a, "borderTopColor", e, !1, "#000")), i.join(" "), f, g)
+              },
+              color: !0,
+              formatter: function(a) {
+                  var b = a.split(" ");
+                  return b[0] + " " + (b[1] || "solid") + " " + (a.match(pa) || ["#000"])[0]
+              }
+          }), ya("borderWidth", {
+              parser: ra("borderTopWidth,borderRightWidth,borderBottomWidth,borderLeftWidth")
+          }), ya("float,cssFloat,styleFloat", {
+              parser: function(a, b, c, d, e, f) {
+                  var g = a.style,
+                      h = "cssFloat" in g ? "cssFloat" : "styleFloat";
+                  return new ta(g, h, 0, 0, e, -1, c, !1, 0, g[h], b)
+              }
+          });
+          var Ua = function(a) {
+              var b, c = this.t,
+                  d = c.filter || _(this.data, "filter") || "",
+                  e = this.s + this.c * a | 0;
+              100 === e && (-1 === d.indexOf("atrix(") && -1 === d.indexOf("radient(") && -1 === d.indexOf("oader(") ? (c.removeAttribute("filter"), b = !_(this.data, "filter")) : (c.filter = d.replace(z, ""), b = !0)), b || (this.xn1 && (c.filter = d = d || "alpha(opacity=" + e + ")"), -1 === d.indexOf("pacity") ? 0 === e && this.xn1 || (c.filter = d + " alpha(opacity=" + e + ")") : c.filter = d.replace(x, "opacity=" + e))
+          };
+          ya("opacity,alpha,autoAlpha", {
+              defaultValue: "1",
+              parser: function(a, b, c, d, f, g) {
+                  var h = parseFloat(_(a, "opacity", e, !1, "1")),
+                      i = a.style,
+                      j = "autoAlpha" === c;
+                  return "string" == typeof b && "=" === b.charAt(1) && (b = ("-" === b.charAt(0) ? -1 : 1) * parseFloat(b.substr(2)) + h), j && 1 === h && "hidden" === _(a, "visibility", e) && 0 !== b && (h = 0), U ? f = new ta(i, "opacity", h, b - h, f) : (f = new ta(i, "opacity", 100 * h, 100 * (b - h), f), f.xn1 = j ? 1 : 0, i.zoom = 1, f.type = 2, f.b = "alpha(opacity=" + f.s + ")", f.e = "alpha(opacity=" + (f.s + f.c) + ")", f.data = a, f.plugin = g, f.setRatio = Ua), j && (f = new ta(i, "visibility", 0, 0, f, -1, null, !1, 0, 0 !== h ? "inherit" : "hidden", 0 === b ? "hidden" : "inherit"), f.xs0 = "inherit", d._overwriteProps.push(f.n), d._overwriteProps.push(c)), f
+              }
+          });
+          var Va = function(a, b) {
+                  b && (a.removeProperty ? (("ms" === b.substr(0, 2) || "webkit" === b.substr(0, 6)) && (b = "-" + b), a.removeProperty(b.replace(B, "-$1").toLowerCase())) : a.removeAttribute(b))
+              },
+              Wa = function(a) {
+                  if (this.t._gsClassPT = this, 1 === a || 0 === a) {
+                      this.t.setAttribute("class", 0 === a ? this.b : this.e);
+                      for (var b = this.data, c = this.t.style; b;) b.v ? c[b.p] = b.v : Va(c, b.p), b = b._next;
+                      1 === a && this.t._gsClassPT === this && (this.t._gsClassPT = null)
+                  } else this.t.getAttribute("class") !== this.e && this.t.setAttribute("class", this.e)
+              };
+          ya("className", {
+              parser: function(a, b, d, f, g, h, i) {
+                  var j, k, l, m, n, o = a.getAttribute("class") || "",
+                      p = a.style.cssText;
+                  if (g = f._classNamePT = new ta(a, d, 0, 0, g, 2), g.setRatio = Wa, g.pr = -11, c = !0, g.b = o, k = ca(a, e), l = a._gsClassPT) {
+                      for (m = {}, n = l.data; n;) m[n.p] = 1, n = n._next;
+                      l.setRatio(1)
+                  }
+                  return a._gsClassPT = g, g.e = "=" !== b.charAt(1) ? b : o.replace(new RegExp("(?:\\s|^)" + b.substr(2) + "(?![\\w-])"), "") + ("+" === b.charAt(0) ? " " + b.substr(2) : ""), a.setAttribute("class", g.e), j = da(a, k, ca(a), i, m), a.setAttribute("class", o), g.data = j.firstMPT, a.style.cssText = p, g = g.xfirst = f.parse(a, j.difs, g, h)
+              }
+          });
+          var Xa = function(a) {
+              if ((1 === a || 0 === a) && this.data._totalTime === this.data._totalDuration && "isFromStart" !== this.data.data) {
+                  var b, c, d, e, f, g = this.t.style,
+                      h = i.transform.parse;
+                  if ("all" === this.e) g.cssText = "", e = !0;
+                  else
+                      for (b = this.e.split(" ").join("").split(","), d = b.length; --d > -1;) c = b[d], i[c] && (i[c].parse === h ? e = !0 : c = "transformOrigin" === c ? Ea : i[c].p), Va(g, c);
+                  e && (Va(g, Ca), f = this.t._gsTransform, f && (f.svg && (this.t.removeAttribute("data-svg-origin"), this.t.removeAttribute("transform")), delete this.t._gsTransform))
+              }
+          };
+          for (ya("clearProps", {
+                  parser: function(a, b, d, e, f) {
+                      return f = new ta(a, d, 0, 0, f, 2), f.setRatio = Xa, f.e = b, f.pr = -10, f.data = e._tween, c = !0, f
+                  }
+              }), j = "bezier,throwProps,physicsProps,physics2D".split(","), wa = j.length; wa--;) za(j[wa]);
+          j = g.prototype, j._firstPT = j._lastParsedTransform = j._transform = null, j._onInitTween = function(a, b, h, j) {
+              if (!a.nodeType) return !1;
+              this._target = q = a, this._tween = h, this._vars = b, r = j, k = b.autoRound, c = !1, d = b.suffixMap || g.suffixMap, e = $(a, ""), f = this._overwriteProps;
+              var n, p, s, t, u, v, w, x, z, A = a.style;
+              if (l && "" === A.zIndex && (n = _(a, "zIndex", e), ("auto" === n || "" === n) && this._addLazySet(A, "zIndex", 0)), "string" == typeof b && (t = A.cssText, n = ca(a, e), A.cssText = t + ";" + b, n = da(a, n, ca(a)).difs, !U && y.test(b) && (n.opacity = parseFloat(RegExp.$1)), b = n, A.cssText = t), b.className ? this._firstPT = p = i.className.parse(a, b.className, "className", this, null, null, b) : this._firstPT = p = this.parse(a, b, null), this._transformType) {
+                  for (z = 3 === this._transformType, Ca ? m && (l = !0, "" === A.zIndex && (w = _(a, "zIndex", e), ("auto" === w || "" === w) && this._addLazySet(A, "zIndex", 0)), o && this._addLazySet(A, "WebkitBackfaceVisibility", this._vars.WebkitBackfaceVisibility || (z ? "visible" : "hidden"))) : A.zoom = 1, s = p; s && s._next;) s = s._next;
+                  x = new ta(a, "transform", 0, 0, null, 2), this._linkCSSP(x, null, s), x.setRatio = Ca ? Ta : Sa, x.data = this._transform || Ra(a, e, !0), x.tween = h, x.pr = -1, f.pop()
+              }
+              if (c) {
+                  for (; p;) {
+                      for (v = p._next, s = t; s && s.pr > p.pr;) s = s._next;
+                      (p._prev = s ? s._prev : u) ? p._prev._next = p: t = p, (p._next = s) ? s._prev = p : u = p, p = v
+                  }
+                  this._firstPT = t
+              }
+              return !0
+          }, j.parse = function(a, b, c, f) {
+              var g, h, j, l, m, n, o, p, s, t, u = a.style;
+              for (g in b) {
+                  if (n = b[g], "function" == typeof n && (n = n(r, q)), h = i[g]) c = h.parse(a, n, g, this, c, f, b);
+                  else {
+                      if ("--" === g.substr(0, 2)) {
+                          this._tween._propLookup[g] = this._addTween.call(this._tween, a.style, "setProperty", $(a).getPropertyValue(g) + "", n + "", g, !1, g);
+                          continue
+                      }
+                      m = _(a, g, e) + "", s = "string" == typeof n, "color" === g || "fill" === g || "stroke" === g || -1 !== g.indexOf("Color") || s && A.test(n) ? (s || (n = na(n), n = (n.length > 3 ? "rgba(" : "rgb(") + n.join(",") + ")"), c = va(u, g, m, n, !0, "transparent", c, 0, f)) : s && J.test(n) ? c = va(u, g, m, n, !0, null, c, 0, f) : (j = parseFloat(m), o = j || 0 === j ? m.substr((j + "").length) : "", ("" === m || "auto" === m) && ("width" === g || "height" === g ? (j = ga(a, g, e), o = "px") : "left" === g || "top" === g ? (j = ba(a, g, e), o = "px") : (j = "opacity" !== g ? 0 : 1, o = "")), t = s && "=" === n.charAt(1), t ? (l = parseInt(n.charAt(0) + "1", 10), n = n.substr(2), l *= parseFloat(n), p = n.replace(w, "")) : (l = parseFloat(n), p = s ? n.replace(w, "") : ""), "" === p && (p = g in d ? d[g] : o), n = l || 0 === l ? (t ? l + j : l) + p : b[g], o !== p && ("" !== p || "lineHeight" === g) && (l || 0 === l) && j && (j = aa(a, g, j, o), "%" === p ? (j /= aa(a, g, 100, "%") / 100, b.strictUnits !== !0 && (m = j + "%")) : "em" === p || "rem" === p || "vw" === p || "vh" === p ? j /= aa(a, g, 1, p) : "px" !== p && (l = aa(a, g, l, p), p = "px"), t && (l || 0 === l) && (n = l + j + p)), t && (l += j), !j && 0 !== j || !l && 0 !== l ? void 0 !== u[g] && (n || n + "" != "NaN" && null != n) ? (c = new ta(u, g, l || j || 0, 0, c, -1, g, !1, 0, m, n), c.xs0 = "none" !== n || "display" !== g && -1 === g.indexOf("Style") ? n : m) : W("invalid " + g + " tween value: " + b[g]) : (c = new ta(u, g, j, l - j, c, 0, g, k !== !1 && ("px" === p || "zIndex" === g), 0, m, n), c.xs0 = p))
+                  }
+                  f && c && !c.plugin && (c.plugin = f)
+              }
+              return c
+          }, j.setRatio = function(a) {
+              var b, c, d, e = this._firstPT,
+                  f = 1e-6;
+              if (1 !== a || this._tween._time !== this._tween._duration && 0 !== this._tween._time)
+                  if (a || this._tween._time !== this._tween._duration && 0 !== this._tween._time || this._tween._rawPrevTime === -1e-6)
+                      for (; e;) {
+                          if (b = e.c * a + e.s, e.r ? b = Math.round(b) : f > b && b > -f && (b = 0), e.type)
+                              if (1 === e.type)
+                                  if (d = e.l, 2 === d) e.t[e.p] = e.xs0 + b + e.xs1 + e.xn1 + e.xs2;
+                                  else if (3 === d) e.t[e.p] = e.xs0 + b + e.xs1 + e.xn1 + e.xs2 + e.xn2 + e.xs3;
+                          else if (4 === d) e.t[e.p] = e.xs0 + b + e.xs1 + e.xn1 + e.xs2 + e.xn2 + e.xs3 + e.xn3 + e.xs4;
+                          else if (5 === d) e.t[e.p] = e.xs0 + b + e.xs1 + e.xn1 + e.xs2 + e.xn2 + e.xs3 + e.xn3 + e.xs4 + e.xn4 + e.xs5;
+                          else {
+                              for (c = e.xs0 + b + e.xs1, d = 1; d < e.l; d++) c += e["xn" + d] + e["xs" + (d + 1)];
+                              e.t[e.p] = c
+                          } else -1 === e.type ? e.t[e.p] = e.xs0 : e.setRatio && e.setRatio(a);
+                          else e.t[e.p] = b + e.xs0;
+                          e = e._next
+                      } else
+                          for (; e;) 2 !== e.type ? e.t[e.p] = e.b : e.setRatio(a), e = e._next;
+                  else
+                      for (; e;) {
+                          if (2 !== e.type)
+                              if (e.r && -1 !== e.type)
+                                  if (b = Math.round(e.s + e.c), e.type) {
+                                      if (1 === e.type) {
+                                          for (d = e.l, c = e.xs0 + b + e.xs1, d = 1; d < e.l; d++) c += e["xn" + d] + e["xs" + (d + 1)];
+                                          e.t[e.p] = c
+                                      }
+                                  } else e.t[e.p] = b + e.xs0;
+                          else e.t[e.p] = e.e;
+                          else e.setRatio(a);
+                          e = e._next
+                      }
+          }, j._enableTransforms = function(a) {
+              this._transform = this._transform || Ra(this._target, e, !0), this._transformType = this._transform.svg && Aa || !a && 3 !== this._transformType ? 2 : 3
+          };
+          var Ya = function(a) {
+              this.t[this.p] = this.e, this.data._linkCSSP(this, this._next, null, !0)
+          };
+          j._addLazySet = function(a, b, c) {
+              var d = this._firstPT = new ta(a, b, 0, 0, this._firstPT, 2);
+              d.e = c, d.setRatio = Ya, d.data = this
+          }, j._linkCSSP = function(a, b, c, d) {
+              return a && (b && (b._prev = a), a._next && (a._next._prev = a._prev), a._prev ? a._prev._next = a._next : this._firstPT === a && (this._firstPT = a._next, d = !0), c ? c._next = a : d || null !== this._firstPT || (this._firstPT = a), a._next = b, a._prev = c), a
+          }, j._mod = function(a) {
+              for (var b = this._firstPT; b;) "function" == typeof a[b.p] && a[b.p] === Math.round && (b.r = 1), b = b._next
+          }, j._kill = function(b) {
+              var c, d, e, f = b;
+              if (b.autoAlpha || b.alpha) {
+                  f = {};
+                  for (d in b) f[d] = b[d];
+                  f.opacity = 1, f.autoAlpha && (f.visibility = 1)
+              }
+              for (b.className && (c = this._classNamePT) && (e = c.xfirst, e && e._prev ? this._linkCSSP(e._prev, c._next, e._prev._prev) : e === this._firstPT && (this._firstPT = c._next), c._next && this._linkCSSP(c._next, c._next._next, e._prev), this._classNamePT = null), c = this._firstPT; c;) c.plugin && c.plugin !== d && c.plugin._kill && (c.plugin._kill(b), d = c.plugin), c = c._next;
+              return a.prototype._kill.call(this, f)
+          };
+          var Za = function(a, b, c) {
+              var d, e, f, g;
+              if (a.slice)
+                  for (e = a.length; --e > -1;) Za(a[e], b, c);
+              else
+                  for (d = a.childNodes, e = d.length; --e > -1;) f = d[e], g = f.type, f.style && (b.push(ca(f)), c && c.push(f)), 1 !== g && 9 !== g && 11 !== g || !f.childNodes.length || Za(f, b, c)
+          };
+          return g.cascadeTo = function(a, c, d) {
+              var e, f, g, h, i = b.to(a, c, d),
+                  j = [i],
+                  k = [],
+                  l = [],
+                  m = [],
+                  n = b._internals.reservedProps;
+              for (a = i._targets || i.target, Za(a, k, m), i.render(c, !0, !0), Za(a, l), i.render(0, !0, !0), i._enabled(!0), e = m.length; --e > -1;)
+                  if (f = da(m[e], k[e], l[e]), f.firstMPT) {
+                      f = f.difs;
+                      for (g in d) n[g] && (f[g] = d[g]);
+                      h = {};
+                      for (g in f) h[g] = k[e][g];
+                      j.push(b.fromTo(m[e], c, h, f))
+                  }
+              return j
+          }, a.activate([g]), g
+      }, !0)
+  }), _gsScope._gsDefine && _gsScope._gsQueue.pop()(),
+  function(a) {
+      "use strict";
+      var b = function() {
+          return (_gsScope.GreenSockGlobals || _gsScope)[a]
+      };
+      "undefined" != typeof module && module.exports ? (require("../TweenLite.min.js"), module.exports = b()) : "function" == typeof define && define.amd && define(["TweenLite"], b)
+  }("CSSPlugin");
