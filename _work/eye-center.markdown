@@ -5,36 +5,37 @@ position: 2
 general:
   client: EyeCenter Optometric
   project_year: 2018
-  cover_image: "/uploads/eye-center-2.jpg"
+  cover_image: "/uploads/eye-center-2.JPG"
 services:
 - type: Photography
-credits:
-- type: Directed by Kyle Barr
 sections:
 - type: full-width-image
-  image: "/uploads/eye-center-1.jpg"
+  body: 
+  image: "/uploads/eye-center-1.JPG"
 - type: split-image-right
-  image: "/uploads/eye-center-2.jpg"
+  image: "/uploads/eye-center-2.JPG"
 - type: split-image-left
-  image: "/uploads/eye-center-3.jpg"
+  image: "/uploads/eye-center-3.JPG"
 - type: split-image-right
-  image: "/uploads/eye-center-4.jpg"
+  image: "/uploads/eye-center-4.JPG"
 - type: full-width-image
-  image: "/uploads/eye-center-5.jpg"
+  image: "/uploads/eye-center-5.JPG"
 - type: split-image-left
-  image: "/uploads/eye-center-6.jpg"
+  image: "/uploads/eye-center-6.JPG"
 - type: split-image-right
-  image: "/uploads/eye-center-7.jpg"
+  image: "/uploads/eye-center-7.JPG"
 - type: split-image-left
-  image: "/uploads/eye-center-8.jpg"
+  image: "/uploads/eye-center-8.JPG"
 - type: split-image-right
-  image: "/uploads/eye-center-9.jpg"
+  image: "/uploads/eye-center-9.JPG"
 - type: full-width-image
-  image: "/uploads/eye-center-10.jpg"
+  image: "/uploads/eye-center-10.JPG"
 - type: split-image-left
-  image: "/uploads/eye-center-11.jpg"
+  image: "/uploads/eye-center-11.JPG"
 - type: full-width-image
   image: "/uploads/eye-center-12.jpg"
+credits:
+- type: Directed by Kyle Barr
 ---
 
 Portraits of Dr. Fred Fuerst on set of our shoot with [KWB Creative](http://kwbcreative.com){:target="_blank"} for EyeCenter.
