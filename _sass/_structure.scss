@@ -29,12 +29,13 @@
 	background-position: center !important;
 
 	h4 {
+		font-size: $base-font-size + 10px;
 		color: $light-color;
 		text-transform: uppercase;
 	}
 	
 	.name {
-		width: 130px;
+		width: 250px;
 	}
 }
 

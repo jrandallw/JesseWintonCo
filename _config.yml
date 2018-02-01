@@ -98,7 +98,6 @@ twitter_username: jrandallw
 google_analytics:
   tracking_id: UA-107682340-1
 markdown: kramdown
-plugins: 
 sass:
   style: compressed
 permalinks: pretty

@@ -5,6 +5,7 @@ position: 0
 is_nav_page: false
 is_split: true
 layout: home
+hero_image: "/uploads/hero3.jpg"
 ---
 
-I’m a Creator, Writer, and Designer in Northern California.
+Photographer, writer, and designer working and living in Northern California.
