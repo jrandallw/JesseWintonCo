@@ -2,6 +2,7 @@
 title: Bella Vista Landscape
 date: 2017-10-12 18:48:00 Z
 position: 4
+published: false
 general:
   client: Bella Vista Landscape
   project_year: 2017
