@@ -90,7 +90,8 @@ defaults:
     layout: contact
     page_heading: ''
 email: hi@jessewinton.co
-description: Self-taught communicator with a focus in photography, communicative design, and writing.
+description: Self-taught communicator with a focus in photography, communicative design,
+  and writing.
 baseurl: http://jessewinton.co
 url: http://jessewinton.co
 twitter_username: jrandallw
