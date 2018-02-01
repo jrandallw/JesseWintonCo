@@ -19,7 +19,6 @@ sections:
 - type: split-image-right
   image: "/uploads/europe-1.jpg"
 - type: center-image
-  body: 
   image: "/uploads/europe-2.jpg"
 - type: split-image-left
   image: "/uploads/europe-3.jpg"

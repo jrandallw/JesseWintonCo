@@ -1,7 +1,7 @@
 ---
 title: Winter Portraits
 date: 2017-12-19 22:29:00 Z
-position: 0
+position: 1
 general:
   client: Personal Project
   project_year: 2017
@@ -10,8 +10,7 @@ services:
 - type: Photography
 sections:
 - type: split-image-left
-  body: 
-  image: "/uploads/winter-1-0613da.JPG"
+  image: "/uploads/winter-1.JPG"
   caption: Model • Jake Bennet
 - type: split-image-right
   image: "/uploads/winter-2.JPG"

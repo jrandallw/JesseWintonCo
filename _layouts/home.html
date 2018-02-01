@@ -3,15 +3,7 @@ layout: default
 class: page
 ---
 
-{% if page.hero_image %}
-<section class="hero column align-center position-relative" style="background: url({{ page.hero_image }});">
-  <h4 class="name text-center">Jesse Winton</h4>
-</section>
-{% else %}
-<section class="hero column align-center position-relative">
-  <h4 class="name text-center">Jesse Winton</h4>
-</section>
-{% endif %}
+{% include hero.html %}
 
 <section class="page-content home column align-center position-relative">
   <div class="container">

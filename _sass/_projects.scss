@@ -78,7 +78,6 @@
     width: $full;
     padding: $gutter * 2 0;
     margin-top: $project-overview;
-    margin-bottom: $footer-height;
     min-height: $footer-height;
 
     .container {
@@ -88,6 +87,10 @@
 
     .content-block {
         margin: $gutter * 8 auto;
+
+        &:first-of-type {
+            margin-top: $gutter * 3;
+        }
     }
 
     .full-width-image img {
