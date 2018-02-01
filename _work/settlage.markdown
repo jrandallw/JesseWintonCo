@@ -24,10 +24,10 @@ sections:
   caption: Model • Josh Settlage
 - type: split-image-left
   image: "/uploads/settlage-5.JPG"
-  caption: Model • Josh Settlage 
+  caption: Model • Josh Settlage
 - type: split-image-right
   image: "/uploads/settlage-6.JPG"
-  caption: Model • Josh Settlage    
+  caption: Model • Josh Settlage
 ---
 
 Lifestyle shots created for Josh Settlage, helping to build recongition and establish brand awareness for his business of personal training, nutrition, strength and conditioning.
