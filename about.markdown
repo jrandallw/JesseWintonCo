@@ -6,7 +6,6 @@ position: 2
 is_nav_page: true
 is_split: true
 page_heading: Let's work together.
-bio_image: "/uploads/bio-image.jpg"
 layout: about
 ---
 

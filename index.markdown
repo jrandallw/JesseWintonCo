@@ -5,7 +5,7 @@ position: 0
 is_nav_page: false
 is_split: true
 layout: home
-hero_image: "/uploads/hero3.jpg"
+hero_image: "/uploads/hero.jpg"
 ---
 
 Photographer, writer, and designer working and living in Northern California.
