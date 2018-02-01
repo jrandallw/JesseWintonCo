@@ -55,6 +55,10 @@ header {
         letter-spacing: 1px;
     	color: $text-color;
 		margin: 0 20px;
+
+		&:hover {
+			border-bottom: 1px solid $dark-color;
+		}
 		
 		&.active {
 			border-bottom: 1px solid $dark-color;
