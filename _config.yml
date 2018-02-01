@@ -92,7 +92,7 @@ defaults:
 email: hi@jessewinton.co
 description: Self-taught communicator with a focus in photography, communicative design,
   and writing.
-baseurl: http://jessewinton.co
+baseurl:
 url: http://jessewinton.co
 twitter_username: jrandallw
 google_analytics:

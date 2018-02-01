@@ -5,7 +5,7 @@ position: 3
 general:
   client: Personal Project
   project_year: 2018
-  cover_image: "/uploads/sacramento-1.JPG"
+  cover_image: "/uploads/sacramento-1.jpg"
 services:
 - type: Photography
 sections:

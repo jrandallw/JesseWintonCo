@@ -5,28 +5,28 @@ position: 0
 general:
   client: Josh Settlage
   project_year: 2018
-  cover_image: "/uploads/settlage-4.JPG"
+  cover_image: "/uploads/settlage-4.jpg"
 services:
 - type: Photography
 - type: Creative Direction
 sections:
 - type: full-width-image
-  image: "/uploads/settlage-1.JPG"
+  image: "/uploads/settlage-1.jpg"
   caption: Model • Josh Settlage
 - type: split-image-left
-  image: "/uploads/settlage-2.JPG"
+  image: "/uploads/settlage-2.jpg"
   caption: Model • Josh Settlage
 - type: full-width-image
-  image: "/uploads/settlage-3.JPG"
+  image: "/uploads/settlage-3.jpg"
   caption: Model • Josh Settlage
 - type: split-image-right
-  image: "/uploads/settlage-4.JPG"
+  image: "/uploads/settlage-4.jpg"
   caption: Model • Josh Settlage
 - type: split-image-left
-  image: "/uploads/settlage-5.JPG"
+  image: "/uploads/settlage-5.jpg"
   caption: Model • Josh Settlage
 - type: split-image-right
-  image: "/uploads/settlage-6.JPG"
+  image: "/uploads/settlage-6.jpg"
   caption: Model • Josh Settlage
 ---
 
