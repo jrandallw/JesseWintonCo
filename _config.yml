@@ -101,4 +101,4 @@ markdown: kramdown
 sass:
   style: compressed
 permalinks: pretty
-profile_image: "/uploads/profile.jpg"
+profile_image: "/uploads/hero.jpg"
