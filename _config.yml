@@ -44,8 +44,7 @@ defaults:
     services:
     - type: 
     sections:
-    - type: text
-      body: 
+    - type: 
 - scope:
     path: ''
     type: proposal
