@@ -22,19 +22,19 @@ sections:
 - type: split-image-left
   image: "/uploads/bong-6.jpg"
 - type: full-width-image
-  image: "/uploads/bong-7.jpg"  
+  image: "/uploads/bong-7.jpg"
 - type: split-image-right
   image: "/uploads/bong-8.jpg"
 - type: split-image-left
-  image: "/uploads/bong-9.jpg" 
+  image: "/uploads/bong-9.jpg"
 - type: split-image-right
-  image: "/uploads/bong-10.jpg" 
+  image: "/uploads/bong-10.jpg"
 - type: split-image-left
-  image: "/uploads/bong-11.jpg"  
+  image: "/uploads/bong-11.jpg"
 - type: split-image-right
-  image: "/uploads/bong-12.jpg"  
+  image: "/uploads/bong-12.jpg"
 - type: split-image-left
-  image: "/uploads/bong-13.jpg"   
+  image: "/uploads/bong-13.jpg"
 ---
 
 Lifestyle shots created for Josh Settlage, helping to build recongition and establish brand awareness for his business of personal training, nutrition, strength and conditioning.
