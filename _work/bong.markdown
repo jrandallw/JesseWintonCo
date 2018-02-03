@@ -5,7 +5,7 @@ position: 0
 general:
   client: Brad Bong
   project_year: 2018
-  cover_image: "/uploads/settlage-5.jpg"
+  cover_image: "/uploads/bong-6.jpg"
 services:
 - type: Photography
 sections:
@@ -37,4 +37,4 @@ sections:
   image: "/uploads/bong-13.jpg"   
 ---
 
-Lifestyle shots created for Josh Settlage, helping to build recongition and establish brand awareness for his business of personal training, nutrition, strength and conditioning.
+Created a new set of headshots and lifestyle portraits for Brad Bong, an actor based in NYC. Shot in Sacramento, CA on Mark III with Zeiss 85.
