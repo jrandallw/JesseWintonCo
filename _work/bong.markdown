@@ -5,7 +5,7 @@ position: 0
 general:
   client: Brad Bong
   project_year: 2018
-  cover_image: "/uploads/bong-6.jpg"
+  cover_image: "/uploads/bong-9.jpg"
 services:
 - type: Photography
 sections:
