@@ -93,6 +93,13 @@
         }
       }
     }
+    
+    @media #{$break-medium} {
+      & {
+        margin-bottom: 0 !important;
+      }
+    }
+
   }
 
   &.contact {
