@@ -6,6 +6,7 @@ general:
   client: Bella Vista Landscape
   project_year: 2017
   cover_image: "/uploads/lasalle-2.jpg"
+  is_dark: true
 services:
 - type: Photography
 sections:
