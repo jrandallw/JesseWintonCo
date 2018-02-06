@@ -22,19 +22,19 @@ sections:
   image: "/uploads/bong-5.jpg"
 - type: split-image-left
   image: "/uploads/bong-6.jpg"
-- type: full-width-image
+- type: push-image-right
   image: "/uploads/bong-7.jpg"
-- type: split-image-right
+- type: split-image-left
   image: "/uploads/bong-8.jpg"
-- type: split-image-left
+- type: split-image-right
   image: "/uploads/bong-9.jpg"
-- type: split-image-right
+- type: split-image-left
   image: "/uploads/bong-10.jpg"
-- type: split-image-left
-  image: "/uploads/bong-11.jpg"
 - type: split-image-right
-  image: "/uploads/bong-12.jpg"
+  image: "/uploads/bong-11.jpg"
 - type: split-image-left
+  image: "/uploads/bong-12.jpg"
+- type: split-image-right
   image: "/uploads/bong-13.jpg"
 ---
 
