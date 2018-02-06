@@ -60,11 +60,11 @@
     padding-top: $gutter * 7;
 
     .container {
-      width: $full - 20%;
+      width: $full - 40%;
 
       .project {
         margin: $gutter auto;
-        flex: 0 0 calc(25% - 20px);
+        flex: 0 0 calc(33% - 20px);
       
         figcaption {
           margin-top: $gutter;
