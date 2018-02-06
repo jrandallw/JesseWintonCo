@@ -48,12 +48,12 @@
     @media #{$break-medium} {
         & {
             height: $full-viewport-height;
+            position: relative;
         }
 
         & .container {
             max-width: $full - 10%;
             width: $full - 10%;
-            margin-top: $gutter * 9;
             flex-direction: column;
             padding-bottom: $gutter * 3;
 
@@ -168,6 +168,10 @@
     }
 
     @media #{$break-medium} {
+        & {
+            margin-top: 0 !important;
+        }    
+        
         & .container {
             max-width: $full;
             width: $full;
