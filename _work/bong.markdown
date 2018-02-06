@@ -6,12 +6,13 @@ general:
   client: Brad Bong
   project_year: 2018
   cover_image: "/uploads/bong-9.jpg"
+  is_dark: true
 services:
 - type: Photography
 sections:
 - type: split-image-left
   image: "/uploads/bong-1.jpg"
-- type: full-width-image
+- type: push-image-right
   image: "/uploads/bong-2.jpg"
 - type: split-image-right
   image: "/uploads/bong-3.jpg"

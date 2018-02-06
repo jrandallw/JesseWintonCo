@@ -102,9 +102,15 @@
     }
 
     .split-image-left,
-    .split-image-right {
+    .split-image-right,
+    .push-image-left,
+    .push-image-right {
         width: 100%;
-        background: $dark-color;
+        background: $secondary-light-color;
+
+        &.dark {
+            background: $dark-color;
+        }
 
         .caption {
             margin-top: $gutter;
@@ -113,7 +119,9 @@
     }
 
     .split-image-left::after,
-    .split-image-right::after {
+    .split-image-right::after,
+    .push-image-left::after,
+    .push-image-right::after {
         content: '';
         display: block;
         clear: both;
@@ -127,6 +135,18 @@
 
     .split-image-right figure {
         width: $half;
+        float: right;
+        position: relative;
+    }
+
+    .push-image-left figure {
+        width: $half + 25%;
+        float: left;
+        position: relative;
+    }
+
+    .push-image-right figure {
+        width: $half + 25%;
         float: right;
         position: relative;
     }

@@ -6,11 +6,11 @@ general:
   client: Personal Project
   project_year: 2017
   cover_image: "/uploads/winter-1.JPG"
+  is_dark: true
 services:
 - type: Photography
 sections:
 - type: split-image-left
-  body: 
   image: "/uploads/winter-1.JPG"
   caption: Model • Jake Bennet
 - type: split-image-right
