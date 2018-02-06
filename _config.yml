@@ -100,3 +100,5 @@ markdown: kramdown
 sass:
   style: compressed
 permalinks: pretty
+plugins:
+  - jekyll-redirect-from
