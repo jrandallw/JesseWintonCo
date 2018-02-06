@@ -101,4 +101,4 @@ sass:
   style: compressed
 permalinks: pretty
 plugins:
-  - jekyll-redirect-from
+- jekyll-redirect-from
