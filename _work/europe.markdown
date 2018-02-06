@@ -1,7 +1,6 @@
 ---
 title: Europe
 date: 2017-10-20 07:51:00 Z
-published: false
 position: 5
 general:
   client: Personal Project
