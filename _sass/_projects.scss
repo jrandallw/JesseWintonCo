@@ -108,14 +108,8 @@
             background: $dark-color;
         }
 
-        &.fadeIn {
-            
-            opacity: 1;
-            @include prefix(opacity, 0.3s, webkit moz);
-            
-            &[data-src] {
-                opacity: 0;
-            }
+        img {
+            width: $full;
         }
 
         .caption {
