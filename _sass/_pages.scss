@@ -60,7 +60,7 @@
     padding-top: $gutter * 7;
 
     .container {
-      width: $full - 10%;
+      width: $full - 20%;
 
       .project {
         margin: $gutter auto;
@@ -96,7 +96,7 @@
     
     @media #{$break-medium} {
       & {
-        margin-bottom: 0 !important;
+        margin-bottom: 0 !i3mportant;
       }
     }
 
