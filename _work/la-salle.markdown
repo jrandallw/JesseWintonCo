@@ -2,6 +2,7 @@
 title: Bella Vista Landscape
 date: 2017-10-12 18:48:00 Z
 position: 4
+published: false
 general:
   client: Bella Vista Landscape
   project_year: 2017
@@ -31,4 +32,4 @@ sections:
 layout: projects
 ---
 
-Partnering with Bella Vista Landscape, I produced a series of shots of their landscape remodel at La Salle Apartments, Davis, CA. When they completed the process of building a new courtyard, planting new plants, and building out a river bed that stretched throughout the entire complex, I helped the capture the essence of their new, modern design. 
+Created images of La Salle, Davis, CA. Documented their remodel, highlighting the modern design.

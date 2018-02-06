@@ -97,10 +97,6 @@
         width: 100%;
     }
 
-    .center-image img {
-        margin: 0 auto;
-    }
-
     .split-image-left,
     .split-image-right,
     .push-image-left,
@@ -112,8 +108,14 @@
             background: $dark-color;
         }
 
-        img {
-            width: 100%;
+        &.fadeIn {
+            
+            opacity: 1;
+            @include prefix(opacity, 0.3s, webkit moz);
+            
+            &[data-src] {
+                opacity: 0;
+            }
         }
 
         .caption {
