@@ -103,21 +103,14 @@
   }
 
   &.contact {
-		.description {
-			font-family: $heading-font-stack !important;
-			font-size: $base-font-size + 10px;
-			width: $full - 10%;
-      z-index: 1;
-      position: relative;
-      margin: 0 auto;
-      line-height: $base-line-height - .6;
-		}
-  }
+    .content {
+      margin-bottom: $gutter * 1.5;
+    }
 
-  @media #{$break-large} {
-    .description {
-      width: $full - 10%;
-      font-size: $base-font-size + 10px !important;
+    @media #{$break-medium} {
+      .container {
+          margin-top: $gutter * 5;  
+      }
     }
   }
 }

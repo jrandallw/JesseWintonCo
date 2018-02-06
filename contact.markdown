@@ -7,6 +7,6 @@ is_nav_page: true
 is_split: true
 page_heading: 
 layout: contact
+step_one_body: Shoot me a message about your project and let's talk about how we can work together.
+step_two_body: Thanks! I will review your inquiry and get back to you soon as I can.
 ---
-
-Shoot me an email at [{{ site.email }}](mailto:{{ site.email }}?subject=Let's work together.). Let's talk.

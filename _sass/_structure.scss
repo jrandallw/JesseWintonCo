@@ -363,6 +363,26 @@
 }
 
 // inputs
+.inquire-form {
+	width: $full;
+}
+
+.inquire-step-2 {
+	display: none;
+}
+
+.form-section {
+	width: $full;
+
+	& > * {
+		width: $full;
+	}
+
+	& {
+		margin-bottom: $gutter;
+	}
+}
+
 input,
 select,
 textarea {
@@ -375,6 +395,7 @@ textarea {
   letter-spacing: 1px;
   background: transparent;
   -webkit-appearance: none;
+  @include prefix(box-sizing, border-box, webkit moz ms);
 }
 @media only screen and (min-width: 40.063em) {
   input,
@@ -383,6 +404,15 @@ textarea {
     font-size: 10px;
   }
 }
+
+.btn {
+	margin: 0 auto;
+    display: block;
+    background: $dark-color;
+	color: $light-color;
+	cursor: pointer;
+}
+
 input:active, input:focus,
 select:active,
 select:focus,
