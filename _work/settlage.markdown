@@ -33,7 +33,7 @@ sections:
   image: "/uploads/settlage-7.jpg"
   caption: Model • Josh Settlage  
 - type: push-image-right
-  image: "/uploads/settlage-8.JPG"
+  image: "/uploads/settlage-8.jpg"
   caption: Model • Josh Settlage
 ---
 
