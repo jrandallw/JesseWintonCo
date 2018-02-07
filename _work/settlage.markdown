@@ -31,7 +31,7 @@ sections:
   caption: Model • Josh Settlage
 - type: split-image-left
   image: "/uploads/settlage-7.jpg"
-  caption: Model • Josh Settlage  
+  caption: Model • Josh Settlage
 - type: push-image-right
   image: "/uploads/settlage-8.jpg"
   caption: Model • Josh Settlage
