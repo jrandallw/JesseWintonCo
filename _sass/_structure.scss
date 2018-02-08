@@ -45,6 +45,10 @@
 			position: relative;
 			color: #fff;
 			text-decoration: none;
+
+			&:hover {
+			  color: $secondary-dark-color;	
+			}
 		}
 	}
 }
