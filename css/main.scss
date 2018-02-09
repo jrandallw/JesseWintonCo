@@ -1,7 +1,7 @@
 ---
 ---
 
-// Variables
+// variables
 $base-font-stack: 'Roboto Mono', 'Courier New', Courier, monospace;
 $heading-font-stack: 'Young Serif';
 $base-font-size: 12px;
@@ -25,7 +25,7 @@ $gutter: 20px;
 $border-box: border-box;
 $content-box: content-box;
 
-// width of the content areas
+// widths
 $full: 100%;
 $half: 50%;
 $max-width: 1600px;
@@ -36,7 +36,7 @@ $half-viewport-width: 50vw;
 $full-viewport-height: 100vh;
 $half-viewport-height: 50vh;
 
-// Browser prefix mixin
+// browser prefix mixin
 @mixin prefix($property, $value, $prefixes: ()) {
   @each $prefix in $prefixes {
     #{'-' + $prefix + '-' + $property}: $value;
@@ -45,7 +45,7 @@ $half-viewport-height: 50vh;
   #{$property}: $value;
 }
 
-// Breakpoints
+// breakpoints
 $break-large: "screen and (max-width: 768px)";
 $break-medium: "screen and (max-width: 438px)";
 

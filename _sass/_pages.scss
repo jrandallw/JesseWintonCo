@@ -92,6 +92,10 @@
           }
         }
       }
+
+      @media #{$break-large} {
+          width: $full - 10%;
+      }
     }
     
     @media #{$break-medium} {
