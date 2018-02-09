@@ -29,7 +29,7 @@ header {
 		}
 	}
 
-	@media #{$break-medium} {
+	@media #{$break-large} {
 		&, &.split {
 			width: $full;
 			padding: 0 !important;
@@ -93,6 +93,12 @@ header {
 	.template-posts-post & {
 		max-width: $full - 20%;
 		position: relative;
+	}
+
+	@media #{$break-large} {
+		&.split {
+			width: $full;
+    	}
 	}
 
 	@media #{$break-medium} {

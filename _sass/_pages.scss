@@ -7,6 +7,12 @@
     margin-bottom: $gutter * 2;
   }
 
+  @media #{$break-medium} {
+		& {
+			width: $full-viewport-width;
+		}
+	}
+
 	//home	
 	&.home {
 		.description {
@@ -17,7 +23,13 @@
       position: relative;
       margin: 0 auto;
       line-height: $base-line-height - .6;
-		}
+    }
+    
+    @media #{$break-large} {
+      & {
+        width: $full-viewport-width;
+      }
+    }
   }
 
   @media #{$break-large} {
@@ -50,7 +62,13 @@
           display: none;
         }
       }
-		}
+    }
+    
+    @media #{$break-large} {
+      & {
+        width: 100%;
+      }
+    }
   }
   
   &.work {
@@ -113,12 +131,6 @@
   &.contact {
     .content {
       margin-bottom: $gutter * 1.5;
-    }
-
-    @media #{$break-medium} {
-      .container {
-          margin-top: $gutter * 5;  
-      }
     }
   }
 }
