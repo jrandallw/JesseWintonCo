@@ -97,6 +97,10 @@
     @media #{$break-medium} {
       & {
         margin-bottom: 0 !important;
+
+        .container {
+          width: $full - 20%;
+        }
       }
     }
 
