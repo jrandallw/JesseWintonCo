@@ -1,4 +1,4 @@
-{% for block in page.sections%}
+{% for block in page.sections %}
 {% case block.type %}
 {% when 'full-width-image' or 'split-image-left' or 'split-image-right' or 'push-image-left' or 'push-image-right' %}
 <div class="{{ block.type }} content-block {% if page.general.is_dark == true %}dark{% endif %}">

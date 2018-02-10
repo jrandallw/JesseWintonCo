@@ -1,4 +1,4 @@
-<footer class="footer {% if page.is_split == true %}split{% endif %} row align-center position-absolute">
+<footer class="footer {% if page.is_split == true %}split position-absolute{% endif %} row align-center">
   <nav class="social grid-one-half">
   	{% for item in site.data.social.items %}
   	<a href={{ item.url | escape }} target={{ item.target }}>{{ item.title | escape }}</a>
