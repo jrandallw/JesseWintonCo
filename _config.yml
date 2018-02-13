@@ -29,8 +29,10 @@ defaults:
     path: ''
     type: posts
   values:
-    permalink: "/:collection/:title/"
+    permalink: "/journal/:title/"
     layout: entries
+    is_dark: true
+    is_fixed: true
 - scope:
     path: ''
     type: work
