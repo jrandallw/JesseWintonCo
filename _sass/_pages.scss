@@ -62,18 +62,6 @@
         }
       }
     }
-
-		.bio-image {
-      width: 300px;
-      display: none;
-      margin: 100px auto 0 auto;
-      
-      @media #{$break-large} {
-        & {
-          display: none;
-        }
-      }
-    }
     
     @media #{$break-large} {
       & {
@@ -140,34 +128,24 @@
 
   &.journal {
     width: $full;
-    min-height: $full-viewport-height;
-    padding-top: $gutter * 7;
+    min-height: 0;
+    
+      .entry {
+        margin: 0;
+        flex: 0 0 $half;
+        height: 500px;
+        text-align: center;
+        text-decoration: none;
 
-    .container {
-      width: $full - 40%;
-
-      .project {
-        margin: $gutter auto;
-        flex: 0 0 calc(33% - 20px);
-      
-        figcaption {
-          margin-top: $gutter;
-      
-          .title,
-          .details {
-            font-size: $base-font-size;
-            font-family: $base-font-stack;
-            text-transform: uppercase;
+          .entry-title {
+            color: $light-color;
           }
-        } 
-      
-        a {
-          text-decoration: none;
-        }
-        
-        &:hover {
-         text-decoration: underline; 
-        }
+          
+          .entry-meta {
+            color: $light-color;
+            font-family: $base-font-stack;
+            font-size: $base-font-size;
+          }
       
         @media #{$break-medium} {
           & {
@@ -176,11 +154,6 @@
           }
         }
       }
-
-      @media #{$break-large} {
-          width: $full - 10%;
-      }
-    }
     
     @media #{$break-medium} {
       & {

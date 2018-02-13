@@ -21,7 +21,12 @@ header {
 		.name,
 		a {
 			color: $light-color;
-		}	
+			
+			&:hover,
+			&.active {
+				border-color: $light-color;
+			}
+		}
 	}
 
 	&.fixed {

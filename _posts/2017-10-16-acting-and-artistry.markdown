@@ -1,6 +1,7 @@
 ---
 title: Acting & Artistry
 date: 2017-10-16 22:27:00 Z
+entry_color: "#d4d9d7"
 sections:
 - type: full-width-image
   image: "/uploads/lasalle-7.jpg"

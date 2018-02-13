@@ -1,4 +1,4 @@
-<nav class="nav text-right {% if page.is_dark == true %}dark{% endif %}">
+<nav class="nav text-right">
   {% if page.collection != 'proposal' %}
   {% assign pages = site.pages | where:"is_nav_page",true | sort: 'position' %}
   {% for node in pages %}

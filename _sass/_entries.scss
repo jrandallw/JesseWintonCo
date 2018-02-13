@@ -2,7 +2,6 @@
     width: $full;
     position: fixed;
     top: 0;
-    background: $dark-color;
     height: $full-viewport-height;
     z-index: -1;
 
@@ -39,7 +38,7 @@
         }
 
         &.text {
-            width: $half - 10%;
+            width: $half - 20%;
 
             @media #{$break-medium} {
                 & {

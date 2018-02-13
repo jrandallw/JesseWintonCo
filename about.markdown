@@ -2,7 +2,7 @@
 title: About
 date: 2017-10-08 02:27:00 Z
 permalink: "/about"
-position: 2
+position: 1
 is_nav_page: true
 is_split: true
 page_heading: I'm a multi-disciplined creative emphasizing story. Let's work together.

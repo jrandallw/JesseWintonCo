@@ -3,11 +3,11 @@ layout: default
 class: journal
 ---
 
-<section class="entries-overview column align-center">
+<section class="entries-overview column align-center" style="background: {{ page.entry_color }};">
     <div class="container">
       <div class="intro">
         <hgroup class="meta text-center">
-          <h3 class="title">{{ page.title | downcase }}</h3>
+          <h3 class="title">{{ page.title | upcase }}</h3>
           <h6 class="date-time">{{ page.date | date: "%B %d. %Y" | upcase }} • {% assign words = content | number_of_words %}{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }} mins{% endif %}</h6>
         </hgroup>  
       </div>
