@@ -1,7 +1,7 @@
 ---
 title: Travel In Europe
 date: 2018-02-13 22:27:00 Z
-entry_color: "#d4d9d7"
+entry_color: "#cccccc"
 sections:
 - type: full-width-image
   image: "/uploads/europe-2.jpg"
