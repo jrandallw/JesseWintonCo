@@ -17,6 +17,14 @@ header {
 		}
 	}
 
+	&.dark {
+		
+		.name,
+		a {
+			color: $light-color;
+		}	
+	}
+
 	.branding {
 		position: relative;
 		z-index: 1000;

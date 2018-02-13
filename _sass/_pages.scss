@@ -1,3 +1,14 @@
+.page-intro {
+  height: $full-viewport-height;
+  background: $dark-color;
+
+  &.journal {
+    & .container {
+      color: $light-color;
+    }
+  }
+}
+
 .page-content {
 	background: $light-color;
 	width: $half;
@@ -72,6 +83,62 @@
   }
   
   &.work {
+    width: $full;
+    min-height: $full-viewport-height;
+    padding-top: $gutter * 7;
+
+    .container {
+      width: $full - 40%;
+
+      .project {
+        margin: $gutter auto;
+        flex: 0 0 calc(33% - 20px);
+      
+        figcaption {
+          margin-top: $gutter;
+      
+          .title,
+          .details {
+            font-size: $base-font-size;
+            font-family: $base-font-stack;
+            text-transform: uppercase;
+          }
+        } 
+      
+        a {
+          text-decoration: none;
+        }
+        
+        &:hover {
+         text-decoration: underline; 
+        }
+      
+        @media #{$break-medium} {
+          & {
+            flex: 0 0 $full;
+            margin-bottom: $gutter * 3;
+          }
+        }
+      }
+
+      @media #{$break-large} {
+          width: $full - 10%;
+      }
+    }
+    
+    @media #{$break-medium} {
+      & {
+        margin-bottom: 0 !important;
+
+        .container {
+          width: $full - 20%;
+        }
+      }
+    }
+
+  }
+
+  &.journal {
     width: $full;
     min-height: $full-viewport-height;
     padding-top: $gutter * 7;
