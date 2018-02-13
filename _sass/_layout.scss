@@ -17,6 +17,23 @@ header {
 		}
 	}
 
+	&.dark {
+		.name,
+		a {
+			color: $light-color;
+			
+			&:hover,
+			&.active {
+				border-color: $light-color;
+			}
+		}
+	}
+
+	&.fixed {
+		position: fixed;
+		z-index: 0;
+	}
+
 	.branding {
 		position: relative;
 		z-index: 1000;
@@ -90,9 +107,15 @@ header {
 		width: $half;
 	}
 
-	.template-posts-post & {
-		max-width: $full - 20%;
+	.template-journal-post & {
+		max-width: $full - 15%;
 		position: relative;
+
+		@media #{$break-medium} {
+			& {
+				max-width: $full;
+			}
+		}
 	}
 
 	@media #{$break-large} {

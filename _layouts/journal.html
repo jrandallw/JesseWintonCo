@@ -3,22 +3,21 @@ layout: default
 class: page
 ---
 
-<section class="page-content work position-relative">
-  <div class="container row position-relative wrap">
-    {% assign projects = site.work | sort: "position" %}
-    
-    {% for project in projects %}
-      <div class="project">
-        <a href="{{ project.url }}">
-          <figure class="project-details">
-            <img src="{{ project.general.cover_image }}">
-            <figcaption class="text-center">
-              <h6 class="title">{{ project.title }}</h6>
-              <h6 class="details">{% for service in project.services %}{{ service.type }}{% if forloop.last == false %},{% endif %}{% endfor %}</h6>
-            </figcaption>
-          </figure> 
-        </a> 
-      </div>
-    {% endfor %}
+<section class="page-intro journal row align-center">
+  <div class="container">
+    {{ content }}
   </div>
+</section>
+
+<section class="page-content journal row wrap position-relative">
+    {% assign entries = site.posts | sort: "position" %}
+    
+    {% for entry in entries %}
+    <a href="{{ entry.url }}" class="entry column align-center" style="background: {{ entry.entry_color }};">
+      <div class="entry-details">
+        <h6 class="entry-title">{{ entry.title | upcase }}</h6>
+        <span class="entry-meta">{{ entry.date | date: "%B %d. %Y" | upcase }} • {% assign words = content | number_of_words %}{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }} mins{% endif %}</span>
+      </div> 
+    </a> 
+    {% endfor %}
 </section>

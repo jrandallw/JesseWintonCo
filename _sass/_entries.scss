@@ -1,9 +1,8 @@
 .entries-overview {
     width: $full;
-    position: relative;
+    position: fixed;
     top: 0;
-    background: $dark-color;
-    height: $half-viewport-height;
+    height: $full-viewport-height;
     z-index: -1;
 
     .title {
@@ -20,12 +19,131 @@
 
 .entry-content {
     background: $light-color;
-    max-width: $full - 20%;
-    width: $full;
+    width: $full - 15%;
+    min-height: $full-viewport-height;
+    margin-top: $full-viewport-height;
+    padding: 0 0 $gutter * 2 0;
+    z-index: 1;
     min-height: $footer-height;
 
     .container {
-        padding: $gutter * 3 0;
-        max-width: $half - 10%;
+        width: $full;
+    }
+
+    .content-block {
+        margin: $gutter * 8 auto;
+
+        &.first {
+            margin-top: 0;
+        }
+
+        &.text {
+            width: $half - 20%;
+
+            @media #{$break-medium} {
+                & {
+                    width: $full - 10%;
+                }    
+            }
+
+            @media #{$break-larger} {
+                & {
+                    width: $half - 10%;
+                }    
+            }
+        }
+    }
+
+    .full-width-image {
+        img {
+            width: 100%;
+    
+        }
+
+        .caption {
+            margin-top: $gutter;
+            width: $full;
+        }
+    }
+
+    .split-image-left,
+    .split-image-right,
+    .push-image-left,
+    .push-image-right {
+        width: $full - 15%;
+        background: $secondary-light-color;
+
+        &.dark {
+            background: $dark-color;
+        }
+
+        img {
+            width: $full;
+        }
+
+        .caption {
+            margin-top: $gutter;
+            width: $full;
+        }
+    }
+
+    .split-image-left::after,
+    .split-image-right::after,
+    .push-image-left::after,
+    .push-image-right::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .split-image-left figure {
+        width: $half;
+        float: left;
+        position: relative;
+    }
+
+    .split-image-right figure {
+        width: $half;
+        float: right;
+        position: relative;
+    }
+
+    .push-image-left figure {
+        width: $half + 25%;
+        float: left;
+        position: relative;
+    }
+
+    .push-image-right figure {
+        width: $half + 25%;
+        float: right;
+        position: relative;
+    }
+
+    .video {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 35px;
+        height: 0;
+        overflow: hidden;
+
+        iframe {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @media #{$break-medium} {
+        & {
+            width: $full;
+        }
+        
+        & .container {
+            max-width: $full;
+            width: $full;
+        }
     }
 }

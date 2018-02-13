@@ -5,6 +5,7 @@ collections:
   posts:
     title: Journal
     output: true
+    permalink: "/:collection/:path"
   work:
     title: Projects
     output: true
@@ -30,11 +31,13 @@ defaults:
   values:
     permalink: "/journal/:title/"
     layout: entries
+    is_dark: true
+    is_fixed: true
 - scope:
     path: ''
     type: work
   values:
-    permalink: "/work/:title/"
+    permalink: "/:collection/:title/"
     layout: projects
     general:
       client: 
@@ -49,7 +52,7 @@ defaults:
     path: ''
     type: proposal
   values:
-    permalink: "/proposal/:title/"
+    permalink: "/:collection/:title/"
     layout: proposal
     is_split: true
     billing_type: 
@@ -68,7 +71,6 @@ defaults:
     permalink: "/about"
     layout: about
     page_heading: ''
-    bio_image: ''
 - scope:
     path: work.markdown
     type: pages
