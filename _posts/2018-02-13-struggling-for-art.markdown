@@ -1,7 +1,7 @@
 ---
 title: Struggling for Art
 date: 2018-02-13 22:27:00 Z
-entry_color: "#dde3e2"
+entry_color: "#bbbbbb"
 sections:
 - type: text
   body: "Art is an act of creating. Of beauty. Through art, we have the chance to
