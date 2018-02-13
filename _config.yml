@@ -5,7 +5,6 @@ collections:
   posts:
     title: Journal
     output: true
-    permalink: "/:collection/:path"
   work:
     title: Projects
     output: true
