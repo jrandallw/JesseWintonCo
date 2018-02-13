@@ -45,18 +45,32 @@
                     width: $full - 10%;
                 }    
             }
+
+            @media #{$break-larger} {
+                & {
+                    width: $half - 10%;
+                }    
+            }
         }
     }
 
-    .full-width-image img {
-        width: 100%;
+    .full-width-image {
+        img {
+            width: 100%;
+    
+        }
+
+        .caption {
+            margin-top: $gutter;
+            width: $full;
+        }
     }
 
     .split-image-left,
     .split-image-right,
     .push-image-left,
     .push-image-right {
-        width: 100%;
+        width: $full - 15%;
         background: $secondary-light-color;
 
         &.dark {

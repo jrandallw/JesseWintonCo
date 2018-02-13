@@ -16,7 +16,7 @@ class: page
     <a href="{{ entry.url }}" class="entry column align-center" style="background: {{ entry.entry_color }};">
       <div class="entry-details">
         <h6 class="entry-title">{{ entry.title | upcase }}</h6>
-        <span class="entry-meta">{{ page.date | date: "%B %d. %Y" | upcase }} • {% assign words = content | number_of_words %}{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }} mins{% endif %}</span>
+        <span class="entry-meta">{{ entry.date | date: "%B %d. %Y" | upcase }} • {% assign words = content | number_of_words %}{% if words < 360 %}1 min{% else %}{{ words | divided_by:180 }} mins{% endif %}</span>
       </div> 
     </a> 
     {% endfor %}
