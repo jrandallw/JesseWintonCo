@@ -2,11 +2,11 @@
 title: Joshua Settlage
 date: 2018-01-28 09:00:00 Z
 position: 0
-is_dark: true
 general:
   client: Josh Settlage
   project_year: 2018
   cover_image: "/uploads/settlage-5.jpg"
+  is_dark: true
 services:
 - type: Photography
 - type: Creative Direction

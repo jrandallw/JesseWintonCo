@@ -2,11 +2,11 @@
 title: Fred Fuerst
 date: 2018-01-16 07:00:00 Z
 position: 2
-is_dark: true
 general:
   client: EyeCenter Optometric
   project_year: 2018
   cover_image: "/uploads/eye-center-2.JPG"
+  is_dark: true
 services:
 - type: Photography
 sections:

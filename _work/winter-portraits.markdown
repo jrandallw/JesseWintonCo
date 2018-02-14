@@ -2,11 +2,11 @@
 title: Winter Portraits
 date: 2017-12-19 22:29:00 Z
 position: 1
-is_dark: true
 general:
   client: Personal Project
   project_year: 2017
   cover_image: "/uploads/winter-1.JPG"
+  is_dark: true
 services:
 - type: Photography
 sections:

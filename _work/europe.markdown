@@ -7,6 +7,7 @@ general:
   client: Personal Project
   project_year: 2015-2016
   cover_image: "/uploads/europe-1.jpg"
+  is_dark: true
 services:
 - type: Photography
 sections:
