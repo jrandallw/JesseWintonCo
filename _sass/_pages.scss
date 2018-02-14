@@ -65,7 +65,7 @@
     
     @media #{$break-large} {
       & {
-        width: 100%;
+        width: $full;
       }
     }
   }
@@ -77,16 +77,32 @@
 
     .container {
       width: $full - 20%;
+      max-width: 1400px;
+
+      .grid-sizer {
+        width: $one-third;
+
+        @media #{$break-medium} {
+          & {
+            width: $full;
+          }
+        }
+      }
 
       .project {
-        margin: $gutter auto;
-        flex: 0 0 calc(33% - 20px);
+        width: calc(#{$one-third} - 20px);
+        margin-bottom: $gutter * 2;
+        
+        @media #{$break-medium} {
+          & {
+            width: $full;
+          }
+        }
       
         figcaption {
           margin-top: $gutter;
       
-          .title,
-          .details {
+          .title {
             font-size: $base-font-size;
             font-family: $base-font-stack;
             text-transform: uppercase;
@@ -204,7 +220,6 @@
       letter-spacing: 1px;
       background: transparent;
       -webkit-appearance: none;
-      @include prefix(box-sizing, border-box, webkit moz ms);
   
       @media #{$break-medium} {
           & {

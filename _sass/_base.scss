@@ -75,6 +75,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+* {
+	@include prefix(box-sizing, border-box, webkit moz ms);
+}
+
 // typography
 h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font-stack;

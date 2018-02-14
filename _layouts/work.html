@@ -4,7 +4,8 @@ class: page
 ---
 
 <section class="page-content work position-relative">
-  <div class="container row position-relative wrap">
+  <div class="project-index-grid container">
+    <div class="grid-sizer"></div>
     {% assign projects = site.work | sort: "position" %}
     
     {% for project in projects %}

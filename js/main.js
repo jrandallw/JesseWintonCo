@@ -4,7 +4,7 @@ $(document).ready(function(){
     tl.staggerFrom(".proposal-overview > div, .project-overview .container > div",.5,{opacity:0},0.1);
     tl.staggerFrom(".info ul li",.5,{opacity:0},0.1);
     tl.staggerFrom(".content-block",.5,{opacity:0},0.1);
-    tl.staggerFrom(".project",.8,{opacity:0,y:50, ease: Power1.easeOut},0.2);
+    tl.staggerFrom(".project",.5,{opacity:0, ease: Power1.easeOut},0.1);
   
     $(".inquire-form").validetta({
       display: "inline",
@@ -43,4 +43,13 @@ $(document).ready(function(){
           a.preventDefault()
       }
     });  
+
+    var $grid = $('.project-index-grid').imagesLoaded( function() {
+        // init Masonry after all images have loaded
+        $grid.masonry({
+            itemSelector: '.project',
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+      });
   });
