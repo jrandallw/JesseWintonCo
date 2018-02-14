@@ -1,7 +1,7 @@
 ---
 title: Spring Portraits
 date: 2018-01-28 09:00:00 Z
-position: 0
+position: 3
 general:
   client: Spring Portraits
   project_year: 2018

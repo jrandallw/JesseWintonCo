@@ -1,7 +1,7 @@
 ---
 title: Joshua Settlage
 date: 2018-01-28 09:00:00 Z
-position: 0
+position: 5
 general:
   client: Josh Settlage
   project_year: 2018
