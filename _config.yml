@@ -42,8 +42,8 @@ defaults:
       client: 
       project_year: 
       project_url: 
-      cover_image:
-      is_dark: true 
+      cover_image: 
+      is_dark: true
     services:
     - type: 
     sections:
