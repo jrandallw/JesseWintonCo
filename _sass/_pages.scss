@@ -72,30 +72,43 @@
   
   &.work {
     width: $full;
+    max-width: 1400px;
+    margin: 0 auto;
     min-height: $full-viewport-height;
     padding-top: $gutter * 7;
 
     .container {
       width: $full - 20%;
-      max-width: 1400px;
 
       .grid-sizer {
         width: $one-third;
 
         @media #{$break-medium} {
           & {
-            width: $full;
+            width: $full !important;
+          }
+        }
+
+        @media #{$break-large} {
+          & {
+            width: $half;
           }
         }
       }
 
       .project {
-        width: calc(#{$one-third} - 20px);
+        width: $one-third;
         margin-bottom: $gutter * 2;
         
         @media #{$break-medium} {
           & {
-            width: $full;
+            width: $full !important;
+          }
+        }
+
+        @media #{$break-large} {
+          & {
+            width: $half;
           }
         }
       
