@@ -3,7 +3,8 @@ header {
 	top: 30px;
 	right: 0;
 	width: $full;
-	position: absolute;
+	position: fixed;
+	z-index: 10;
 	
 	.template-work-post & {
 		position: fixed;
@@ -39,7 +40,7 @@ header {
 		z-index: 1000;
 
 		.name {
-    		width: 200px;
+    		width: 250px;
     		text-align: center;
 			line-height: 1.3;
 			margin: 0 auto;
