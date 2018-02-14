@@ -1,0 +1,90 @@
+.page-content {
+  background: $light-color;
+  width: $half;
+  min-height: $full-viewport-height;
+  
+  &.work {
+    width: $full;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: $full-viewport-height;
+    padding-top: $gutter * 7;
+
+    .container {
+      width: $full - 20%;
+
+      .grid-sizer {
+        width: $one-third;
+
+        @media #{$break-medium} {
+          & {
+            width: $full !important;
+          }
+        }
+
+        @media #{$break-large} {
+          & {
+            width: $half;
+          }
+        }
+      }
+
+      .project {
+        width: $one-third;
+        margin-bottom: $gutter * 2;
+        
+        @media #{$break-medium} {
+          & {
+            width: $full !important;
+          }
+        }
+
+        @media #{$break-large} {
+          & {
+            width: $half;
+          }
+        }
+      
+        figcaption {
+          margin-top: $gutter;
+      
+          .title {
+            font-size: $base-font-size;
+            font-family: $base-font-stack;
+            text-transform: uppercase;
+          }
+        } 
+      
+        a {
+          text-decoration: none;
+        }
+        
+        &:hover {
+         text-decoration: underline; 
+        }
+      
+        @media #{$break-medium} {
+          & {
+            flex: 0 0 $full;
+            margin-bottom: $gutter * 3;
+          }
+        }
+      }
+
+      @media #{$break-large} {
+          width: $full - 10%;
+      }
+    }
+    
+    @media #{$break-medium} {
+      & {
+        margin-bottom: 0 !important;
+
+        .container {
+          width: $full - 20%;
+        }
+      }
+    }
+
+  }
+}

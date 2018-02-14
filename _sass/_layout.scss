@@ -1,4 +1,3 @@
-// header
 header {
 	top: 30px;
 	right: 0;
@@ -89,7 +88,72 @@ header {
 	}
 }
 
-// footer
+.wrapper {
+	width: $full;
+	z-index: 1;
+
+	.page-content {
+		background: $light-color;
+		width: $half;
+		min-height: $full-viewport-height;
+	}
+
+@media #{$break-large} {
+    & {
+		flex-direction: column;
+    }
+}
+
+.container {
+	width: $full - 40%;
+	margin: 0 auto;
+}
+
+@media #{$break-medium} {
+    .container {
+        width: $full - 20%;
+    }
+}
+
+.hero {
+	width: $half-viewport-width;
+	height: $full-viewport-height;
+	background-color: $dark-color !important;
+	@include prefix(background-size, cover !important, webkit moz);
+	background-position: center !important;
+
+	h4 {
+		font-size: $base-font-size + 10px;
+		color: $light-color;
+		text-transform: uppercase;
+	}
+	
+	.name {
+		width: 250px;
+
+		span {
+			display: inline-block;
+		}
+
+		a {
+			position: relative;
+			color: #fff;
+			text-decoration: none;
+
+			&:hover {
+			  color: $secondary-dark-color;	
+			}
+		}
+	}
+
+	@media #{$break-large} {
+		& {
+			display: none !important;
+		}
+	}
+}
+}
+
 .footer {
     bottom: 0;
     width:  100%;

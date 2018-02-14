@@ -53,12 +53,14 @@ $break-medium: "screen and (max-width: 438px)";
 
 @import
 	"base",
-	"layout",
-  "pages",
-  "entries",
+  "layout",
+  "home",
+  "about",
+  "work",
   "projects",
+  "journal",
+  "entries",
   "proposals",
-  "structure",
-  "grids",
+  "contact",
 	"fonts"
 ;

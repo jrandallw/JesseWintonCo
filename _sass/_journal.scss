@@ -1,0 +1,53 @@
+.page-intro {
+    height: $full-viewport-height;
+    background: $dark-color;
+  
+    &.journal {
+      & .container {
+        color: $light-color;
+      }
+    }
+  }
+  
+  .page-content {
+    &.journal {
+      width: $full;
+      min-height: 0;
+      
+        .entry {
+          margin: 0;
+          flex: 0 0 $half;
+          height: 400px;
+          text-align: center;
+          text-decoration: none;
+  
+            .entry-title {
+              color: $light-color;
+            }
+            
+            .entry-meta {
+              color: $light-color;
+              font-family: $base-font-stack;
+              font-size: $base-font-size;
+            }
+        
+          @media #{$break-medium} {
+            & {
+              flex: 0 0 $full;
+              margin-bottom: $gutter * 3;
+            }
+          }
+        }
+      
+      @media #{$break-medium} {
+        & {
+          margin-bottom: 0 !important;
+  
+          .container {
+            width: $full - 20%;
+          }
+        }
+      }
+  
+    }
+  }
