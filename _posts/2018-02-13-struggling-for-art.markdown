@@ -1,6 +1,7 @@
 ---
 title: Struggling for Art
 date: 2018-02-13 22:27:00 Z
+published: false
 entry_color: "#bbbbbb"
 sections:
 - type: text
