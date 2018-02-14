@@ -44,11 +44,15 @@ $(document).ready(function(){
       }
     });  
 
-    var $grid = $('.project-index-grid').imagesLoaded( function() {
-        $grid.masonry({
-            itemSelector: '.project',
+    $(".project-index-grid").imagesLoaded(function() {
+        $(".project-index-grid").isotope({
+            itemSelector: ".project",
             percentPosition: !0,
-            columnWidth: '.grid-sizer'
-        });
-    });
+            layoutMode: "masonry",
+            masonry: {
+                columnWidth: ".grid-sizer"
+            }
+        })
+    })
+    
   });
