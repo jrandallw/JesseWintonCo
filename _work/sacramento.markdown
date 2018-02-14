@@ -2,11 +2,11 @@
 title: Sacramento, CA
 date: 2017-12-19 22:29:00 Z
 position: 3
+is_dark: true
 general:
   client: Personal Project
   project_year: 2018
   cover_image: "/uploads/sacramento-1.jpg"
-  is_dark: true
 services:
 - type: Photography
 sections:

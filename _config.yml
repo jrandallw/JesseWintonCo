@@ -38,6 +38,7 @@ defaults:
   values:
     permalink: "/:collection/:title/"
     layout: projects
+    is_dark: true
     general:
       client: 
       project_year: 
