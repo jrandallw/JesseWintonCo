@@ -10,7 +10,7 @@
 {% when 'text' %}
 <div class="{{ block.type }} content-block">
   <div class="container">
-    {% if block.title %}<h6>{{ block.title | downcase }}{% if block.price %} • {{ block.price | prepend: "$" }}{% endif%}{% if block.schedule %} • {{ block.schedule }}{% endif%}</h6>{% endif %}
+    {% if block.title %}<h6>{{ block.title | downcase }}{% if block.price %} • {{ block.price | prepend: "$" }}{% endif%}{% if block.schedule %} • {{ block.schedule | downcase }}{% endif%}</h6>{% endif %}
     {{ block.body | markdownify | downcase }}
   </div>
 </div>  
