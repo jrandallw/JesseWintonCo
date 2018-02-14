@@ -1,8 +1,8 @@
 ---
 title: Sacramento, CA
 date: 2017-12-19 22:29:00 Z
-position: 3
 published: false
+position: 3
 general:
   client: Personal Project
   project_year: 2018
