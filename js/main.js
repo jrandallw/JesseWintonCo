@@ -1,4 +1,15 @@
 $(document).ready(function(){
+    $(".project-index-grid").imagesLoaded(function() {
+        $(".project-index-grid").isotope({
+            itemSelector: ".project",
+            percentPosition: !0,
+            layoutMode: "masonry",
+            masonry: {
+                columnWidth: ".grid-sizer"
+            }
+        })
+    })
+    
     window.tl = new TimelineLite();
     tl.from(".hero, .description",.5,{opacity:0},0);
     tl.staggerFrom(".proposal-overview > div, .project-overview .container > div",.5,{opacity:0},0.1);
@@ -42,17 +53,6 @@ $(document).ready(function(){
       onError: function(a) {
           a.preventDefault()
       }
-    });  
-
-    $(".project-index-grid").imagesLoaded(function() {
-        $(".project-index-grid").isotope({
-            itemSelector: ".project",
-            percentPosition: !0,
-            layoutMode: "masonry",
-            masonry: {
-                columnWidth: ".grid-sizer"
-            }
-        })
-    })
+    }); 
     
   });

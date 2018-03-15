@@ -7,10 +7,11 @@
     width: $full;
     margin: 0 auto;
     min-height: $full-viewport-height;
-    padding-top: $gutter * 7;
+    padding-top: $gutter * 9;
 
     .container {
       width: $full - 20%;
+      max-width: 1400px;
 
       .grid-sizer {
         width: $one-third;
