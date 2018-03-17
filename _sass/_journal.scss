@@ -15,8 +15,8 @@
       min-height: 0;
       
         .entry {
-          margin: 0;
-          flex: 0 0 $half;
+          margin-bottom: $gutter * 3;
+          flex: 0 0 $full;
           height: 400px;
           text-align: center;
           text-decoration: none;
@@ -31,10 +31,10 @@
               font-size: $base-font-size;
             }
         
-          @media #{$break-medium} {
+          @media #{$break-mf-medium} {
             & {
-              flex: 0 0 $full;
-              margin-bottom: $gutter * 3;
+              flex: 0 0 $half;
+              margin: 0;
             }
           }
         }

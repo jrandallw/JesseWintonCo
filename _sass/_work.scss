@@ -14,34 +14,29 @@
       max-width: 1400px;
 
       .grid-sizer {
-        width: $one-third;
+        width: $full;
 
-        @media #{$break-medium} {
+        @media #{$break-mf-large} {
           & {
             width: $full !important;
-          }
-        }
-
-        @media #{$break-large} {
-          & {
-            width: $half;
           }
         }
       }
 
       .project {
-        width: $one-third;
+        width: $full;
         margin-bottom: $gutter * 2;
-        
-        @media #{$break-medium} {
+        padding: 0 $gutter / 2;
+
+        @media #{$break-mf-large} {
           & {
-            width: $full !important;
+            width: $one-third !important;
           }
         }
 
-        @media #{$break-large} {
+        @media #{$break-mf-medium} {
           & {
-            width: $half;
+            width: $one-third;
           }
         }
       
@@ -62,27 +57,10 @@
         &:hover {
          text-decoration: underline; 
         }
-      
-        @media #{$break-medium} {
-          & {
-            flex: 0 0 $full;
-            margin-bottom: $gutter * 3;
-          }
-        }
       }
 
-      @media #{$break-large} {
+      @media #{$break-mf-small} {
           width: $full - 10%;
-      }
-    }
-    
-    @media #{$break-medium} {
-      & {
-        margin-bottom: 0 !important;
-
-        .container {
-          width: $full - 20%;
-        }
       }
     }
 
