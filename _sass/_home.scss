@@ -1,46 +1,20 @@
 .page-content {
-      &.home {
+    &.home {
+        width: $full-viewport-width;
           .description {
               font-family: $heading-font-stack !important;
               font-size: $base-font-size + 10px;
               width: $full - 10%;
-        z-index: 1;
-        position: relative;
-        margin: 0 auto;
-        line-height: $base-line-height - .6;
-      }
-      
-      @media #{$break-large} {
-        & {
-          width: $full-viewport-width;
-        }
-      }
-    }
-  
-    @media #{$break-large} {
-      .description {
-        width: $full - 10%;
-        font-size: $base-font-size + 10px !important;
-      }
-    }
-  
-  
-      &.about {
-      .container {
-        width: $half + 25%;
-  
-        @media #{$break-medium} {
-          & {
-            margin-top: $gutter * 8;
-            width: $full - 10%;
+              z-index: 1;
+              position: relative;
+              margin: 0 auto;
+              line-height: $base-line-height - .6;
           }
-        }
-      }
       
-      @media #{$break-large} {
+      @media #{$break-mf-medium} {
         & {
-          width: $full;
+          width: $half;
         }
       }
     }
-  }
+}

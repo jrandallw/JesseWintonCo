@@ -1,8 +1,17 @@
+// complete
 .page-content {
-      
     &.contact {
+      width: $full;
+
       .content {
           margin-bottom: $gutter * 1.5;
+          margin-top: 100px;
+
+        @media #{$break-mf-medium} {
+          & {
+              margin-top: 0;
+            }
+          }  
       }
   
       .inquire-form {
@@ -32,15 +41,15 @@
           -webkit-appearance: none;
           border-radius: 0;
           padding: $gutter / 1.5;
-          font-size: $base-font-size - 3px;
+          font-size: $base-font-size - 2px;
           font-family: $base-font-stack;
           letter-spacing: 1px;
           background: transparent;
           -webkit-appearance: none;
     
-          @media #{$break-medium} {
+          @media #{$break-mf-medium} {
             & {
-                font-size: $base-font-size - 2px;
+                font-size: $base-font-size - 3px;
             }
           }
       }
@@ -121,5 +130,11 @@
         text-transform: uppercase;
         letter-spacing: 1.5px;
       }
-    }
+
+      @media #{$break-mf-medium} {
+        & {
+            width: $half;
+        }
+      }
+    }  
 }

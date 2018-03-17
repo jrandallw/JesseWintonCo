@@ -51,6 +51,10 @@ $break-larger: "screen and (max-width: 1300px)";
 $break-large: "screen and (max-width: 768px)";
 $break-medium: "screen and (max-width: 438px)";
 
+$break-mf-small: "only screen and (max-width: 40em)";
+$break-mf-medium: "screen and (min-width: 40.063em)";
+$break-mf-large: "screen and (min-width: 64.063em)";
+
 @import
 	"base",
   "layout",

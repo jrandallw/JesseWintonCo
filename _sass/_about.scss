@@ -1,21 +1,23 @@
 .page-content {
-  
-      &.about {
+    &.about {
+      width: $full;
+      
       .container {
-        width: $half + 25%;
+        width: $full - 10%;
+        margin-top: $gutter * 8;
   
-        @media #{$break-medium} {
+        @media #{$break-mf-medium} {
           & {
-            margin-top: $gutter * 8;
-            width: $full - 10%;
+            margin: 0;
+            width: $full - 25%;
           }
         }
       }
       
-      @media #{$break-large} {
+      @media #{$break-mf-medium} {
         & {
-          width: $full;
+          width: $half;
         }
       }
     }
-  }
+}
