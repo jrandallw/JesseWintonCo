@@ -151,7 +151,7 @@
   min-height: $footer-height;
 
   .container {
-      max-width: $full - 40%;
+      max-width: $max-width-slim;
       width: $full;
   }
 
