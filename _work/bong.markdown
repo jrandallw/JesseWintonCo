@@ -1,7 +1,7 @@
 ---
 title: Brad Bong
 date: 2018-01-28 09:00:00 Z
-position: 0
+position: 1
 general:
   client: Brad Bong
   project_year: 2018
