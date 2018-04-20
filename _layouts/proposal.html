@@ -42,6 +42,7 @@ class: proposal
   <div class="container">
   {% include content.html %}
 
+  {% if page.show_price == true %}
   {% assign total = 0 %}
   {% for price in page.sections %}
     {% assign total = total | plus: price.price %}
@@ -49,9 +50,14 @@ class: proposal
   <div class="content-block">
     <div class="text">
       <div class="container row align-center">
-        <p class="total price heading">Total Price <span>{{ total | prepend: "$" }} {{ page.billing_type | downcase }}</span></p>
+        {% if price %}
+        <p class="total price heading">Total Price <span>{{ total | prepend: "$" }}{{ page.billing_type | downcase }}</span></p>
+        {% else %}
+        <p class="total price heading">Total Price <span>{{ page.general.total_price | prepend: "$" }} {{ page.billing_type | downcase }}</span></p>
+        {% endif %}
       </div> 
     </div>  
-  </div>  
+  </div> 
+  {% endif %} 
 </div>
 </section>
