@@ -7,7 +7,7 @@ billing_type: Monthly
 purpose: Marketing & Strategy Proposal
 general: 
   is_dark: true
-  total_price: 1500
+  total_price: 2000
 client:
 - info: Bella Vista Landscape Services
 - info: San Jose, CA • 831.461.1761  
@@ -68,7 +68,7 @@ sections:
     
     **_Measuring Social Media Metrics_** 
 
-    In the first steps of the strategic development process, we’ll plan out 1-2 months worth of social media content across all platforms, specifically LinkedIn, Facebook, Instagram, Pinterest, Medium, and Houzz. This content will include photographs of properties, written stories of staff, email newsletters, photo journals telling stories of the company, and sharing pertinent articles and content from within the landscape & construction industry. The goal of this will be to build an audience, measure audience engagement, and use the metrics that we’ve gathered to plan future social media content. This is how we can start to develop our long-term social media strategy, utilizing the data that we collect to push the most effective content.  
+    In the first steps of the strategic development process, we’ll plan out 1-2 months worth of social media content across all platforms, specifically LinkedIn, Facebook, Instagram, Pinterest, Medium, and Houzz. This content will include photographs of properties, written stories of staff, email newsletters, photo journals telling stories of the company, and sharing pertinent articles and content from within the landscape & construction industry. The goal of this will be to build an audience, measure audience engagement, and use the metrics that we’ve gathered to plan future social media content. This is how we can start to develop our long-term social media strategy, utilizing the data that we collect to push the most effective content. We'll also create a first, introductory short-film, which will be the first in a series. The details of the videos are included below. 
 - type: split-image-left
   image: "/uploads/lasalle-8.jpg"
 - title: Other Tools
@@ -82,7 +82,7 @@ sections:
     
     **_Photo Journals & Company Stories_** 
 
-    Along with video content, there is significant data to prove that users engage most fully with content that includes imagery. We can create and tell stories of staff members, of the company itself, of specific properties that BLVS transformed, coupled with photographs that will be shot to help tell those stories. This is a somewhat new genre of marketing type- essentially a photo journal that weaves together a narrative with the visuals, tying the story of BVLS to the power of photographic content. These stories and photos can be shared on social networks like Pinterest, Houzz, Facebook, Instagram, and Medium, where we can create a corporate blog and utilize their format to help share the story of your company.
+    Along with video content, there is significant data to prove that users engage most fully with content that includes imagery. We can create and tell stories of staff members, of the company itself, of specific properties that BLVS transformed, coupled with photographs that will be shot to help tell those stories. This is a somewhat new genre of marketing type- essentially a photo journal that weaves together a narrative with the visuals, tying the story of BVLS to the power of photographic content. These stories and photos can be shared on social networks like Pinterest, Houzz, Facebook, Instagram, and [Medium](http://medium.com){:target="blank"}, where we can create a corporate blog and utilize their format to help share the story of your company.
 - type: split-image-right
   image: "/uploads/lasalle-9.jpg"
 - title: Conclusion

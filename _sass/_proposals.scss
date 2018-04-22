@@ -26,8 +26,19 @@
         margin-left: $gutter;
         margin-right: auto;
         
-        .services {
-            margin-left: $gutter;    
+        .services,
+        .client {
+            margin-left: $gutter;   
+            
+            @media #{$break-medium} {
+                margin-left: 0;
+            }
+        }
+
+        .client {
+            @media #{$break-medium} {
+                margin-bottom: $gutter * 2;
+            }
         }
     }    
 
@@ -223,6 +234,8 @@
     }
 
     @media #{$break-medium} {
+        margin-top: $full-viewport-height;
+
         & .container {
             max-width: $full;
             width: $full;
