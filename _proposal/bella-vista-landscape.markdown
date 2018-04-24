@@ -1,5 +1,5 @@
 ---
-title: Bella Vista Landscape
+title: BellaVista Landscape
 date: 2017-10-25 23:04:00 Z
 is_split: false
 show_price: true
@@ -9,7 +9,7 @@ general:
   is_dark: true
   total_price: 2000
 client:
-- info: Bella Vista Landscape Services
+- info: BellaVista Landscape Services
 - info: San Jose, CA • 831.461.1761  
 services:
 - type: Strategy
@@ -40,7 +40,7 @@ sections:
     * Strategic Short Films
     * Written Content
     
-    Bella Vista’s best asset for growth is, and will likely continue to be, predicated on a strong relationship with property managers and residential homeowners throughout Northern California. The strategy has been to create a culture where clients feel personally cared for, while BLVS operates on a large scale level; a small-scale feel with large-scale capabilities and quality.
+    BellaVista’s best asset for growth is, and will likely continue to be, predicated on a strong relationship with property managers and residential homeowners throughout Northern California. The strategy has been to create a culture where clients feel personally cared for, while BLVS operates on a large scale level; a small-scale feel with large-scale capabilities and quality.
 
     Using the tools listed above, we’ll build on the existing concept, and be able to build out a solid marketing strategy that will help BLVS achieve it’s goals for growth on digital platforms over the next 2-3 years.
 - type: push-image-left
@@ -95,4 +95,4 @@ sections:
   image: "/uploads/lasalle-4.jpg"
 ---
 
-This proposal is for strategization and creation of short and long-term marketing plans to help facilitate continual growth for Bella Vista Landscape Services.
+This proposal is for strategization and creation of short and long-term marketing plans to help facilitate continual growth for BellaVista Landscape Services.
