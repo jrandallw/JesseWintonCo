@@ -7,17 +7,17 @@ class: proposal
   <div class="container row">
     <div class="intro grid-one-half">
       <h6 class="heading">{{ page.title }} • {{ page.purpose }}</h6>
-      <p class="content">{{ page.content | remove: '<p>' | remove: '</p>' }}</p>
+      <p class="content">{{ page.content | downcase | remove: '<p>' | remove: '</p>' }}</p>
     </div>
 
     <div class="info grid-one-half row">
       {% assign client = page.client | strip_newlines %}
       {% if client != '' %}
       <div class="client grid-one-half">
-        <h6 class="heading">Client</h6>   
+        <h6 class="heading">{{ "Client" | upcase }}</h6>   
         <ul>
           {% for client_info in page.client %}
-          <li>{{ client_info.info }}</li>
+          <li>{{ client_info.info | downcase}}</li>
           {% endfor %}
         </ul>
       </div>
@@ -26,10 +26,10 @@ class: proposal
       {% assign services = page.services | strip_newlines %}
       {% if services != '' %}
       <div class="services grid-one-half">
-        <h6 class="heading">Services</h6>   
+        <h6 class="heading">{{ "Services" | upcase }}</h6>   
         <ul>
           {% for service in page.services %}
-          <li>{{ service.type }}</li>
+          <li>{{ service.type | downcase }}</li>
           {% endfor %}
         </ul>
       </div>
