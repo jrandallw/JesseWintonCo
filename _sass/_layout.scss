@@ -120,7 +120,7 @@ header {
 	height: $full-viewport-height;
 	background-color: $dark-color !important;
 	@include prefix(background-size, cover !important, webkit moz);
-	background-position: center !important;
+	background-position: center top !important;
 
 	h4 {
 		font-size: $base-font-size + 10px;
