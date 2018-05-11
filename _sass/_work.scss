@@ -10,7 +10,7 @@
     padding-top: $gutter * 9;
 
     .container {
-      width: $full - 20%;
+      width: $full - 10%;
       max-width: 1400px;
 
       .grid-sizer {
@@ -18,15 +18,15 @@
 
         @media #{$break-mf-large} {
           & {
-            width: $full !important;
+            width: $full / 3 !important;
           }
         }
       }
 
       .project {
         width: $full;
-        margin-bottom: $gutter * 2;
-        padding: 0 $gutter / 2;
+        margin-bottom: $gutter;
+        //padding: 0 $gutter / 2;
 
         @media #{$break-mf-large} {
           & {

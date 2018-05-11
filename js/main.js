@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    /*$(".project-index-grid").imagesLoaded(function() {
+    $(".project-index-grid").imagesLoaded(function() {
         $(".project-index-grid").isotope({
             itemSelector: ".project",
             percentPosition: !0,
@@ -8,7 +8,7 @@ $(document).ready(function(){
                 columnWidth: ".grid-sizer"
             }
         })
-    })*/
+    })
     
     window.tl = new TimelineLite();
     tl.from(".hero, .description",.5,{opacity:0},0);
