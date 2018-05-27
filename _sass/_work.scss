@@ -11,32 +11,27 @@
 
     .container {
       width: $full - 10%;
-      max-width: 1400px;
+      max-width: $content-width;
+      @include flex-row;
+      flex-wrap: wrap;
 
-      .grid-sizer {
+
+      .project {
         width: $full;
+        margin-bottom: $gutter;
+        padding: 0 $gutter / 2;
+        @include flex-column;
+        @include flex-center;
 
         @media #{$break-mf-large} {
           & {
             width: $full / 3 !important;
           }
         }
-      }
-
-      .project {
-        width: $full;
-        margin-bottom: $gutter;
-        //padding: 0 $gutter / 2;
-
-        @media #{$break-mf-large} {
-          & {
-            width: $one-third !important;
-          }
-        }
 
         @media #{$break-mf-medium} {
           & {
-            width: $one-third;
+            width: $full / 3;
           }
         }
       

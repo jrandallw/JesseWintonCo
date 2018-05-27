@@ -29,6 +29,7 @@ $content-box: content-box;
 // widths
 $full: 100%;
 $half: 50%;
+$content-width: 1440px;
 $max-width: 1600px;
 $max-width-slim: 1200px;
 $one-third: 33.3333333%;
@@ -45,6 +46,33 @@ $half-viewport-height: 50vh;
   }
 
   #{$property}: $value;
+}
+
+// flex mixins
+@mixin flex-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
 }
 
 // breakpoints

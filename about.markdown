@@ -5,9 +5,10 @@ permalink: "/about"
 position: 1
 is_nav_page: true
 is_split: true
-page_heading: I'm a multi-disciplined creative emphasizing story. Let's work together.
+page_heading: Let's work together.
+hero_image: "/uploads/hero.jpg"
 ---
 
-Self-taught communicator with a focus in photography, communicative design, and writing. I love working with start-ups and established companies across all sectors to help create the things that they need to build and grow. Pure, candid collaboration is my goal, which in turn creates an incubator for strong work, both in-house and through strategic creative partnerships. 
+I'm a freelance photographer, writer, and communicator, currently living and working just outside Sacramento, CA. I love telling stories, and photography is one of the many ways I've found that allows me to express that. I love travel, street, and portrait photography. I'm also in school studying Musical Theatre. 
 
-I provide photography, design, writing, production, strategy, and film services. 
+More stories– go figure. Talk to me at <a href="mailto:hi@jessewinton.co">hi@jessewinton.co</a>.

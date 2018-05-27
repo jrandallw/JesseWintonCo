@@ -1,10 +1,47 @@
 ---
-title: Home
-date: 2017-09-08 20:14:00 Z
-is_nav_page: false
-is_split: true
-layout: home
-hero_image: "/uploads/hero.jpg"
+title: Work
+date: 2017-10-12 01:03:00 Z
+position: 0
+layout: work
+is_nav_page: true
+work:
+- image: "/uploads/IMG_001.jpg"
+- image: "/uploads/IMG_002.jpg"
+- image: "/uploads/IMG_003.jpg"
+- image: "/uploads/IMG_005.jpg"
+- image: "/uploads/IMG_004.jpg"
+- image: "/uploads/IMG_006.jpg"
+- image: "/uploads/IMG_009.jpg"
+- image: "/uploads/IMG_007.jpg"
+- image: "/uploads/IMG_011.jpg"
+- image: "/uploads/IMG_008.jpg"
+- image: "/uploads/IMG_010.jpg"
+- image: "/uploads/IMG_012.jpg"
+- image: "/uploads/IMG_014.jpg"
+- image: "/uploads/IMG_013.jpg"
+- image: "/uploads/IMG_018.jpg"
+- image: "/uploads/IMG_016.jpg"
+- image: "/uploads/IMG_017.jpg"
+- image: "/uploads/IMG_015.jpg"
+- image: "/uploads/IMG_023.jpg"
+- image: "/uploads/IMG_020.jpg"
+- image: "/uploads/IMG_021.jpg"
+- image: "/uploads/IMG_019.jpg"
+- image: "/uploads/IMG_022.jpg"
+- image: "/uploads/IMG_024.jpg"
+- image: "/uploads/IMG_026.jpg"
+- image: "/uploads/IMG_025.jpg"
+- image: "/uploads/IMG_035.jpg"
+- image: "/uploads/IMG_028.jpg"
+- image: "/uploads/IMG_029.jpg"
+- image: "/uploads/IMG_030.jpg"
+- image: "/uploads/IMG_031.jpg"
+- image: "/uploads/IMG_032.jpg"
+- image: "/uploads/IMG_033.jpg"
+- image: "/uploads/IMG_034.jpg"
+- image: "/uploads/IMG_026.jpg"
+- image: "/uploads/IMG_036.jpg"
+- image: "/uploads/IMG_037.jpg"
+- image: "/uploads/IMG_038.jpg"
+- image: "/uploads/IMG_039.jpg"
 ---
-
-Photographer, writer, and designer working and living in Northern California.
