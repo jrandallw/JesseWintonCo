@@ -1,0 +1,22 @@
+---
+label: Image
+hide_body: false
+is_partial: true
+fields:
+- type: file
+  name: image
+  label: Image Upload
+- type: select
+  name: image_layout
+  config:
+    source:
+      type: simple
+    options:
+    - fullwidth
+    - center
+    - split-right
+    - split-left
+    - push-right
+    - push-left
+    required: true
+  label: Image Layout
