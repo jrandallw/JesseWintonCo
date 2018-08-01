@@ -23,12 +23,11 @@ fields:
     name: service
     label: Service
 - type: blocks
-  name: sections
-  label: Page Sections
+  name: blocks
+  label: Blocks
   template_types:
   - image
-  description: Predefined content types to build out your pages...
-- type: blocks
+  description: ''
 pages:
 - 404.markdown
 - index.markdown
