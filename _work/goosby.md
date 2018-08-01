@@ -21,7 +21,6 @@ blocks:
 - template: image
   image_layout: split-image-right
   image: "/uploads/goosby005.jpg"
-published: false
 
 ---
 I made a new set of lifestyle portraits for Chris Goosby, an actor based in NYC moving to California. These shots were made for his move to a new city, pursuing film and television.
