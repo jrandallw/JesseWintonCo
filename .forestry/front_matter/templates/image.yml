@@ -21,3 +21,6 @@ fields:
     required: true
   label: Image Layout
   default: fullwidth
+- type: text
+  name: caption
+  label: Caption
