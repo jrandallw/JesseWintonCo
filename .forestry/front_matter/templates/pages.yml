@@ -6,13 +6,13 @@ fields:
 - type: text
   name: client
   label: Client
-  default: Client
+  default: ''
 - type: text
-  default: Project Year
+  default: ''
   label: Project Year
   name: project_year
 - type: textarea
-  default: Project Description
+  default: ''
   label: Project Description
   name: project_description
 - type: field_group_list
