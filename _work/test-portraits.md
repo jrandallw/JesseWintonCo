@@ -7,6 +7,7 @@ project_description: Lifestyle shots with Mary Kantorik, a new affiliate for XOM
 date: 2018-08-01 17:41:41 +0000
 services:
 - service: Photography
+- service: Creative Direction
 blocks:
 - template: image
   image_layout: fullwidth
