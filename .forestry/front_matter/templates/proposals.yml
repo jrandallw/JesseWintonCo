@@ -10,8 +10,8 @@ fields:
   name: scope
   label: Scope
 - type: field_group_list
-  label: Info
-  name: info
+  label: Client Info
+  name: client_info
   fields:
   - type: text
     name: info
