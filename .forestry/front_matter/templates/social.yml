@@ -11,10 +11,8 @@ fields:
   - type: text
     label: Title
     name: title
-    description: e.g. Facebook
   - type: text
     label: URL
     name: url
-    description: e.g. https://facebook.com/username
 data_files:
 - _data/social.yml
