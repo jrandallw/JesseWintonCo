@@ -8,11 +8,6 @@
    label: Pages
    create: all
  - type: directory
-   path: _uploads
-   label: Uploads
-   create: all
-   match: "**/*"
- - type: directory
    path: _proposal
    label: Proposal
    create: all
@@ -22,10 +17,10 @@
    label: Work
    create: all
    match: "**/*"
- - type: jekyll-posts
-   label: Posts
-   create: all
-   match: "**/*"
+ # - type: jekyll-posts
+ #  label: Posts
+ #  create: all
+ #  match: "**/*"
  upload_dir: uploads
  public_path: "/uploads"
  front_matter_path: ''
