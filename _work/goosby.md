@@ -18,6 +18,9 @@ blocks:
 - template: image
   image_layout: push-image-left
   image: "/uploads/goosby004.jpg"
+- template: image
+  image_layout: split-image-right
+  image: "/uploads/goosby005.jpg"
 published: false
 
 ---
