@@ -20,6 +20,8 @@ blocks:
 - template: image
   image_layout: split-image-left
   image: "/uploads/eyecenter004.jpg"
-published: false
+- template: image
+  image_layout: split-image-right
+  image: "/uploads/eyecenter005.jpg"
 
 ---
