@@ -75,26 +75,31 @@
   background: $secondary-light-color;
   min-height: $project-overview;
   z-index: -1;
+  @include flex-row;
+  @include flex-center;
 
   .container {
       max-width: $max-width-slim;
       width: $full - 20%;
+      @include flex-row;
   }
 
   .intro {
       padding-right: $gutter + 10px;
       box-sizing: border-box;
       text-align: justify;
+      @include grid-half;
   }
 
   .intro,
   .info {
-      flex: 0 0 calc(50% - #{$gutter * 2});
+      @include grid-half;
   }
 
   .info {
       margin-left: $gutter;
       margin-right: auto;
+      @include flex-row;
       
       .services {
           margin-left: $gutter;    
@@ -186,6 +191,8 @@
       .caption {
           margin-top: $gutter;
           width: $full;
+          @include pin-horizontal-center;
+          text-align: center;
       }
   }
 

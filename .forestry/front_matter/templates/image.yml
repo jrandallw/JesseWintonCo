@@ -12,12 +12,12 @@ fields:
     source:
       type: simple
     options:
-    - fullwidth
-    - center
-    - split-right
-    - split-left
-    - push-right
-    - push-left
+    - fullwidth-image
+    - center-image
+    - split-image-right
+    - split-image-left
+    - push-image-right
+    - push-image-left
     required: true
   label: Image Layout
   default: fullwidth

@@ -3,24 +3,21 @@ layout: default
 class: page
 ---
 
-<section class="project-overview row align-center">
-  <div class="container row">
-    <div class="intro grid-one-half">
-      <h6 class="heading">{{ page.general.client }} • {{ page.general.project_year }}</h6>
-
-      {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
-
-      <a href="{{ page.general.project_url }}" target="_blank" class="project-link">{{ page.general.project_url | remove: "http://" }}</a>
+<section class="project-overview">
+  <div class="container">
+    <div class="intro">
+      <h6 class="heading">{{ page.client }} • {{ page.project_year }}</h6>
+      {{ page.project_description | downcase | remove: '<p>' | remove: '</p>' }}
     </div>
 
-    <div class="info grid-one-half row">
+    <div class="info">
       {% assign services = page.services | strip_newlines %}
       {% if services != '' %}
-      <div class="services grid-one-half">
+      <div class="services">
         <h6 class="heading">{{ "Services" | upcase }}</h6>   
         <ul>
-          {% for service in page.services %}
-          <li>{{ service.type | downcase }}</li>
+          {% for services in page.services %}
+          <li>{{ services.service | downcase }}</li>
           {% endfor %}
         </ul>
       </div>
@@ -43,6 +40,12 @@ class: page
 
 <section class="project-content">
   <div class="container">
-   {% include content.html %}
+    {% for block in page.blocks %}
+    {% assign template = block.template %}
+    {% case template %}
+    {% when 'image' %}
+        {% include blocks/images.html %}                  
+    {% endcase %}
+    {% endfor %}
   </div>
 </section>
