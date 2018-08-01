@@ -1,5 +1,5 @@
 ---
-new_page_extension: md
+new_page_extension: markdown
 auto_deploy: false
 admin_path: ''
 webhook_url: 
@@ -8,13 +8,8 @@ sections:
   label: Pages
   create: all
 - type: directory
-  path: _uploads
-  label: Uploads
-  create: all
-  match: "**/*"
-- type: directory
   path: _proposal
-  label: Proposal
+  label: Proposals
   create: all
   match: "**/*"
 - type: directory
@@ -22,9 +17,6 @@ sections:
   label: Work
   create: all
   match: "**/*"
-- type: jekyll-posts
-  label: Posts
-  create: all
 upload_dir: _uploads
 public_path: "/uploads"
 front_matter_path: ''
