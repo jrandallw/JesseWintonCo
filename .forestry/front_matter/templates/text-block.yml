@@ -1,8 +1,14 @@
 ---
-label: Text Block
+label: Proposal Block
 hide_body: false
 is_partial: false
 fields:
+- type: text
+  label: Title
+  name: title
+- type: text
+  name: price
+  label: Price
 - type: textarea
   config:
     wysiwyg: true
