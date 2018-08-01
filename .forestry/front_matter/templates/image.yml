@@ -20,3 +20,4 @@ fields:
     - push-left
     required: true
   label: Image Layout
+  default: fullwidth
