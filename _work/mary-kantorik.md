@@ -11,6 +11,5 @@ blocks:
   image_layout: split-image-right
   image: "/uploads/kantorik001.jpg"
   caption: Model • Mary Kantorik
-published: false
 
 ---
