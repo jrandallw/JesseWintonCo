@@ -13,6 +13,9 @@ collections:
     title: Proposals
     output: true
     permalink: "/:collection/:path"
+  uploads:
+    title: Uploads
+    output: true
 defaults:
 - scope:
     path: ''
@@ -29,6 +32,38 @@ defaults:
     layout: entries
     is_dark: true
     is_fixed: true
+- scope:
+    path: ''
+    type: work
+  values:
+    permalink: "/:collection/:title/"
+    layout: projects
+    general:
+      client: 
+      project_year: 
+      project_url: 
+      cover_image: 
+      is_dark: true
+    services:
+    - type: 
+    sections:
+    - type: 
+- scope:
+    path: ''
+    type: proposal
+  values:
+    permalink: "/:collection/:title/"
+    layout: proposal
+    is_split: true
+    billing_type: 
+    purpose: 
+    services:
+    - type: 
+    sections:
+    - type: 
+      title: 
+      body: 
+      price: 
 - scope:
     path: about.markdown
     type: pages
