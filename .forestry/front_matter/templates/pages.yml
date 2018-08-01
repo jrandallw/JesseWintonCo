@@ -1,26 +1,25 @@
 ---
-label: Pages
+label: Work
 hide_body: false
 is_partial: false
 fields:
-- name: title
-  label: Title
-  type: text
-  hidden: false
-  default: ''
+- type: text
+  name: client
+  label: Client
+  default: Client
+- type: text
+  default: Project Year
+  label: Project Year
+  name: project_year
+- type: textarea
+  default: Project Description
+  label: Project Description
+  name: project_description
 - type: blocks
   name: sections
   label: Page Sections
   template_types:
-  - hero
-  - intro
   - image
-  - story
-  - gallery
-  - call-to-action
-  - signup
-  - byline
-  - text-block
   description: Predefined content types to build out your pages...
 pages:
 - 404.markdown
