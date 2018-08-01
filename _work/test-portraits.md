@@ -10,9 +10,8 @@ services:
 - service: Creative Direction
 blocks:
 - template: image
-  image_layout: fullwidth
-  image: "/uploads/kantorik-1.jpg"
+  image_layout: split-image-right
+  image: "/uploads/kantorik001.jpg"
   caption: Model • Mary Kantorik
-published: false
 
 ---
