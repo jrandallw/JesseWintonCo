@@ -8,6 +8,11 @@ sections:
   label: Pages
   create: all
 - type: directory
+   path: _uploads
+   label: Uploads
+   create: all
+   match: "**/*"
+- type: directory
   path: _proposal
   label: Proposals
   create: all
