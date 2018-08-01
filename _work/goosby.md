@@ -12,7 +12,13 @@ blocks:
 - template: image
   image_layout: push-image-right
   image: "/uploads/goosby002.jpg"
+- template: image
+  image_layout: push-image-right
+  image: "/uploads/goosby003.jpg"
+- template: image
+  image_layout: push-image-left
+  image: "/uploads/goosby004.jpg"
 published: false
 
 ---
-Created a new set of lifestyle portraits for chris goosby, an actor based in nyc moving to california. These shots were made for his move to a new city, pursuing film and television.
+Created a new set of lifestyle portraits for chris goosby, an actor based in NYC moving to California. These shots were made for his move to a new city, pursuing film and television.
