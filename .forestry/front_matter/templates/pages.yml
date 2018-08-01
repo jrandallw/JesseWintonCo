@@ -23,6 +23,5 @@ fields:
   - text-block
   description: Predefined content types to build out your pages...
 pages:
-- index.markdown
 - 404.markdown
-- process.markdown
+- index.markdown
