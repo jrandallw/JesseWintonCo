@@ -6,7 +6,6 @@ fields:
 - type: field_group_list
   name: social
   label: Social
-  description: Social and online accounts
   fields:
   - type: text
     label: Title
