@@ -9,3 +9,10 @@ fields:
 - type: text
   name: scope
   label: Scope
+- type: field_group_list
+  name: services
+  label: Services
+  fields:
+  - type: text
+    name: service
+    label: Service
