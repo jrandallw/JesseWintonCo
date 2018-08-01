@@ -1,25 +1,13 @@
 ---
-label: Proposal
+label: Proposals
 hide_body: false
 is_partial: false
 fields:
 - type: text
+  default: Client
   label: Client
   name: client
 - type: text
-  name: scope
-  label: Scope
-- type: field_group_list
-  label: Client Info
-  name: client_info
-  fields:
-  - type: text
-    name: info
-    label: Info
-- type: field_group_list
-  name: services
-  label: Services
-  fields:
-  - type: text
-    name: service
-    label: Service
+  default: Purpose
+  label: Purpose
+  name: purpose

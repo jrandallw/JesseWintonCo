@@ -12,3 +12,6 @@ blocks:
   image: "/uploads/kantorik001.jpg"
   caption: Model • Mary Kantorik
 ---
+Lifestyle shots with Mary Kantorik, a new affiliate for XOMandySue,
+
+an urban apparel company located in Newport Beach, CA.

@@ -11,14 +11,6 @@ fields:
   default: ''
   label: Project Year
   name: project_year
-- type: textarea
-  default: ''
-  label: Project Description
-  name: project_description
-  config:
-    wysiwyg: true
-    schema:
-      format: markdown
 - type: field_group_list
   name: services
   label: Services
