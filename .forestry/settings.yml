@@ -9,7 +9,7 @@ sections:
   create: all
 - type: directory
   path: _proposal
-  label: Proposal
+  label: Proposals
   create: all
   match: "**/*"
 - type: directory
