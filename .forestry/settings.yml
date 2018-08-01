@@ -17,9 +17,9 @@ sections:
   label: Work
   create: all
   match: "**/*"
-- type: jekyll-posts
-  label: Posts
-  create: all
+# - type: jekyll-posts
+  # label: Posts
+  # create: all
 upload_dir: _uploads
 public_path: "/uploads"
 front_matter_path: ''
