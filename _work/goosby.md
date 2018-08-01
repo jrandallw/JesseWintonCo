@@ -24,4 +24,4 @@ blocks:
 published: false
 
 ---
-Created a new set of lifestyle portraits for chris goosby, an actor based in NYC moving to California. These shots were made for his move to a new city, pursuing film and television.
+I made a new set of lifestyle portraits for Chris Goosby, an actor based in NYC moving to California. These shots were made for his move to a new city, pursuing film and television.
