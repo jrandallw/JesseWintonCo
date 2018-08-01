@@ -1,6 +1,6 @@
 <div class="{{ block.image_layout }} content-block {% if page.is_dark == true or page.general.is_dark == true %}dark{% endif %} {% if forloop.index <=1 %}first{% endif %}">
     <figure>
-      <img src="{{ block.image }}"> 
+      <img src="{{ block.image | prepend: site.url }}"> 
       <figcaption class="caption">{{ block.caption | downcase }}</figcaption>
     </figure>
 </div>  

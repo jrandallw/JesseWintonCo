@@ -8,7 +8,7 @@ services:
 blocks:
 - template: image
   image_layout: split-image-right
-  image: "/uploads/kantorik001.jpg"
+  image: "/uploads/kantorik-1.jpg"
   caption: Model • Mary Kantorik
 - template: image
   image_layout: split-image-left
