@@ -14,8 +14,8 @@ blocks:
   image_layout: push-image-right
   image: "/uploads/nesteruk002.jpg"
 - template: image
-  image_layout: fullwidth-image
-published: false
+  image_layout: push-image-left
+  image: "/uploads/nesteruk003.jpg"
 
 ---
 The result of an impromptu photoshoot at [The Pour Choice](http://thepourchoice.com/ "The Pour Choice"), Auburn, CA.
