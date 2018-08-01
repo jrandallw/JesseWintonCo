@@ -21,6 +21,13 @@ fields:
   template_types:
   - image
   description: Predefined content types to build out your pages...
+- type: field_group_list
+  name: services
+  label: Services
+  fields:
+  - type: text
+    name: service
+    label: Service
 pages:
 - 404.markdown
 - index.markdown
