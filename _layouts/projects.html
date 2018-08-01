@@ -7,7 +7,7 @@ class: page
   <div class="container">
     <div class="intro">
       <h6 class="heading">{{ page.client }} • {{ page.project_year }}</h6>
-      {{ page.project_description | downcase | remove: '<p>' | remove: '</p>' }}
+      {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
     </div>
 
     <div class="info">
