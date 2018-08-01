@@ -1,7 +1,7 @@
 ---
 label: Proposal Block
 hide_body: false
-is_partial: false
+is_partial: true
 fields:
 - type: text
   label: Title
