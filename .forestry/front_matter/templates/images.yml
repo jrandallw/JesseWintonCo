@@ -1,0 +1,25 @@
+---
+label: Images
+hide_body: false
+is_partial: true
+fields:
+- type: field_group
+  fields:
+  - type: file
+    name: image
+    label: Image
+  - type: select
+    config:
+      source:
+        type: simple
+      options:
+      - Fullwidth
+      - Center
+      - Split Left
+      - Split Right
+      - Push Left
+      - Push Right
+    label: Alignment
+    name: image_type
+  label: Image
+  name: image

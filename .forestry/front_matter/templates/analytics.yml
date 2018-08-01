@@ -13,5 +13,3 @@ fields:
   - type: text
     name: pixel_id
     label: Facebook Pixel ID
-data_files:
-- _data/analytics.yml

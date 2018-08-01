@@ -12,5 +12,3 @@ fields:
     label: Content
     name: content
     description: e.g. phone number, email address
-data_files:
-- _data/information.yml
