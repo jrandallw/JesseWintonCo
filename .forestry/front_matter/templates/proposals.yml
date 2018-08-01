@@ -6,3 +6,6 @@ fields:
 - type: text
   label: Client
   name: client
+- type: text
+  name: scope
+  label: Scope
