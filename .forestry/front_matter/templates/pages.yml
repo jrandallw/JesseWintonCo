@@ -15,12 +15,6 @@ fields:
   default: Project Description
   label: Project Description
   name: project_description
-- type: blocks
-  name: sections
-  label: Page Sections
-  template_types:
-  - image
-  description: Predefined content types to build out your pages...
 - type: field_group_list
   name: services
   label: Services
@@ -28,6 +22,12 @@ fields:
   - type: text
     name: service
     label: Service
+- type: blocks
+  name: sections
+  label: Page Sections
+  template_types:
+  - image
+  description: Predefined content types to build out your pages...
 pages:
 - 404.markdown
 - index.markdown
