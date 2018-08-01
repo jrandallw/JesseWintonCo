@@ -8,8 +8,13 @@ sections:
   label: Pages
   create: all
 - type: directory
+  path: _uploads
+  label: Uploads
+  create: all
+  match: "**/*"
+- type: directory
   path: _proposal
-  label: Proposals
+  label: Proposal
   create: all
   match: "**/*"
 - type: directory
@@ -17,6 +22,9 @@ sections:
   label: Work
   create: all
   match: "**/*"
+- type: jekyll-posts
+  label: Posts
+  create: all
 upload_dir: _uploads
 public_path: "/uploads"
 front_matter_path: ''
