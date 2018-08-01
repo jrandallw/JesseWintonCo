@@ -10,12 +10,8 @@ fields:
   - type: text
     label: Title
     name: title
-    config:
-      required: true
   - type: text
     label: URL
     name: url
-    config:
-      required: true
 data_files:
 - _data/social.yml
