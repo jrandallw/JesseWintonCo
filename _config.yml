@@ -13,9 +13,6 @@ collections:
     title: Proposals
     output: true
     permalink: "/:collection/:path"
-  uploads:
-    title: Uploads
-    output: true
 defaults:
 - scope:
     path: ''
