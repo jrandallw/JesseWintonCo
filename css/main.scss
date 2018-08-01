@@ -12,7 +12,6 @@ $font-weight-bold: 600;
 $text-color: #222;
 $light-color: #fff;
 $secondary-light-color: #eee;
-$third-light-color: #ddd;
 $dark-color: #111;
 $secondary-dark-color: #222;
 $border-color: #ddd;
@@ -56,14 +55,40 @@ $break-mf-small: "only screen and (max-width: 40em)";
 $break-mf-medium: "screen and (min-width: 40.063em)";
 $break-mf-large: "screen and (min-width: 64.063em)";
 
+// flex mixin
+@mixin flex-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+@mixin grid-half {
+  flex: 0 0 50%;
+}
+
 @import
 	"base",
   "layout",
-  "home",
-  "about",
-  "work",
-  "journal",
-  "proposals",
-  "contact",
-	"fonts"
+  "pages",
+  "fonts"
 ;

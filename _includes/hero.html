@@ -1,9 +1,9 @@
 {% if page.hero_image %}
-<section class="hero column align-center position-relative" style="background: url({{ page.hero_image }});">
-  <h4 class="name text-center"><a href="{{ site.url }}">{{ site.title }}</a></h4>
+<section class="hero" style="background: url({{ page.hero_image }});">
+  <h4 class="name"><a href="{{ site.url }}">{{ site.title }}</a></h4>
 </section>
 {% else %}
-<section class="hero column align-center position-relative">
-  <h4 class="name text-center"><a href="{{ site.url }}">{{ site.title }}</a></h4>
+<section class="hero">
+  <h4 class="name"><a href="{{ site.url }}">{{ site.title }}</a></h4>
 </section>
 {% endif %}
