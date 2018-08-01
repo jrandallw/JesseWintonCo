@@ -28,6 +28,7 @@ fields:
   template_types:
   - image
   description: Predefined content types to build out your pages...
+- type: blocks
 pages:
 - 404.markdown
 - index.markdown
