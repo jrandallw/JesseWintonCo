@@ -24,6 +24,3 @@ fields:
 - type: text
   name: caption
   label: Caption
-- type: boolean
-  name: featured_image
-  label: Featured Image
