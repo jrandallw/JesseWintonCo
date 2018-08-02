@@ -13,5 +13,14 @@ fields:
   - type: text
     label: URL
     name: url
+- type: field_group_list
+  name: social2
+  label: Social2
+  fields:
+  - type: color
+    name: test
+    config:
+      color_format: Hex
+    label: Test
 data_files:
 - _data/social.yml
