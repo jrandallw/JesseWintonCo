@@ -7,6 +7,7 @@ services:
 - service: Photography
 - service: Strategy
 - service: Production
+featured_image: "/uploads/eyecenter002.jpg"
 blocks:
 - template: image
   image_layout: push-image-left
@@ -14,7 +15,6 @@ blocks:
 - template: image
   image_layout: push-image-right
   image: "/uploads/eyecenter002.jpg"
-  featured_image: true
 - template: image
   image_layout: split-image-right
   image: "/uploads/eyecenter003.jpg"

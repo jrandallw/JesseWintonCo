@@ -11,10 +11,7 @@ class: page
       <div class="project">
         <a href="{{ project.url }}">
           <figure class="project-details">
-            {% assign featured_blocks = project.blocks | where_exp:"block", "block.image.featured_image == true" %}
-            {% for block in featured_blocks %}
-              <img src="block.url">
-            {% endfor %}
+            <img src="{{ project.featured_image }}">
             <figcaption class="text-center">
               <h6 class="title">{{ project.title }}</h6>
             </figcaption>
