@@ -20,7 +20,10 @@ fields:
     - push-image-left
     required: true
   label: Image Layout
-  default: fullwidth
+  default: fullwidth-image
 - type: text
   name: caption
   label: Caption
+- type: boolean
+  name: featured_image
+  label: Featured Image
