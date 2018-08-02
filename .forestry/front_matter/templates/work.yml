@@ -18,6 +18,10 @@ fields:
   - type: text
     name: service
     label: Service
+- type: file
+  label: Featured Image
+  name: featured_image
+  description: ''
 - type: blocks
   name: blocks
   label: Blocks
