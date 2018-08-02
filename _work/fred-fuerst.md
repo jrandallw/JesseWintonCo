@@ -25,3 +25,4 @@ blocks:
   image: "/uploads/eyecenter005.jpg"
 
 ---
+Portraits of Dr. Fred Fuerst on set of my shoot with [KWB Creative](https://kwbcreative.com) for EYECenter Optometric.
