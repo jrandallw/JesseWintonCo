@@ -56,7 +56,7 @@ blocks:
 
     Along with video content, there is significant data to prove that users engage most fully with content that includes imagery. We can create and tell stories of staff members, of the company itself, of specific properties that blvs transformed, coupled with photographs that will be shot to help tell those stories. This is a somewhat new genre of marketing type- essentially a photo journal that weaves together a narrative with the visuals, tying the story of BVLS to the power of photographic content. These stories and photos can be shared on social networks like Pinterest, Houzz, Facebook, Instagram, and [Medium](http://medium.com/), where we can create a corporate blog and utilize their format to help share the story of your company.
 - template: image
-  image_layout: push-image-right
+  image_layout: push-image-left
   image: "/uploads/lasalle003.jpg"
 - template: content-block
   heading: Conclusion
