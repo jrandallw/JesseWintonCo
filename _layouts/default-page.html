@@ -13,8 +13,8 @@ class: page
     {% case template %}
     {% when 'heading' %}
         {% include blocks/heading.html %}  
-    {% when 'text-block' %}
-        {% include blocks/text-block.html %}                
+    {% when 'content-block' %}
+        {% include blocks/content-block.html %}                
     {% endcase %}
     {% endfor %}  
   </div>
