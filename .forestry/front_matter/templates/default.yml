@@ -23,6 +23,7 @@ fields:
   template_types:
   - heading
   - text-block
+  - content-block
 pages:
 - index.markdown
 - about.markdown
