@@ -11,3 +11,10 @@ fields:
   default: Purpose
   label: Purpose
   name: purpose
+- type: field_group_list
+  name: services
+  label: Services
+  fields:
+  - type: text
+    name: service
+    label: Service  

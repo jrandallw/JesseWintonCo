@@ -3,33 +3,35 @@ layout: default
 class: proposal
 ---
 
-<section class="proposal-overview column align-center">
-  <div class="container row">
-    <div class="intro grid-one-half">
-      <h6 class="heading">{{ page.title }} • {{ page.purpose }}</h6>
-      <p class="content">{{ page.content | downcase | remove: '<p>' | remove: '</p>' }}</p>
+<section class="project-overview">
+  <div class="container">
+    <div class="intro">
+      {% for info in page.client %}
+      <h6 class="heading">{{ info.info }}</h6>
+      {% endfor %}
+      {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
     </div>
 
-    <div class="info grid-one-half row">
-      {% assign client = page.client | strip_newlines %}
-      {% if client != '' %}
-      <div class="client grid-one-half">
-        <h6 class="heading">{{ "Client" | upcase }}</h6>   
+    <div class="info">
+      {% assign services = page.services | strip_newlines %}
+      {% if services != '' %}
+      <div class="services">
+        <h6 class="heading">{{ "Services" | upcase }}</h6>   
         <ul>
-          {% for client_info in page.client %}
-          <li>{{ client_info.info | downcase}}</li>
+          {% for services in page.services %}
+          <li>{{ services.service | downcase }}</li>
           {% endfor %}
         </ul>
       </div>
       {% endif %}
 
-      {% assign services = page.services | strip_newlines %}
-      {% if services != '' %}
-      <div class="services grid-one-half">
-        <h6 class="heading">{{ "Services" | upcase }}</h6>   
+      {% assign credits = page.credits | strip_newlines %}
+      {% if credits != '' %}
+      <div class="credits grid-one-half">
+        <h6 class="heading">{{ "Credits" | upcase }}</h6>
         <ul>
-          {% for service in page.services %}
-          <li>{{ service.type | downcase }}</li>
+          {% for credit in page.credits %}
+          <li>{{ credit.type | downcase }}</li>
           {% endfor %}
         </ul>
       </div>
