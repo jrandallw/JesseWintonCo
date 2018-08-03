@@ -39,6 +39,22 @@ blocks:
     **_measuring social media metrics_**
 
     in the first steps of the strategic development process, we’ll plan out 1-2 months worth of social media content across all platforms, specifically linkedin, facebook, instagram, pinterest, medium, and houzz. this content will include photographs of properties, written stories of staff, email newsletters, photo journals telling stories of the company, and sharing pertinent articles and content from within the landscape & construction industry. the goal of this will be to build an audience, measure audience engagement, and use the metrics that we’ve gathered to plan future social media content. this is how we can start to develop our long-term social media strategy, utilizing the data that we collect to push the most effective content.
+- template: image
+  image_layout: split-image-right
+  image: "/uploads/lasalle002.jpg"
+  caption: LaSalle • Davis, CA
+- template: content-block
+  heading: Additional Strategies
+  copy: |-
+    **_strategic short films_**
+
+    in the social media market, one of the most heavily engaged content types is video. in 2017, hubspot reported that 74% of all internet traffic was video content, and by 2019, cisco has projected that 90% of all internet traffic will be video. this places a high importance on video content for bella vista.
+
+    in early 2018, jw/co produced the first in a series of short films for eyecenter optometric, telling the story of their founder. the short is meant to create a vision for who they are: a company with a small-business mindset operating on a large scale across the area. we will plan to create similar videos, telling the story of bvls. the specific content and stories will be planned out at a later time, but we will create a series of shorts to utilize on social media, and the bvls website.
+
+    **_photo journals & company stories_**
+
+    along with video content, there is significant data to prove that users engage most fully with content that includes imagery. we can create and tell stories of staff members, of the company itself, of specific properties that blvs transformed, coupled with photographs that will be shot to help tell those stories. this is a somewhat new genre of marketing type- essentially a photo journal that weaves together a narrative with the visuals, tying the story of bvls to the power of photographic content. these stories and photos can be shared on social networks like pinterest, houzz, facebook, instagram, and [medium](http://medium.com/), where we can create a corporate blog and utilize their format to help share the story of your company.
 
 ---
 This proposal is for strategization and creation of short and long-term marketing plans to help facilitate continual growth for BellaVista Landscape Services.
