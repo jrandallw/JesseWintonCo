@@ -12,19 +12,19 @@ blocks:
 - template: content-block
   heading: Executive Summary
   copy: |-
-    in the modern business landscape, there is perhaps nothing more vital to the continued success and growth of a company than social media. across all sectors of business, companies with a strong social media presence are able to continuously and consistently connect with their clients, leading to strong interpersonal relationships, and continued trust predicated on the personal touch and humanity you can demonstrate through social media. as of 2017, facebook has over 2 billion active monthly users, twitter has over 300 million active monthly users, and instagram has 600 million monthly active users, and more importantly within the construction sector, linkedin has 450 million active monthly users.
+    In the modern business landscape, there is perhaps nothing more vital to the continued success and growth of a company than social media. across all sectors of business, companies with a strong social media presence are able to continuously and consistently connect with their clients, leading to strong interpersonal relationships, and continued trust predicated on the personal touch and humanity you can demonstrate through social media. As of 2017, Facebook has over 2 billion active monthly users, Twitter has over 300 million active monthly users, and Instagram has 600 million monthly active users, and more importantly within the construction sector, LinkedIn has 450 million active monthly users.
 
-    the most effective marketing happens over time when quality meets consistency. we will create consistent, quality content in the following ways:
+    The most effective marketing happens over time when quality meets consistency. We will create consistent, quality content in the following ways:
 
-    * installation of metrics systems such as google analytics
-    * social content
-    * photographs
-    * strategic short films
-    * written content
+    * Installation of metrics systems such as google analytics
+    * Social Content
+    * Photographs
+    * Strategic Short Films
+    * Written Content
 
-    bellavista’s best asset for growth is, and will likely continue to be, predicated on a strong relationship with property managers and residential homeowners throughout northern california. the strategy has been to create a culture where clients feel personally cared for, while blvs operates on a large scale level; a small-scale feel with large-scale capabilities and quality.
+    BellaVista’s best asset for growth is, and will likely continue to be, predicated on a strong relationship with property managers and residential homeowners throughout Northern California. The strategy has been to create a culture where clients feel personally cared for, while blvs operates on a large scale level; a small-scale feel with large-scale capabilities and quality.
 
-    using the tools listed above, we’ll build on the existing concept, and be able to build out a solid marketing strategy that will help blvs achieve it’s goals for growth on digital platforms over the next 2-3 years.
+    Using the tools listed above, we’ll build on the existing concept, and be able to build out a solid marketing strategy that will help blvs achieve it’s goals for growth on digital platforms over the next 2-3 years.
 - template: image
   image_layout: push-image-left
   image: "/uploads/lasalle001.jpg"
