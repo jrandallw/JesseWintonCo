@@ -25,3 +25,4 @@ fields:
   - text-block
 pages:
 - index.markdown
+- about.markdown
