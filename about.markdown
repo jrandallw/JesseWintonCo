@@ -7,6 +7,11 @@ layout: default-page
 page_heading: Let's work together.
 page_type: split
 hero_image: ''
+menu:
+  main:
+    identifier: _about
+    url: "/about"
+    weight: -1
 blocks:
 - template: content-block
   heading: Let's Work Together
