@@ -22,7 +22,8 @@ fields:
   name: blocks
   label: Blocks
   template_types:
-  - image
+  - content-block
   - proposal-block
+  - image
 pages:
 - _proposal/bellavista-landscape-services.md
