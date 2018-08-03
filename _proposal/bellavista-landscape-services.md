@@ -55,6 +55,15 @@ blocks:
     **_photo journals & company stories_**
 
     along with video content, there is significant data to prove that users engage most fully with content that includes imagery. we can create and tell stories of staff members, of the company itself, of specific properties that blvs transformed, coupled with photographs that will be shot to help tell those stories. this is a somewhat new genre of marketing type- essentially a photo journal that weaves together a narrative with the visuals, tying the story of bvls to the power of photographic content. these stories and photos can be shared on social networks like pinterest, houzz, facebook, instagram, and [medium](http://medium.com/), where we can create a corporate blog and utilize their format to help share the story of your company.
+- template: image
+  image_layout: push-image-right
+  image: "/uploads/lasalle003.jpg"
+- template: content-block
+  heading: Conclusion
+  copy: |-
+    In conclusion, what’s been provided here is a series of first steps- concepts for a full-featured marketing strategy that will begin with discovering metrics that work for your company, combined with other proven tools that have been shown to work. using this proposal as a starting point, we can discuss the specific ideas and tools that can work moving forward to help you build a strong marketing strategy, which my agency will implement in the short and long term.
+
+    I’d love to discuss these strategies further with you. If you have any more questions moving forward please don’t hesitate to reach out to me.
 
 ---
 This proposal is for strategization and creation of short and long-term marketing plans to help facilitate continual growth for BellaVista Landscape Services.
