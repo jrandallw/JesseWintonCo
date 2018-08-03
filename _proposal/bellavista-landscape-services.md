@@ -32,13 +32,13 @@ blocks:
 - template: content-block
   heading: " Initial Strategies"
   copy: |-
-    **_installation & use of google analytics_**
+    **_Installation & use of Google Analytics_**
 
-    google analytics is a web analytics service that is installed to measure user input on a website. it can track page views, seeing which pages users navigate to, can measure the amount of time spent on each page to view which content most draws users, and can provide information as to what sent the user to the website, i.e. if they were sent from a bvls newsletter, through facebook or other social media platforms etc. giving you the tools to be able to measure digital engagement with the content that you’ve provided on the site, and strategically place content according to those metrics.
+    Google Analytics is a web analytics service that is installed to measure user input on a website. It can track page views, seeing which pages users navigate to, can measure the amount of time spent on each page to view which content most draws users, and can provide information as to what sent the user to the website, i.e. if they were sent from a BVLS newsletter, through Facebook or other social media platforms etc. giving you the tools to be able to measure digital engagement with the content that you’ve provided on the site, and strategically place content according to those metrics.
 
-    **_measuring social media metrics_**
+    **_Measuring Social Media Metrics_**
 
-    in the first steps of the strategic development process, we’ll plan out 1-2 months worth of social media content across all platforms, specifically linkedin, facebook, instagram, pinterest, medium, and houzz. this content will include photographs of properties, written stories of staff, email newsletters, photo journals telling stories of the company, and sharing pertinent articles and content from within the landscape & construction industry. the goal of this will be to build an audience, measure audience engagement, and use the metrics that we’ve gathered to plan future social media content. this is how we can start to develop our long-term social media strategy, utilizing the data that we collect to push the most effective content.
+    In the first steps of the strategic development process, we’ll plan out 1-2 months worth of social media content across all platforms, specifically LinkedIn, Facebook, Instagram, Pinterest, Medium, and Houzz. This content will include photographs of properties, written stories of staff, email newsletters, photo journals telling stories of the company, and sharing pertinent articles and content from within the landscape & construction industry. The goal of this will be to build an audience, measure audience engagement, and use the metrics that we’ve gathered to plan future social media content. This is how we can start to develop our long-term social media strategy, utilizing the data that we collect to push the most effective content.
 - template: image
   image_layout: split-image-right
   image: "/uploads/lasalle002.jpg"
