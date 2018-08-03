@@ -18,3 +18,9 @@ fields:
   - type: text
     name: service
     label: Service
+- type: blocks
+  name: blocks
+  label: Blocks
+  template_types:
+  - image
+  - proposal-block
