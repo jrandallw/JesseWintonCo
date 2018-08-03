@@ -64,6 +64,7 @@ blocks:
     In conclusion, what’s been provided here is a series of first steps- concepts for a full-featured marketing strategy that will begin with discovering metrics that work for your company, combined with other proven tools that have been shown to work. using this proposal as a starting point, we can discuss the specific ideas and tools that can work moving forward to help you build a strong marketing strategy, which my agency will implement in the short and long term.
 
     I’d love to discuss these strategies further with you. If you have any more questions moving forward please don’t hesitate to reach out to me.
+dark_theme: true
 
 ---
 This proposal is for strategization and creation of short and long-term marketing plans to help facilitate continual growth for BellaVista Landscape Services.
