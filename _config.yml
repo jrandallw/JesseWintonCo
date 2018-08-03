@@ -104,3 +104,4 @@ sass:
 permalinks: pretty
 plugins:
 - jekyll-redirect-from
+- jekyll-menus
