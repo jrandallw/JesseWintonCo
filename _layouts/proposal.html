@@ -6,9 +6,7 @@ class: proposal
 <section class="project-overview">
   <div class="container">
     <div class="intro">
-      {% for info in page.client %}
-      <h6 class="heading">{{ info.info }}</h6>
-      {% endfor %}
+      <h6 class="heading">{{ page.client }} • {{ page.purpose }}</h6>
       {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
     </div>
 
@@ -40,26 +38,18 @@ class: proposal
   </div>
 </section>
 
-<section class="proposal-content">
+<section class="project-content">
   <div class="container">
-  {% include content.html %}
-
-  {% if page.show_price == true %}
-  {% assign total = 0 %}
-  {% for price in page.sections %}
-    {% assign total = total | plus: price.price %}
-  {% endfor %}
-  <div class="content-block">
-    <div class="text">
-      <div class="container row align-center">
-        {% if price %}
-        <p class="total price heading">Total Price <span>{{ total | prepend: "$" }}{{ page.billing_type | downcase }}</span></p>
-        {% else %}
-        <p class="total price heading">Total Price <span>{{ page.general.total_price | prepend: "$" }} {{ page.billing_type | downcase }}</span></p>
-        {% endif %}
-      </div> 
-    </div>  
-  </div> 
-  {% endif %} 
-</div>
+    {% for block in page.blocks %}
+    {% assign template = block.template %}
+    {% case template %}
+    {% when 'image' %}
+        {% include blocks/images.html %}  
+    {% when 'content-block' %}
+        {% include blocks/content-block.html %}
+    {% when 'price-block' %}
+        {% include blocks/price-block.html %}                  
+    {% endcase %}
+    {% endfor %}
+  </div>
 </section>
