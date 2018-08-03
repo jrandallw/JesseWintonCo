@@ -24,3 +24,5 @@ fields:
   template_types:
   - image
   - proposal-block
+pages:
+- _proposal/bellavista-landscape-services.md
