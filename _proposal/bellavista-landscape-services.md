@@ -46,15 +46,15 @@ blocks:
 - template: content-block
   heading: Additional Strategies
   copy: |-
-    **_strategic short films_**
+    **_Strategic Short Films_**
 
-    in the social media market, one of the most heavily engaged content types is video. in 2017, hubspot reported that 74% of all internet traffic was video content, and by 2019, cisco has projected that 90% of all internet traffic will be video. this places a high importance on video content for bella vista.
+    In the social media market, one of the most heavily engaged content types is video. In 2017, hubspot reported that 74% of all internet traffic was video content, and by 2019, Cisco has projected that 90% of all internet traffic will be video. This places a high importance on video content for Bella Vista.
 
-    in early 2018, jw/co produced the first in a series of short films for eyecenter optometric, telling the story of their founder. the short is meant to create a vision for who they are: a company with a small-business mindset operating on a large scale across the area. we will plan to create similar videos, telling the story of bvls. the specific content and stories will be planned out at a later time, but we will create a series of shorts to utilize on social media, and the bvls website.
+    In early 2018, JW/CO produced the first in a series of short films for eyecenter optometric, telling the story of their founder. The short is meant to create a vision for who they are: a company with a small-business mindset operating on a large scale across the area. We will plan to create similar videos, telling the story of bvls. the specific content and stories will be planned out at a later time, but we will create a series of shorts to utilize on social media, and the BVLS website.
 
-    **_photo journals & company stories_**
+    **_Photo Journals & Company Stories_**
 
-    along with video content, there is significant data to prove that users engage most fully with content that includes imagery. we can create and tell stories of staff members, of the company itself, of specific properties that blvs transformed, coupled with photographs that will be shot to help tell those stories. this is a somewhat new genre of marketing type- essentially a photo journal that weaves together a narrative with the visuals, tying the story of bvls to the power of photographic content. these stories and photos can be shared on social networks like pinterest, houzz, facebook, instagram, and [medium](http://medium.com/), where we can create a corporate blog and utilize their format to help share the story of your company.
+    Along with video content, there is significant data to prove that users engage most fully with content that includes imagery. We can create and tell stories of staff members, of the company itself, of specific properties that blvs transformed, coupled with photographs that will be shot to help tell those stories. This is a somewhat new genre of marketing type- essentially a photo journal that weaves together a narrative with the visuals, tying the story of BVLS to the power of photographic content. These stories and photos can be shared on social networks like Pinterest, Houzz, Facebook, Instagram, and [Medium](http://medium.com/), where we can create a corporate blog and utilize their format to help share the story of your company.
 - template: image
   image_layout: push-image-right
   image: "/uploads/lasalle003.jpg"
