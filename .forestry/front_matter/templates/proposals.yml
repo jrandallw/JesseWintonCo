@@ -4,10 +4,6 @@ hide_body: false
 is_partial: false
 fields:
 - type: text
-  default: Client
-  label: Client
-  name: client
-- type: text
   default: Purpose
   label: Purpose
   name: purpose

@@ -58,6 +58,10 @@ header {
 	width: $full;
 	z-index: 1;
 
+	&.split {
+		@include flex-row;
+	}
+
 	.page-content {
 		background: $light-color;
 		width: $half;
@@ -133,6 +137,7 @@ header {
 	box-sizing: $border-box;
 	background: $light-color;
 	@include flex-row;
+	@include flex-center;
 
 	a {
 		text-decoration: none;
@@ -141,17 +146,6 @@ header {
 	&.split {
 		width: $half;
 		position: absolute;
-	}
-
-	.template-journal-post & {
-		max-width: $full - 15%;
-		position: relative;
-
-		@media #{$break-medium} {
-			& {
-				max-width: $full;
-			}
-		}
 	}
 
 	@media #{$break-large} {
