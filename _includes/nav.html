@@ -1,4 +1,5 @@
 <nav class="nav text-right">
+  {% assign menu = site.menus.main %}
   {% if menu %}
     {% for item in menu %}
     <a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
