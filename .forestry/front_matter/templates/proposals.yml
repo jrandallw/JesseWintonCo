@@ -17,4 +17,4 @@ fields:
   fields:
   - type: text
     name: service
-    label: Service  
+    label: Service
