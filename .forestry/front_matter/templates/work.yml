@@ -30,7 +30,6 @@ fields:
   description: ''
 pages:
 - 404.markdown
-- index.markdown
 - _work/goosby.md
 - _work/bong.md
 - _work/kantorik.md

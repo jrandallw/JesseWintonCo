@@ -20,3 +20,5 @@ fields:
   template_types:
   - heading
   - text-block
+pages:
+- index.markdown
