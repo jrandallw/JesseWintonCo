@@ -6,9 +6,11 @@ fields:
 - type: text
   label: Title
   name: title
-- type: text
+- type: number
   name: price
   label: Price
+  config:
+    step: '100'
 - type: textarea
   config:
     wysiwyg: true
