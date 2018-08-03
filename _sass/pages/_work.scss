@@ -9,10 +9,11 @@
     min-height: $full-viewport-height;
     padding-top: $gutter * 9;
 
-    .container {
+    .project-index-grid {
       width: $full - 20%;
       max-width: 1400px;
       @include flex-row;
+      flex-wrap: wrap;
 
       .grid-sizer {
         width: $full;
@@ -28,18 +29,9 @@
         width: $full;
         margin-bottom: $gutter * 2;
         padding: 0 $gutter / 2;
-
-        @media #{$break-mf-large} {
-          & {
-            width: $one-third !important;
-          }
-        }
-
-        @media #{$break-mf-medium} {
-          & {
-            width: $one-third;
-          }
-        }
+        @include grid-third;
+        flex-wrap: wrap;
+        
       
         figcaption {
           margin-top: $gutter;

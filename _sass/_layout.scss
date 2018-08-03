@@ -54,79 +54,6 @@ header {
 	}
 }
 
-.wrapper {
-	width: $full;
-	z-index: 1;
-
-	&.split {
-		@include flex-row;
-	}
-
-	.page-content {
-		background: $light-color;
-		width: $half;
-		min-height: $full-viewport-height;
-		@include flex-column;
-		@include flex-center;
-		position: relative;
-	}
-	
-.container {
-	width: $full - 20%;
-	margin: 0 auto;
-	@include flex-column;
-	@include flex-center;
-}
-
-@media #{$break-large} {
-    .container {
-        width: $full - 40%;
-    }
-}
-
-.hero {
-	width: 50vw;
-	height: 100vh;
-	background-color: $dark-color !important;
-	@include flex-column;
-	@include flex-center;
-	@include prefix(background-size, cover !important, webkit moz);
-	position: relative;
-	background-position: center !important;
-
-	h4 {
-		font-size: $base-font-size + 10px;
-		color: $light-color;
-		text-transform: uppercase;
-	}
-	
-	.name {
-		width: 250px;
-		text-align: center;
-
-		span {
-			display: inline-block;
-		}
-
-		a {
-			position: relative;
-			color: #fff;
-			text-decoration: none;
-
-			&:hover {
-			  color: $secondary-dark-color;	
-			}
-		}
-	}
-
-	@media #{$break-large} {
-		& {
-			display: none !important;
-		}
-	}
-}
-}
-
 .footer {
     bottom: 0;
     width:  100%;
@@ -176,35 +103,36 @@ header {
 		}
 	}
   .social {
-	@include grid-half;
+	  @include grid-half;
+
+	  a {
+		font-family: 'Roboto Mono';
+		font-size: 10px;
+		letter-spacing: 1px;
+		color: #000;
+		margin: 0 6px;
+		border-bottom: 1px solid rgba(0,0,0,0);
+	
+		&:hover {
+			border-color: #000;
+		}
+		
+		&:first-of-type {
+			margin-left: 0;
+		}
+	}
   }
-}
 
-.social a,
-.copyright {
-	font-family: 'Roboto Mono';
-	font-size: 10px;
-    letter-spacing: 1px;
-	color: #000;
-    border-bottom: 1px solid rgba(0,0,0,0);
-}
-
-.copyright {
+  .copyright {
 	@include grid-half;
-}
 
-.social a:first-of-type {
-    margin-left: 0;
-}
-
-.social a {
-    margin: 0 6px;
-}
-
-.social a:hover {
-    border-color: #000;
-}
-
-.copyright {
+	h6 {
+		font-family: 'Roboto Mono';
+		font-size: 10px;
+    	letter-spacing: 1px;
+		color: #000;
 		text-align: right;
+	}
+  }
+  
 }

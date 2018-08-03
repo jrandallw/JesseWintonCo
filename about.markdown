@@ -3,8 +3,7 @@ title: About
 date: 2017-10-08 02:27:00 +0000
 permalink: "/about"
 position: 1
-layout: default-page
-page_heading: Let's work together.
+layout: pages
 page_type: split
 hero_image: ''
 blocks:

@@ -14,7 +14,9 @@ class: page
     {% when 'heading' %}
         {% include blocks/heading.html %}  
     {% when 'content-block' %}
-        {% include blocks/content-block.html %}                
+        {% include blocks/content-block.html %}    
+    {% when 'text-block' %}
+        {% include blocks/text-block.html %}             
     {% endcase %}
     {% endfor %}  
   </div>

@@ -55,7 +55,7 @@ $break-mf-small: "only screen and (max-width: 40em)";
 $break-mf-medium: "screen and (min-width: 40.063em)";
 $break-mf-large: "screen and (min-width: 64.063em)";
 
-// flex mixin
+// flex mixins
 @mixin flex-row {
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -83,9 +83,22 @@ $break-mf-large: "screen and (min-width: 64.063em)";
 }
 
 @mixin grid-half {
-  flex: 0 0 50%;
+  flex: 0 0 (100% / 2);
 }
 
+@mixin grid-third {
+	flex: 0 0 (100% / 3);
+}
+
+@mixin grid-quarter {
+	flex: 0 0 (100% / 4);
+}
+
+@mixin grid-fifth {
+	flex: 0 0 (100% / 5);
+}
+
+// position mixins
 @mixin pin-horizontal-center {
   position: absolute;
 	left: $half;
