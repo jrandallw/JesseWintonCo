@@ -1,7 +1,7 @@
 ---
 title: BellaVista Landscape Services
-client: Client
-purpose: Purpose
+client: BellaVista Landscape Services
+purpose: Marketing Strategy & Implementation
 date: 2018-08-03 16:53:02 +0000
 services:
 - service: Strategy
