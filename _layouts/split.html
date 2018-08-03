@@ -5,9 +5,9 @@
 
   <body {% if layout.class %}class="template-{{ layout.class }}-post"{% endif %}>
     <main class="wrapper split" role="main">
-      {% include header.html %}
+      {% include header-split.html %}
       {{ content }}
-      {% include footer.html %}
+      {% include footer-split.html %}
     </main>
 
     {% include scripts.html %}
