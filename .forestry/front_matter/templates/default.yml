@@ -25,5 +25,6 @@ fields:
   - text-block
   - content-block
 pages:
+- contact.markdown
 - index.markdown
 - about.markdown

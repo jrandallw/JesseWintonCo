@@ -3,13 +3,15 @@ title: Contact
 date: 2017-10-08 01:06:00 +0000
 permalink: "/contact"
 position: 3
-layout: pages
 page_type: split
-hero_image: ''
 blocks:
 - template: text-block
-  copy: 
+  copy: Shoot me a message about your project and let's talk about how we can work
+    together. [hi@jessewinton.co](mailto:hi@jessewinton.co).
+layout: pages
+hero_image: ''
 menu:
   main:
     weight: 2
+
 ---
