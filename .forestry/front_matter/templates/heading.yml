@@ -1,0 +1,19 @@
+---
+label: Heading
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  name: heading
+  label: Heading
+- type: select
+  name: text_alignment
+  config:
+    source:
+      type: simple
+    options:
+    - left
+    - right
+    - center
+    - justify
+  label: Text Alignment
