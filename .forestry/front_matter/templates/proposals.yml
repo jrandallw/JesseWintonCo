@@ -14,6 +14,7 @@ fields:
 - type: boolean
   name: dark_theme
   label: Dark Theme
+  default: true
 - type: field_group_list
   name: services
   label: Services
