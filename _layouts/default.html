@@ -4,7 +4,8 @@
   {% include head.html %}
 
   <body {% if layout.class %}class="template-{{ layout.class }}-post"{% endif %}>
-    <main class="wrapper" role="main">
+    {% assign type = page.page_type %}
+    <main class="wrapper {{ type }}" role="main">
       {% include header.html %}
       {{ content }}
       {% include footer.html %}
