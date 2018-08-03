@@ -123,6 +123,8 @@
         .caption {
             margin-top: $gutter;
             width: $full;
+            @include pin-horizontal-center;
+            text-align: center;
         }
     }
   
