@@ -29,7 +29,6 @@ fields:
   - image
   description: ''
 pages:
-- 404.markdown
 - _work/goosby.md
 - _work/bong.md
 - _work/kantorik.md
