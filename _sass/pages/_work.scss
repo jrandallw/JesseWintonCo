@@ -17,19 +17,13 @@
 
       .grid-sizer {
         width: $full;
-
-        @media #{$break-mf-large} {
-          & {
-            width: $full !important;
-          }
-        }
       }
 
       .project {
         width: $full;
         margin-bottom: $gutter * 2;
         padding: 0 $gutter / 2;
-        @include flex-third;
+        @include flex-full;
         flex-wrap: wrap;
         
       
@@ -51,10 +45,10 @@
         &:hover {
          text-decoration: underline; 
         }
-      }
 
-      @media #{$break-mf-small} {
-          width: $full - 10%;
+        @media #{$break-large} {
+            @include flex-third;
+          }
       }
     }
 
