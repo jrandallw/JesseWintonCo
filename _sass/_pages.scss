@@ -8,7 +8,7 @@
 
 	.page-content {
 		background: $light-color;
-		width: 50%;
+		width: 100%;
 		min-height: 100vh;
 		@include flex-column;
 		@include flex-center;
@@ -51,7 +51,11 @@
       .container {
         text-align: justify;
       }
-    }
+		}
+		
+		@media #{$break-large} {
+			width: 50%;
+		}
 	}
 	
 .container {
@@ -61,20 +65,13 @@
 	@include flex-center;
 }
 
-@media #{$break-large} {
-    .container {
-        width: 60%;
-    }
-}
-
 .hero {
 	width: 50vw;
 	height: 100vh;
 	background-color: $dark-color !important;
-	@include flex-column;
-	@include flex-center;
 	@include prefix(background-size, cover !important, webkit moz);
 	position: relative;
+	display: none;
 	background-position: center !important;
 
 	h4 {
@@ -103,15 +100,13 @@
 	}
 
 	@media #{$break-large} {
-		& {
-			display: none !important;
-		}
+		@include flex-column;
+		@include flex-center;
 	}
 }
 }
 
 @import
   "pages/work",
-  "pages/proposals",
-  "pages/journal"
+  "pages/proposals"
 ;

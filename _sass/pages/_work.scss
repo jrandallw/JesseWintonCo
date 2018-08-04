@@ -10,7 +10,7 @@
     padding-top: $gutter * 9;
 
     .project-index-grid {
-      width: $full - 20%;
+      width: 80%;
       max-width: 1400px;
       @include flex-row;
       flex-wrap: wrap;
@@ -29,7 +29,7 @@
         width: $full;
         margin-bottom: $gutter * 2;
         padding: 0 $gutter / 2;
-        @include grid-third;
+        @include flex-third;
         flex-wrap: wrap;
         
       
@@ -81,12 +81,12 @@
       padding-right: $gutter + 10px;
       box-sizing: border-box;
       text-align: justify;
-      @include grid-half;
+      @include flex-half;
   }
 
   .intro,
   .info {
-      @include grid-half;
+      @include flex-half;
   }
 
   .info {

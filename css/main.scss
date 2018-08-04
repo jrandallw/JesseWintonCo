@@ -22,8 +22,6 @@ $footer-height: 75px;
 
 // padding
 $gutter: 20px;
-$border-box: border-box;
-$content-box: content-box;
 
 // widths
 $full: 100%;
@@ -47,13 +45,11 @@ $half-viewport-height: 50vh;
 }
 
 // breakpoints
-$break-larger: "screen and (max-width: 1300px)";
-$break-large: "screen and (max-width: 768px)";
-$break-medium: "screen and (max-width: 438px)";
+$break-large: "screen and (min-width: 40em)";
+$break-medium: "screen and (min-width: 40em)";
+$break-mf-large: "screen and (min-width: 40em)";
+$break-mf-small: "screen and (min-width: 40em)";
 
-$break-mf-small: "only screen and (max-width: 40em)";
-$break-mf-medium: "screen and (min-width: 40.063em)";
-$break-mf-large: "screen and (min-width: 64.063em)";
 
 // flex mixins
 @mixin flex-row {
@@ -82,19 +78,23 @@ $break-mf-large: "screen and (min-width: 64.063em)";
 	-webkit-justify-content: center;
 }
 
-@mixin grid-half {
+@mixin flex-full {
+  flex: 0 0 100%;
+}
+
+@mixin flex-half {
   flex: 0 0 (100% / 2);
 }
 
-@mixin grid-third {
+@mixin flex-third {
 	flex: 0 0 (100% / 3);
 }
 
-@mixin grid-quarter {
+@mixin flex-quarter {
 	flex: 0 0 (100% / 4);
 }
 
-@mixin grid-fifth {
+@mixin flex-fifth {
 	flex: 0 0 (100% / 5);
 }
 
