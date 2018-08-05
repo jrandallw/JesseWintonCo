@@ -95,9 +95,9 @@ description: Self-taught communicator with a focus in photography, communicative
   and writing.
 baseurl: 
 url: http://jessewinton.co
-twitter_username: jrandall
+twitter_username: jrandallw
 google_analytics:
-  tracking_id: UA-107682340-1
+  tracking_id: 
 markdown: kramdown
 sass:
   style: compressed
