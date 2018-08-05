@@ -16,7 +16,6 @@ blocks:
 menu:
   main:
     identifier: _about
-    url: "/about"
     weight: 2
 
 ---
