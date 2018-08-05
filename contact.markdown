@@ -13,5 +13,4 @@ layout: pages
 menu:
   main:
     weight: 3
-
 ---
