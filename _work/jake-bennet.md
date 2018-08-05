@@ -30,6 +30,7 @@ blocks:
   image_layout: push-image-right
   image: "/uploads/winter006.jpg"
   caption: Model • Jake Bennet
+featured_image: "/uploads/winter004.jpg"
 
 ---
 A set of portraits highlighting Gap Inc. apparel in the wild, featuring Jake Bennet. 
