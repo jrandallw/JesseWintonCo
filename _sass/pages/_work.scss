@@ -68,19 +68,18 @@
   .container {
       max-width: $max-width-slim;
       width: $full - 20%;
-      @include flex-row;
+      @include flex-column;
   }
 
   .intro {
       padding-right: $gutter + 10px;
       box-sizing: border-box;
       text-align: justify;
-      @include flex-half;
   }
 
   .intro,
   .info {
-      @include flex-half;
+      @include flex-full;
   }
 
   .info {
