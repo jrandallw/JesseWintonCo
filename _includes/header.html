@@ -1,3 +1,5 @@
 <header class="header {{ type }} {% if page.is_dark == true %}dark{% endif %}">
-  {% include nav.html %}
+  {% if include.menu and include.menu.size > 0 %}
+  {% include nav.html menu="main" %}
+  {% endif %}
 </header>
