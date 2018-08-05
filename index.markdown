@@ -10,8 +10,5 @@ blocks:
   text_alignment: center
   heading: Photographer, writer, and designer working and living in Northern California.
 page_type: split
-menu:
-  main:
-    weight: 1
 
 ---
