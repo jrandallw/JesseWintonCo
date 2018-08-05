@@ -24,6 +24,7 @@ blocks:
 - template: image
   image_layout: split-image-right
   image: "/uploads/eyecenter005.jpg"
+dark_theme: true
 
 ---
 Portraits of Dr. Fred Fuerst on set of my shoot with [KWB Creative](https://kwbcreative.com) for EYECenter Optometric.
