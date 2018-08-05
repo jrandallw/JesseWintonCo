@@ -17,6 +17,6 @@ menu:
   main:
     identifier: _about
     url: "/about"
-    weight: 1
+    weight: 2
 
 ---

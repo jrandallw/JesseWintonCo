@@ -12,6 +12,6 @@ hero_image: ''
 layout: pages
 menu:
   main:
-    weight: 2
+    weight: 3
 
 ---
