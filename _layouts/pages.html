@@ -1,0 +1,27 @@
+---
+layout: default
+class: page
+---
+
+{% if page.page_type == "split" %}
+{% include hero.html %}
+
+<section class="page-content">
+  <div class="container">
+    {% for block in page.blocks %}
+    {% assign template = block.template %}
+    {% case template %}
+    {% when 'heading' %}
+        {% include blocks/heading.html %}  
+    {% when 'content-block' %}
+        {% include blocks/content-block.html %}    
+    {% when 'text-block' %}
+        {% include blocks/text-block.html %}             
+    {% endcase %}
+    {% endfor %}  
+  </div>
+</section>
+{% else %}
+<section class="page-content">
+</section>
+{% endif %}

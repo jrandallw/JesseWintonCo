@@ -1,0 +1,17 @@
+---
+label: Social
+hide_body: true
+is_partial: false
+fields:
+- type: field_group_list
+  name: social
+  label: Social
+  fields:
+  - type: text
+    label: Title
+    name: title
+  - type: text
+    label: URL
+    name: url
+data_files:
+- _data/social.yml

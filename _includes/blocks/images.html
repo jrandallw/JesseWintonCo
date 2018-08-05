@@ -1,0 +1,6 @@
+<div class="{{ block.image_layout }} {% if page.dark_theme == true %}dark{% endif %} {% if forloop.index <=1 %}first{% endif %} block">
+    <figure>
+      <img src="{{ block.image | relative_url }}"> 
+      <figcaption class="caption">{{ block.caption | downcase }}</figcaption>
+    </figure>
+</div>  

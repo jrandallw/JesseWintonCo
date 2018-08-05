@@ -1,0 +1,21 @@
+---
+label: Price Block
+hide_body: false
+is_partial: true
+fields:
+- type: text
+  label: Title
+  name: title
+- type: number
+  name: price
+  label: Price
+  config:
+    step: '100'
+  default: '0'
+- type: textarea
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Copy
+  name: copy

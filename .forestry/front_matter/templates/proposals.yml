@@ -1,0 +1,29 @@
+---
+label: Proposals
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  default: Purpose
+  label: Purpose
+  name: purpose
+- type: boolean
+  name: dark_theme
+  label: Dark Theme
+  default: true
+- type: field_group_list
+  name: services
+  label: Services
+  fields:
+  - type: text
+    name: service
+    label: Service
+- type: blocks
+  name: blocks
+  label: Blocks
+  template_types:
+  - content-block
+  - price-block
+  - image
+pages:
+- _proposal/bellavista-landscape-services.md

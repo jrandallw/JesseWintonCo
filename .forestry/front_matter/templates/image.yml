@@ -1,0 +1,26 @@
+---
+label: Image
+hide_body: false
+is_partial: true
+fields:
+- type: file
+  name: image
+  label: Image Upload
+- type: select
+  name: image_layout
+  config:
+    source:
+      type: simple
+    options:
+    - fullwidth-image
+    - center-image
+    - split-image-right
+    - split-image-left
+    - push-image-right
+    - push-image-left
+    required: true
+  label: Image Layout
+  default: fullwidth-image
+- type: text
+  name: caption
+  label: Caption

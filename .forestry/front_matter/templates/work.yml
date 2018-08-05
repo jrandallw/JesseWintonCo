@@ -1,0 +1,41 @@
+---
+label: Work
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: client
+  label: Client
+  default: ''
+- type: text
+  default: ''
+  label: Project Year
+  name: project_year
+- type: field_group_list
+  name: services
+  label: Services
+  fields:
+  - type: text
+    name: service
+    label: Service
+- type: boolean
+  name: dark_theme
+  label: Dark Theme
+  default: true
+- type: file
+  label: Featured Image
+  name: featured_image
+  description: ''
+- type: blocks
+  name: blocks
+  label: Blocks
+  template_types:
+  - image
+  description: ''
+pages:
+- _work/nesteruk.md
+- _work/jake-bennet.md
+- _work/goosby.md
+- _work/bong.md
+- _work/kantorik.md
+- _work/fred-fuerst.md

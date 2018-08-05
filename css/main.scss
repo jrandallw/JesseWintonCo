@@ -12,7 +12,7 @@ $font-weight-bold: 600;
 $text-color: #222;
 $light-color: #fff;
 $secondary-light-color: #eee;
-$third-light-color: #ddd;
+$third-light-color: #f9f9f9;
 $dark-color: #111;
 $secondary-dark-color: #222;
 $border-color: #ddd;
@@ -23,14 +23,12 @@ $footer-height: 75px;
 
 // padding
 $gutter: 20px;
-$border-box: border-box;
-$content-box: content-box;
 
 // widths
 $full: 100%;
 $half: 50%;
 $max-width: 1600px;
-$max-width-slim: 1200px;
+$slim: 1200px;
 $one-third: 33.3333333%;
 $two-thirds: 66.6666%;
 $full-viewport-width: 100vw;
@@ -48,22 +46,67 @@ $half-viewport-height: 50vh;
 }
 
 // breakpoints
-$break-larger: "screen and (max-width: 1300px)";
-$break-large: "screen and (max-width: 768px)";
-$break-medium: "screen and (max-width: 438px)";
+$break-large: "screen and (min-width: 40em)";
+$break-medium: "screen and (min-width: 40em)";
 
-$break-mf-small: "only screen and (max-width: 40em)";
-$break-mf-medium: "screen and (min-width: 40.063em)";
-$break-mf-large: "screen and (min-width: 64.063em)";
+
+// flex mixins
+@mixin flex-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  align-items: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	justify-content: center;
+	-webkit-justify-content: center;
+}
+
+@mixin flex-full {
+  flex: 0 0 100%;
+}
+
+@mixin flex-half {
+  flex: 0 0 (100% / 2);
+}
+
+@mixin flex-third {
+	flex: 0 0 (100% / 3);
+}
+
+@mixin flex-quarter {
+	flex: 0 0 (100% / 4);
+}
+
+@mixin flex-fifth {
+	flex: 0 0 (100% / 5);
+}
+
+// position mixins
+@mixin pin-horizontal-center {
+  position: absolute;
+	left: $half;
+	@include prefix(transform, translateX(-$half) !important, webkit moz ms);
+}
 
 @import
 	"base",
   "layout",
-  "home",
-  "about",
-  "work",
-  "journal",
-  "proposals",
-  "contact",
-	"fonts"
+  "pages",
+  "fonts"
 ;

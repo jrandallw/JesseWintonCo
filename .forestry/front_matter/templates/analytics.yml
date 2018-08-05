@@ -1,0 +1,8 @@
+---
+label: Analytics
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: analytics_id
+  label: Analytics ID

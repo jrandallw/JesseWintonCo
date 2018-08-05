@@ -1,0 +1,31 @@
+---
+label: Default
+hide_body: true
+is_partial: false
+fields:
+- type: file
+  name: hero_image
+  label: Hero Image
+- type: select
+  name: page_type
+  config:
+    source:
+      type: simple
+    options:
+    - split
+    - default
+    required: true
+  label: Page Type
+  default: split
+- type: blocks
+  label: Blocks
+  name: blocks
+  template_types:
+  - heading
+  - text-block
+  - content-block
+pages:
+- 404.markdown
+- contact.markdown
+- index.markdown
+- about.markdown
