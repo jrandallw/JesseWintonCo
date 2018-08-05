@@ -18,6 +18,10 @@ fields:
   - type: text
     name: service
     label: Service
+- type: boolean
+  name: dark_theme
+  label: Dark Theme
+  default: true
 - type: file
   label: Featured Image
   name: featured_image
