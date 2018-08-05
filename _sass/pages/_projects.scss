@@ -1,0 +1,127 @@
+.project-overview {
+  width: $full;
+  background: $secondary-light-color;
+  min-height: $project-overview;
+  z-index: -1;
+  @include flex-row;
+  @include flex-center;
+
+  .container {
+      max-width: $slim;
+      width: 80%;
+      @include flex-column;
+
+      @media #{$break-large} {
+        @include flex-row;
+      } 
+  }
+
+  .intro {
+      padding-right: $gutter + 10px;
+      box-sizing: border-box;
+      text-align: justify;
+      @include flex-half;
+  }
+
+  .info {
+      margin-top: $gutter * 2;
+      margin-right: auto;
+      @include flex-half;
+
+      @media #{$break-large} {
+        margin-top: 0;
+        margin-left: $gutter * 2;
+      } 
+  }   
+
+  .heading {
+      font-size: $base-font-size - 2px;
+      font-family: $base-font-stack;
+      margin-bottom: $gutter;
+  }
+}
+
+.project-content {
+  background: $light-color;
+  width: $full;
+  min-height: $full-viewport-height;
+  padding: $gutter * 2 0;
+  min-height: $footer-height;
+
+  .container {
+      max-width: $slim;
+      width: $full;
+  }
+
+  .block {
+      margin: $gutter * 1.5 auto;
+
+      &:first-of-type {
+          margin-top: $gutter * 3;
+      }
+
+      @media #{$break-large} {
+        margin: $gutter * 4 auto;
+      }    
+  }
+
+  .full-width-image img {
+      width: 100%;
+  }
+
+  .split-image-left,
+  .split-image-right,
+  .push-image-left,
+  .push-image-right {
+      width: 100%;
+      background: $third-light-color;
+
+      &.dark {
+          background: $dark-color;
+      }
+
+      img {
+          width: $full;
+      }
+
+      .caption {
+          margin-top: $gutter;
+          width: $full;
+          @include pin-horizontal-center;
+          text-align: center;
+      }
+  }
+
+  .split-image-left::after,
+  .split-image-right::after,
+  .push-image-left::after,
+  .push-image-right::after {
+      content: '';
+      display: block;
+      clear: both;
+  }
+
+  .split-image-left figure {
+      width: $half;
+      float: left;
+      position: relative;
+  }
+
+  .split-image-right figure {
+      width: $half;
+      float: right;
+      position: relative;
+  }
+
+  .push-image-left figure {
+      width: $half + 25%;
+      float: left;
+      position: relative;
+  }
+
+  .push-image-right figure {
+      width: $half + 25%;
+      float: right;
+      position: relative;
+  }
+}

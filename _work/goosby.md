@@ -13,13 +13,13 @@ blocks:
   image_layout: push-image-right
   image: "/uploads/goosby002.jpg"
 - template: image
-  image_layout: push-image-right
+  image_layout: push-image-left
   image: "/uploads/goosby003.jpg"
 - template: image
-  image_layout: push-image-left
+  image_layout: push-image-right
   image: "/uploads/goosby004.jpg"
 - template: image
-  image_layout: split-image-right
+  image_layout: split-image-left
   image: "/uploads/goosby005.jpg"
 featured_image: "/uploads/goosby001.jpg"
 

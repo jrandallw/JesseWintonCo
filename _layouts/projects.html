@@ -6,7 +6,7 @@ class: page
 <section class="project-overview">
   <div class="container">
     <div class="intro">
-      <h6 class="heading">{{ page.client }} • {{ page.project_year }}</h6>
+      <h6 class="heading">{{ page.client | upcase }} • {{ page.project_year }}</h6>
       {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
     </div>
 
