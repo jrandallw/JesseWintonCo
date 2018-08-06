@@ -16,7 +16,7 @@
     
     .heading {
       font-family: $heading-font-stack !important;
-      font-size: $base-font-size + 10px;
+      font-size: $base-font-size + 5px;
       width: $full - 10%;
       z-index: 1;
       position: relative;
@@ -37,7 +37,11 @@
 
       &.justify {
         text-align: justify;
-      }
+			}
+			
+			@media #{$break-large} {
+				font-size: $base-font-size + 10px;
+			}
     }
 
     .content-block {

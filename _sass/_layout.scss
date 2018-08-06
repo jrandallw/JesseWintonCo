@@ -68,7 +68,7 @@ header {
 	right: 0;
     height: $footer-height;
 	z-index: 1;
-	padding: 0 $gutter * 2;
+	padding: 0 $gutter;
 	box-sizing: border-box;
 	background: $light-color;
 	@include flex-column;
@@ -130,5 +130,6 @@ header {
   
   @media #{$break-large} {
 	@include flex-row;
+	padding: 0 $gutter * 2;
   }
 }
