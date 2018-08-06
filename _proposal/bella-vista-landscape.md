@@ -65,6 +65,8 @@ blocks:
 
     I’d love to discuss these strategies further with you. If you have any more questions moving forward please don’t hesitate to reach out to me.
 dark_theme: true
+total: 2000
+cycle: Monthly
 
 ---
 This proposal is for strategization and creation of short and long-term marketing plans to help facilitate continual growth for BellaVista Landscape Services.
