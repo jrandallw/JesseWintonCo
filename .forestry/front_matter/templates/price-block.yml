@@ -22,6 +22,7 @@ fields:
     - Bi-weekly
     - Monthly
     - Yearly
+    - Flat fee
   label: Cycle  
 - type: textarea
   config:
