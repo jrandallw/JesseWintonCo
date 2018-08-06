@@ -1,6 +1,6 @@
-<div class="price-block block">
-    <div class="container">
-      <h5>{{ block.title | downcase }} • {{ block.price | prepend: "$" }}</h5>
-      {{ block.copy | markdownify | downcase }}
-    </div>
-</div>
+<div class="content-block block">
+  <div class="container">
+    <h5 class="heading">{{ block.heading | downcase }} - {{ block.price | prepend: "$" }} {{ block.cycle | downcase }}</h5>
+    {{ block.copy | markdownify | downcase }}
+  </div>
+</div>  

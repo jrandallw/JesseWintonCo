@@ -12,6 +12,17 @@ fields:
   config:
     step: '100'
   default: '0'
+- type: select
+  name: cycle
+  config:
+    source:
+      type: simple
+    options:
+    - Weekly
+    - Bi-weekly
+    - Monthly
+    - Yearly
+  label: Cycle  
 - type: textarea
   config:
     wysiwyg: true

@@ -39,5 +39,13 @@ class: proposal
         {% include blocks/price-block.html %}                  
     {% endcase %}
     {% endfor %}
+
+    <div class="content-block">
+      <div class="text">
+        <div class="container row align-center">
+          {{ page.total | prepend: "$" }} {{ page.cycle }}
+        </div> 
+      </div>  
+    </div> 
   </div>
 </section>
