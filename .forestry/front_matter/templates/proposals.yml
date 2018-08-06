@@ -25,5 +25,10 @@ fields:
   - content-block
   - price-block
   - image
+- type: number
+  name: total
+  label: Total
+  config:
+    step: '100'
 pages:
 - _proposal/bella-vista-landscape.md
