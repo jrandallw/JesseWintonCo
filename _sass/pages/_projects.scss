@@ -10,34 +10,38 @@
       max-width: $slim;
       width: 80%;
       @include flex-column;
+      align-items: start;
 
       @media #{$break-large} {
         @include flex-row;
       } 
-  }
 
-  .intro {
-      padding-right: $gutter + 10px;
-      box-sizing: border-box;
-      text-align: justify;
-      @include flex-half;
-  }
+      .intro {
+        text-align: justify;
+        @include flex-half;
 
-  .info {
-      margin-top: $gutter * 2;
-      margin-right: auto;
-      @include flex-half;
-
-      @media #{$break-large} {
-        margin-top: 0;
-        margin-left: $gutter * 2;
-      } 
-  }   
-
-  .heading {
-      font-size: $base-font-size - 2px;
-      font-family: $base-font-stack;
-      margin-bottom: $gutter;
+        @media #{$break-large} {
+            padding-right: $gutter + 10px;
+            box-sizing: border-box;
+        } 
+    }
+  
+    .info {
+        margin-top: $gutter * 2;
+        margin-right: auto;
+        @include flex-half;
+  
+        @media #{$break-large} {
+          margin-top: 0;
+          margin-left: $gutter * 2;
+        } 
+    }   
+  
+    .heading {
+        font-size: $base-font-size - 2px;
+        font-family: $base-font-stack;
+        margin-bottom: $gutter;
+    }
   }
 }
 
