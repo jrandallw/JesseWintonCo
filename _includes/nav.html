@@ -29,7 +29,7 @@
 
 <nav class="nav">
   {%- for item in menu_items -%}
-    <a class="active" href={{ item.url | escape }}> {{ item.title }}</a>
+    <a href={{ item.url | escape }}> {{ item.title }}</a>
   {%- endfor -%}
   <div class="branding">
     <a href="{{ site.url }}"><h6 class="name">{{ site.title }}</h6></a>
