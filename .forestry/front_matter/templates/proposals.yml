@@ -40,6 +40,7 @@ fields:
     - Bi-weekly
     - Monthly
     - Yearly
+    - Flat fee
   label: Cycle
 pages:
 - _proposal/bella-vista-landscape.md
