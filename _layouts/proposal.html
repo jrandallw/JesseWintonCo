@@ -40,12 +40,8 @@ class: proposal
     {% endcase %}
     {% endfor %}
 
-    <div class="content-block">
-      <div class="text">
-        <div class="container row align-center">
-          {{ page.total | prepend: "$" }} {{ page.cycle }}
-        </div> 
-      </div>  
-    </div> 
+    {% if page.total %}
+      {% include blocks/total.html %}
+    {% endif %}
   </div>
 </section>

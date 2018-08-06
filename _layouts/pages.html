@@ -4,8 +4,7 @@ class: page
 ---
 
 {% if page.page_type == "split" %}
-{% include hero.html %}
-
+{% include sections/hero.html %}
 <section class="page-content">
   <div class="container">
     {% for block in page.blocks %}

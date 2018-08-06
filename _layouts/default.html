@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+  {% include sections/head.html %}
 
   <body {% if layout.class %}class="template-{{ layout.class }}-post"{% endif %}>
     {% assign type = page.page_type %}
     <main class="wrapper {{ type }}" role="main">
-      {% include header.html %}
+      {% include sections/header.html %}
       {{ content }}
-      {% include footer.html %}
+      {% include sections/footer.html %}
     </main>
 
-    {% include scripts.html %}
+    {% include utilities/scripts.html %}
 
   </body>
 
