@@ -30,5 +30,16 @@ fields:
   label: Total
   config:
     step: '100'
+- type: select
+  name: cycle
+  config:
+    source:
+      type: simple
+    options:
+    - Weekly
+    - Bi-weekly
+    - Monthly
+    - Yearly
+  label: Cycle
 pages:
 - _proposal/bella-vista-landscape.md
