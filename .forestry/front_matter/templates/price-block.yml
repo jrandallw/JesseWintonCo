@@ -23,7 +23,7 @@ fields:
     - Monthly
     - Yearly
     - Flat fee
-  label: Cycle  
+  label: Cycle
 - type: textarea
   config:
     wysiwyg: true
