@@ -12,7 +12,13 @@
 		min-height: 100vh;
 		@include flex-column;
 		@include flex-center;
-    position: relative;
+		position: relative;
+		
+		&.split {
+			@media #{$break-large} {
+				width: 50%;
+			}
+		}
     
     .heading {
       font-family: $heading-font-stack !important;
@@ -56,18 +62,22 @@
         text-align: justify;
       }
 		}
-		
-		@media #{$break-large} {
-			width: 50%;
+
+		.container {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 $gutter;
+			text-align: justify;
+			box-sizing: border-box;
+			@include flex-column;
+			@include flex-center;
+
+			@media #{$break-large} {
+				width: 80%;
+			}
 		}
+		
 	}
-	
-.container {
-	width: 80%;
-	margin: 0 auto;
-	@include flex-column;
-	@include flex-center;
-}
 
 .hero {
 	width: 50vw;

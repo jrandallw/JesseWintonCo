@@ -5,7 +5,7 @@ class: page
 
 {% if page.page_type == "split" %}
 {% include sections/hero.html %}
-<section class="page-content">
+<section class="page-content split">
   <div class="container">
     {% for block in page.blocks %}
     {% assign template = block.template %}
@@ -22,5 +22,17 @@ class: page
 </section>
 {% else %}
 <section class="page-content">
-</section>
+  <div class="container">
+    {% for block in page.blocks %}
+    {% assign template = block.template %}
+    {% case template %}
+    {% when 'heading' %}
+        {% include blocks/heading.html %}  
+    {% when 'content-block' %}
+        {% include blocks/content-block.html %}    
+    {% when 'text-block' %}
+        {% include blocks/text-block.html %}             
+    {% endcase %}
+    {% endfor %}  
+  </div>
 {% endif %}

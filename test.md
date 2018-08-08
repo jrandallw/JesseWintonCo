@@ -1,6 +1,7 @@
 ---
 title: Test
 page_type: default
+layout: pages
 date: 2018-08-08 18:11:40 +0000
 hero_image: ''
 blocks:
@@ -13,6 +14,6 @@ blocks:
     molestie. Phasellus mollis hendrerit ligula. Suspendisse at dui eget felis iaculis
     sollicitudin id eu nunc. Cras porttitor suscipit augue, nec faucibus mi semper
     porttitor. Aenean rhoncus leo id dapibus imperdiet.
-published: false
+published: true
 
 ---
