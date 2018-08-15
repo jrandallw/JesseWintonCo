@@ -24,7 +24,7 @@ blocks:
 - template: image
   image_layout: split-image-left
   image: "/uploads/bong006.jpg"
-featured_image: "/uploads/bong006.jpg"
+featured_image: "/uploads/bong-featured.jpg"
 dark_theme: true
 
 ---
