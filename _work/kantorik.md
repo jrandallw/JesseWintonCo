@@ -27,7 +27,7 @@ blocks:
   image_layout: split-image-left
   image: "/uploads/kantorik005.jpg"
   caption: Model • Mary Kantorik
-featured_image: "/uploads/kantorik001.jpg"
+featured_image: "/uploads/kantorik-featured.jpg"
 dark_theme: true
 
 ---
