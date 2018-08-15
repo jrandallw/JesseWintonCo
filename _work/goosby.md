@@ -21,7 +21,7 @@ blocks:
 - template: image
   image_layout: split-image-left
   image: "/uploads/goosby005.jpg"
-featured_image: "/uploads/goosby001.jpg"
+featured_image: "/uploads/goosby-featured.jpg"
 dark_theme: true
 
 ---
