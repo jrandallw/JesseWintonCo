@@ -33,9 +33,9 @@ fields:
   - image
   description: ''
 pages:
-- _work/serman-brands.md
 - _work/nesteruk.md
 - _work/jake-bennet.md
+- _work/serman-brands.md
 - _work/goosby.md
 - _work/bong.md
 - _work/kantorik.md
