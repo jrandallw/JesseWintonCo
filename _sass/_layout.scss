@@ -77,6 +77,8 @@ header {
 	
 	&.split {
 		width: 100%;
+		right: 0;
+		bottom: 0;
 		position: absolute;
 
 		@media #{$break-large} {
