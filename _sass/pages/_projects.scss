@@ -70,14 +70,12 @@
       }    
   }
 
-  .full-width-image img {
-      width: 100%;
-  }
-
   .split-image-left,
   .split-image-right,
   .push-image-left,
-  .push-image-right {
+  .push-image-right,
+  .fullwidth-image,
+  .center-image {
       width: 100%;
       background: $third-light-color;
 
@@ -106,26 +104,31 @@
       clear: both;
   }
 
+  .center-image figure {
+      width: 75%;
+      margin: 0 auto;
+  }
+
   .split-image-left figure {
-      width: $half;
+      width: 50%;
       float: left;
       position: relative;
   }
 
   .split-image-right figure {
-      width: $half;
+      width: 50%;
       float: right;
       position: relative;
   }
 
   .push-image-left figure {
-      width: $half + 25%;
+      width: 75%;
       float: left;
       position: relative;
   }
 
   .push-image-right figure {
-      width: $half + 25%;
+      width: 75%;
       float: right;
       position: relative;
   }
