@@ -35,6 +35,7 @@ fields:
   - text-block
   description: ''
 pages:
+- _work/test.md
 - _work/kantorik.md
 - _work/serman-brands.md
 - _work/fred-fuerst.md
