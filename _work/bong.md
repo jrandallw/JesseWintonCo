@@ -1,8 +1,7 @@
 ---
 title: Brad Bong
 date: 2018-08-01 23:32:14 +0000
-client: Brad Bong
-project_year: 2018
+subtitle: Lifestyle Photography
 services:
 - service: Photography
 blocks:

@@ -1,9 +1,7 @@
 ---
 title: Serman Brands
-dark_theme: true
 date: 2018-08-15 00:38:23 +0000
-client: Serman Brands
-project_year: 2018
+subtitle: Lifestyle Photography
 services:
 - service: Lifestyle Photography
 - service: Art Direction
@@ -33,6 +31,7 @@ blocks:
   image_layout: split-image-left
   image: "/uploads/serman002.jpg"
   caption: Model • Kaleb Branderhorst
+dark_theme: true
 
 ---
 New partnership with [Serman Brands](https://sermanbrands.com), creating a set of images for their online presence. Serman Brands is creating minimalist, RFID safe wallets. Featured in GQ Magazine.

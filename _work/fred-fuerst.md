@@ -1,8 +1,7 @@
 ---
-title: Fred Fuerst
+title: EYECenter Optometric
 date: 2018-08-01 23:54:52 +0000
-client: EYECenter Optometric
-project_year: 2018
+subtitle: Strategy & Production
 services:
 - service: Photography
 - service: Strategy

@@ -4,13 +4,14 @@ hide_body: false
 is_partial: false
 fields:
 - type: text
-  name: client
-  label: Client
-  default: ''
-- type: text
-  default: ''
-  label: Project Year
-  name: project_year
+  name: subtitle
+  label: Subtitle
+  default: ''  
+  - type: datetime
+    name: project_year
+    label: Project Year
+    config:
+      date_format: YYYY
 - type: field_group_list
   name: services
   label: Services
