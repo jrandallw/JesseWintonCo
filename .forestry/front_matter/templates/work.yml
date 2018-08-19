@@ -7,11 +7,11 @@ fields:
   name: subtitle
   label: Subtitle
   default: ''  
-  - type: datetime
-    name: project_year
-    label: Project Year
-    config:
-      date_format: YYYY
+- type: datetime
+  name: project_year
+  label: Project Year
+  config:
+    date_format: YYYY
 - type: field_group_list
   name: services
   label: Services
