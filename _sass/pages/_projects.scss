@@ -56,6 +56,26 @@
       max-width: $slim;
       width: $full;
       margin: 0 auto;
+
+      .split-image-left,
+      .split-image-right,
+      .push-image-left,
+      .push-image-right,
+      .fullwidth-image,
+      .center-image {
+            background: $third-light-color;
+      }
+
+      &.dark {
+        .split-image-left,
+        .split-image-right,
+        .push-image-left,
+        .push-image-right,
+        .fullwidth-image,
+        .center-image {
+            background: $dark-color;
+        }
+    }
   }
 
   .block {
@@ -67,21 +87,20 @@
 
       @media #{$break-large} {
         margin: $gutter * 4 auto;
-      }    
-  }
-
-  .split-image-left,
-  .split-image-right,
-  .push-image-left,
-  .push-image-right,
-  .fullwidth-image,
-  .center-image {
-      width: 100%;
-      background: $third-light-color;
-
-      &.dark {
-          background: $dark-color;
+      } 
+      
+      &.text-block {
+          width: 70%;
+          margin: 0 auto;
       }
+
+      &.split-image-left,
+      &.split-image-right,
+      &.push-image-left,
+      &.push-image-right,
+      &.fullwidth-image,
+      &.center-image {
+        width: 100%;
 
       img {
           width: $full;
@@ -93,43 +112,45 @@
           @include pin-horizontal-center;
           text-align: center;
       }
-  }
 
-  .split-image-left::after,
-  .split-image-right::after,
-  .push-image-left::after,
-  .push-image-right::after {
+      &.split-image-left::after,
+  &.split-image-right::after,
+  &.push-image-left::after,
+  &.push-image-right::after {
       content: '';
       display: block;
       clear: both;
   }
 
-  .center-image figure {
+  &.center-image figure {
       width: 75%;
       margin: 0 auto;
   }
 
-  .split-image-left figure {
+  &.split-image-left figure {
       width: 50%;
       float: left;
       position: relative;
   }
 
-  .split-image-right figure {
+  &.split-image-right figure {
       width: 50%;
       float: right;
       position: relative;
   }
 
-  .push-image-left figure {
+  &.push-image-left figure {
       width: 75%;
       float: left;
       position: relative;
   }
 
-  .push-image-right figure {
+  &.push-image-right figure {
       width: 75%;
       float: right;
       position: relative;
   }
+  }
+
+}
 }

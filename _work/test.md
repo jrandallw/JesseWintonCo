@@ -11,6 +11,6 @@ blocks:
   copy: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget felis vitae
     tortor aliquet sagittis ac id arcu. Suspendisse porta et dui quis congue. Nam
     fermentum lobortis sapien maximus varius.
-published: false
+published: true
 
 ---
