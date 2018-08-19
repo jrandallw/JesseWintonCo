@@ -28,6 +28,7 @@ blocks:
   caption: Model • Mary Kantorik
 featured_image: "/uploads/kantorik-featured.jpg"
 dark_theme: true
+project_year: 2018-08-01 07:00:00 +0000
 
 ---
 Lifestyle shots with Mary Kantorik, a new affiliate for xomandysue, an urban apparel company located in Newport Beach, CA.
