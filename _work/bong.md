@@ -25,6 +25,7 @@ blocks:
   image: "/uploads/bong006.jpg"
 featured_image: "/uploads/bong-featured.jpg"
 dark_theme: true
+project_year: 2018-08-01 07:00:00 +0000
 
 ---
 Created a new set of headshots and lifestyle portraits for Brad Bong, an actor based in NYC. Shot in Sacramento, CA.
