@@ -31,6 +31,7 @@ blocks:
   caption: Model • Jake Bennet
 featured_image: "/uploads/winter-featured.jpg"
 dark_theme: true
+project_year: 2017-08-01 07:00:00 +0000
 
 ---
 A set of portraits highlighting Gap Inc. apparel in the wild, featuring Jake Bennet.
