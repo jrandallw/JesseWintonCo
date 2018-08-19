@@ -21,7 +21,7 @@ blocks:
   image: "/uploads/goosby005.jpg"
 featured_image: "/uploads/goosby-featured.jpg"
 dark_theme: true
-subtitle: ''
+subtitle: 'Lifestyle Photography '
 project_year: 2018-08-01 07:00:00 +0000
 
 ---
