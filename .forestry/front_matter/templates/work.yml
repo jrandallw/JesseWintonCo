@@ -34,8 +34,8 @@ fields:
   - image
   description: ''
 pages:
-- _work/fred-fuerst.md
 - _work/serman-brands.md
+- _work/fred-fuerst.md
 - _work/jake-bennet.md
 - _work/kantorik.md
 - _work/goosby.md
