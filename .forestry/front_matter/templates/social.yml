@@ -13,5 +13,3 @@ fields:
   - type: text
     label: URL
     name: url
-data_files:
-- _data/social.yml
