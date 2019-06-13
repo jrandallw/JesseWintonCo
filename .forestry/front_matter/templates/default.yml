@@ -1,7 +1,6 @@
 ---
 label: Default
 hide_body: true
-is_partial: false
 fields:
 - type: file
   name: hero_image
@@ -25,7 +24,7 @@ fields:
   - text-block
   - content-block
 pages:
-- contact.markdown
-- index.markdown
-- about.markdown
 - 404.markdown
+- about.markdown
+- index.markdown
+- contact.markdown

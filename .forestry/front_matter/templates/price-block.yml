@@ -1,7 +1,6 @@
 ---
 label: Price Block
 hide_body: false
-is_partial: true
 fields:
 - type: text
   label: Title

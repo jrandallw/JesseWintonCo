@@ -1,7 +1,6 @@
 ---
 label: Work
 hide_body: false
-is_partial: false
 fields:
 - type: text
   name: subtitle
@@ -35,9 +34,9 @@ fields:
   - text-block
   description: ''
 pages:
-- _work/jake-bennet.md
-- _work/goosby.md
-- _work/bong.md
-- _work/kantorik.md
-- _work/fred-fuerst.md
 - _work/serman-brands.md
+- _work/fred-fuerst.md
+- _work/kantorik.md
+- _work/bong.md
+- _work/goosby.md
+- _work/jake-bennet.md
