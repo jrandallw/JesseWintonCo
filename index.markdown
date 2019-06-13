@@ -6,7 +6,7 @@ hero_image: "/uploads/hero.jpg"
 blocks:
 - template: heading
   text_alignment: center
-  heading: Photographer, writer, and designer working and living in Northern California.
+  heading: Multi-disciplined creative living and working in Northern California.
 page_type: split
 
 ---
