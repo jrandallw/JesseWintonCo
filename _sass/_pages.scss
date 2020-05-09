@@ -29,15 +29,17 @@
 
 	.page-content {
 		width: 100%;
-		min-height: 100vh;
-    	position: relative;
+		min-height: 75vh;
+		position: relative;
+		@include flex-column;
+		@include flex-center;
     
     .heading {
       	font-family: $heading-font-stack !important;
 		font-size: $base-font-size + 8;
 		font-weight: normal;
-      	width: $full;
-      	z-index: 1;
+		  width: $full;
+		  z-index: 1;
       	position: relative;
 	  	margin: 0 auto;
       	line-height: $base-line-height - .6;
@@ -59,7 +61,7 @@
 	  }
 			
 	  @media #{$break-large} {
-		font-size: $base-font-size + 90px;
+		font-size: $base-font-size + 50px;
 	  }
 
 	  /*@supports (-webkit-text-stroke: 1px $accent-color) {
@@ -68,6 +70,11 @@
 		  -webkit-text-fill-color: transparent;
 		}
 	  }*/
+
+	  &::after {
+		  content: '.';
+		  color: $accent-color;
+	  }
     }
 
     .text-block {
