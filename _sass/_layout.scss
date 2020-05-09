@@ -34,9 +34,10 @@ header {
 		text-align: right;
 	
 		a {
-			font-size: $base-font-size + 2px;
+			font-size: $base-font-size;
 			text-decoration: none;
 			letter-spacing: 1px;
+			text-transform: uppercase;
 			color: $text-color;
 			margin: 0 20px;
 	

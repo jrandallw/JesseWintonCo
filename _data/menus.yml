@@ -1,14 +1,14 @@
 ---
 main:
-- url: "/uploads/resume.pdf"
+- url: "mailto:hi@jessewinton.com"
   weight: 3
-  title: Resumé
-- url: "/bio"
+  title: Contact
+- url: "/about"
   weight: 1
-  title: Bio
-- url: "/photos"
+  title: About
+- url: "/work"
   weight: 2
-  title: Photos
+  title: Work
 social:
 - url: https://twitter.com/thejessewinton
   weight: 1
