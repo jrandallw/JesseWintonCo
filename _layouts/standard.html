@@ -4,7 +4,7 @@ layout: default
 
 {% assign type = page.page_type %}
 {% assign theme = page.page_theme %}
-
+{% include sections/header.html %}
 <section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
   <div class="container">
     {% for block in page.blocks %}

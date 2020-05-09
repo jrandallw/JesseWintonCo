@@ -27,9 +27,8 @@
 
 {%- endif -%}
 
-<nav class="nav">
-  <a href='{{ site.url }}' class='index-link'>●</a>
-  {%- for item in menu_items -%}
-    <a href="{{ item.url | escape }}"{% if page.url contains item.url %} class='active'{% endif %} title="{{ site.title }} — {{ item.title }}">{{ item.title }}</a>
-  {%- endfor -%}
+<nav class="social">
+  {% for item in menu_items %}
+  <a href="{{ item.url }}" title="{{ item.title }}" target="_blank">{{ item.title }}</a>
+  {% endfor %}
 </nav>

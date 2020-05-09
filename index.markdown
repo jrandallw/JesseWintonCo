@@ -5,8 +5,7 @@ layout: pages
 hero_image: ''
 blocks:
 - template: heading
-  text_alignment: center
-  heading: Multi-disciplined creative living and working in Northern California.
-page_type: split
-
+  text_alignment: left
+  heading: I'm Jesse Winton, and I'm a multi-disciplined creative in California
+page_theme: light
 ---

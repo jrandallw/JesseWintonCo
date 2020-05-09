@@ -1,0 +1,18 @@
+.page-content {
+
+    .container {
+        
+        .heading {
+            max-width: 75%;
+        }
+    }
+
+    &.home {
+        display: none;
+        
+        @media #{$break-large} {
+            @include flex-column;
+            @include flex-center;
+        }
+    }
+}

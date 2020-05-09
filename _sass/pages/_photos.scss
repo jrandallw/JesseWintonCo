@@ -1,4 +1,4 @@
-.projects .footer {
+.photos .footer {
     background: $light-color;
 }
 
@@ -7,12 +7,11 @@
         width: 100%;
     }
 
-    &.projects {
+    &.photos {
         width: $full;
         margin: 0 auto;
         background: $light-color;
         min-height: 100vh;
-        padding-top: $gutter * 8;
 
         .container {
             max-width: $slim;
@@ -40,7 +39,7 @@
           }
         }
       
-        .project {
+        .photo {
             margin: $gutter * 1.5 auto;
       
             &:first-of-type {
