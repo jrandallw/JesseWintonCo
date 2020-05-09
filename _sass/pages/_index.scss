@@ -1,7 +1,10 @@
 .page-content {
 
     .container {
-        max-width: 75%;
+        
+        .heading {
+            max-width: 75%;
+        }
     }
 
     &.home {

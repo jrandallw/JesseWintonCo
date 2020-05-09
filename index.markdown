@@ -8,5 +8,4 @@ blocks:
   text_alignment: left
   heading: I'm Jesse Winton, and I'm a multi-disciplined creative in California
 page_theme: light
-
 ---
