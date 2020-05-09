@@ -1,8 +1,103 @@
 ---
 title: Jesse Winton
 timezone: UTC
-email: hi@jessewinton.com
-description: Actor & Writer in Sacramento, CA.
+collections:
+  posts:
+    title: Journal
+    output: true
+  work:
+    title: Projects
+    output: true
+    permalink: "/:collection/:path"
+  proposal:
+    title: Proposals
+    output: true
+    permalink: "/:collection/:path"
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: pages
+  values:
+    is_nav_page: 
+    is_dark: 
+    is_split: 
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/journal/:title/"
+    layout: entries
+    is_dark: true
+    is_fixed: true
+- scope:
+    path: ''
+    type: work
+  values:
+    permalink: "/:collection/:title/"
+    layout: projects
+    general:
+      client: 
+      project_year: 
+      project_url: 
+      cover_image: 
+      is_dark: true
+    services:
+    - type: 
+    sections:
+    - type: 
+- scope:
+    path: ''
+    type: proposal
+  values:
+    permalink: "/:collection/:title/"
+    layout: proposal
+    is_split: true
+    billing_type: 
+    purpose: 
+    services:
+    - type: 
+    sections:
+    - type: 
+      title: 
+      body: 
+      price: 
+- scope:
+    path: about.markdown
+    type: pages
+  values:
+    permalink: "/about"
+    layout: about
+    page_heading: ''
+- scope:
+    path: work.markdown
+    type: pages
+  values:
+    permalink: "/work"
+    layout: work
+- scope:
+    path: journal.markdown
+    type: pages
+  values:
+    permalink: "/journal"
+    layout: journal
+- scope:
+    path: contact.markdown
+    type: pages
+  values:
+    permalink: "/contact"
+    layout: contact
+    page_heading: ''
+email: hi@jessewinton.co
+description: Self-taught communicator with a focus in photography, communicative design,
+  and writing.
+baseurl: 
+url: https://jessewinton.works
+twitter_username: jrandallw
+google_analytics:
+  tracking_id: 
 markdown: kramdown
 sass:
   style: compressed
