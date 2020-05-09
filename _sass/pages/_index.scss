@@ -1,0 +1,19 @@
+.page-content {
+
+    &.dark {
+        background: $dark-color;
+
+        .heading {
+            color: $light-color !important;
+        }
+    }
+
+    &.home {
+        display: none;
+        
+        @media #{$break-large} {
+            @include flex-column;
+            @include flex-center;
+        }
+    }
+}

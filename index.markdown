@@ -1,12 +1,12 @@
 ---
-title: Home
-date: 2017-09-08 20:14:00 +0000
-layout: pages
-hero_image: "/uploads/hero.jpg"
+title: Index
+date: '2017-09-08T20:14:00.000+00:00'
+layout: index
+hero_image: "uploads/headshot.jpg"
 blocks:
 - template: heading
-  text_alignment: center
-  heading: Multi-disciplined creative living and working in Northern California.
-page_type: split
+  text_alignment: left
+  heading: I'm Jesse Winton, and I'm a multi-disciplined creative in California.
+page_theme: light
 
 ---

@@ -1,1 +1,18 @@
---- {}
+---
+main:
+- url: "/uploads/resume.pdf"
+  weight: 3
+  title: Resumé
+- url: "/bio"
+  weight: 1
+  title: Bio
+- url: "/photos"
+  weight: 2
+  title: Photos
+social:
+- url: https://twitter.com/thejessewinton
+  weight: 1
+  title: Twitter
+- url: https://instagram.com/thejessewinton
+  weight: 2
+  title: Instagram

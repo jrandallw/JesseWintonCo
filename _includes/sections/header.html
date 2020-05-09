@@ -1,3 +1,6 @@
-<header class="header {{ type }}">
-  {% include sections/nav.html menu="main" %}
+{% assign theme = page.page_theme %}
+<header class="header {% if theme == "dark" %} {{ theme }}{% endif %}">
+  <div class="branding"><a href="{{ site.url }}">JW</a></div>
+  {% assign menu = site.menus.main %}
+  {% include sections/nav.html menu="main"%}
 </header>
