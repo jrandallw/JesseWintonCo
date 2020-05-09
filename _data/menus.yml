@@ -1,18 +1,18 @@
 ---
-main:
-- url: "mailto:hi@jessewinton.com"
-  weight: 3
-  title: Contact
-- url: "/about"
-  weight: 1
-  title: About
-- url: "/work"
-  weight: 2
-  title: Work
 social:
-- url: https://twitter.com/thejessewinton
-  weight: 1
-  title: Twitter
 - url: https://instagram.com/thejessewinton
   weight: 2
   title: Instagram
+- url: https://twitter.com/thejessewinton
+  weight: 1
+  title: Twitter
+main:
+- url: "/work"
+  weight: 2
+  title: Work
+- url: "/about"
+  weight: 1
+  title: About
+- url: mailto:hi@jessewinton.com
+  weight: 3
+  title: Contact
