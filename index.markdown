@@ -1,8 +1,8 @@
 ---
 title: Home
-date: 2017-09-08 20:14:00 +0000
+date: '2017-09-08T20:14:00.000+00:00'
 layout: pages
-hero_image: "/uploads/hero.jpg"
+hero_image: ''
 blocks:
 - template: heading
   text_alignment: center
