@@ -8,6 +8,11 @@
         }
     }
 
+    .container {
+        position: relative;
+        top: 150px;
+    }
+
     &.home {
         display: none;
         

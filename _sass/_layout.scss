@@ -1,31 +1,16 @@
 header {
-	top: 30px;
 	right: 0;
+	height: 75px;
 	width: 100%;
-	position: absolute;
+	position: fixed;
+	background: $light-color;
 	z-index: 10;
-	padding: 0 $gutter;
 	box-sizing: border-box;
 	@include flex-row;
 	@include flex-center;
-	
-	&.dark .name,
-	&.dark .nav a {
-		color: $light-color !important;
-	}
 
-	.branding {
-		position: relative;
-		z-index: 1000;
-
-		a {
-			font-size: $base-font-size + 2px;
-			text-decoration: none;
-		}
-
-		@media #{$break-large} {
-			@include flex-half;
-		}
+	.index-link {
+		color: $accent-color !important;
 	}
 
 	.nav {
@@ -34,7 +19,7 @@ header {
 		text-align: right;
 	
 		a {
-			font-size: $base-font-size;
+			font-size: $base-font-size + 3px;
 			text-decoration: none;
 			letter-spacing: 1px;
 			text-transform: uppercase;
