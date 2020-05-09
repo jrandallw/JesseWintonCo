@@ -34,9 +34,9 @@ fields:
   - text-block
   description: ''
 pages:
-- _work/serman-brands.md
-- _work/fred-fuerst.md
-- _work/kantorik.md
 - _work/bong.md
+- _work/fred-fuerst.md
 - _work/goosby.md
 - _work/jake-bennet.md
+- _work/kantorik.md
+- _work/serman-brands.md
