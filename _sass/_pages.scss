@@ -36,14 +36,14 @@
     position: relative;
     
     .heading {
-      font-family: $heading-font-stack !important;
-			font-size: $base-font-size + 8;
-			font-weight: normal;
-      width: $full;
-      z-index: 1;
-      position: relative;
-	  margin: 0 auto;
-      line-height: $base-line-height - .6;
+      	font-family: $heading-font-stack !important;
+		font-size: $base-font-size + 8;
+		font-weight: normal;
+      	width: $full;
+      	z-index: 1;
+      	position: relative;
+	  	margin: 0 auto;
+      	line-height: $base-line-height - .6;
 
       &.left {
         text-align: left;
@@ -59,11 +59,18 @@
 
       &.justify {
         text-align: justify;
-			}
+	  }
 			
-			@media #{$break-large} {
-				font-size: $base-font-size + 80px;
-			}
+	  @media #{$break-large} {
+		font-size: $base-font-size + 80px;
+	  }
+
+	  @supports (-webkit-text-stroke: 1px black) {
+		& {
+		  -webkit-text-stroke: 1px $accent-color;
+		  -webkit-text-fill-color: white;
+		}
+	  }
     }
 
     .text-block {
