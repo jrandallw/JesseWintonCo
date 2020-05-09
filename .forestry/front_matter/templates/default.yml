@@ -2,20 +2,6 @@
 label: Default
 hide_body: true
 fields:
-- type: file
-  name: hero_image
-  label: Hero Image
-- type: select
-  name: page_type
-  config:
-    source:
-      type: simple
-    options:
-    - split
-    - default
-    required: true
-  label: Page Type
-  default: split
 - type: blocks
   label: Blocks
   name: blocks
