@@ -3,12 +3,8 @@
     {% for project in projects %}
     <div class="project">
       <a href="{{ project.url }}">
-        <figure class="project-details">
-          <img src="{{ project.featured_image }}">
-          <figcaption class="text-center">
-            <h6 class="title">{{ project.title }}</h6>
-          </figcaption>
-        </figure> 
+        <img src="{{ project.featured_image }}">
+        <h6 class="title">{{ project.title }}</h6>
       </a> 
     </div>
   {% endfor %}

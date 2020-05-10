@@ -1,18 +1,15 @@
 .page-content {
     .project-index-grid {
-        width: 100%;
-        @include flex-row;
-        @include flex-center;
-        padding: 0 $gutter;
-        flex-wrap: wrap;
+        max-width: 1400px;
+        width: 75%;
+
+        .project {
+            padding: 0 $gutter;
+        }
 
         .project,
         .grid-sizer {
             width: $full;
-            
-            @media #{$break-medium} {
-                width: $full / 2;
-            }
 
             @media #{$break-large} {
                 width: $full / 3;
