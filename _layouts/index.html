@@ -8,7 +8,23 @@ layout: default
   <div class="container">
     <div class="headline">
       <h1 {{ alignment }}>{{ page.headline }}</h1>
-  </div>    
+    </div>    
+  </div>
+
+  <div class='work'>
+    {% assign projects = site.work | sort: "position" %}
+    {% for project in projects %}
+    <div class="project">
+      <a href="{{ project.url }}">
+        <figure class="project-details">
+          <img src="{{ project.featured_image }}">
+          <figcaption class="text-center">
+            <h6 class="title">{{ project.title }}</h6>
+          </figcaption>
+        </figure> 
+      </a> 
+    </div>
+  {% endfor %}
   </div>
 </section>
 {% include sections/footer.html %}
