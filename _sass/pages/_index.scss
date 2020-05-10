@@ -1,62 +1,28 @@
 .page-content {
+    #headline {
+        max-width: 75%;
+        min-height: 400px;
+        @include flex-row;
+        @include flex-center;
 
-    .container {
-        
-        .headline {
-            max-width: 75%;
-
-            h1 {
-                font-family: $heading-font-stack !important;
-              font-size: $base-font-size + 8;
-              font-weight: normal;
-                width: $full;
-                z-index: 1;
-                position: relative;
-                margin: 0 auto;
-                line-height: $base-line-height - .6;
-              
-          
-            &.left {
-              text-align: left;
-            }
-          
-            &.right {
-              text-align: right;
-            }
-          
-            &.center {
-              text-align: center;
-            }
-          
-            &.justify {
-              text-align: justify;
-            }
+        h1 {
+            font-family: $heading-font-stack !important;
+            font-size: $base-font-size + 8;
+            font-weight: normal;
+            width: $full;
+            z-index: 1;
+            position: relative;
+            margin: 0 auto;
+            line-height: $base-line-height - .6;
                   
             @media #{$break-large} {
-              font-size: $base-font-size + 50px;
+                font-size: $base-font-size + 50px;
             }
-          
-            /*@supports (-webkit-text-stroke: 1px $accent-color) {
-              & {
-                -webkit-text-stroke: 1px $accent-color;
-                -webkit-text-fill-color: transparent;
-              }
-            }*/
           
             &::after {
                 content: '.';
                 color: $accent-color;
             }
-        }
-        }
-    }
-
-    &.home {
-        display: none;
-        
-        @media #{$break-large} {
-            @include flex-column;
-            @include flex-center;
         }
     }
 }

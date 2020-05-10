@@ -5,26 +5,9 @@ layout: default
 {% assign theme = page.page_theme %}
 {% include sections/header.html %}
 <section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
-  <div class="container">
-    <div class="headline">
-      <h1 {{ alignment }}>{{ page.headline }}</h1>
-    </div>    
-  </div>
-
-  <div class='work'>
-    {% assign projects = site.work | sort: "position" %}
-    {% for project in projects %}
-    <div class="project">
-      <a href="{{ project.url }}">
-        <figure class="project-details">
-          <img src="{{ project.featured_image }}">
-          <figcaption class="text-center">
-            <h6 class="title">{{ project.title }}</h6>
-          </figcaption>
-        </figure> 
-      </a> 
-    </div>
-  {% endfor %}
-  </div>
+  <div id="headline">
+    <h1 {{ alignment }}>{{ page.headline }}</h1>
+  </div>    
+  {% include sections/projects.html %}
+  {% include sections/footer.html %}
 </section>
-{% include sections/footer.html %}

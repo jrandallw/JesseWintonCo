@@ -1,107 +1,22 @@
-.projects .footer {
-    background: $light-color;
-}
-
 .page-content {
-    .grid-sizer {
+    .project-index-grid {
         width: 100%;
-    }
+        @include flex-row;
+        @include flex-center;
+        padding: 0 $gutter;
+        flex-wrap: wrap;
 
-    &.projects {
-        width: $full;
-        margin: 0 auto;
-        background: $light-color;
-        min-height: 100vh;
-        padding-top: $gutter * 8;
-
-        .container {
-            max-width: $slim;
+        .project,
+        .grid-sizer {
             width: $full;
-            margin: 0 auto;
-      
-            .split-image-left,
-            .split-image-right,
-            .push-image-left,
-            .push-image-right,
-            .fullwidth-image,
-            .center-image {
-                  background: $third-light-color;
-            }
-      
-            &.dark {
-              .split-image-left,
-              .split-image-right,
-              .push-image-left,
-              .push-image-right,
-              .fullwidth-image,
-              .center-image {
-                  background: $dark-color;
-              }
-          }
-        }
-      
-        .project {
-            margin: $gutter * 1.5 auto;
-      
-            &:first-of-type {
-                margin-top: $gutter * 3;
+            
+            @media #{$break-medium} {
+                width: $full / 2;
             }
 
             @media #{$break-large} {
-              margin: $gutter * 4 auto;
-            } 
-      
-            &.split-image-left,
-            &.split-image-right,
-            &.push-image-left,
-            &.push-image-right,
-            &.fullwidth-image,
-            &.center-image {
-              width: 100%;
-      
-            img {
-                width: $full;
+                width: $full / 3;
             }
-
-      
-        &.split-image-left::after,
-        &.split-image-right::after,
-        &.push-image-left::after,
-        &.push-image-right::after {
-            content: '';
-            display: block;
-            clear: both;
         }
-      
-        &.center-image figure {
-            width: 75%;
-            margin: 0 auto;
-        }
-      
-        &.split-image-left figure {
-            width: 50%;
-            float: left;
-            position: relative;
-        }
-      
-        &.split-image-right figure {
-            width: 50%;
-            float: right;
-            position: relative;
-        }
-      
-        &.push-image-left figure {
-            width: 75%;
-            float: left;
-            position: relative;
-        }
-      
-        &.push-image-right figure {
-            width: 75%;
-            float: right;
-            position: relative;
-        }
-        }}
-
-    }    
+    }
 }

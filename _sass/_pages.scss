@@ -2,153 +2,26 @@
 	width: 100%;
 	z-index: 1;
 
-	&.split {
-		@include flex-row;
-	}
-
-	&.index {
-		.header h6 {
-			color: $light-color;
-
-			@media #{$break-large} {
-				color: $dark-color;
-			}	
-		}
-
-		.header,
-		.footer {
-			a,p {
-				color: $light-color;
-
-				@media #{$break-large} {
-					color: $dark-color;
-				}	
-			} 
-		}
-	}
-
 	.page-content {
 		width: 100%;
+		margin-top: $height * 2;
 		min-height: 75vh;
 		position: relative;
 		@include flex-column;
 		@include flex-center;
-    
-    .heading {
-
-		h1 {
-      	font-family: $heading-font-stack !important;
-		font-size: $base-font-size + 8;
-		font-weight: normal;
-		  width: $full;
-		  z-index: 1;
-      	position: relative;
-	  	margin: 0 auto;
-		  line-height: $base-line-height - .6;
-		
-
-      &.left {
-        text-align: left;
-      }
-
-      &.right {
-        text-align: right;
-      }
-
-      &.center {
-        text-align: center;
-      }
-
-      &.justify {
-        text-align: justify;
-	  }
-			
-	  @media #{$break-large} {
-		font-size: $base-font-size + 50px;
-	  }
-
-	  /*@supports (-webkit-text-stroke: 1px $accent-color) {
-		& {
-		  -webkit-text-stroke: 1px $accent-color;
-		  -webkit-text-fill-color: transparent;
-		}
-	  }*/
-
-	  &::after {
-		  content: '.';
-		  color: $accent-color;
-	  }
-	}
-    }
-
-    .text-block {
-      .container {
-        text-align: justify;
-      }
-	}
-		
 	}
 	
-.container {
-	width: 95%;
-	margin: 0 auto;
-	display: none;
-	@include flex-column;
-	@include flex-center;
-}
-
-.hero {
-	width: 100vw;
-	height: 100vh;
-	background-color: $dark-color !important;
-	@include prefix(background-size, cover !important, webkit moz);
-	position: absolute;
-	background-position: left center !important;
-
-	@media #{$break-large} {
-		position: relative;
-		width: 50vw;
-	}
-
-	h4 {
-		font-size: $base-font-size + 10px;
-		color: $light-color;
-		text-transform: uppercase;
-	}
-	
-	.name {
-		text-align: center;
+	.container {
+		width: 95%;
+		margin: 0 auto;
 		display: none;
-
-		@media #{$break-large} {
-			display: block;
-		}
-
-		span {
-			display: inline-block;
-		}
-
-		a {
-			position: relative;
-			color: #fff;
-			text-decoration: none;
-
-			&:hover {
-			  color: $secondary-dark-color;	
-			}
-		}
-	}
-
-	@media #{$break-large} {
 		@include flex-column;
 		@include flex-center;
 	}
 }
-}
 
 @import
 	"pages/index",
-	"pages/photos",
 	"pages/bio",
 	"pages/projects"
 ;

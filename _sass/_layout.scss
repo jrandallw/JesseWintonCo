@@ -1,6 +1,6 @@
 header {
 	right: 0;
-	height: 75px;
+	height: $height;
 	width: 100%;
 	position: fixed;
 	background: $light-color;
@@ -47,7 +47,7 @@ footer {
     width:  100%;
 	right: 0;
 	position: absolute;
-	height: $footer-height;
+	height: $height;
 	z-index: 1;
 	padding: 0 $gutter;
 	box-sizing: border-box;
