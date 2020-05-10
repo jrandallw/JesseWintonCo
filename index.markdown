@@ -5,5 +5,6 @@ layout: index
 hero_image: ''
 blocks: []
 page_theme: light
+headline: 'I''m Jesse Winton, and I''m a multi-disciplined creative living in California. '
 
 ---
