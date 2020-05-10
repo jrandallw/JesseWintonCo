@@ -7,17 +7,8 @@
 		margin-top: $height * 2;
 		min-height: 75vh;
 		position: relative;
-		@include flex-column;
-		@include flex-center;
 	}
-	
-	.container {
-		width: 95%;
-		margin: 0 auto;
-		display: none;
-		@include flex-column;
-		@include flex-center;
-	}
+
 }
 
 @import

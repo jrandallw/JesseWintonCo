@@ -1,10 +1,14 @@
 .page-content {
     .project-index-grid {
-        max-width: 1400px;
-        width: 75%;
+        width: 100%;
 
         .project {
-            padding: 0 $gutter;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+
+            .project-link {
+                display: block;
+            }
         }
 
         .project,
