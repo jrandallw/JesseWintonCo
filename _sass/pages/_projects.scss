@@ -4,10 +4,11 @@
         padding: 0 $gutter;
 
         .project {
-            margin-bottom: $gutter;
+            margin-bottom: $gutter * 2;
 
             img {
                 width: 100%;
+                padding: 0 $gutter;
             }
 
             .project-link {
@@ -15,23 +16,24 @@
                 text-decoration: none;
             }
 
+            .project-title {
+                padding: 0 $gutter;
+            }
+
             .project-services {
                 font-size: $base-font-size + 3px;
                 color: $accent-color;
                 margin-top: -20px;
+                padding: 0 $gutter;
             }
         }
 
         .project,
         .grid-sizer {
             width: $full;
-
+            
             @media #{$break-large} {
                 width: $full / 3;
-            }
-            
-            @media #{$break-medium} {
-                width: $full / 2;
             }
         }
     }
