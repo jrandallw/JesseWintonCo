@@ -2,43 +2,63 @@ header {
 	right: 0;
 	height: $height;
 	width: 100%;
+	font-weight: bold;
 	position: fixed;
-	background: $light-color;
+	padding: 0 $gutter;
+	// background: $light-color;
 	z-index: 10;
 	box-sizing: border-box;
 	@include flex-row;
 	@include flex-center;
 
-	.index-link {
-		color: $accent-color !important;
-	}
-
-	.nav {
-		top: 1.4em;
-		z-index: 10;
-		text-align: right;
-	
 		a {
-			font-size: $base-font-size + 6px;
+			font-family: $subheading-font-stack;
+			font-size: $base-font-size;
 			text-decoration: none;
 			letter-spacing: 1px;
 			text-transform: uppercase;
 			color: $text-color;
 			margin: 0 20px;
-	
-			&:hover {
-				border-bottom: 1px solid $dark-color;
+
+			&:first-of-type {
+				margin-left: 0;
 			}
-			
-			&.active {
-				border-bottom: 1px solid $dark-color;
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+		}
+
+		.branding {
+			a {
+				text-decoration: none;
+			}
+
+			@media #{$break-medium} {
+				@include flex-half;
 			}
 		}
 
-		@media #{$break-large} {
-			@include flex-half;
-		}
-	}
+		.nav {
+			top: 1.4em;
+			z-index: 10;
+			text-align: right;
+	
+			a {
+				&:hover {
+					border-bottom: 1px solid $dark-color;
+				}
+			
+				&.active {
+					border-bottom: 1px solid $dark-color;
+				}
+			}
+
+			@media #{$break-medium} {
+				@include flex-half;
+			}
+}
 	
 }
 
