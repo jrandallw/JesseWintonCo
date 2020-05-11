@@ -4,9 +4,10 @@
     {% assign projects = site.work | sort: "position" %}
     {% for project in projects %}
     <div class="project">
-      <a href="{{ project.url }}">
-        <img src="{{ project.featured_image }}">
-        <h6 class="title">{{ project.title }}</h6>
+      <a href="{{ project.url }}" class="project-link">
+        <img src="{{ project.featured_image }}" class="project-title">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <h4 class="project-services">{{ project.services }}</h4>
       </a> 
     </div>
   {% endfor %}
