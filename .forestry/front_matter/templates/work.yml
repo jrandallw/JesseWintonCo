@@ -6,18 +6,16 @@ fields:
   name: subtitle
   label: Subtitle
   default: ''
+- name: services
+  type: text
+  config:
+    required: false
+  label: Services
 - type: datetime
   name: project_year
   label: Project Year
   config:
     date_format: YYYY
-- type: field_group_list
-  name: services
-  label: Services
-  fields:
-  - type: text
-    name: service
-    label: Service
 - type: boolean
   name: dark_theme
   label: Dark Theme
