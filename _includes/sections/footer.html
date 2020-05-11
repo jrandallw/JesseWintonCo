@@ -1,11 +1,9 @@
-<footer class="footer {{ type }}">
-  <nav class="social">
-  	{% for item in site.data.social %}
-    <a href="{{ item.url }}" title="{{ item.title }}" target="_blank">{{ item.title }}</a>
-    {% endfor %}
-  </nav>
+{% assign theme = page.page_theme %}
+<footer class="footer {% if theme == "dark" %} {{ theme }}{% endif %}">
+  {% assign menu = site.menus.social %}
+  {% include sections/social.html menu="social"%}
 
   <div class="copyright">
-    <h6>&copy; 2011-{{ 'now' | date: "%Y" }} Jesse Winton</h6>
+    <p>&copy;{{ 'now' | date: "%Y" }} {{ site.title }}</p>
   </div>
 </footer>

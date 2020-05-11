@@ -4,10 +4,21 @@
         padding: 0 $gutter;
 
         .project {
-            margin-bottom: $gutter * 2;
+            margin-bottom: $gutter;
+
+            img {
+                width: 100%;
+            }
 
             .project-link {
                 display: block;
+                text-decoration: none;
+            }
+
+            .project-services {
+                font-size: $base-font-size + 3px;
+                color: $accent-color;
+                margin-top: -20px;
             }
         }
 

@@ -1,0 +1,19 @@
+.page-content.bio {
+    .heading {
+        width: 90%;
+        margin-bottom: 20px !important;
+
+        @media #{$break-large} {
+            width: 80%;
+        }
+    }
+
+    .container {
+        width: 90%;
+
+        @media #{$break-large} {
+            width: 80%;
+        }
+    }
+
+}

@@ -1,1 +1,21 @@
 /* fonts */
+@font-face {
+	font-family: 'Glysa';
+	font-weight: normal;
+	src: url('../fonts/glysa.woff') format('woff'),
+		 	 url('../fonts/glysa.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Bigilla';
+	font-weight: normal;
+	src: url('../fonts/bigilla-regular.woff') format('woff'),
+		 	 url('../fonts/bigilla-regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Bigilla';
+	font-weight: bold;
+	src: url('../fonts/bigilla-bold.woff') format('woff'),
+		 	 url('../fonts/bigilla-bold.woff2') format('woff2');
+}
