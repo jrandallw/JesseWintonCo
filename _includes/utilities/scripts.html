@@ -1,16 +1,3 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="{{ '/js/plugins.js' | prepend: site.url }}"></script>
-<script src="{{ '/js/main.js' | prepend: site.url }}"></script>
-{%- if jekyll.environment == "production" -%}
-{%- assign analytics_id = site.data.analytics.google_analytics -%}
-{%- if analytics_id -%}
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ analytics_id }}"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    
-    gtag('config', '{{ site.data.analytics.google_analytics }}');
-</script>
-{%- endif -%}
-{%- endif -%}
+<script src="{{ "/js/plugins.js" | prepend: site.url }}"></script>
+<script src="{{ "/js/main.js" | prepend: site.url }}"></script>

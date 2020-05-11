@@ -1,11 +1,11 @@
 ---
 layout: default
+class: page
 ---
 
-{% assign type = page.page_type %}
-{% assign theme = page.page_theme %}
-
-<section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
+{% if page.page_type == "split" %}
+{% include sections/hero.html %}
+<section class="page-content split">
   <div class="container">
     {% for block in page.blocks %}
     {% assign template = block.template %}
@@ -15,11 +15,24 @@ layout: default
     {% when 'content-block' %}
         {% include blocks/content-block.html %}    
     {% when 'text-block' %}
-        {% include blocks/text-block.html %}  
-    {% when 'list' %}
-        {% include blocks/list.html %}                   
+        {% include blocks/text-block.html %}             
     {% endcase %}
     {% endfor %}  
   </div>
 </section>
-{% include sections/footer.html %}
+{% else %}
+<section class="page-content">
+  <div class="container">
+    {% for block in page.blocks %}
+    {% assign template = block.template %}
+    {% case template %}
+    {% when 'heading' %}
+        {% include blocks/heading.html %}  
+    {% when 'content-block' %}
+        {% include blocks/content-block.html %}    
+    {% when 'text-block' %}
+        {% include blocks/text-block.html %}             
+    {% endcase %}
+    {% endfor %}  
+  </div>
+{% endif %}

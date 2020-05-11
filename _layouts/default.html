@@ -3,12 +3,20 @@
 
   {% include sections/head.html %}
 
+<<<<<<< HEAD
   {% assign layout = page.layout %}
   {% assign theme = page.page_theme %}
   <body class="template-{{ layout }} {{ theme }}">
     {% assign type = page.page_type %}
     <main class="wrapper">
+=======
+  <body {% if layout.class %}class="template-{{ layout.class }}-post"{% endif %}>
+    {% assign type = page.page_type %}
+    <main class="wrapper {{ type }}" role="main">
+      {% include sections/header.html %}
+>>>>>>> parent of a166bac... big updates
       {{ content }}
+      {% include sections/footer.html %}
     </main>
 
     {% include utilities/scripts.html %}

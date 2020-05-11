@@ -1,0 +1,88 @@
+.project-content.proposal {
+
+    .container {
+      max-width: $slim;
+      width: $full;
+    
+      .content-block {
+        margin: $gutter auto;
+        max-width: 90%;
+        font-size: $base-font-size;
+
+        @media #{$break-medium} {
+            max-width: 75%;
+        }
+
+        .heading {
+            margin-right: auto;
+            font-family: $base-font-stack;
+            font-size: $base-font-size + 4px;
+            margin-bottom: $gutter * 1.5;
+        }
+
+        ul {
+            margin-bottom: $gutter;
+            
+            li::before {
+                content: '•';
+                vertical-align: middle;
+                margin-right: $gutter / 4;
+                font-size: 14px;
+            }
+        }
+
+        p {
+            margin-right: auto;
+        }
+      }
+
+      .price {
+          width: 100%;
+          height: 50px;
+          @include flex-column;
+          @include flex-center;
+
+          .container {
+              @include flex-column;
+        
+              .total {
+                  @include flex-column;
+                  @include flex-center;
+                  @include flex-full;
+                  width: 100%;
+                  height: 50px;
+                  text-align: center;
+                  margin-right: auto;
+                  color: $light-color;
+                  background: $dark-color;
+
+                  @media #{$break-medium} {
+                    @include flex-half;
+                    width: 50%;
+                  }
+              }
+
+              .number {
+                  @include flex-column;
+                  @include flex-center;
+                  @include flex-full;
+                  width: 100%;
+                  height: 50px;
+                  text-align: center;
+                  margin-left: auto;
+                  background: $third-light-color;
+
+                  @media #{$break-medium} {
+                    @include flex-half;
+                    width: 50%;
+                  }
+              }
+
+              @media #{$break-medium} {
+                @include flex-row;
+              }
+          }
+      }
+    
+    }
+}

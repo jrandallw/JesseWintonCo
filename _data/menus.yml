@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 social:
 - url: https://instagram.com/thejessewinton
@@ -16,3 +17,6 @@ main:
 - url: mailto:hi@jessewinton.com
   weight: 3
   title: Contact
+=======
+--- {}
+>>>>>>> parent of a166bac... big updates

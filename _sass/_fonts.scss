@@ -1,21 +1,35 @@
 /* fonts */
 @font-face {
+<<<<<<< HEAD
 	font-family: 'Glysa';
 	font-weight: normal;
 	src: url('../fonts/glysa.woff') format('woff'),
 		 	 url('../fonts/glysa.woff2') format('woff2');
-}
-
-@font-face {
-	font-family: 'Bigilla';
+=======
+	font-family: 'Young Serif';
 	font-weight: normal;
-	src: url('../fonts/bigilla-regular.woff') format('woff'),
-		 	 url('../fonts/bigilla-regular.woff2') format('woff2');
+	src: url('../fonts/youngserif.woff') format('woff'),
+		 	 url('../fonts/youngserif.woff2') format('woff2');
 }
 
 @font-face {
-	font-family: 'Bigilla';
-	font-weight: bold;
-	src: url('../fonts/bigilla-bold.woff') format('woff'),
-		 	 url('../fonts/bigilla-bold.woff2') format('woff2');
+	font-family: 'Roboto Mono';
+	font-weight: normal;
+	src: url('../fonts/roboto-mono.woff') format('woff'),
+			 url('../fonts/roboto-mono.woff2') format('woff2');
+>>>>>>> parent of a166bac... big updates
+}
+
+@font-face {
+	font-family: 'Roboto Mono';
+	font-weight: 500;
+	src: url('../fonts/roboto-medium.woff') format('woff'),
+			 url('../fonts/roboto-medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Roboto Mono';
+	font-weight: 600;
+	src: url('../fonts/roboto-bold.woff') format('woff'),
+			 url('../fonts/roboto-bold.woff2') format('woff2');
 }
