@@ -1,6 +1,8 @@
 $(document).ready(function(){
-    $('.project-index-grid').masonry({
-        columnWidth: '.grid-sizer',
-        itemSelector: '.project'
-    });
+    $('.project-index-grid').isotope({
+    itemSelector: '.project',
+    columnWidth: '.grid-sizer',
+    layoutMode: 'masonry',
+    percentPosition: !0
+  })
 });
