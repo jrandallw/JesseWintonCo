@@ -5,6 +5,6 @@ layout: default
 {% assign theme = page.page_theme %}
 {% include sections/header.html %}
 <section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
-  {% include sections/projects.html %}
+  {% include sections/projects-grid.html %}
   {% include sections/footer.html %}
 </section>

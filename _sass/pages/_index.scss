@@ -1,13 +1,14 @@
 .page-content {
     #headline {
         max-width: 75%;
-        min-height: 400px;
+        min-height: 250px;
+        margin: 0 auto 100px auto;
         @include flex-row;
         @include flex-center;
 
         h1 {
             font-family: $heading-font-stack !important;
-            font-size: $base-font-size + 8;
+            font-size: $base-font-size + 13;
             font-weight: normal;
             width: $full;
             z-index: 1;
@@ -16,13 +17,17 @@
             line-height: $base-line-height - .6;
                   
             @media #{$break-large} {
-                font-size: $base-font-size + 50px;
+                font-size: $base-font-size + 70px;
             }
           
             &::after {
                 content: '.';
                 color: $accent-color;
             }
+        }
+        
+        @media #{$break-large} {
+            min-height: 400px;
         }
     }
 }

@@ -1,10 +1,10 @@
 .page-content {
-    .project-index-grid {
-        width: 100%;
+    .work-project-index {
+        margin: 0 auto;
+        padding: 0 $gutter;
 
         .project {
-            margin-bottom: 20px;
-            box-sizing: border-box;
+            margin-bottom: $gutter * 2;
 
             .project-link {
                 display: block;
