@@ -4,17 +4,50 @@ layout: default
 
 {% include sections/header.html %}
 
-<section class="page-content projects">
-  <div class="container{% if page.dark_theme == true %} dark{% endif %}">
-  <section class="projects-index-grid">
-      {% for project in page.projects %}
-      <div class="{{ project.image_layout }} project{% if forloop.index <=1 %} first{% endif %}">
-      <figure>
-        <img src="{{ project.image | relative_url }}"> 
-      </figure>
+<section class="project-overview">
+  <div class="container">
+    <div class="intro">
+      <h6 class="heading">{{ page.title | upcase }} • {{ page.project_year }}</h6>
+      {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
+    </div>
+
+    <div class="info">
+      {% assign services = page.services | strip_newlines %}
+      {% if services != '' %}
+      <div class="services">
+        <h6 class="heading">{{ "Services" | upcase }}</h6>   
+        <ul>
+          {% for services in page.services %}
+          <li>{{ services.service | downcase }}</li>
+          {% endfor %}
+        </ul>
       </div>
-      {% endfor %}
-  </section>
+      {% endif %}
+
+      {% assign credits = page.credits | strip_newlines %}
+      {% if credits != '' %}
+      <div class="credits grid-one-half">
+        <h6 class="heading">{{ "Credits" | upcase }}</h6>
+        <ul>
+          {% for credit in page.credits %}
+          <li>{{ credit.type | downcase }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="project-content">
+  <div class="container">
+    {% for block in page.blocks %}
+    {% assign template = block.template %}
+    {% case template %}
+    {% when 'image' %}
+        {% include blocks/images.html %}                  
+    {% endcase %}
+    {% endfor %}
   </div>
 </section>
 

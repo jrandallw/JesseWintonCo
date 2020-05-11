@@ -1,7 +1,6 @@
 .page-content {
     .work-project-index {
         margin: 0 auto;
-        padding: 0 $gutter;
 
         .project {
             margin-bottom: $gutter;
@@ -28,7 +27,95 @@
 
             @media #{$break-large} {
                 width: $full / 3;
+                box-sizing: content-box;
             }
         }
     }
 }
+
+.project-content {
+    background: $light-color;
+    width: $full;
+    min-height: 100vh;
+    padding: $gutter * 2 0;
+    min-height: $height;
+  
+    .container {
+        padding: 0 $gutter;
+    }
+  
+    .block {
+        margin: $gutter * 1.5 auto;
+  
+        &:first-of-type {
+            margin-top: $gutter * 3;
+        }
+  
+        @media #{$break-large} {
+          margin: $gutter * 4 auto;
+        }    
+    }
+  
+    .split-image-left,
+    .split-image-right,
+    .push-image-left,
+    .push-image-right,
+    .fullwidth-image,
+    .center-image {
+        width: 100%;
+        background: $third-light-color;
+  
+        &.dark {
+            background: $dark-color;
+        }
+  
+        img {
+            width: $full;
+        }
+  
+        .caption {
+            margin-top: $gutter;
+            width: $full;
+            @include pin-horizontal-center;
+            text-align: center;
+        }
+    }
+  
+    .split-image-left::after,
+    .split-image-right::after,
+    .push-image-left::after,
+    .push-image-right::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+  
+    .center-image figure {
+        width: 75%;
+        margin: 0 auto;
+    }
+  
+    .split-image-left figure {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+  
+    .split-image-right figure {
+        width: 50%;
+        float: right;
+        position: relative;
+    }
+  
+    .push-image-left figure {
+        width: 75%;
+        float: left;
+        position: relative;
+    }
+  
+    .push-image-right figure {
+        width: 75%;
+        float: right;
+        position: relative;
+    }
+  }
