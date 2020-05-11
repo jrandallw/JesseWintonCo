@@ -3,7 +3,6 @@ header {
 	height: $height;
 	width: 100%;
 	position: fixed;
-<<<<<<< HEAD
 	background: $light-color;
 	z-index: 10;
 	box-sizing: border-box;
@@ -34,41 +33,6 @@ header {
 			&.active {
 				border-bottom: 1px solid $dark-color;
 			}
-=======
-	z-index: 10;
-	@include flex-row;
-	@include flex-center;
-	
-	.template-work-post & {
-		position: fixed;
-	}
-
-	&.split {
-		width: 100%;
-
-		.name {
-			display: block;
-
-			@media #{$break-large} {
-				display: none;
-			}
-		}
-
-		@media #{$break-large} {
-			width: 50%;
-		}
-	}
-
-	.branding {
-		position: relative;
-		z-index: 1000;
-
-		.name {
-    		width: 250px;
-    		text-align: center;
-			line-height: 1.3;
-			margin: 0 auto;
->>>>>>> parent of a166bac... big updates
 		}
 	}
 }
@@ -95,17 +59,12 @@ header {
 	}
 }
 
-<<<<<<< HEAD
 footer {
     bottom: 0;
     width:  100%;
 	right: 0;
 	position: absolute;
 	height: $height;
-=======
-.footer {
-    height: $footer-height;
->>>>>>> parent of a166bac... big updates
 	z-index: 1;
 	padding: 0 $gutter;
 	box-sizing: border-box;

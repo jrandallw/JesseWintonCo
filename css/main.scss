@@ -2,13 +2,8 @@
 ---
 
 // variables
-<<<<<<< HEAD
 $base-font-stack: roc-grotesk;
 $heading-font-stack: roc-grotesk;
-=======
-$base-font-stack: 'Roboto Mono', 'Courier New', Courier, monospace;
-$heading-font-stack: 'Young Serif';
->>>>>>> parent of a166bac... big updates
 $base-font-size: 12px;
 $base-font-weight: 400;
 $base-line-height: 2;
@@ -24,12 +19,7 @@ $secondary-dark-color: #222;
 $border-color: #ddd;
 
 // heights
-<<<<<<< HEAD
 $height: 75px;
-=======
-$project-overview: 650px;
-$footer-height: 75px;
->>>>>>> parent of a166bac... big updates
 
 // padding
 $gutter: 20px;
@@ -116,12 +106,5 @@ $break-medium: "screen and (min-width: 25em)";
 
 @import
 	"base",
-<<<<<<< HEAD
 	"layout",
 	"pages";
-=======
-  "layout",
-  "pages",
-  "fonts"
-;
->>>>>>> parent of a166bac... big updates

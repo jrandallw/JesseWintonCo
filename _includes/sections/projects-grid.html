@@ -1,7 +1,7 @@
 <div class="work-project-index">
   <div class="project-index-grid">
     <div class="grid-sizer"></div>
-    {% assign projects = site.work | sort: "position" %}
+    {% assign projects = site.work %}
     {% for project in projects %}
     <div class="project">
       <a href="{{ project.url }}">
