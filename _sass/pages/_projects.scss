@@ -1,6 +1,7 @@
 .page-content {
     .work-project-index {
         margin: 0 auto;
+        padding: 0 $gutter;
 
         .project {
             margin-bottom: $gutter;
@@ -27,7 +28,10 @@
 
             @media #{$break-large} {
                 width: $full / 3;
-                box-sizing: content-box;
+            }
+            
+            @media #{$break-medium} {
+                width: $full / 2;
             }
         }
     }
