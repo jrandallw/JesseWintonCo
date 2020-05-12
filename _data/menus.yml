@@ -1,6 +1,6 @@
 ---
 main:
-- url: "mailto:jrandallwinton@gmail.com"
+- url: "mailto:jrandallwinton@gmail.com?subject=Project Inquiry"
   weight: 3
   title: Contact
 - url: "/work"
