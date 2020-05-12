@@ -1,13 +1,20 @@
 <head>
   <meta charset="UTF-8">
-  <title>{{ site.title | escape }}{% if page.url == "/" %} {% else %} • {{ page.title | escape }} {% if page.collection == "work" %}- {{ page.subtitle }}{% endif %}{% endif %}</title>
+  <title>{{ site.title | escape }}{% if page.url != "/" %} • {{ page.title | escape }}{% endif %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/assets/icons/jessewintonco.ico">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="author" content="{{ site.title }}">
   <meta name="robots" content="Index, Follow">
   <meta name="description" content="{{ site.description }}">
+  <meta name="p:domain_verify" content="15b6a2e76896040440f147e4b1269e90"/>
+  <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+  <meta property="og:type" content="page" />
+  <meta property="og:title" content="{{ site.title | escape }}{% if page.url != "/" %} • {{ page.title | escape }}{% endif %}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:image" content="{{ site.url }}/uploads/headshot.jpg" />
 </head>
    
     

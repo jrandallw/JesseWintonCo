@@ -6,24 +6,40 @@
 		@include flex-row;
 	}
 
+	&.index {
+		.header h6 {
+			color: $light-color;
+
+			@media #{$break-large} {
+				color: $dark-color;
+			}	
+		}
+
+		.header,
+		.footer {
+			a,p {
+				color: $light-color;
+
+				@media #{$break-large} {
+					color: $dark-color;
+				}	
+			} 
+		}
+	}
+
 	.page-content {
 		background: $light-color;
 		width: 100%;
 		min-height: 100vh;
 		@include flex-column;
 		@include flex-center;
-		position: relative;
-		
-		&.split {
-			@media #{$break-large} {
-				width: 50%;
-			}
-		}
+    position: relative;
     
     .heading {
       font-family: $heading-font-stack !important;
-      font-size: $base-font-size + 5px;
-      width: $full - 10%;
+			font-size: $base-font-size + 8;
+			font-weight: 300;
+      width: $full - 20%;
       z-index: 1;
       position: relative;
       margin: 0 auto;
@@ -50,43 +66,37 @@
 			}
     }
 
-    .content-block {
-      .heading {
-        margin-left: 0;
-        margin-bottom: 20px;
-      }
-    }
-
     .text-block {
       .container {
         text-align: justify;
       }
-		}
-
-		.container {
-			width: 100%;
-			margin: 0 auto;
-			padding: 0 $gutter;
-			text-align: justify;
-			box-sizing: border-box;
-			@include flex-column;
-			@include flex-center;
-
-			@media #{$break-large} {
-				width: 80%;
-			}
-		}
-		
 	}
+		
+		@media #{$break-large} {
+			width: 50%;
+		}
+	}
+	
+.container {
+	width: 80%;
+	margin: 0 auto;
+	display: none;
+	@include flex-column;
+	@include flex-center;
+}
 
 .hero {
-	width: 50vw;
+	width: 100vw;
 	height: 100vh;
 	background-color: $dark-color !important;
 	@include prefix(background-size, cover !important, webkit moz);
-	position: relative;
-	display: none;
-	background-position: center !important;
+	position: absolute;
+	background-position: left center !important;
+
+	@media #{$break-large} {
+		position: relative;
+		width: 50vw;
+	}
 
 	h4 {
 		font-size: $base-font-size + 10px;
@@ -95,8 +105,12 @@
 	}
 	
 	.name {
-		width: 250px;
 		text-align: center;
+		display: none;
+
+		@media #{$break-large} {
+			display: block;
+		}
 
 		span {
 			display: inline-block;
@@ -121,7 +135,8 @@
 }
 
 @import
+	"pages/index",
 	"pages/work",
-  "pages/projects",
-  "pages/proposals"
+	"pages/projects",
+	"pages/proposals"
 ;

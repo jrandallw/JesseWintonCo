@@ -2,13 +2,18 @@ header {
 	top: 30px;
 	right: 0;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	z-index: 10;
 	@include flex-row;
 	@include flex-center;
 	
 	.template-work-post & {
 		position: fixed;
+	}
+
+	&.dark .name,
+	&.dark .nav a {
+		color: $light-color !important;
 	}
 
 	&.split {
@@ -38,47 +43,77 @@ header {
 			margin: 0 auto;
 		}
 	}
-}
 
-.nav {
-	top: 1.4em;
-    z-index: 10;
-
-    a {
-		font-size: $base-font-size - 2px;
-		text-transform: uppercase;
-		text-decoration: none;
-        letter-spacing: 1px;
-    	color: $text-color;
-		margin: 0 20px;
-
-		&:hover {
-			border-bottom: 1px solid $dark-color;
-		}
-		
-		&.active {
-			border-bottom: 1px solid $dark-color;
+	.nav {
+		top: 1.4em;
+		z-index: 10;
+		text-align: center;
+	
+		a {
+			font-size: $base-font-size - 2px;
+			text-transform: uppercase;
+			text-decoration: none;
+			letter-spacing: 1px;
+			color: $text-color;
+			margin: 0 20px;
+	
+			&:hover {
+				border-bottom: 1px solid $dark-color;
+			}
+			
+			&.active {
+				border-bottom: 1px solid $dark-color;
+			}
 		}
 	}
+	
 }
 
 .footer {
-    height: $footer-height;
+    bottom: 0;
+    width:  100%;
+	right: 0;
+	height: $footer-height;
 	z-index: 1;
 	padding: 0 $gutter;
 	box-sizing: border-box;
-	background: $light-color;
 	@include flex-column;
 	@include flex-center;
 
-	a {
+	&.dark {
+		background: $dark-color;
+
+		a,
+		p {
+			color: $light-color !important;
+		}
+
+	}
+
+	@media #{$break-large} {
+		background: $light-color;
+	}
+
+	a,
+	p {
+		color: $dark-color;
+		margin: 0 6px;
+		border-bottom: 1px solid rgba(0,0,0,0);
+		font-size: $base-font-size - 4px;
 		text-decoration: none;
+		letter-spacing: 1px;
+	}
+
+	a:hover {
+		border-color: #000;
+	}
+	
+	a:first-of-type {
+		margin-left: 0;
 	}
 	
 	&.split {
 		width: 100%;
-		right: 0;
-		bottom: 0;
 		position: absolute;
 
 		@media #{$break-large} {
@@ -89,23 +124,6 @@ header {
   .social {
 	flex: none;
 
-	  a {
-		font-family: 'Roboto Mono';
-		font-size: 10px;
-		letter-spacing: 1px;
-		color: #000;
-		margin: 0 6px;
-		border-bottom: 1px solid rgba(0,0,0,0);
-	
-		&:hover {
-			border-color: #000;
-		}
-		
-		&:first-of-type {
-			margin-left: 0;
-		}
-	}
-
 	@media #{$break-large} {
 		@include flex-half;
 	}
@@ -113,14 +131,7 @@ header {
 
   .copyright {
 	flex: none;
-
-	h6 {
-		font-family: 'Roboto Mono';
-		font-size: 10px;
-    	letter-spacing: 1px;
-		color: #000;
-		text-align: right;
-	}
+	text-align: right;
 
 	@media #{$break-large} {
 		@include flex-half;
