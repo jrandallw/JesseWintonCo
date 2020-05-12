@@ -73,6 +73,7 @@ header {
     bottom: 0;
     width:  100%;
 	right: 0;
+	background: $light-color;
 	height: $footer-height;
 	z-index: 1;
 	padding: 0 $gutter;
@@ -88,10 +89,6 @@ header {
 			color: $light-color !important;
 		}
 
-	}
-
-	@media #{$break-large} {
-		background: $light-color;
 	}
 
 	a,
@@ -120,6 +117,14 @@ header {
 			width: 50%;
 		}
 	}
+
+	@media screen and (min-width: 40em) {
+		
+			background:#fff
+		
+	}
+	
+	
 
   .social {
 	flex: none;

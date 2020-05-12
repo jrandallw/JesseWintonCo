@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Index
 date: 2017-09-08 20:14:00 +0000
 layout: split
 hero_image: "/uploads/hero.jpg"

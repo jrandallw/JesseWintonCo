@@ -6,7 +6,6 @@ layout: default
 {% assign theme = page.page_theme %}
 
 {% if type == "split" %}
-{% include sections/header.html %}
 {% include sections/hero.html %}
 <section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
   <div class="container">
@@ -25,7 +24,6 @@ layout: default
     {% endfor %}  
   </div>
 </section>
-{% include sections/footer.html %}
 {% else %}
 <section class="page-content">
 </section>
