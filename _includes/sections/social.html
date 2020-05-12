@@ -27,11 +27,8 @@
 
 {%- endif -%}
 
-<nav class="nav">
-  {%- for item in menu_items -%}
-    <a href="{{ item.url | escape }}"{% if page.url contains item.url %} class='active'{% endif %} title="{{ site.title }} • {{ item.title }}">{{ item.title }}</a>
-  {%- endfor -%}
-  <div class="branding">
-    <a href="{{ site.url }}"><h6 class="name">{{ site.title }}</h6></a>
-  </div>
+<nav class="social">
+  {% for item in menu_items %}
+  <a href="{{ item.url }}" title="{{ item.title }}" target="_blank">{{ item.title }}</a>
+  {% endfor %}
 </nav>

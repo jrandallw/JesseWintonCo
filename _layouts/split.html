@@ -1,12 +1,14 @@
 ---
 layout: default
-class: page
 ---
 
-{% if page.page_type == "split" %}
+{% assign type = page.page_type %}
+{% assign theme = page.page_theme %}
+
+{% if type == "split" %}
 {% include sections/header.html %}
 {% include sections/hero.html %}
-<section class="page-content">
+<section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
   <div class="container">
     {% for block in page.blocks %}
     {% assign template = block.template %}
@@ -16,9 +18,9 @@ class: page
     {% when 'content-block' %}
         {% include blocks/content-block.html %}    
     {% when 'text-block' %}
-        {% include blocks/text-block.html %}
+        {% include blocks/text-block.html %}  
     {% when 'list' %}
-        {% include blocks/list.html %}                 
+        {% include blocks/list.html %}                   
     {% endcase %}
     {% endfor %}  
   </div>

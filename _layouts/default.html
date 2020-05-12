@@ -3,9 +3,11 @@
 
   {% include sections/head.html %}
 
-  <body {% if layout.class %}class="template-{{ layout.class }}-post"{% endif %}>
+  {% assign layout = page.layout %}
+  {% assign theme = page.page_theme %}
+  <body class="template-{{ layout }}">
     {% assign type = page.page_type %}
-    <main class="wrapper {{ type }}" role="main">
+    <main class="wrapper{% if type %} {{ type }}{% endif %}" role="main">
       {% include sections/header.html %}
       {{ content }}
       {% include sections/footer.html %}

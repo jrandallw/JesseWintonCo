@@ -9,8 +9,5 @@ blocks:
   copy: Shoot me a message about your project and let's talk about how we can work
     together. [hi@jessewinton.co](mailto:hi@jessewinton.co).
 hero_image: ''
-layout: pages
-menu:
-  main:
-    weight: 3
+layout: split
 ---
