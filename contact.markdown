@@ -7,7 +7,7 @@ page_type: split
 blocks:
 - template: text-block
   copy: Shoot me a message about your project and let's talk about how we can work
-    together. [hi@jessewinton.co](mailto:hi@jessewinton.co).
+    together. [jrandallwinton@gmail.com](mailto:jrandallwinton@gmail.com).
 hero_image: ''
 layout: pages
 menu:
