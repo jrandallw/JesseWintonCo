@@ -1,6 +1,6 @@
 ---
 title: About
-date: 2017-10-08 02:27:00 +0000
+date: '2017-10-08T02:27:00.000+00:00'
 permalink: "/about"
 position: 1
 layout: split
@@ -9,7 +9,8 @@ hero_image: "/uploads/hero.jpg"
 blocks:
 - template: text-block
   copy: |-
-    I'm a self-taught communicator with a focus in strategy, photography, and writing. I love working with small start-ups and established brands to craft a clear, consistent message through pure, candid collaboration.
+    I'm a self-taught communicator with a focus in strategy, photography, and writing. I love working with individuals, small start-ups and established brands to craft a clear, consistent message through pure, candid collaboration.
 
-    I provide strategy, photography, writing, and production services. Let's craft an image.
+    I provide photography, branding, copywriting, and creative consultation.
+
 ---
