@@ -2,25 +2,24 @@
 ---
 
 // variables
-$base-font-stack: roc-grotesk;
-$heading-font-stack: roc-grotesk;
-$subheading-font-stack: roc-grotesk;
+$base-font-stack: 'Roboto Mono', 'Courier New', Courier, monospace;
+$heading-font-stack: 'Young Serif';
 $base-font-size: 12px;
 $base-font-weight: 400;
 $base-line-height: 2;
 $font-weight-medium: 500;
 $font-weight-bold: 600;
-$accent-color: #b29f77;
 $text-color: #222;
-$light-color: #e1dfd8;
-$secondary-light-color: #fff;
+$light-color: #fff;
+$secondary-light-color: #eee;
 $third-light-color: #f9f9f9;
 $dark-color: #111;
 $secondary-dark-color: #222;
 $border-color: #ddd;
 
 // heights
-$height: 75px;
+$project-overview: 650px;
+$footer-height: 75px;
 
 // padding
 $gutter: 20px;
@@ -30,8 +29,12 @@ $full: 100%;
 $half: 50%;
 $max-width: 1600px;
 $slim: 1200px;
-$extra-slim: 999px;
-
+$one-third: 33.3333333%;
+$two-thirds: 66.6666%;
+$full-viewport-width: 100vw;
+$half-viewport-width: 50vw;
+$full-viewport-height: 100vh;
+$half-viewport-height: 50vh;
 
 // browser prefix mixin
 @mixin prefix($property, $value, $prefixes: ()) {
@@ -44,8 +47,7 @@ $extra-slim: 999px;
 
 // breakpoints
 $break-large: "screen and (min-width: 40em)";
-$break-medium: "screen and (min-width: 25em)";
-$break-small: "screen and (min-width: 10em)";
+$break-medium: "screen and (min-width: 40em)";
 
 
 // flex mixins
@@ -83,10 +85,6 @@ $break-small: "screen and (min-width: 10em)";
   flex: 0 0 (100% / 2);
 }
 
-@mixin flex-two-thirds {
-	flex: 0 0 (100% / 1.5);
-}
-
 @mixin flex-third {
 	flex: 0 0 (100% / 3);
 }
@@ -108,5 +106,7 @@ $break-small: "screen and (min-width: 10em)";
 
 @import
 	"base",
-	"layout",
-	"pages";
+  "layout",
+  "pages",
+  "fonts"
+;

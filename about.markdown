@@ -13,4 +13,9 @@ blocks:
     I'm a self-taught communicator with a focus in strategy, photography, and writing. I love working with small start-ups and established brands to craft a clear, consistent message through pure, candid collaboration.
 
     I provide strategy, photography, writing, and production services. Let's craft an image.
+menu:
+  main:
+    identifier: _about
+    weight: 2
+
 ---

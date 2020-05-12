@@ -1,13 +1,12 @@
 ---
 layout: default
+class: page
 ---
-
-{% include sections/header.html %}
 
 <section class="project-overview">
   <div class="container">
     <div class="intro">
-      <h6 class="heading">{{ page.title | upcase }} • {{ page.project_year }}</h6>
+      <h6 class="heading">{{ page.title | upcase }} • {{ page.project_year | date: "%Y" }}</h6>
       {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
     </div>
 
@@ -40,15 +39,15 @@ layout: default
 </section>
 
 <section class="project-content">
-  <div class="container">
+  <div class="container {% if page.dark_theme == true %}dark{% endif %}">
     {% for block in page.blocks %}
     {% assign template = block.template %}
     {% case template %}
     {% when 'image' %}
-        {% include blocks/images.html %}                  
+        {% include blocks/images.html %}  
+    {% when 'text-block' %}
+        {% include blocks/text-block.html %}                     
     {% endcase %}
     {% endfor %}
   </div>
 </section>
-
-{% include sections/footer.html %}

@@ -1,10 +1,23 @@
 ---
 layout: default
+class: page
 ---
 
-{% assign theme = page.page_theme %}
-{% include sections/header.html %}
-<section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
-  {% include sections/projects-grid.html %}
-  {% include sections/footer.html %}
+<section class="page-content work position-relative">
+  <div class="project-index-grid">
+    {% assign projects = site.work | sort: "position" %}
+    
+    {% for project in projects %}
+      <div class="project">
+        <a href="{{ project.url }}">
+          <figure class="project-details">
+            <img src="{{ project.featured_image }}">
+            <figcaption class="text-center">
+              <h6 class="title">{{ project.title }}</h6>
+            </figcaption>
+          </figure> 
+        </a> 
+      </div>
+    {% endfor %}
+  </div>
 </section>

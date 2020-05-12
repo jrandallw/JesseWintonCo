@@ -1,7 +1,0 @@
-{% assign alignment = block.text_alignment %}
-<ul class="{{ alignment }}">
-    <li class="title">{{ block.heading | downcase }}</li>
-    {% for item in block.list_item %}
-    {{ item.copy | downcase }}
-    {% endfor %}
-</ul>

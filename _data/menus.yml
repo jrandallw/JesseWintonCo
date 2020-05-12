@@ -1,12 +1,1 @@
----
-social:
-- url: https://instagram.com/thejessewinton
-  weight: 2
-  title: Instagram
-- url: https://twitter.com/thejessewinton
-  weight: 1
-  title: Twitter
-main:
-- url: mailto:jrandallwinton@gmail.com
-  weight: 3
-  title: Contact
+--- {}
