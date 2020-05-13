@@ -15,7 +15,7 @@ blocks:
   image: "/uploads/kantorik002.jpg"
   caption: Model • Mary Kantorik
 - template: image
-  image_layout: split-image-left
+  image_layout: center-image
   image: "/uploads/kantorik003.jpg"
   caption: Model • Mary Kantorik
 - template: image
