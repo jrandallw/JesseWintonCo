@@ -3,7 +3,7 @@ title: Disneyland
 dark_theme: false
 subtitle: Personal Project
 services: Personal Project
-project_year: 2019-05-01 07:00:00 +0000
+project_year: 2019-05-01T07:00:00.000+00:00
 featured_image: "/uploads/disneyland-featured.jpg"
 blocks:
 - template: image
@@ -44,3 +44,4 @@ blocks:
   caption: ''
 
 ---
+A collection of street photography from the last trip to Disneyland. Carried a camera through the parks, attempting to capture some of the essence.
