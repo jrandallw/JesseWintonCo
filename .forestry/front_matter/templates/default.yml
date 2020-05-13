@@ -9,6 +9,3 @@ fields:
   - heading
   - text-block
   - content-block
-pages:
-- src/404.markdown
-- src/about.markdown
