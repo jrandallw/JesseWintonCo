@@ -7,7 +7,7 @@ class: page
   <div class="container">
     <div class="intro">
       <h6 class="heading">{{ page.title | upcase }} • {{ page.project_year | date: "%Y" }}</h6>
-      {{ page.content | downcase | remove: '<p>' | remove: '</p>' }}
+      {{ page.content | remove: '<p>' | remove: '</p>' }}
     </div>
 
     <div class="info">
@@ -17,7 +17,7 @@ class: page
         <h6 class="heading">{{ "Services" | upcase }}</h6>   
         <ul>
           {% for services in page.services %}
-          <li>{{ services.service | downcase }}</li>
+          <li>{{ services.service }}</li>
           {% endfor %}
         </ul>
       </div>
@@ -29,7 +29,7 @@ class: page
         <h6 class="heading">{{ "Credits" | upcase }}</h6>
         <ul>
           {% for credit in page.credits %}
-          <li>{{ credit.type | downcase }}</li>
+          <li>{{ credit.type }}</li>
           {% endfor %}
         </ul>
       </div>
