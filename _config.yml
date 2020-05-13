@@ -1,6 +1,9 @@
 ---
 title: Jesse Winton
 timezone: UTC
+destination: public
+source: src
+exclude: ['node_modules']
 collections:
   posts:
     title: Journal

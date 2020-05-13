@@ -1,4 +1,6 @@
-_site
+public
+node_modules
 .sass-cache
+src/assets/*.js
 .jekyll-metadata
 .jekyll-cache

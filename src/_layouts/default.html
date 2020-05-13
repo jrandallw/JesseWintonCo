@@ -13,9 +13,7 @@
     {% assign type = page.page_type %}
     <main class="wrapper{% if type %} {{ type }}{% endif %}" role="main" data-barba="container">
       {% include sections/header.html %}
-      <div class="app" data-barba="container" data-barba-namespace="{{ page.title | downcase }}">
       {{ content }}
-      </div>
       {% include sections/footer.html %}
     </main>
 
