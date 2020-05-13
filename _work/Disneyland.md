@@ -1,4 +1,5 @@
 ---
+title: Disneyland
 dark_theme: false
 subtitle: Personal Project
 services: Personal Project
