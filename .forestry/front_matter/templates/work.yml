@@ -36,8 +36,8 @@ fields:
   - text-block
   description: ''
 pages:
-- _work/Disneyland.md
 - _work/bong.md
+- _work/disneyland.md
 - _work/fred-fuerst.md
 - _work/goosby.md
 - _work/jake-bennet.md
