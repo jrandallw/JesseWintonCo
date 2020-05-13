@@ -1,5 +1,6 @@
 ---
 title: Jake Bennet
+published: false
 date: 2018-08-02 00:01:05 +0000
 subtitle: Lifestyle Photography
 services:
