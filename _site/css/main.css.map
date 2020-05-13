@@ -3,14 +3,14 @@
 	"file": "main.css",
 	"sources": [
 		"main.scss",
-		"src/_sass/_base.scss",
-		"src/_sass/_layout.scss",
-		"src/_sass/_pages.scss",
-		"src/_sass/pages/_index.scss",
-		"src/_sass/pages/_work.scss",
-		"src/_sass/pages/_projects.scss",
-		"src/_sass/pages/_proposals.scss",
-		"src/_sass/_fonts.scss"
+		"_sass/_base.scss",
+		"_sass/_layout.scss",
+		"_sass/_pages.scss",
+		"_sass/pages/_index.scss",
+		"_sass/pages/_work.scss",
+		"_sass/pages/_projects.scss",
+		"_sass/pages/_proposals.scss",
+		"_sass/_fonts.scss"
 	],
 	"sourcesContent": [
 		"// variables\n$base-font-stack: 'Roboto Mono', 'Courier New', Courier, monospace;\n$heading-font-stack: nazare;\n$base-font-size: 12px;\n$base-font-weight: 300;\n$base-line-height: 2;\n$font-weight-medium: 500;\n$font-weight-bold: 600;\n$text-color: #222;\n$light-color: #fff;\n$secondary-light-color: #eee;\n$third-light-color: #f9f9f9;\n$dark-color: #111;\n$secondary-dark-color: #222;\n$border-color: #ddd;\n\n// heights\n$project-overview: 650px;\n$footer-height: 75px;\n\n// padding\n$gutter: 20px;\n\n// widths\n$full: 100%;\n$half: 50%;\n$max-width: 1600px;\n$slim: 1200px;\n$one-third: 33.3333333%;\n$two-thirds: 66.6666%;\n$full-viewport-width: 100vw;\n$half-viewport-width: 50vw;\n$full-viewport-height: 100vh;\n$half-viewport-height: 50vh;\n\n// browser prefix mixin\n@mixin prefix($property, $value, $prefixes: ()) {\n  @each $prefix in $prefixes {\n    #{'-' + $prefix + '-' + $property}: $value;\n  }\n\n  #{$property}: $value;\n}\n\n// breakpoints\n$break-large: \"screen and (min-width: 40em)\";\n$break-medium: \"screen and (min-width: 40em)\";\n\n\n// flex mixins\n@mixin flex-row {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: -moz-flex;\n\tdisplay: -ms-flexbox;\n  display: flex;\n  flex-direction: row;\n}\n\n@mixin flex-column {\n\tdisplay: -webkit-box;\n\tdisplay: -webkit-flex;\n\tdisplay: -moz-flex;\n\tdisplay: -ms-flexbox;\n  display: flex;\n  flex-direction: column;\n}\n\n@mixin flex-center {\n  align-items: center;\n\t-webkit-align-items: center;\n\t-moz-align-items: center;\n\tjustify-content: center;\n\t-webkit-justify-content: center;\n}\n\n@mixin flex-full {\n  flex: 0 0 100%;\n}\n\n@mixin flex-half {\n  flex: 0 0 (100% / 2);\n}\n\n@mixin flex-third {\n\tflex: 0 0 (100% / 3);\n}\n\n@mixin flex-quarter {\n\tflex: 0 0 (100% / 4);\n}\n\n@mixin flex-fifth {\n\tflex: 0 0 (100% / 5);\n}\n\n// position mixins\n@mixin pin-horizontal-center {\n  position: absolute;\n\tleft: $half;\n\t@include prefix(transform, translateX(-$half) !important, webkit moz ms);\n}\n\n@import\n\t\"base\",\n  \"layout\",\n  \"pages\",\n  \"fonts\"\n;\n",

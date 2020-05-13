@@ -3,10 +3,10 @@ const path = require("path");
 module.exports = {
   mode: "production",
   watch: true,
-  entry: path.join(__dirname, "src", "js", "app"),
+  entry: path.join(__dirname, "js", "app"),
   output: {
     filename: "main.js",
-    path: path.resolve(__dirname, "src/js"),
+    path: path.resolve(__dirname, "js"),
   },
   module: {
     rules: [
