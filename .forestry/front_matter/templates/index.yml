@@ -8,4 +8,4 @@ fields:
     required: false
   label: Headline
 pages:
-- index.markdown
+- src/index.markdown
