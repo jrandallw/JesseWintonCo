@@ -3,8 +3,8 @@ label: Work
 hide_body: false
 fields:
 - type: text
-  name: subtitle
-  label: Subtitle
+  name: title
+  label: Title
   default: ''
 - type: text
   name: subtitle
