@@ -25,6 +25,21 @@ blocks:
   image_layout: center-image
   image: "/uploads/disneyland005.jpg"
   caption: ''
-published: false
+- template: image
+  image_layout: push-image-right
+  image: "/uploads/disneyland006.jpg"
+  caption: ''
+- template: image
+  image_layout: push-image-left
+  image: "/uploads/disneyland007.jpg"
+  caption: ''
+- template: image
+  image_layout: split-image-right
+  image: "/uploads/disneyland008.jpg"
+  caption: ''
+- template: image
+  image_layout: split-image-left
+  image: "/uploads/disneyland009.jpg"
+  caption: ''
 
 ---
