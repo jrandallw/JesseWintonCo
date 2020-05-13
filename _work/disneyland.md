@@ -1,40 +1,47 @@
 ---
 title: Disneyland
-date: 2018-08-02 00:01:05 +0000
+dark_theme: true
 subtitle: Personal Project
-services:
-- service: Personal Project
+services: Personal Project
+project_year: 2019-05-01T07:00:00.000+00:00
+featured_image: "/uploads/disneyland-featured.jpg"
 blocks:
 - template: image
-  image_layout: push-image-left
+  image_layout: fullwidth-image
   image: "/uploads/disneyland001.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-right
+  image_layout: fullwidth-image
   image: "/uploads/disneyland002.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-left
+  image_layout: fullwidth-image
   image: "/uploads/disneyland003.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-right
+  image_layout: fullwidth-image
   image: "/uploads/disneyland004.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-left
+  image_layout: fullwidth-image
   image: "/uploads/disneyland005.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-right
+  image_layout: fullwidth-image
   image: "/uploads/disneyland006.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-left
-  image: "/uploads/disneyland007.jpg" 
+  image_layout: fullwidth-image
+  image: "/uploads/disneyland007.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-right
+  image_layout: fullwidth-image
   image: "/uploads/disneyland008.jpg"
+  caption: ''
 - template: image
-  image_layout: push-image-left
+  image_layout: fullwidth-image
   image: "/uploads/disneyland009.jpg"
-featured_image: "/uploads/disneyland-featured.jpg"
-dark_theme: false
-project_year: 2019-12-17 07:00:00 +0000
+  caption: ''
 
 ---
-A personal project from the last trip to Disneyland. Showcasing street photography work.
+A collection of street photography from the last trip to Disneyland. Carried a camera through the parks, attempting to capture some of the essence.

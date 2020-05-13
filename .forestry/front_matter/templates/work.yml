@@ -3,6 +3,10 @@ label: Work
 hide_body: false
 fields:
 - type: text
+  name: title
+  label: Title
+  default: ''
+- type: text
   name: subtitle
   label: Subtitle
   default: ''
@@ -33,6 +37,7 @@ fields:
   description: ''
 pages:
 - _work/bong.md
+- _work/disneyland.md
 - _work/fred-fuerst.md
 - _work/goosby.md
 - _work/jake-bennet.md
