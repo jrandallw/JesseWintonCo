@@ -1,27 +1,21 @@
 import barba from '@barba/core';
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
+//import { delay, pageTransition, contentAnimation } from "./modules/transitions.js";
 import regeneratorRuntime from "regenerator-runtime";
-import { delay, pageTransition, contentAnimation } from "./modules/transitions.js";
 
 barba.init({
-  sync: true,
-
   transitions: [{
-
+    name: 'opacity-transition',
     async leave(data) {
-      const done = this.async();
-      pageTransition();
-      await delay(1000);
-      done();
+      // const done = this.async();
+      return gsap.to(data.current.container, {
+        opacity: 0
+      });
     },
-
-    async enter(data) {
-      contentAnimation();
-    },
-
-    async once(data) {
-      contentAnimation();
+    enter(data) {
+      return gsap.from(data.next.container, {
+        delay: 1, opacity: 0
+      });
     }
-
   }]
 });
