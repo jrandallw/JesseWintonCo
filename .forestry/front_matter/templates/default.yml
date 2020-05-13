@@ -10,5 +10,5 @@ fields:
   - text-block
   - content-block
 pages:
-- 404.markdown
-- about.markdown
+- src/404.markdown
+- src/about.markdown
