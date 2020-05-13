@@ -7,5 +7,3 @@ fields:
   config:
     required: false
   label: Headline
-pages:
-- src/index.markdown
