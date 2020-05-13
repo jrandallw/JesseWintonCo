@@ -1,7 +1,6 @@
 ---
 title: Jesse Winton
 timezone: UTC
-source: src
 exclude: ['node_modules']
 collections:
   posts:
