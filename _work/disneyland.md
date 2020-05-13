@@ -1,6 +1,6 @@
 ---
 title: Disneyland
-dark_theme: false
+dark_theme: true
 subtitle: Personal Project
 services: Personal Project
 project_year: 2019-05-01T07:00:00.000+00:00
