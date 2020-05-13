@@ -18,8 +18,12 @@ blocks:
   image: "/uploads/disneyland003.jpg"
   caption: ''
 - template: image
-  image_layout: center-image
+  image_layout: split-image-left
   image: "/uploads/disneyland004.jpg"
+  caption: ''
+- template: image
+  image_layout: center-image
+  image: "/uploads/disneyland005.jpg"
   caption: ''
 published: false
 
