@@ -7,7 +7,8 @@ header {
 	@include flex-row;
 	@include flex-center;
 	
-	.template-work-post & {
+	.template-work &,
+	.template-projects & {
 		position: fixed;
 	}
 

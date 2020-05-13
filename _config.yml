@@ -37,7 +37,7 @@ defaults:
     type: work
   values:
     permalink: "/:collection/:title/"
-    layout: projects
+    layout: project
     general:
       client: 
       project_year: 
