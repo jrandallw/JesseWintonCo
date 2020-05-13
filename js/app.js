@@ -17,7 +17,3 @@ barba.init({
     }
   }]
 });
-
-Barba.Dispatcher.on('newPageReady', function(current, prev, container) {
-  history.scrollRestoration = 'manual';
-});
