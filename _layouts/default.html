@@ -11,7 +11,7 @@
       </div>
     </div>
     {% assign type = page.page_type %}
-    <main class="wrapper{% if type %} {{ type }}{% endif %}" role="main" data-barba="container">
+    <main class="wrapper{% if type %} {{ type }}{% endif %}" role="main" data-barba="container" barba-namespace="{{ layout }}">
       {% include sections/header.html %}
       {{ content }}
       {% include sections/footer.html %}

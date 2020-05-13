@@ -1,5 +1,5 @@
 import barba from '@barba/core';
-import { delay, pageTransition, contentAnimation } from "./modules/transitions.js";
+import { delay, pageTransition, workIndexAnimation } from "./modules/transitions.js";
 import regeneratorRuntime from "regenerator-runtime";
 
 barba.init({
@@ -13,7 +13,11 @@ barba.init({
       done();
     },
     async enter(data) { 
-      contentAnimation(); 
+      workIndexAnimation(); 
     }
   }]
+});
+
+Barba.Dispatcher.on('newPageReady', function(current, prev, container) {
+  history.scrollRestoration = 'manual';
 });
