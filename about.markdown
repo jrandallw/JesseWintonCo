@@ -4,6 +4,7 @@ date: '2017-10-08T02:27:00.000+00:00'
 permalink: "/about"
 position: 1
 layout: split
+class: index
 page_type: split
 hero_image: "/uploads/hero.jpg"
 blocks:

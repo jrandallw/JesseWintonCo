@@ -4,6 +4,7 @@
   {% include sections/head.html %}
 
   {% assign layout = page.layout %}
+  {% assign class = page.class %}
   {% assign theme = page.page_theme %}
   <body class="template-{{ layout }}" data-barba="wrapper">
     <div class="loading-container">
@@ -11,7 +12,7 @@
       </div>
     </div>
     {% assign type = page.page_type %}
-    <main class="wrapper{% if type %} {{ type }}{% endif %}" role="main" data-barba="container" barba-namespace="{{ layout }}">
+    <main class="wrapper{% if type %} {{ layout }}{% endif %}" role="main" data-barba="container" barba-namespace="{{ class }}">
       {% include sections/header.html %}
       {{ content }}
       {% include sections/footer.html %}
