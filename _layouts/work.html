@@ -3,21 +3,5 @@ layout: default
 class: page
 ---
 <section class="page-content work position-relative">
-  <div class="project-index-grid">
-    {% assign projects = site.work | sort: "position" %}
-    
-    {% for project in projects %}
-      <div class="project">
-        <a href="{{ project.url }}">
-          <figure class="project-details">
-            <img src="{{ project.featured_image }}">
-            <figcaption class="text-center">
-              <h6 class="title">{{ project.title }}</h6>
-              <h6 class="title">{{ project.subtitle }}</h6>
-            </figcaption>
-          </figure> 
-        </a> 
-      </div>
-    {% endfor %}
-  </div>
+  {% include sections/project-grid.html %}
 </section>

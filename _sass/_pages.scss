@@ -24,6 +24,7 @@
 .wrapper {
 	width: 100%;
 	z-index: 1;
+	background: $light-color;
 
 	.app {
 		width: 100%;
@@ -56,12 +57,11 @@
 	}
 
 	.page-content {
-		background: $light-color;
 		width: 100%;
 		min-height: 100vh;
 		@include flex-column;
 		@include flex-center;
-    position: relative;
+    	position: relative;
     
     .heading {
       font-family: $heading-font-stack !important;

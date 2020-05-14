@@ -1,0 +1,26 @@
+<div class="work-project-index">  
+  {% if page.layout == 'project' %}
+  <div class="work-link-wrapper">
+    <a href="{{ site.url }}/work">More Work</a>
+  </div>
+  {% endif %}
+  <div class="project-index-grid">
+    {% assign projects = site.work | sort: "position" %}
+    
+    {% for project in projects %}
+      {% if project.url != page.url %}
+      <div class="project">
+        <a href="{{ project.url }}">
+          <figure class="project-details">
+            <img src="{{ project.featured_image }}">
+            <figcaption class="text-center">
+              <h6 class="title">{{ project.title }}</h6>
+              <h6 class="title">{{ project.subtitle }}</h6>
+            </figcaption>
+          </figure> 
+        </a> 
+      </div>
+      {% endif %}
+    {% endfor %}
+</div>
+</div>
