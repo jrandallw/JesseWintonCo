@@ -2,7 +2,7 @@
   "name": "jesse-winton-co",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {
     "@barba/core": "^2.9.7",
     "babel-core": "^6.26.3",
