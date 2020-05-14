@@ -18,3 +18,7 @@ barba.init({
     }
   }]
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  workIndexAnimation();
+}, false);
