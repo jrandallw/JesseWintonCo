@@ -3,13 +3,12 @@ import { delay, pageTransition, workIndexAnimation } from "./modules/transitions
 import regeneratorRuntime from "regenerator-runtime";
 
 barba.init({
-  sync: false,
   transitions: [{
-    name: 'swipe-transition',
+    name: 'work-index',
     async leave(data) {
       const done = this.async();
       pageTransition();
-      await delay(500);
+      await delay(1000);
       window.scrollTo(0, 0);
       done();
     },
