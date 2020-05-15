@@ -26,11 +26,6 @@
 	z-index: 1;
 	background: $light-color;
 
-	.app {
-		width: 100%;
-	}
-
-	.app,
 	&.split {
 		@include flex-row;
 	}
@@ -121,9 +116,11 @@
 	background-color: $dark-color !important;
 	@include prefix(background-size, cover !important, webkit moz);
 	position: absolute;
+	display: none;
 	background-position: left center !important;
 
 	@media #{$break-large} {
+		display: block;
 		position: relative;
 		width: 50vw;
 	}

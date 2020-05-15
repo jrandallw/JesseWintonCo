@@ -1,7 +1,8 @@
 header {
-	top: 30px;
+	padding-top: 30px;
 	right: 0;
 	width: 100%;
+	background: $light-color;
 	position: absolute;
 	z-index: 10;
 	@include flex-row;
