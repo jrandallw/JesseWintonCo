@@ -5,7 +5,6 @@ permalink: "/about"
 layout: pages
 class: index
 page_type: split
-hero_image: "/uploads/hero.jpg"
 blocks:
 - template: text-block
   copy: |-
