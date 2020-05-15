@@ -11,6 +11,11 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 $gutter;
+
+  @media #{$break-large} {
+    padding: 0;
+  }
 
   .work-link-wrapper {
     text-align: center;
