@@ -18,6 +18,8 @@ barba.init({
   }]
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  workIndexAnimation();
-}, false);
+if (document.querySelector('.work-project-index') !== null) {
+  document.addEventListener('DOMContentLoaded', function() {
+    workIndexAnimation();
+  }, false);
+}
