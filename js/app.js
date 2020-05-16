@@ -1,11 +1,10 @@
 import barba from '@barba/core';
-import { delay, pageTransition, workIndexAnimation } from "./modules/transitions.js";
-import regeneratorRuntime from "regenerator-runtime";
+import 'babel-polyfill';
+import { delay, pageTransition, IndexAnimation, workIndexAnimation } from "./modules/transitions.js";
 
 barba.init({
-  sync: false,
   transitions: [{
-    name: 'swipe-transition',
+    name: 'work-index',
     async leave(data) {
       const done = this.async();
       pageTransition();
@@ -19,6 +18,8 @@ barba.init({
   }]
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  workIndexAnimation();
-}, false);
+if (document.querySelector('.work-project-index') !== null) {
+  document.addEventListener('DOMContentLoaded', function() {
+    workIndexAnimation();
+  }, false);
+}
