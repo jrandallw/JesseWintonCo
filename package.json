@@ -8,6 +8,7 @@
     "@barba/core": "^2.9.7",
     "analytics": "^0.3.5",
     "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "gsap": "^3.2.6",
     "scroll-restoration-polyfill": "^0.6.1"
