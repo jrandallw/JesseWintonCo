@@ -7,6 +7,17 @@
     }
 }
 
+.loading-curtain {
+  position: fixed;
+  width: 50vw;
+  transform: scaleX(0) skewX(0);
+  height: 100vh;
+  background: $secondary-light-color;
+  z-index: 1000;
+}
+
+
+
 .work-project-index {
   width: 100%;
   max-width: 1400px;
