@@ -1,45 +1,11 @@
 ---
-dark_theme: true
+dark_theme: false
 title: Disneyland
 subtitle: Personal Project
 services:
 - service: Personal Project
 project_year: 2020-05-01 07:00:00 +0000
 featured_image: "/uploads/disneyland-featured.jpg"
-- template: image
-  image_layout: push-image-left
-  image: "/uploads/disneyland001.jpg"
-  caption: ''
-- template: image
-  image_layout: push-image-right
-  image: "/uploads/disneyland002.jpg"
-  caption: ''
-- template: image
-  image_layout: push-image-left
-  image: "/uploads/disneyland003.jpg"
-  caption: ''
-- template: image
-  image_layout: push-image-right
-  image: "/uploads/disneyland004.jpg"
-  caption: ''
-- template: image
-  image_layout: push-image-left
-  image: "/uploads/disneyland005.jpg"
-  caption: ''
-- template: image
-  image_layout: push-image-right
-  image: "/uploads/disneyland006.jpg"
-  caption: ''
-- template: image
-  image_layout: push-image-left
-  image: "/uploads/disneyland007.jpg"
-  caption: ''
-- template: image
-  image_layout: push-image-right
-  image: "/uploads/disneyland008.jpg"
-  caption: ''
-- template: image
-  image_layout: split-image-left
-  image: "/uploads/disneyland009.jpg"
-  caption: ''
+blocks: []
+
 ---
