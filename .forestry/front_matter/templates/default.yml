@@ -32,4 +32,5 @@ fields:
       path: 
   label: Page Type
 pages:
+- about.markdown
 - index.markdown
