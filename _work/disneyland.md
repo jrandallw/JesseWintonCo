@@ -31,5 +31,9 @@ blocks:
   image_layout: split-image-right
   image: "/uploads/disneyland006.jpg"
   caption: ''
+- template: image
+  image_layout: split-image-left
+  image: "/uploads/disneyland007.jpg"
+  caption: ''
 
 ---
