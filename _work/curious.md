@@ -21,5 +21,6 @@ blocks:
   image_layout: fullwidth-image
   image: "/uploads/curious-style-guide.jpg"
   caption: ''
+
 ---
 Branding and custom type for Curious Theatre Works, a new theatre company based in Rocklin, CA. The goal was to create an identity that could communicate a sense of class and professionalism, while still encapsulating a sense of fun and lightness.

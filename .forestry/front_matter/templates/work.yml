@@ -44,4 +44,5 @@ fields:
   - text-block
   description: ''
 pages:
+- _work/curious.md
 - _work/goosby.md
