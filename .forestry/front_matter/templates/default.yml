@@ -9,3 +9,16 @@ fields:
   - heading
   - text-block
   - content-block
+- name: page_type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - split
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Page Type
