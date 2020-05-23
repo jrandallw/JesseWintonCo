@@ -45,3 +45,4 @@ blocks:
   caption: ''
 
 ---
+A personal project, carrying a camera through the park to attempt and capture the essence. 
