@@ -43,3 +43,5 @@ fields:
   - image
   - text-block
   description: ''
+pages:
+- _work/goosby.md
