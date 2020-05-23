@@ -9,5 +9,6 @@ blocks:
   text_alignment: center
   heading: Multi-disciplined creative living and working in Northern California.
 page_type: split
+image_layout: fullwidth-image
 
 ---
