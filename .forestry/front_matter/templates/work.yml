@@ -11,9 +11,17 @@ fields:
   label: Subtitle
   default: ''
 - name: services
-  type: text
+  type: field_group_list
+  fields:
+  - name: service
+    type: text
+    config:
+      required: false
+    label: Service
   config:
-    required: false
+    min: 
+    max: 
+    labelField: 
   label: Services
 - type: datetime
   name: project_year
