@@ -31,3 +31,5 @@ fields:
       file: 
       path: 
   label: Page Type
+pages:
+- index.markdown
