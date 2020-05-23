@@ -1,7 +1,6 @@
 ---
 title: About
 date: '2017-10-08T02:27:00.000+00:00'
-permalink: "/about"
 layout: pages
 class: index
 page_type: split
