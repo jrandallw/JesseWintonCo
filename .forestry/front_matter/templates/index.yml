@@ -2,8 +2,17 @@
 label: Index
 hide_body: true
 fields:
-- name: headline
-  type: text
+- name: hero_image
+  type: file
   config:
-    required: false
-  label: Headline
+    maxSize: 64
+  label: Hero Image
+- name: blocks
+  type: blocks
+  template_types:
+  - heading
+  - text-block
+  config:
+    min: 
+    max: 
+  label: Blocks
