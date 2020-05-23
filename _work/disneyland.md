@@ -39,5 +39,9 @@ blocks:
   image_layout: split-image-right
   image: "/uploads/disneyland008.jpg"
   caption: ''
+- template: image
+  image_layout: fullwidth-image
+  image: "/uploads/disneyland009.jpg"
+  caption: ''
 
 ---
