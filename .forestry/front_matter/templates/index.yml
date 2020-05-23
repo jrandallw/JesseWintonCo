@@ -16,3 +16,17 @@ fields:
     min: 
     max: 
   label: Blocks
+- name: page_type
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - split
+    - fullwidth
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Page Type
