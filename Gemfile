@@ -5,4 +5,5 @@ gem 'jekyll', "~> 4.0"
 group :jekyll_plugins do
   gem 'jekyll-menus'
   gem 'jekyll-redirect-from'
+  gem "jekyll-sitemap"
 end

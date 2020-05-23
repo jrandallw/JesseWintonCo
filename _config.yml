@@ -1,7 +1,9 @@
 ---
 title: Jesse Winton
 timezone: UTC
-exclude: ['node_modules']
+exclude: 
+- node_modules
+- .jekyll-cache
 collections:
   posts:
     title: Journal
@@ -51,11 +53,9 @@ defaults:
     permalink: "/work"
     layout: work
 email: jrandallwinton@gmail.com
-description: Self-taught communicator with a focus in photography, communicative design,
-  and writing.
+description: Multi-disciplined creative living and working in Northern California.
 baseurl: 
 url: https://jessewinton.works
-twitter_username: jrandallw
 markdown: kramdown
 sass:
   style: compressed
@@ -63,3 +63,4 @@ permalinks: pretty
 plugins:
 - jekyll-redirect-from
 - jekyll-menus
+- jekyll-sitemap
