@@ -14,7 +14,7 @@ blocks:
     and development. I love working with individuals, small start-ups and established
     brands to craft a clear, consistent message through pure, candid collaboration.
     [Let's work together.](mailto:jrandallwinton@gmail.com?subject=Project Inquiry
-    "Contact")
+    "Project Inquiry")
 hero_image: ''
 
 ---
