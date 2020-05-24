@@ -10,11 +10,11 @@ blocks:
     for the web.
   text_alignment: left
 - template: text-block
-  copy: I'm a self-taught communicator making with a focus in photography, branding, strategy,
-    and development. I love working with individuals, small start-ups and established
-    brands to craft a clear, consistent message through pure, candid collaboration.
+  copy: I'm a self-taught communicator making with a focus in photography, branding,
+    strategy, and development. I love working with individuals, small start-ups and
+    established brands to craft a clear, consistent message through pure, candid collaboration.
     [Let's work together](mailto:jrandallwinton@gmail.com?subject=Project Inquiry
     "Project Inquiry").
-hero_image: ''
+hero_image: "/uploads/disneyland005.jpg"
 
 ---
