@@ -29,7 +29,11 @@
 
 <nav class="nav">
   {%- for item in menu_items -%}
+    {% if item.url contains site.url %}
     <a href="{{ item.url | escape }}"{% if page.url contains item.url %} class='active'{% endif %} title="{{ site.title }} • {{ item.title }}">{{ item.title }}</a>
+    {% else %}
+    <a href="{{ item.url | escape }}"{% if page.url contains item.url %} class='active'{% endif %} title="{{ site.title }} • {{ item.title }}" target="_blank">{{ item.title }}</a>
+    {% endif %}
   {%- endfor -%}
   <div class="branding">
     <a href="{{ site.url }}"><h6 class="name">{{ site.title }}</h6></a>
