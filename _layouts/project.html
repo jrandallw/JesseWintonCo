@@ -12,7 +12,6 @@ class: page
 
     <div class="info">
       {% assign services = page.services | strip_newlines %}
-      {% if services != '' %}
       <div class="services">
         <h6 class="heading">{{ "Services" | upcase }}</h6>   
         <ul>
@@ -25,7 +24,6 @@ class: page
           {% endif %}
         </ul>
       </div>
-      {% endif %}
     </div>
   </div>
 </section>
