@@ -13,7 +13,6 @@ fields:
   template_types:
   - heading
   - text-block
-  - image
   config:
     min: 
     max: 

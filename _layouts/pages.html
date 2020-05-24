@@ -13,9 +13,7 @@ layout: default
     {% assign template = block.template %}
     {% case template %}
     {% when 'heading' %}
-        {% include blocks/heading.html %}  
-    {% when 'content-block' %}
-        {% include blocks/content-block.html %}    
+        {% include blocks/heading.html %}     
     {% when 'text-block' %}
         {% include blocks/text-block.html %}                  
     {% endcase %}
