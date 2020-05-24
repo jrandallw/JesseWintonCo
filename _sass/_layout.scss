@@ -120,7 +120,8 @@ header {
 		color: $text-color;
 		margin: 0 6px;
 		border-bottom: 1px solid rgba(0,0,0,0);
-		font-size: $base-font-size - 4px;
+		font-size: $base-font-size - 2px;
+		text-transform: uppercase;
 		text-decoration: none;
 		letter-spacing: 1px;
 	}
