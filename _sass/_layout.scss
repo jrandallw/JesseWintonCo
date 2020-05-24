@@ -59,11 +59,11 @@ header {
 			margin: 0 20px;
 	
 			&:hover {
-				border-bottom: 1px solid $dark-color;
+				border-bottom: 1px solid $text-color;
 			}
 			
 			&.active {
-				border-bottom: 1px solid $dark-color;
+				border-bottom: 1px solid $text-color;
 			}
 		}
 	}
@@ -117,7 +117,7 @@ header {
 
 	a,
 	p {
-		color: $dark-color;
+		color: $text-color;
 		margin: 0 6px;
 		border-bottom: 1px solid rgba(0,0,0,0);
 		font-size: $base-font-size - 4px;

@@ -1,8 +1,8 @@
 .page-content {
     &.work {
-        width: $full;
+        width: 100%;
         margin: 0 auto;
-        min-height: $full-viewport-height;
+        min-height: 100vh;
         padding-top: $gutter * 9;
     }
 }
@@ -32,7 +32,7 @@
     a {
       text-decoration: none;
 
-      :hover {
+      &:hover {
         text-decoration: underline; 
       }
     }
@@ -43,7 +43,7 @@
     flex-wrap: wrap;
 
     .project {
-      width: $full;
+      width: 100%;
       margin-bottom: $gutter * 2;
       padding: 0 $gutter / 2;
       @include flex-full;

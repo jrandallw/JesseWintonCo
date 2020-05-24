@@ -1,7 +1,6 @@
 ---
 ---
 
-// variables
 $base-font-stack: 'Roboto Mono', 'Courier New', Courier, monospace;
 $heading-font-stack: nazare;
 $base-font-size: 12px;
@@ -15,49 +14,26 @@ $secondary-light-color: #eee;
 $third-light-color: #f9f9f9;
 $dark-color: #111;
 $secondary-dark-color: #222;
-$border-color: #ddd;
-
-// heights
 $project-overview: 650px;
 $footer-height: 75px;
-
-// padding
 $gutter: 20px;
 
-// widths
-$full: 100%;
-$half: 50%;
-$max-width: 1600px;
-$slim: 1200px;
-$one-third: 33.3333333%;
-$two-thirds: 66.6666%;
-$full-viewport-width: 100vw;
-$half-viewport-width: 50vw;
-$full-viewport-height: 100vh;
-$half-viewport-height: 50vh;
-
-// browser prefix mixin
 @mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
-
-  #{$property}: $value;
+  	@each $prefix in $prefixes {
+    	#{'-' + $prefix + '-' + $property}: $value;
+  	}
+  	#{$property}: $value;
 }
 
-// breakpoints
 $break-large: "screen and (min-width: 40em)";
-$break-medium: "screen and (min-width: 40em)";
 
-
-// flex mixins
 @mixin flex-row {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flexbox;
-  display: flex;
-  flex-direction: row;
+  	display: flex;
+  	flex-direction: row;
 }
 
 @mixin flex-column {
@@ -65,12 +41,12 @@ $break-medium: "screen and (min-width: 40em)";
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
+  	display: flex;
+  	flex-direction: column;
 }
 
 @mixin flex-center {
-  align-items: center;
+  	align-items: center;
 	-webkit-align-items: center;
 	-moz-align-items: center;
 	justify-content: center;
@@ -78,11 +54,11 @@ $break-medium: "screen and (min-width: 40em)";
 }
 
 @mixin flex-full {
-  flex: 0 0 100%;
+  	flex: 0 0 100%;
 }
 
 @mixin flex-half {
-  flex: 0 0 (100% / 2);
+  	flex: 0 0 (100% / 2);
 }
 
 @mixin flex-third {
@@ -97,16 +73,14 @@ $break-medium: "screen and (min-width: 40em)";
 	flex: 0 0 (100% / 5);
 }
 
-// position mixins
 @mixin pin-horizontal-center {
-  position: absolute;
-	left: $half;
-	@include prefix(transform, translateX(-$half) !important, webkit moz ms);
+  	position: absolute;
+	left: 50%;
+	@include prefix(transform, translateX(-50%) !important, webkit moz ms);
 }
 
 @import
 	"base",
-  "layout",
-  "pages",
-  "fonts"
-;
+	"layout",
+	"pages",
+	"fonts";

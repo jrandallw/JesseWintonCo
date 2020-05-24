@@ -12,7 +12,7 @@
 			color: $light-color;
 
 			@media #{$break-large} {
-				color: $dark-color;
+				color: $text-color;
 			}	
 		}
 
@@ -22,7 +22,7 @@
 				color: $light-color;
 
 				@media #{$break-large} {
-					color: $dark-color;
+					color: $text-color;
 				}	
 			} 
 		}
@@ -47,7 +47,7 @@
       		font-family: $heading-font-stack !important;
 			font-size: $base-font-size + 8;
 			font-weight: 300;
-      		width: $full;
+      		width: 100%;
 	  		z-index: 1;
 	  		margin-bottom: $gutter !important;
       		position: relative;
@@ -80,7 +80,7 @@
     	.text-block {
       		.container {
 				text-align: justify;
-				width: $full;
+				width: 100%;
       		}
 		}
 		

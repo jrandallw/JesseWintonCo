@@ -1,5 +1,5 @@
 .project-overview {
-  width: $full;
+  width: 100%;
   background: $third-light-color;
   min-height: $project-overview;
   z-index: -1;
@@ -7,7 +7,7 @@
   @include flex-center;
 
   .container {
-      max-width: $slim;
+      max-width: 1200px;
       width: 80%;
       @include flex-column;
       align-items: start;
@@ -47,14 +47,14 @@
 
 .project-content {
   background: $light-color;
-  width: $full;
-  min-height: $full-viewport-height;
+  width: 100%;
+  min-height: 100vh;
   padding: 0 0 $gutter * 2 0;
   min-height: $footer-height;
 
   .container {
-      max-width: $slim;
-      width: $full;
+      max-width: 1200px;
+      width: 100%;
       margin: 0 auto;
 
       .split-image-left,
@@ -103,12 +103,12 @@
         width: 100%;
 
       img {
-          width: $full;
+          width: 100%;
       }
 
       .caption {
           margin-top: $gutter;
-          width: $full;
+          width: 100%;
           @include pin-horizontal-center;
           text-align: center;
       }
