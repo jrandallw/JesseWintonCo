@@ -10,9 +10,6 @@ social:
   weight: 1
   title: Twitter
 main:
-- url: https://facebook.com
-  weight: 4
-  title: Facebook
 - url: "/about"
   weight: 2
   title: About
