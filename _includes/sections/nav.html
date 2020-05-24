@@ -1,36 +1,7 @@
-{%- assign menu_exp = "item.menu." | append: include.menu -%}
-{%- assign menu_sort = "menu." | append: include.menu | append: ".weight" -%}
-
-{%- assign menu_items = site.pages | where_exp:"item", menu_exp | sort: menu_sort -%}
-{%- assign data_menu_items = site.data.menus[include.menu] -%}
-
-{%- if data_menu_items and data_menu_items.size > 0 -%}
-
-{%- assign data_menu_items = data_menu_items | sort: "weight" -%}
-{%- assign page_count = menu_items.size -%}
-
-{%- for item in menu_items -%}
-
-{%- if item.menu[include.menu].weight > data_menu_items.first.weight and data_menu_items.first -%}
-
-{%- assign temp_menu_items = menu_items | shift: forloop.index0 -%}
-{%- assign menu_items = menu_items | pop: temp_menu_items.size | push: data_menu_items.first | concat: temp_menu_items -%}
-
-{%- assign data_menu_items = data_menu_items | shift -%}
-{%- endif -%}
-
-{%- endfor -%}
-
-{%- if menu_items and menu_items.size == 0 -%}
-{%- assign menu_items = data_menu_items -%}
-{%- endif -%}
-
-{%- endif -%}
-
 <nav class="nav">
-  {%- for item in menu_items -%}
+  {% for item in site.data.menus.main %}
     <a href="{{ item.url | escape }}"{% if page.url contains item.url %} class='active'{% endif %} title="{{ site.title }} • {{ item.title }}">{{ item.title }}</a>
-  {%- endfor -%}
+  {% endfor %}
   <div class="branding">
     <a href="{{ site.url }}"><h6 class="name">{{ site.title }}</h6></a>
   </div>
