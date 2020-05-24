@@ -10,12 +10,6 @@ social:
   weight: 1
   title: Twitter
 main:
-- url: "/about"
-  weight: 2
-  title: About
-- url: "/work"
-  weight: 1
-  title: Work
 - url: mailto:jrandallwinton@gmail.com?subject=Project Inquiry
   weight: 3
   title: Contact

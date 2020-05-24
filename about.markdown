@@ -12,5 +12,8 @@ blocks:
     [Let's work together.](mailto:jrandallwinton@gmail.com?subject=Project Inquiry
     "Contact")
 hero_image: ''
+menu:
+  main:
+    weight: 2
 
 ---
