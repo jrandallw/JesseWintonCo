@@ -10,9 +10,6 @@ social:
   weight: 1
   title: Twitter
 main:
-- url: https://google.com
-  weight: 4
-  title: Test
 - url: "/about"
   weight: 2
   title: About
