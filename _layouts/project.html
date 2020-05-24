@@ -16,21 +16,13 @@ class: page
       <div class="services">
         <h6 class="heading">{{ "Services" | upcase }}</h6>   
         <ul>
+          {% if page.services %}
           {% for services in page.services %}
           <li>{{ services.service }}</li>
           {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-
-      {% assign credits = page.credits | strip_newlines %}
-      {% if credits != '' %}
-      <div class="credits grid-one-half">
-        <h6 class="heading">{{ "Credits" | upcase }}</h6>
-        <ul>
-          {% for credit in page.credits %}
-          <li>{{ credit.type }}</li>
-          {% endfor %}
+          {% else %}
+          <li>{{ page.subtitle }}</li>
+          {% endif %}
         </ul>
       </div>
       {% endif %}
