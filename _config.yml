@@ -41,12 +41,6 @@ defaults:
     layout: project
     class: work
 - scope:
-    path: ''
-    type: proposal
-  values:
-    permalink: "/:collection/:title/"
-    layout: proposal
-- scope:
     path: work.markdown
     type: pages
   values:
