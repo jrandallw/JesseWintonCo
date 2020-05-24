@@ -5,6 +5,10 @@ layout: pages
 class: index
 page_type: split
 blocks:
+- template: heading
+  heading: I'm a multi-disciplined creative, making photographs, and building things
+    for the web
+  text_alignment: left
 - template: text-block
   copy: I'm a self-taught communicator with a focus in photography, branding, strategy,
     and writing. I love working with individuals, small start-ups and established
@@ -12,4 +16,5 @@ blocks:
     [Let's work together.](mailto:jrandallwinton@gmail.com?subject=Project Inquiry
     "Contact")
 hero_image: ''
+
 ---
