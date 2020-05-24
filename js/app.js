@@ -1,6 +1,6 @@
 import barba from '@barba/core';
 import 'babel-polyfill';
-import { delay, pageTransition, curtainTransition, IndexAnimation, workIndexAnimation } from "./modules/transitions.js";
+import { delay, pageTransition, workIndexAnimation } from "./modules/transitions.js";
 
 barba.init({
   transitions: [{
