@@ -7,7 +7,6 @@ layout: default
 
 {% include sections/hero.html %}
 <section class="page-content {{ page.title | downcase | handleize }}{% if theme == "dark" %} dark{% endif %}">
-  <div class='loading-curtain'></div>
   <div class="container">
     {% for block in page.blocks %}
     {% assign template = block.template %}
