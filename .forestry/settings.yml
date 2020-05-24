@@ -8,11 +8,6 @@ sections:
   label: Pages
   create: all
 - type: directory
-  path: _proposal
-  label: Proposal
-  create: all
-  match: "**/*"
-- type: directory
   path: _work
   label: Work
   create: all
