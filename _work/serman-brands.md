@@ -1,9 +1,9 @@
 ---
 title: Serman Brands
 date: '2018-08-15T00:38:23.000+00:00'
-subtitle: Product Photography
+subtitle: Lifestyle Photography
 services:
-- service: Product Photography
+- service: Lifestyle Photography
 - service: Art Direction
 featured_image: "/uploads/serman013.jpg"
 blocks:
