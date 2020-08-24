@@ -9,7 +9,11 @@ featured_image: "/uploads/comms-featured.jpg"
 blocks:
 - template: image
   image_layout: push-image-right
-  image: "/uploads/comms-cover.jpg"
+  image: "/uploads/comms001.jpg"
+  caption: ''
+- template: image
+  image_layout: push-image-left
+  image: "/uploads/comms002.jpg"
   caption: ''
 dark_theme: true
 project_year: 2020-04-01T07:00:00.000+00:00
