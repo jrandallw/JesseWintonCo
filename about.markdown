@@ -15,6 +15,6 @@ blocks:
     established brands to craft a clear, consistent message through pure, candid collaboration.
     [Let's work together](mailto:jrandallwinton@gmail.com?subject=Project Inquiry
     "Project Inquiry").
-hero_image: "/uploads/disneyland005.jpg"
+hero_image: ''
 
 ---
